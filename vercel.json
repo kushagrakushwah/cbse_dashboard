@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/cbse_portal/?$", "dest": "/cbse_portal.html" },
+    { "src": "/student/?$", "dest": "/student/index.html" },
+    { "src": "/teacher/?$", "dest": "/teacher/index.html" },
+    { "src": "/principal/?$", "dest": "/principal/index.html" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}

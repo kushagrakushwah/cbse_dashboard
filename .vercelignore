@@ -1,0 +1,15 @@
+# Ignore large reference documents and PDFs exceeding Vercel 100MB limit
+English Enhancement Guidebook- Final-15 june (1) (4).pdf
+UrjaGram_PPT_v25.pdf
+*.docx
+
+# Ignore raw data files in root (exclude downloads directory)
+*.xlsx
+!downloads/
+
+# Ignore scratch and tooling scripts
+scratch/
+scratch_*
+*.py
+aim_api_data.json
+deploy_vercel.bat

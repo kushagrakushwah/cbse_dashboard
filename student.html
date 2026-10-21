@@ -1,0 +1,2214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>CBSE Student Creative Studio & AIM Hub - CBSE × Adobe Express for Education</title>
+<meta name="description" content="Your 12-month creative journey with Adobe Express.">
+<meta name="robots" content="noindex">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23FA0F00'/><text y='.9em' font-size='72' x='15' fill='white' font-weight='900'>A</text></svg>">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#F8F7F5;color:#1C1C1E;line-height:1.5;min-height:100vh}
+:root{
+  --red:#003087;--red-dk:#001F5B;--red-bg:#F0F4FC;--red-border:rgba(0,48,135,.18);--saffron:#FF6600;--saffron-dk:#D95300;--saffron-bg:#FFF4ED;
+  --ink:#1C1C1E;--ink-2:#48484A;--ink-3:#8E8E93;
+  --surface:#FFFFFF;--surface-2:#F8F7F5;--surface-3:#F2F0ED;
+  --border:#E5E3DF;
+  --radius-sm:8px;--radius:14px;--radius-lg:20px;
+  --shadow-sm:0 1px 4px rgba(0,0,0,.07);
+  --shadow:0 4px 16px rgba(0,0,0,.09);
+  --shadow-lg:0 12px 40px rgba(0,0,0,.12);
+}
+/* HEADER */
+.hdr{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.94);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--border);padding:0 28px}
+.hdr-in{max-width:1160px;margin:0 auto;height:62px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:inherit;cursor:pointer}
+.brand-mark{width:38px;height:38px;border-radius:10px;background:#FFF;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 6px rgba(0,0,0,.06);transition:all .18s ease}
+.brand:hover .brand-mark{border-color:var(--red);transform:scale(1.05);box-shadow:0 4px 12px rgba(0,48,135,.15)}
+.brand-text{line-height:1.2}
+.brand-name{font-size:.88rem;font-weight:700;color:var(--ink);letter-spacing:-.01em}
+.brand-sub{font-size:.68rem;font-weight:600;color:var(--ink-3);letter-spacing:.04em;text-transform:uppercase}
+.hdr-right{display:flex;align-items:center;gap:10px}
+.hdr-badge{background:var(--red);color:#FFF;font-size:.72rem;font-weight:700;padding:5px 14px;border-radius:999px;letter-spacing:.03em}
+/* LANGUAGE TOGGLE */
+.lang-toggle{display:flex;align-items:center;gap:0;background:var(--surface-3);border:1.5px solid var(--border);border-radius:999px;padding:3px;cursor:pointer}
+.lang-btn{padding:4px 12px;border-radius:999px;font-size:.72rem;font-weight:800;color:var(--ink-3);transition:all .18s;user-select:none}
+.lang-btn.active{background:var(--red);color:#FFF;box-shadow:0 2px 6px rgba(0,48,135,.25)}
+/* HERO - COMPACT */
+.hero{background:linear-gradient(150deg,#003087 0%,#001F5B 55%,#0A4EB5 100%);color:#FFF;padding:26px 28px 20px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FFFFFF' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
+.hero-in{max-width:1160px;margin:0 auto;position:relative;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.hero-left{flex:1;min-width:0}
+.hero-tag{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.9);font-size:.72rem;font-weight:700;padding:4px 12px;border-radius:999px;margin-bottom:8px;letter-spacing:.03em}
+.hero-tag-dot{width:6px;height:6px;border-radius:50%;background:#FFD60A}
+.hero h1{font-size:clamp(1.3rem,2.8vw,1.85rem);font-weight:900;letter-spacing:-.03em;line-height:1.2;margin-bottom:6px;max-width:620px}
+.hero-sub{font-size:.84rem;color:rgba(255,255,255,.84);max-width:540px;line-height:1.5;margin-bottom:12px}
+.flow{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.flow-step{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:5px 13px;border-radius:999px;font-size:.76rem;font-weight:700;color:#FFF;white-space:nowrap;cursor:pointer;user-select:none;transition:all .2s cubic-bezier(.16,1,.3,1)}
+.flow-step:hover{background:rgba(255,255,255,.28);border-color:rgba(255,255,255,.6);transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.25)}
+.flow-step:hover .flow-n{transform:scale(1.1);box-shadow:0 2px 6px rgba(0,0,0,.2)}
+.flow-step:active{transform:translateY(0);background:rgba(255,255,255,.38)}
+.flow-step:focus-visible{outline:2px solid #FFF;outline-offset:2px}
+.flow-n{width:18px;height:18px;border-radius:50%;background:#FFF;color:var(--red);font-size:.68rem;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .2s ease}
+.flow-arr{color:rgba(255,255,255,.45);font-size:.8rem;font-weight:900}
+/* MAIN */
+.main{max-width:1160px;margin:0 auto;padding:26px 28px 80px}
+/* GUIDE BAR */
+.guide{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--red);border-radius:var(--radius);padding:12px 18px;margin-bottom:22px;box-shadow:var(--shadow-sm)}
+.guide-icon{font-size:1.1rem;flex-shrink:0}
+.guide p{font-size:.85rem;color:var(--ink-2);line-height:1.5}
+.guide strong{color:var(--ink)}
+/* TILES GRID */
+.tiles-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.tile-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;cursor:pointer;user-select:none;transition:all .22s cubic-bezier(.16,1,.3,1);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;position:relative}
+.tile-img-wrap{overflow:hidden;position:relative;flex-shrink:0;height:115px}
+.tile-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.tile-card:hover .tile-img{transform:scale(1.05)}
+.tile-img-ov{position:absolute;bottom:8px;left:10px;background:var(--red);color:#FFF;font-size:1.2rem;width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.tile-body{padding:16px 18px;flex:1;display:flex;flex-direction:column;justify-content:space-between}
+.tile-card:hover{border-color:var(--red);transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,48,135,.12)}
+.tile-tag{font-size:.62rem;font-weight:800;color:var(--red);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+.tile-title{font-size:.98rem;font-weight:800;color:var(--ink);line-height:1.3;margin-bottom:4px}
+.tile-desc{font-size:.78rem;color:var(--ink-3);line-height:1.45;margin-bottom:12px}
+.tile-footer{display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border)}
+.tile-hint{font-size:.7rem;color:var(--ink-3);font-weight:600}
+.tile-btn{display:inline-flex;align-items:center;gap:5px;background:var(--red-bg);color:var(--red);font-size:.75rem;font-weight:800;padding:5px 12px;border-radius:999px;transition:all .18s;border:1px solid var(--red-border)}
+.tile-card:hover .tile-btn{background:var(--red);color:#FFF;border-color:var(--red)}
+/* FULL SECTION VIEW */
+.section-full-view{display:none;animation:viewFadeIn .28s ease}
+@keyframes viewFadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.sec-nav-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;gap:12px;flex-wrap:wrap}
+.back-btn{display:inline-flex;align-items:center;gap:8px;background:var(--surface);color:var(--red);border:1.5px solid var(--red);padding:9px 18px;border-radius:999px;font-size:.84rem;font-weight:800;cursor:pointer;transition:all .18s;box-shadow:var(--shadow-sm)}
+.back-btn:hover{background:var(--red);color:#FFF;transform:translateX(-2px)}
+.sec-breadcrumb{font-size:.84rem;color:var(--ink-3);font-weight:700}
+.sec-breadcrumb strong{color:var(--ink)}
+.sec-hero-card{background:var(--surface);border:2px solid var(--red);border-radius:var(--radius-lg);padding:22px 26px;margin-bottom:22px;box-shadow:0 8px 30px rgba(0,48,135,.08);display:flex;align-items:center;gap:18px}
+.sec-hero-badge{width:50px;height:50px;border-radius:14px;background:var(--red);color:#FFF;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:900;flex-shrink:0}
+.sec-hero-body{flex:1;min-width:0}
+.sec-hero-tag{font-size:.68rem;font-weight:800;color:var(--red);text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px}
+.sec-hero-title{font-size:1.45rem;font-weight:900;color:var(--ink);letter-spacing:-.02em;margin-bottom:4px;line-height:1.2}
+.sec-hero-desc{font-size:.86rem;color:var(--ink-2);line-height:1.5}
+.sec-content-box{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius-lg);padding:26px;box-shadow:var(--shadow-sm);margin-bottom:22px}
+.sec-bottom-bar{display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid var(--border);gap:12px;flex-wrap:wrap}
+/* MONTH PILLS */
+.month-pills{display:flex;gap:8px;overflow-x:auto;padding-bottom:12px;margin-bottom:18px;scrollbar-width:thin}
+.mp{padding:7px 16px;background:var(--surface-2);border:1.5px solid var(--border);border-radius:999px;font-size:.8rem;font-weight:700;color:var(--ink-2);cursor:pointer;white-space:nowrap;transition:all .18s;flex-shrink:0}
+.mp:hover{background:var(--red-bg);border-color:var(--red);color:var(--red)}
+.mp.active{background:var(--red);border-color:var(--red);color:#FFF;box-shadow:0 3px 10px rgba(0,48,135,.28)}
+.mcard{background:var(--surface-2);border:2px solid var(--red);border-radius:var(--radius);padding:22px;box-shadow:0 4px 18px rgba(0,48,135,.08)}
+.mcard-row{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.mcard-theme{background:var(--red-bg);color:var(--red);font-size:.72rem;font-weight:800;padding:4px 12px;border-radius:999px;border:1px solid var(--red-border);text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+.mcard-dur{font-size:.76rem;font-weight:700;color:var(--ink-3);background:var(--surface);padding:4px 12px;border-radius:999px;border:1px solid var(--border);white-space:nowrap}
+.mcard h3{font-size:1.25rem;font-weight:900;color:var(--ink);margin-bottom:8px;line-height:1.25;letter-spacing:-.02em}
+.mcard p{font-size:.86rem;color:var(--ink-2);line-height:1.65;margin-bottom:16px}
+.mcard-skills{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:18px}
+.mskill{background:var(--surface);color:var(--ink);border:1px solid var(--border);font-size:.73rem;font-weight:700;padding:3px 10px;border-radius:6px}
+.mcard-actions{display:flex;gap:10px;flex-wrap:wrap;padding-top:16px;border-top:1px solid var(--border)}
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:6px;padding:9px 20px;border-radius:999px;font-size:.82rem;font-weight:700;text-decoration:none;border:none;cursor:pointer;white-space:nowrap;transition:all .16s;line-height:1}
+.btn-primary{background:var(--red);color:#FFF;box-shadow:0 2px 8px rgba(0,48,135,.25)}
+.btn-primary:hover{background:var(--red-dk);transform:translateY(-1px)}
+.btn-outline{background:transparent;color:var(--red);border:1.5px solid var(--red)}
+.btn-outline:hover{background:var(--red);color:#FFF}
+.btn-dark{background:var(--ink);color:#FFF}
+.btn-dark:hover{background:#333;transform:translateY(-1px)}
+.btn-ghost{background:var(--surface-2);color:var(--ink-2);border:1.5px solid var(--border)}
+.btn-ghost:hover{border-color:var(--red);color:var(--red);background:var(--red-bg)}
+.btn-empty{background:var(--surface-3);color:var(--ink-3);border:1.5px dashed var(--border);cursor:not-allowed}
+/* RESOURCE GRID */
+.rg{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.rc{background:var(--surface-2);border:1.5px solid var(--border);border-radius:var(--radius);padding:20px;transition:all .18s;display:flex;flex-direction:column;justify-content:space-between}
+.rc:hover{border-color:var(--red);background:var(--surface);box-shadow:0 6px 20px rgba(0,48,135,.1);transform:translateY(-2px)}
+.rc-badge{display:inline-block;background:var(--red-bg);color:var(--red);font-size:.66rem;font-weight:800;padding:3px 10px;border-radius:999px;margin-bottom:10px;border:1px solid var(--red-border);text-transform:uppercase;letter-spacing:.04em}
+.rc h4{font-size:.95rem;font-weight:800;color:var(--ink);margin-bottom:6px;line-height:1.3}
+.rc p{font-size:.82rem;color:var(--ink-2);margin-bottom:14px;line-height:1.55}
+.rc img.rc-thumb{width:100%;height:100px;object-fit:cover;border-radius:8px;margin-bottom:12px}
+
+/* DCAIS AIM ADVANCED STYLES */
+.aim-tip-box{display:flex;align-items:flex-start;gap:12px;background:#FFF6E5;border:1.5px solid #FFE0B2;border-left:5px solid #FF9800;border-radius:var(--radius);padding:14px 18px;margin-bottom:22px}
+.aim-tip-ico{font-size:1.8rem;line-height:1;flex-shrink:0}
+.aim-tip-txt{font-size:.84rem;color:#5D4037;line-height:1.5}
+.aim-tip-txt strong{color:#E65100}
+
+.aim-grade-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin-bottom:24px}
+.aim-gc{background:var(--surface);border:2px solid var(--border);border-radius:var(--radius-lg);padding:22px 18px;text-align:center;cursor:pointer;user-select:none;transition:all .22s cubic-bezier(.16,1,.3,1);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;align-items:center;position:relative}
+.aim-gc:hover{border-color:var(--red);transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,48,135,.15)}
+.aim-gc.active{border-color:var(--red);background:#F4F7FD;box-shadow:0 8px 24px rgba(0,48,135,.18)}
+.aim-gc-icon{width:52px;height:52px;border-radius:50%;background:#FFF0F0;border:1.5px solid rgba(0,48,135,.2);display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin-bottom:12px;transition:all .2s}
+.aim-gc:hover .aim-gc-icon{background:var(--red);color:#FFF}
+.aim-gc h3{font-size:1.2rem;font-weight:900;color:var(--ink);margin-bottom:3px}
+.aim-gc-cnt{font-size:.78rem;color:var(--ink-3);font-weight:700;margin-bottom:12px}
+.aim-gc-btn{font-size:.76rem;font-weight:800;color:var(--red);display:inline-flex;align-items:center;gap:4px;border-top:1px solid var(--border);padding-top:10px;width:100%;justify-content:center}
+.aim-gc:hover .aim-gc-btn{color:var(--red-dk)}
+.aim-gc-hindi{background:#FFF;border:2px solid #FAD2DB;border-radius:var(--radius-lg);padding:24px 18px;text-align:center;cursor:pointer;user-select:none;transition:all .22s cubic-bezier(.16,1,.3,1);box-shadow:0 4px 14px rgba(220,53,69,.08);display:flex;flex-direction:column;align-items:center;position:relative}
+.aim-gc-hindi:hover{border-color:var(--red);transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,48,135,.18)}
+.aim-gc-hindi-icon{width:56px;height:56px;border-radius:50%;background:#FDE8ED;display:flex;align-items:center;justify-content:center;font-size:1.6rem;color:#E0245E;margin-bottom:12px;box-shadow:0 2px 8px rgba(224,36,94,.12)}
+.aim-gc-hindi h3{font-size:1.12rem;font-weight:900;color:var(--ink);margin-bottom:4px;line-height:1.25}
+.aim-gc-hindi-cnt{font-size:.78rem;color:var(--ink-3);font-weight:700;margin-bottom:12px}
+.aim-gc-hindi-btn{background:var(--red);color:#FFF;font-size:.82rem;font-weight:800;padding:8px 30px;border-radius:999px;border:none;cursor:pointer;box-shadow:0 3px 10px rgba(0,48,135,.3);transition:all .18s;margin-top:auto}
+.aim-gc-hindi:hover .aim-gc-hindi-btn{background:var(--red-dk);transform:scale(1.03)}
+.aim-sub-filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.aim-sub-btn{padding:5px 14px;border-radius:999px;font-size:.76rem;font-weight:800;border:1.5px solid var(--border);background:var(--surface);color:var(--ink-2);cursor:pointer;transition:all .18s}
+.aim-sub-btn:hover{border-color:var(--red);color:var(--red)}
+.aim-sub-btn.active{background:var(--red);border-color:var(--red);color:#FFF;box-shadow:0 2px 6px rgba(0,48,135,.25)}
+
+.aim-top-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--surface-2);border:1.5px solid var(--border);border-radius:var(--radius);padding:12px 16px;margin-bottom:18px;flex-wrap:wrap}
+.aim-back-grade{display:inline-flex;align-items:center;gap:6px;background:var(--surface);color:var(--ink-2);border:1.5px solid var(--border);padding:6px 14px;border-radius:999px;font-size:.78rem;font-weight:800;cursor:pointer;transition:all .18s}
+.aim-back-grade:hover{border-color:var(--red);color:var(--red)}
+.aim-search{flex:1;min-width:200px;max-width:340px;position:relative}
+.aim-search input{width:100%;padding:7px 14px 7px 32px;border:1.5px solid var(--border);border-radius:999px;font-size:.8rem;outline:none;font-family:inherit}
+.aim-search input:focus{border-color:var(--red)}
+.aim-search::before{content:'🔍';position:absolute;left:10px;top:50%;transform:translateY(-50%);font-size:.78rem;opacity:.5}
+
+.aim-act-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.aim-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius-lg);padding:20px;display:flex;flex-direction:column;justify-content:space-between;transition:all .22s;box-shadow:var(--shadow-sm);position:relative}
+.aim-card:hover{border-color:var(--red);transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,48,135,.12)}
+.aim-badge{display:inline-block;background:var(--red-bg);color:var(--red);font-size:.65rem;font-weight:800;padding:3px 10px;border-radius:999px;border:1px solid var(--red-border);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px}
+.aim-title{font-size:.96rem;font-weight:800;color:var(--ink);margin-bottom:6px;line-height:1.35}
+.aim-skills{font-size:.76rem;color:var(--red-dk);font-weight:700;margin-bottom:8px;line-height:1.4}
+.aim-instr{font-size:.78rem;color:var(--ink-2);line-height:1.5;margin-bottom:14px;flex:1}
+.aim-actions{display:flex;flex-direction:column;gap:7px;padding-top:12px;border-top:1px solid var(--border)}
+
+/* Skill Bar */
+.sbar{height:6px;background:var(--border);border-radius:999px;overflow:hidden;margin-bottom:14px}
+.sbar-fill{height:100%;background:linear-gradient(90deg,var(--red),#FF6040);border-radius:999px}
+/* Portfolio Stats */
+.pstats{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-bottom:24px}
+.pstat{background:var(--surface-2);border:1.5px solid var(--border);border-radius:var(--radius);padding:16px 14px;text-align:center}
+.pstat-n{font-size:1.9rem;font-weight:900;color:var(--red);line-height:1.1}
+.pstat-l{font-size:.7rem;font-weight:700;color:var(--ink-3);text-transform:uppercase;letter-spacing:.04em;margin-top:4px}
+/* Achievements */
+.ach-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.ac{background:var(--surface-2);border:1.5px solid var(--border);border-radius:var(--radius);padding:20px 16px;text-align:center;transition:all .18s}
+.ac.earned{background:var(--red-bg);border-color:var(--red-border)}
+.ac:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.ac-icon{width:44px;height:44px;border-radius:50%;margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:900}
+.ac.earned .ac-icon{background:var(--red);color:#FFF}
+.ac.locked .ac-icon{background:var(--border);color:var(--ink-3)}
+.ac h4{font-size:.9rem;font-weight:800;color:var(--ink);margin-bottom:4px}
+.ac p{font-size:.74rem;color:var(--ink-3);line-height:1.45;margin-bottom:10px}
+.ac-tag{font-size:.66rem;font-weight:800;padding:3px 12px;border-radius:999px;text-transform:uppercase}
+.ac.earned .ac-tag{background:var(--red);color:#FFF}
+.ac.locked .ac-tag{background:var(--border);color:var(--ink-3)}
+/* Tools */
+.tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px}
+.tool{display:flex;flex-direction:column;align-items:center;background:var(--surface-2);border:1.5px solid var(--border);border-radius:var(--radius);padding:18px 10px;text-align:center;text-decoration:none;color:inherit;transition:all .18s}
+.tool:hover{border-color:var(--red);background:var(--red-bg);transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,48,135,.1)}
+.tool-ico{width:38px;height:38px;border-radius:10px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--red);font-weight:900;font-size:.88rem;margin-bottom:8px}
+.tool h4{font-size:.82rem;font-weight:800;color:var(--ink);margin-bottom:2px}
+.tool span{font-size:.7rem;color:var(--ink-3)}
+/* FOOTER */
+footer{background:var(--ink);padding:24px;text-align:center;color:rgba(255,255,255,.38);font-size:.82rem}
+footer p+p{margin-top:5px}
+/* RESPONSIVE */
+@media(max-width:760px){
+  .hdr{padding:0 16px}
+  .hero{padding:20px 16px 16px}
+  .main{padding:20px 14px 60px}
+  .tiles-grid{grid-template-columns:1fr}
+  .flow{flex-direction:column;align-items:flex-start}
+  .flow-arr{display:none}
+  .sec-hero-card{flex-direction:column;align-items:flex-start;padding:18px}
+  .sec-content-box{padding:18px 14px}
+  .mcard-row{flex-direction:column}
+  .mcard-actions{flex-direction:column}
+  .aim-top-nav{flex-direction:column;align-items:stretch}
+  .aim-search{max-width:100%}
+}
+
+/* DCAIS Weekly Modules & Month Tabs */
+.aim-month-tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:10px;margin-bottom:18px;scrollbar-width:thin}
+.aim-month-btn{padding:7px 16px;border-radius:999px;font-size:.8rem;font-weight:700;border:1.5px solid var(--border);background:var(--surface);color:var(--ink-2);cursor:pointer;white-space:nowrap;transition:all .18s;flex-shrink:0}
+.aim-month-btn:hover{border-color:var(--red);color:var(--red);background:var(--red-bg)}
+.aim-month-btn.active{background:var(--red);border-color:var(--red);color:#FFF;box-shadow:0 3px 10px rgba(0,48,135,.28)}
+.aim-weekly-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
+.aim-weekly-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius-lg);padding:22px;display:flex;flex-direction:column;justify-content:space-between;transition:all .22s cubic-bezier(.16,1,.3,1);box-shadow:var(--shadow-sm);position:relative}
+.aim-weekly-card:hover{border-color:var(--red);transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,48,135,.12)}
+.aim-card-header{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:10px}
+.aim-week-badge{background:var(--red-bg);color:var(--red);font-size:.72rem;font-weight:800;padding:4px 12px;border-radius:999px;border:1px solid var(--red-border);text-transform:uppercase;letter-spacing:.03em;white-space:nowrap}
+.aim-mod-badge{background:var(--surface-3);color:var(--ink-2);font-size:.7rem;font-weight:700;padding:4px 10px;border-radius:999px;border:1px solid var(--border)}
+.aim-card-modname{font-size:.78rem;font-weight:700;color:var(--ink-3);margin-bottom:4px;text-transform:uppercase;letter-spacing:.03em}
+.aim-card-actname{font-size:1.1rem;font-weight:900;color:var(--ink);margin-bottom:8px;line-height:1.3}
+.aim-card-section-title{font-size:.72rem;font-weight:800;color:var(--red);text-transform:uppercase;letter-spacing:.05em;margin:10px 0 4px}
+.aim-card-outcomes{font-size:.78rem;color:var(--ink-2);line-height:1.5;margin-bottom:8px;background:var(--surface-2);border-radius:8px;padding:10px 12px;border:1px solid var(--border)}
+.aim-card-instr{font-size:.78rem;color:var(--ink-2);line-height:1.5;margin-bottom:10px;white-space:pre-line}
+.aim-card-skills{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.aim-skill-pill{background:#FFF0F0;color:#003087;font-size:.7rem;font-weight:700;padding:3px 10px;border-radius:6px;border:1px solid rgba(0,48,135,.15)}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+.tile-toggle-btn{width:100%;height:36px;display:flex;align-items:center;justify-content:space-between;padding:0 12px;background:var(--surface-2);border:1.5px solid var(--border);border-radius:var(--radius-sm);color:var(--ink-2);font-size:.78rem;font-weight:700;cursor:pointer;transition:all .18s ease;margin-top:4px}
+.tile-toggle-btn:hover{background:var(--surface-3);color:var(--ink);border-color:rgba(0,0,0,0.2)}
+
+/* DCAIS MID-TERM EXAM STYLES */
+.exam-meta-banner{display:flex;align-items:center;justify-content:space-between;background:linear-gradient(135deg,#F0F4FC 0%,#F4F7FD 100%);border:1.5px solid var(--red-border);border-radius:var(--radius);padding:18px 22px;margin-bottom:24px;gap:16px;flex-wrap:wrap}
+.exam-meta-title{font-size:1.05rem;font-weight:900;color:var(--ink);display:flex;align-items:center;gap:10px}
+.exam-meta-badges{display:flex;gap:8px;flex-wrap:wrap}
+.exam-pill{font-size:.74rem;font-weight:800;padding:4px 12px;border-radius:999px;background:#FFF;border:1px solid var(--red-border);color:var(--red)}
+.exam-search-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+.exam-search-box{flex:1;min-width:240px;position:relative}
+.exam-search-box input{width:100%;padding:9px 16px 9px 36px;border:1.5px solid var(--border);border-radius:999px;font-size:.84rem;outline:none;font-family:inherit}
+.exam-search-box input:focus{border-color:var(--red)}
+.exam-search-box::before{content:'🔍';position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:.82rem;opacity:.5}
+.exam-region-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px}
+.exam-region-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius-lg);padding:20px;display:flex;flex-direction:column;justify-content:space-between;transition:all .22s;box-shadow:var(--shadow-sm);position:relative;overflow:hidden}
+.exam-region-card:hover{border-color:var(--red);transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,48,135,.12)}
+.exam-region-head{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.exam-region-icon{width:46px;height:46px;border-radius:12px;background:#FFF0F0;border:1.5px solid rgba(0,48,135,.2);display:flex;align-items:center;justify-content:center;font-size:1.45rem;flex-shrink:0}
+.exam-region-title{font-size:1.08rem;font-weight:900;color:var(--ink);line-height:1.2}
+.exam-region-sub{font-size:.74rem;font-weight:700;color:var(--ink-3);text-transform:uppercase;letter-spacing:.04em;margin-top:2px}
+.exam-region-actions{display:flex;flex-direction:column;gap:8px;margin-top:16px;padding-top:14px;border-top:1px solid var(--border)}
+.exam-guidelines-box{background:#FFFBEB;border:1.5px solid #FDE68A;border-left:5px solid #F59E0B;border-radius:var(--radius);padding:16px 20px;margin-bottom:22px}
+.exam-guidelines-title{font-size:.95rem;font-weight:900;color:#92400E;display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.exam-guidelines-list{list-style:none;display:flex;flex-direction:column;gap:6px;font-size:.82rem;color:#78350F;line-height:1.5}
+.exam-guidelines-list li{display:flex;align-items:flex-start;gap:8px}
+.exam-toast{position:fixed;bottom:24px;right:24px;z-index:9999;background:var(--ink);color:#FFF;padding:12px 22px;border-radius:999px;font-size:.84rem;font-weight:800;box-shadow:0 8px 30px rgba(0,0,0,.25);display:flex;align-items:center;gap:10px;animation:toastIn .25s ease}
+@keyframes toastIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+/* ===== AUTUMN BOOTCAMP STYLES ===== */
+.bc-hero-banner { background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #334155 100%); color: #FFF; border-radius: var(--radius-lg); padding: 28px 32px; margin-bottom: 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; box-shadow: 0 10px 30px rgba(15,23,42,0.18); position: relative; overflow: hidden; }
+.bc-hero-banner::before { content: ''; position: absolute; top: -50px; right: -50px; width: 220px; height: 220px; border-radius: 50%; background: rgba(0,48,135,0.15); filter: blur(50px); pointer-events: none; }
+.bc-poster-thumb { width: 280px; max-width: 100%; height: auto; aspect-ratio: 723 / 335; border-radius: 12px; object-fit: contain; border: 2.5px solid rgba(255,255,255,0.4); box-shadow: 0 8px 24px rgba(0,0,0,0.3); flex-shrink: 0; cursor: pointer; transition: transform .25s ease; background: #02B6F9; }
+.tile-card[data-section="bootcamp"] .tile-img-wrap { background: #02B6F9; }
+.tile-card[data-section="bootcamp"] .tile-img { object-fit: contain; background: #02B6F9; }
+.bc-poster-thumb:hover { transform: scale(1.04); }
+.bc-tag-pill { display: inline-flex; align-items: center; gap: 6px; background: rgba(0,48,135,0.2); border: 1px solid rgba(0,48,135,0.4); color: #FF8577; padding: 4px 12px; border-radius: 999px; font-size: .75rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; margin-bottom: 10px; }
+.bc-timing-pill { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.22); color: #FFF; padding: 5px 14px; border-radius: 999px; font-size: .8rem; font-weight: 800; margin-bottom: 12px; }
+.bc-guide-box { background: #FFF; border: 1.5px solid var(--border); border-left: 5px solid #003087; border-radius: var(--radius); padding: 18px 22px; margin-bottom: 24px; box-shadow: var(--shadow-sm); }
+.bc-flow-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 14px; }
+.bc-step-item { background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; display: flex; align-items: center; gap: 10px; font-size: .84rem; font-weight: 700; color: var(--ink); }
+.bc-step-num { width: 28px; height: 28px; border-radius: 50%; background: #003087; color: #FFF; font-size: .8rem; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.bc-sessions-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin-bottom: 28px; }
+.bc-card { background: var(--surface); border: 2px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; transition: all .25s ease; box-shadow: var(--shadow-sm); }
+.bc-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
+.bc-card.session-1 { border-top: 6px solid #0284C7; }
+.bc-card.session-1:hover { border-color: #0284C7; }
+.bc-card.session-2 { border-top: 6px solid #EA580C; }
+.bc-card.session-2:hover { border-color: #EA580C; }
+.bc-card.session-3 { border-top: 6px solid #EAB308; }
+.bc-card.session-3:hover { border-color: #EAB308; }
+.bc-card-hdr { padding: 16px 20px 12px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+.bc-card-date { font-size: .78rem; font-weight: 800; color: var(--ink-2); display: flex; align-items: center; gap: 6px; }
+.bc-card-tag { font-size: .7rem; font-weight: 900; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; letter-spacing: .04em; }
+.bc-tag-1 { background: #E0F2FE; color: #0369A1; border: 1px solid #BAE6FD; }
+.bc-tag-2 { background: #FFEDD5; color: #C2410C; border: 1px solid #FED7AA; }
+.bc-tag-3 { background: #FEF3C7; color: #A16207; border: 1px solid #FDE68A; }
+.bc-card-body { padding: 20px; flex: 1; }
+.bc-card-title { font-size: 1.25rem; font-weight: 900; color: var(--ink); margin-bottom: 8px; line-height: 1.25; }
+.bc-card-desc { font-size: .88rem; color: var(--ink-2); line-height: 1.5; margin-bottom: 16px; }
+.bc-tools-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--surface-2); border: 1px solid var(--border); border-radius: 6px; padding: 4px 10px; font-size: .75rem; font-weight: 700; color: var(--ink-2); margin-bottom: 18px; }
+.bc-card-actions { padding: 16px 20px 20px; background: var(--surface-2); border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 10px; }
+.bc-btn-yt { display: flex; align-items: center; justify-content: center; gap: 8px; background: #DC2626; color: #FFF; padding: 10px 16px; border-radius: 8px; font-size: .84rem; font-weight: 800; text-decoration: none; transition: all .18s; box-shadow: 0 2px 6px rgba(220,38,38,0.25); }
+.bc-btn-yt:hover { background: #B91C1C; transform: translateY(-1px); color: #FFF; }
+.bc-tpl-list { display: flex; flex-direction: column; gap: 6px; }
+.bc-btn-tpl { display: flex; align-items: center; justify-content: space-between; background: #FFF; border: 1.5px solid var(--border); color: var(--ink); padding: 8px 12px; border-radius: 8px; font-size: .8rem; font-weight: 700; text-decoration: none; transition: all .16s; }
+.bc-btn-tpl:hover { border-color: #003087; color: #003087; background: #F0F4FC; transform: translateX(2px); }
+.bc-btn-sub { display: flex; align-items: center; justify-content: center; gap: 6px; background: #059669; color: #FFF; border: none; padding: 9px 16px; border-radius: 8px; font-size: .82rem; font-weight: 800; cursor: pointer; transition: all .18s; width: 100%; text-decoration: none; }
+.bc-btn-sub:hover { background: #047857; color: #FFF; transform: translateY(-1px); }
+.bc-btn-sub.pending { background: var(--surface-3); color: var(--ink-3); border: 1px dashed var(--border); cursor: pointer; }
+.bc-btn-sub.pending:hover { background: var(--surface-2); color: var(--ink-2); }
+
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="hdr">
+  <div class="hdr-in">
+    <div class="brand" onclick="showDashboard()">
+      <div class="brand-mark" aria-label="Adobe">
+        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#003087" aria-hidden="true" style="display:block;">
+          <path d="M15.1 2H24v20L15.1 2zM8.9 2H0v20L8.9 2zM12 9.4L17.6 22h-3.8l-1.6-4H8.1L12 9.4z"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <div class="brand-name">Adobe Express for Education</div>
+        <div class="brand-sub" id="hdrSubLabel">Student Creative Studio</div>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <!-- Language Toggle -->
+      <div class="lang-toggle" onclick="toggleLang()" title="Switch Language / भाषा बदलें">
+        <div class="lang-btn active" id="langBtnEN">EN</div>
+        <div class="lang-btn" id="langBtnHI">हिं</div>
+      </div>
+      <div class="hdr-badge" id="hdrBadge">Student Portal</div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO - SMALLER -->
+<section class="hero" id="mainHero">
+  <div class="hero-in">
+    <div class="hero-left">
+      <div class="hero-tag">
+        <span class="hero-tag-dot"></span>
+        <span id="heroTagText">🎨 Creative Studio - For Students</span>
+      </div>
+      <h1 id="heroTitle">Create Something New Every Month! 🎉</h1>
+      <p class="hero-sub" id="heroSub">Pick your project, watch a short video, create in Adobe Express, and show your teacher. It's that easy!</p>
+      <div class="flow">
+        <div class="flow-step" data-flow-section="1" onclick="openSection('1')" role="button" tabindex="0" title="Go to Section 1: 12-Month Creative Activities"><span class="flow-n">1</span><span id="flow1">Pick Month</span></div>
+        <span class="flow-arr">→</span>
+        <div class="flow-step" data-flow-section="3" onclick="openSection('3')" role="button" tabindex="0" title="Go to Section 3: DCAIS Activities"><span class="flow-n">2</span><span id="flow2">DCAIS Activities</span></div>
+        <span class="flow-arr">→</span>
+        <div class="flow-step" data-flow-section="4" onclick="openSection('4')" role="button" tabindex="0" title="Go to Section 4: DCAIS Mid-Term Examination"><span class="flow-n">3</span><span id="flow3">Mid-Term Exam</span></div>
+        <span class="flow-arr">→</span>
+        <div class="flow-step" data-flow-section="bootcamp" onclick="openSection('bootcamp')" role="button" tabindex="0" title="Go to Autumn Bootcamp 2026"><span class="flow-n">🎒</span><span id="flowBootcamp">Autumn Bootcamp</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN APP AREA -->
+<main class="main">
+
+  <!-- VIEW 1: SECTIONS DASHBOARD TILES -->
+  <div id="dashboardView">
+    <div class="guide">
+      <span class="guide-icon">💡</span>
+      <p id="guideText"><strong>Tap any box below</strong> to open it and start your creative work!</p>
+    </div>
+
+    <div class="tiles-grid">
+      <!-- Section 1 -->
+      <div class="tile-card" data-section="1" onclick="openSection('1')">
+        <div class="tile-img-wrap">
+          <img class="tile-img" src="assets/guidebook/student_creative_challenge.png" alt="Monthly Activities" crossorigin="anonymous">
+          <div class="tile-img-ov">📅</div>
+        </div>
+        <div class="tile-body">
+          <div>
+            <div class="tile-tag" id="s1-tag">Section 1</div>
+            <h2 class="tile-title" id="s1-title">Monthly Creative Activities</h2>
+            <p class="tile-desc" id="s1-desc">One fun art project for every month - January to December. Watch, make, submit!</p>
+          </div>
+          <div class="tile-footer">
+            <span class="tile-hint" id="s1-hint">12 Fun Challenges</span>
+            <span class="tile-btn" id="s1-btn">Open →</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2 [Commented out as not needed now]
+      <div class="tile-card" data-section="2" onclick="openSection('2')">
+        <div class="tile-img-wrap">
+          <img class="tile-img" src="assets/guidebook/student_generative_art.png" alt="Skill Tracks" crossorigin="anonymous">
+          <div class="tile-img-ov">🎯</div>
+        </div>
+        <div class="tile-body">
+          <div>
+            <div class="tile-tag" id="s2-tag">Section 2</div>
+            <h2 class="tile-title" id="s2-title">Skill Building Tracks</h2>
+            <p class="tile-desc" id="s2-desc">Learn step-by-step: design posters, make videos, create social posts, and more!</p>
+          </div>
+          <div class="tile-footer">
+            <span class="tile-hint" id="s2-hint">5 Guided Tracks</span>
+            <span class="tile-btn" id="s2-btn">Open →</span>
+          </div>
+        </div>
+      </div>
+      -->
+
+      <!-- Section 3: Full DCAIS / AIM Activities -->
+      <div class="tile-card" data-section="3" onclick="openSection('3')">
+        <div class="tile-img-wrap">
+          <img class="tile-img" src="assets/guidebook/dcais_quick_actions.png" alt="DCAIS Activities" crossorigin="anonymous">
+          <div class="tile-img-ov">🌟</div>
+        </div>
+        <div class="tile-body">
+          <div>
+            <div class="tile-tag" id="s3-tag">Section 3 • DCAIS</div>
+            <h2 class="tile-title" id="s3-title">DCAIS Activities</h2>
+            <p class="tile-desc" id="s3-desc">Complete curriculum for Grades 6-8 from DCAIS. Select your grade, make posters, videos and earn badges!</p>
+          </div>
+          <div class="tile-footer">
+            <span class="tile-hint" id="s3-hint">54+ Activities • Grades 6-8</span>
+            <span class="tile-btn" id="s3-btn">Open →</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 4: DCAIS Mid-Term Examination -->
+      <div class="tile-card" data-section="4" onclick="openSection('4')">
+        <div class="tile-img-wrap">
+          <img class="tile-img" src="assets/guidebook/dcais_exam_assessment.png" alt="Mid-Term Examination" crossorigin="anonymous">
+          <div class="tile-img-ov">📝</div>
+        </div>
+        <div class="tile-body">
+          <div>
+            <div class="tile-tag" id="s4-tag">Section 4 • Mid-Term Exam</div>
+            <h2 class="tile-title" id="s4-title">DCAIS Mid-Term Examination</h2>
+            <p class="tile-desc" id="s4-desc">Official regional examination forms for 16 CBSE Regional Offices. Open test link mid term and submit your exam.</p>
+          </div>
+          <div class="tile-footer">
+            <span class="tile-hint" id="s4-hint">16 CBSE Regional Offices • Sem-1 Exam</span>
+            <span class="tile-btn" id="s4-btn">Open →</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section Bootcamp: CBSE Digital Innovation Bootcamp -->
+      <div class="tile-card" data-section="bootcamp" onclick="openSection('bootcamp')">
+        <div class="tile-img-wrap" style="background:#02B6F9;">
+          <img class="tile-img" src="assets/autumn_bootcamp_banner.jpg?v=2" alt="CBSE Digital Innovation Bootcamp" crossorigin="anonymous" style="object-fit:contain;background:#02B6F9;">
+          <div class="tile-img-ov">🎒</div>
+        </div>
+        <div class="tile-body">
+          <div>
+            <div class="tile-tag" id="sBoot-tag">Autumn Bootcamp • 17–24 Oct 2026</div>
+            <h2 class="tile-title" id="sBoot-title">CBSE Digital Innovation Bootcamp</h2>
+            <p class="tile-desc" id="sBoot-desc">Join 3 fun live sessions: Comic-a-concept, Hero of My Nation, and My Childhood Memory. Use GenAI in Adobe Express!</p>
+          </div>
+          <div class="tile-footer">
+            <span class="tile-hint" id="sBoot-hint">3 Live Sessions • Templates & YouTube</span>
+            <span class="tile-btn" id="sBoot-btn">Open Bootcamp →</span>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Sections 5, 6, 7 [Commented out as not needed now]
+
+      <div class="tile-card" data-section="5" onclick="openSection('5')">
+        <div class="tile-img-wrap">
+          <img class="tile-img" src="assets/guidebook/student_text_effects.png" alt="Tutorials" crossorigin="anonymous">
+          <div class="tile-img-ov">🎬</div>
+        </div>
+        <div class="tile-body">
+          <div>
+            <div class="tile-tag" id="s5-tag">Section 5</div>
+            <h2 class="tile-title" id="s5-title">How-To Videos</h2>
+            <p class="tile-desc" id="s5-desc">Short videos that show you exactly how to use Adobe Express tools. Easy to follow!</p>
+          </div>
+          <div class="tile-footer">
+            <span class="tile-hint" id="s5-hint">5 Video Masterclasses</span>
+            <span class="tile-btn" id="s5-btn">Open →</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tile-card" data-section="6" onclick="openSection('6')">
+        <div class="tile-img-wrap">
+          <img class="tile-img" src="assets/guidebook/student_sticker_design.png" alt="Creative Tools" crossorigin="anonymous">
+          <div class="tile-img-ov">🛠️</div>
+        </div>
+        <div class="tile-body">
+          <div>
+            <div class="tile-tag" id="s6-tag">Section 6</div>
+            <h2 class="tile-title" id="s6-title">Creative Tools</h2>
+            <p class="tile-desc" id="s6-desc">Jump straight into making! Open posters, videos, cards, collages and more in Adobe Express.</p>
+          </div>
+          <div class="tile-footer">
+            <span class="tile-hint" id="s6-hint">8 Quick Launch Tools</span>
+            <span class="tile-btn" id="s6-btn">Open →</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tile-card" data-section="7" onclick="openSection('7')">
+        <div class="tile-img-wrap">
+          <img class="tile-img" src="assets/guidebook/student_game_art_design.png" alt="Achievements" crossorigin="anonymous">
+          <div class="tile-img-ov">🏆</div>
+        </div>
+        <div class="tile-body">
+          <div>
+            <div class="tile-tag" id="s7-tag">Section 7</div>
+            <h2 class="tile-title" id="s7-title">My Badges &amp; Awards</h2>
+            <p class="tile-desc" id="s7-desc">See what badges you have won! Keep doing projects to unlock more cool rewards.</p>
+          </div>
+          <div class="tile-footer">
+            <span class="tile-hint" id="s7-hint">6 Milestone Badges</span>
+            <span class="tile-btn" id="s7-btn">Open →</span>
+          </div>
+        </div>
+      </div>
+      -->
+    </div>
+  </div>
+
+  <!-- VIEW 2: FULL SECTION VIEW -->
+  <div id="sectionView" class="section-full-view">
+    <div class="sec-nav-bar">
+      <button class="back-btn" onclick="showDashboard()">← <span id="backBtnLabel">Back to Sections</span></button>
+      <div class="sec-breadcrumb"><span id="crumbHome">Home</span> / <strong id="crumbName">Section</strong></div>
+    </div>
+    <div class="sec-hero-card">
+      <div class="sec-hero-badge" id="secBadge">01</div>
+      <div class="sec-hero-body">
+        <div class="sec-hero-tag" id="secTag">Section</div>
+        <div class="sec-hero-title" id="secTitle">Title</div>
+        <div class="sec-hero-desc" id="secDesc">Description</div>
+      </div>
+    </div>
+    <div class="sec-content-box">
+      <div id="secContent"></div>
+    </div>
+    <div class="sec-bottom-bar">
+      <div id="secNextPrev"></div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:6px;"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#003087" aria-hidden="true" style="vertical-align:middle;display:inline-block;"><path d="M15.1 2H24v20L15.1 2zM8.9 2H0v20L8.9 2zM12 9.4L17.6 22h-3.8l-1.6-4H8.1L12 9.4z"/></svg> <strong>Adobe Express for Education</strong></div>
+  <p>Adobe Express for Education - Student Creative Studio</p>
+  <p>&copy; Adobe Inc. All rights reserved.</p>
+</footer>
+
+
+
+<script src="dcais-data.js"></script>
+<script src="../dcais-data.js"></script>
+<script>
+
+// DCAIS Full Curriculum Data from aeskills.github.io/AIM
+window.DCAIS_DATA = {
+  "weeklyModules": [
+    {
+      "id": "m_1",
+      "index": 1,
+      "month": "July",
+      "monthHi": "जुलाई",
+      "week": "July - Week 1",
+      "weekHi": "जुलाई - सप्ताह 1",
+      "moduleName": "Module 1: Creativity for All",
+      "moduleNameHi": "मॉड्यूल 1: सभी के लिए रचनात्मकता",
+      "subtopic": "1.1 What is Creativity?",
+      "activityName": "Creative on Recycling",
+      "learningOutcomes": "• Understand the defination of creativity.\n• Learn why creativity is important.\n• Explore examples of creative geniuses who have changed the shape of the world.\n• Recognize creativity skills as a crucial aspect of the future of work and life.",
+      "instructions": "The teacher explains how posters and quotes can raise awareness and communicate ideas creatively.\nTeacher demonstrates:\n• Opening template\n• Editing quote\n• Changing colors/fonts\n• Saving project\n\nFor E-Module activity: Teacher to guide students to log in to Adobe Express school Account; guide them towards Module 1 (Section 1.1) of the online course on ‘Digital Creativity and AI Skills (Level-1).’",
+      "skillsInFocus": "Creative Exploration & Digital Literacy",
+      "bookScreenshot": "M1, Page-27,28",
+      "bookScreenshotLink": "https://drive.google.com/file/d/1BKfQL3qP8O9H8dksl8yny9-sYwjjit1n/view?usp=drive_link",
+      "activityLinkClassroom": "Swachhata drive at school- https://adobe.ly/3PCLotc",
+      "activityLinkClassroomUrl": "https://adobe.ly/3PCLotc",
+      "activityLinkHomework": "",
+      "activityLinkHomeworkUrl": "",
+      "activityNameHi": "रीसाइक्लिंग पर रचनात्मक गतिविधि",
+      "skillsInFocusHi": "रचनात्मक अन्वेषण एवं डिजिटल साक्षरता",
+      "learningOutcomesHi": "• रचनात्मकता की परिभाषा को समझना।\n• रचनात्मकता क्यों महत्वपूर्ण है, यह जानना।\n• दुनिया को बदलने वाले रचनात्मक दिग्गजों के उदाहरण तलाशना।\n• रचनात्मक कौशल को भविष्य के कार्य और जीवन के महत्वपूर्ण पहलू के रूप में पहचानना।",
+      "instructionsHi": "शिक्षक समझाते हैं कि पोस्टर और उद्धरण किस प्रकार जागरूकता बढ़ा सकते हैं।\nशिक्षक प्रदर्शन करते हैं:\n• टेम्पलेट खोलना\n• उद्धरण संपादित करना\n• रंग/फ़ॉन्ट बदलना\n• प्रोजेक्ट सहेजना\n\nई-मॉड्यूल गतिविधि: एडोब एक्सप्रेस स्कूल खाते में लॉगिन करें और मॉड्यूल 1 (अनुभाग 1.1) पूरा करें।"
+    },
+    {
+      "id": "m_2",
+      "index": 2,
+      "month": "July",
+      "monthHi": "जुलाई",
+      "week": "July - Week 3",
+      "weekHi": "जुलाई - सप्ताह 3",
+      "moduleName": "Module 1: Creativity for All",
+      "moduleNameHi": "मॉड्यूल 1: सभी के लिए रचनात्मकता",
+      "subtopic": "1.2 Fostering Creativity in the Classroom",
+      "activityName": "Yoga or Culural Club Poster",
+      "learningOutcomes": "• Get introduced to the 4 Cs: Creativity, Critical inking, Communication, and Collaboration.\n• Understand the interconnections between the 4 Cs.\n• Learn how to integrate the 4 Cs into daily life.",
+      "instructions": "The teacher explains how colors, text, and images help communicate messages effectively.\nTeacher demonstrates:\n• Opening template\n• writing or adding new text\n• Changing font/colors\n• Adding one icon/image\n• Saving project\n\nFor E-Module activity: Teacher to guide students to log in to Adobe Express school Account; guide them towards Module 1 (Section 1.2) of the online course on ‘Digital Creativity and AI Skills (Level-1).’",
+      "skillsInFocus": "Visual Communication & Design Skills",
+      "bookScreenshot": "M1,Page 34.35,36",
+      "bookScreenshotLink": "https://drive.google.com/file/d/1r568cq_vA_fOx-uzsW2uXEHBMfmgjZzI/view?usp=drive_link",
+      "activityLinkClassroom": "Yoga Club : https://adobe.ly/3R0K18c",
+      "activityLinkClassroomUrl": "https://adobe.ly/3R0K18c",
+      "activityLinkHomework": "Create a Movie Poster : https://adobe.ly/4wqooyg",
+      "activityLinkHomeworkUrl": "https://adobe.ly/4wqooyg",
+      "activityNameHi": "योग या सांस्कृतिक क्लब पोस्टर",
+      "skillsInFocusHi": "दृश्य संचार और डिज़ाइन कौशल",
+      "learningOutcomesHi": "• डिजिटल पोस्टर के घटकों को समझना।\n• आकर्षक पोस्टर बनाने के लिए डिज़ाइन सिद्धांतों का उपयोग करना।\n• एडोब एक्सप्रेस में टेक्स्ट, रंग और आकृतियों का प्रभावी उपयोग करना।",
+      "instructionsHi": "शिक्षक स्कूल के योग दिवस या सांस्कृतिक क्लब के लिए पोस्टर डिज़ाइन का प्रदर्शन करते हैं। छात्र टेम्पलेट चुनकर अपना अनूठा पोस्टर तैयार करते हैं।"
+    },
+    {
+      "id": "m_3",
+      "index": 3,
+      "month": "July",
+      "monthHi": "जुलाई",
+      "week": "July - Week 4",
+      "weekHi": "जुलाई - सप्ताह 4",
+      "moduleName": "Module 1: Creativity for All",
+      "moduleNameHi": "मॉड्यूल 1: सभी के लिए रचनात्मकता",
+      "subtopic": "1.3 Digital Creativity and Creative Tools",
+      "activityName": "Imaginary Storybook Cover",
+      "learningOutcomes": "• Get introduced to Technology and Digital Creativity skills.\n• Learn about Adobe Express and its basic functions.\n• Explore how Adobe Express can be used to enhance your own creative projects.",
+      "instructions": "The teacher explains how to generate a book cover image or background and edit a Storybook cover template.\nTeacher demonstrates:\n• Using Generative AI\n• Adding title\n• Adding subtitle/tagline\n• Adding/editing image/background\n• Customizing fonts/colors\n• Saving project\n\nFor E-Module activity: Teacher to guide students to log in to Adobe Express school Account; guide them towards Module 1 (Section 1.3) of the online course on ‘Digital Creativity and AI Skills (Level-1).’",
+      "skillsInFocus": "Creative Self-Expression & AI Creative Skills",
+      "bookScreenshot": "M1,Page 41-42.pdf",
+      "bookScreenshotLink": "https://drive.google.com/file/d/1T2DYDaIqUy36giJZ7Y7KWb1P-hX5HD1e/view?usp=drive_link",
+      "activityLinkClassroom": "Create a book Cover - https://adobe.ly/42ulMBQ",
+      "activityLinkClassroomUrl": "https://adobe.ly/42ulMBQ",
+      "activityLinkHomework": "",
+      "activityLinkHomeworkUrl": "",
+      "activityNameHi": "काल्पनिक स्टोरीबुक कवर डिज़ाइन",
+      "skillsInFocusHi": "रचनात्मक आत्म-अभिव्यक्ति और एआई रचनात्मक कौशल",
+      "learningOutcomesHi": "• पुस्तक कवर डिज़ाइन के मुख्य तत्वों (शीर्षक, लेखक, चित्र) को समझना।\n• कहानी के विषय के अनुसार लेआउट और टाइपोग्राफी चुनना।",
+      "instructionsHi": "छात्र अपनी पसंदीदा काल्पनिक कहानी के लिए एक आकर्षक कवर पेज डिज़ाइन करते हैं।"
+    },
+    {
+      "id": "m_4",
+      "index": 4,
+      "month": "August",
+      "monthHi": "अगस्त",
+      "week": "August - Week 1 (Part 1)",
+      "weekHi": "अगस्त - सप्ताह 1 (भाग 1)",
+      "moduleName": "Module 2: Unleash Creativity with Adobe Express",
+      "moduleNameHi": "मॉड्यूल 2: Adobe Express के साथ रचनात्मकता का विस्तार",
+      "subtopic": "2.1 Getting started with Adobe Express\n2.2 Exploring “Quick Actions” in Adobe Express",
+      "activityName": "Remove background (Activity 2.1.1)",
+      "learningOutcomes": "• Familiarization with various features of Adobe Express dashboard\n• Familiarization with various actions under 'Quick Actions'",
+      "instructions": "Teacher demonstrates:\n• Remove background\n• Dashboard\n• Access 'quick actions' on dashboard\n• Quick Action Tools (Such as, Edit Images and Videos, Work with PDFs, Animate Characters, Create GIFs)\n\nFor E-Module activity: Teacher to guide students to login into Adobe Express school; guide them towards Module 2 (Section 2.1 and Section 2.2) of online course on ‘Digital Creativity and AI Skills (Level-1)’",
+      "skillsInFocus": "Functionality of digital tools",
+      "bookScreenshot": "",
+      "bookScreenshotLink": "",
+      "activityLinkClassroom": "https://express.adobe.com/sp/tools/remove-background",
+      "activityLinkClassroomUrl": "https://express.adobe.com/sp/tools/remove-background",
+      "activityLinkHomework": "",
+      "activityLinkHomeworkUrl": "",
+      "activityNameHi": "बैकग्राउंड हटाएं (क्विक एक्शन 2.1.1)",
+      "skillsInFocusHi": "डिजिटल टूल्स की कार्यप्रणाली",
+      "learningOutcomesHi": "• एडोब एक्सप्रेस के क्विक एक्शन टूल्स को समझना।\n• एक क्लिक में इमेज से बैकग्राउंड हटाना सीखना।",
+      "instructionsHi": "शिक्षक एडोब एक्सप्रेस में 'रिमूव बैकग्राउंड' फीचर का उपयोग करके दिखाते हैं। छात्र अपनी इमेज का बैकग्राउंड हटाकर पारदर्शी पीएनजी बनाते हैं।"
+    },
+    {
+      "id": "m_5",
+      "index": 5,
+      "month": "August",
+      "monthHi": "अगस्त",
+      "week": "August - Week 1 (Part 2)",
+      "weekHi": "अगस्त - सप्ताह 1 (भाग 2)",
+      "moduleName": "Module 2: Unleash Creativity with Adobe Express",
+      "moduleNameHi": "मॉड्यूल 2: Adobe Express के साथ रचनात्मकता का विस्तार",
+      "subtopic": "2.2 Exploring “Quick Actions” in Adobe Express",
+      "activityName": "Create a short Animated video (Activity 2.2.1)",
+      "learningOutcomes": "• Actions under 'Quick Actions'\n• How to perform various tasks under 'Quick actions.’",
+      "instructions": "Teacher demonstrates:\n• Quick Action Tools\n• Animate character\n\nFor E-Module activity: Teacher to guide students to login into Adobe Express school; guide them towards Module 2 (Section 2.2) of online course on ‘Digital Creativity and AI Skills (Level-1)’",
+      "skillsInFocus": "Express by creating professional looking content, quickly",
+      "bookScreenshot": "",
+      "bookScreenshotLink": "",
+      "activityLinkClassroom": "https://express.adobe.com/sp/tools/animate-from-audio",
+      "activityLinkClassroomUrl": "https://express.adobe.com/sp/tools/animate-from-audio",
+      "activityLinkHomework": "",
+      "activityLinkHomeworkUrl": "",
+      "activityNameHi": "लघु एनिमेटेड वीडियो बनाएं (एक्टिविटी 2.2.1)",
+      "skillsInFocusHi": "त्वरित व पेशेवर सामग्री निर्माण",
+      "learningOutcomesHi": "• ऑडियो से एनीमेशन बनाने की प्रक्रिया सीखना।\n• कैरेक्टर चुनना और अपनी आवाज रिकॉर्ड करना।",
+      "instructionsHi": "छात्र एक एनिमेटेड कैरेक्टर चुनते हैं, संवाद रिकॉर्ड करते हैं और वीडियो डाउनलोड/शेयर करते हैं।"
+    },
+    {
+      "id": "m_6",
+      "index": 6,
+      "month": "August",
+      "monthHi": "अगस्त",
+      "week": "August - Week 3",
+      "weekHi": "अगस्त - सप्ताह 3",
+      "moduleName": "Module 2: Unleash Creativity with Adobe Express",
+      "moduleNameHi": "मॉड्यूल 2: Adobe Express के साथ रचनात्मकता का विस्तार",
+      "subtopic": "2.3 Getting Started with Educational Templates in Adobe Express",
+      "activityName": "Book report or poster on any chapter of NCERT book (Activity 2.3.1)",
+      "learningOutcomes": "• Familiarization with educational templates infographics\n• How to use and remix templates",
+      "instructions": "Teacher demonstrates:\n• Search for templates (poster, educational template etc)\n• Customize template/ Personalize poster (Edit text, add visual elements etc)\n\nFor E-Module activity:\nTeacher to guide students towards Module 2 (Section 2.3) of the online course on ‘Digital Creativity and AI Skills (Level-1)’",
+      "skillsInFocus": "Use educational templates, personalize, enhance and create projects",
+      "bookScreenshot": "M2,Page-55-56",
+      "bookScreenshotLink": "https://drive.google.com/file/d/1bEl2UC5oTx2XfpTO4xs3I0oyDYGcePVu/view?usp=drive_link",
+      "activityLinkClassroom": "Click the activity link - https://adobe.ly/3Rjf5jy",
+      "activityLinkClassroomUrl": "https://adobe.ly/3Rjf5jy",
+      "activityLinkHomework": "Personalize your school bag - https://adobe.ly/498BIgH",
+      "activityLinkHomeworkUrl": "https://adobe.ly/498BIgH",
+      "activityNameHi": "एनसीईआरटी अध्याय पर बुक रिपोर्ट या पोस्टर (एक्टिविटी 2.3.1)",
+      "skillsInFocusHi": "शैक्षिक टेम्पलेट अनुकूलन व प्रस्तुति",
+      "learningOutcomesHi": "• एनसीईआरटी विषय वस्तु का सार प्रस्तुत करना।\n• शैक्षिक टेम्पलेट्स को कस्टमाइज़ करना सीखना।",
+      "instructionsHi": "शिक्षक एनसीईआरटी के किसी पाठ पर आधारित बुक रिपोर्ट का टेम्पलेट दिखाते हैं। छात्र अपने पाठ के मुख्य बिंदुओं को ग्राफिक रूप में प्रस्तुत करते हैं।"
+    },
+    {
+      "id": "m_7",
+      "index": 7,
+      "month": "August",
+      "monthHi": "अगस्त",
+      "week": "August - Week 4",
+      "weekHi": "अगस्त - सप्ताह 4",
+      "moduleName": "Module 2: Unleash Creativity with Adobe Express",
+      "moduleNameHi": "मॉड्यूल 2: Adobe Express के साथ रचनात्मकता का विस्तार",
+      "subtopic": "2.3 Getting Started with Educational Templates in Adobe Express",
+      "activityName": "Video on separation of substances (Science, NCERT) - Activity 2.3.2",
+      "learningOutcomes": "Use educational template",
+      "instructions": "Teacher demonstrates:\n• Search templates\n• Select, open and customize a template (video)\n• Instructions to students for student collaborations, Science book activity\n\nFor E-Module activity:\nTeacher to guide students towards Module 2 (Section 2.3) of the online course on ‘Digital Creativity and AI Skills (Level-1)’",
+      "skillsInFocus": "Use educational templates and create school project in collaboration with other students",
+      "bookScreenshot": "M2,Page 57-58",
+      "bookScreenshotLink": "https://drive.google.com/file/d/1baTvdlz4bGlZecu1c0gA6sYwO1lE9MqJ/view?usp=drive_link",
+      "activityLinkClassroom": "Click the activity link  -https://adobe.ly/495H0JQ",
+      "activityLinkClassroomUrl": "https://adobe.ly/495H0JQ",
+      "activityLinkHomework": "Share your Summer Vibe - https://adobe.ly/3POGlpE",
+      "activityLinkHomeworkUrl": "https://adobe.ly/3POGlpE",
+      "activityNameHi": "पदार्थों के पृथक्करण पर वीडियो (विज्ञान, एनसीईआरटी) - 2.3.2",
+      "skillsInFocusHi": "सहयोगात्मक डिजिटल प्रोजेक्ट निर्माण",
+      "learningOutcomesHi": "• विज्ञान की अवधारणाओं को दृश्य रूप में समझाना।\n• साथियों के साथ मिलकर वीडियो प्रोजेक्ट बनाना।",
+      "instructionsHi": "छात्र समूह में पदार्थों के पृथक्करण (Separation of Substances) की विधियों पर संक्षिप्त व्याख्यात्मक वीडियो बनाते हैं।"
+    },
+    {
+      "id": "m_8",
+      "index": 8,
+      "month": "September",
+      "monthHi": "सितंबर",
+      "week": "September - Week 1",
+      "weekHi": "सितंबर - सप्ताह 1",
+      "moduleName": "Module 3: Exploring the Power of Generative AI in Adobe Express",
+      "moduleNameHi": "मॉड्यूल 3: Adobe Express में जनरेटिव AI की शक्ति का अन्वेषण",
+      "subtopic": "3.1 Introduction to AI and Generative AI",
+      "activityName": "Introduction to AI & Generative AI",
+      "learningOutcomes": "• Get introduced to the ‘Generative AI’ technology.\n• Understand the buzz around ‘Generative AI’.\n• Know about various Generative AI tools.",
+      "instructions": "The teacher will create a simple 2-slide presentation explaining how AI can support learning and creativity. Introduce AI and Generative AI concepts. Discuss popular AI tools such as Adobe Firefly and ChatGPT. Discuss real-world AI tools and their uses. Guide students to complete the Ignite video and Skill Check-up. Facilitate the Creativity Showcase activity and encourage students to explore additional resources.\n\n\nFor E-Module activity: Teacher to guide students to log in to Adobe Express school Account; guide them towards Module 3 (Section 3.3.1) of the online course on ‘Digital Creativity and AI Skills (Level-1).’",
+      "skillsInFocus": "AI Literacy, Creativity, Digital Awareness",
+      "bookScreenshot": "M3,Page-64,65",
+      "bookScreenshotLink": "https://drive.google.com/file/d/1nEAQBASCocTUQ9atX9poAHvS6sn25gDP/view?usp=drive_link",
+      "activityLinkClassroom": "Click the activity link-\nhttps://adobe.ly/3PYIy1O",
+      "activityLinkClassroomUrl": "https://adobe.ly/3PYIy1O",
+      "activityLinkHomework": "Create your own Robot helper-https://adobe.ly/4vv5ViQ",
+      "activityLinkHomeworkUrl": "https://adobe.ly/4vv5ViQ",
+      "activityNameHi": "एआई एवं जनरेटिव एआई का परिचय",
+      "skillsInFocusHi": "एआई साक्षरता, रचनात्मकता, डिजिटल जागरूकता",
+      "learningOutcomesHi": "• आर्टिफिशियल इंटेलिजेंस और जनरेटिव एआई की मूल बातें समझना।\n• जिम्मेदार और नैतिक एआई उपयोग के नियम जानना।",
+      "instructionsHi": "शिक्षक एडोब एक्सप्रेस में जनरेटिव एआई की कार्यप्रणाली समझाते हैं और सुरक्षित उपयोग के दिशा-निर्देश देते हैं।"
+    },
+    {
+      "id": "m_9",
+      "index": 9,
+      "month": "September",
+      "monthHi": "सितंबर",
+      "week": "September - Week 3",
+      "weekHi": "सितंबर - सप्ताह 3",
+      "moduleName": "Module 3: Exploring the Power of Generative AI in Adobe Express",
+      "moduleNameHi": "मॉड्यूल 3: Adobe Express में जनरेटिव AI की शक्ति का अन्वेषण",
+      "subtopic": "3.2 Generative AI Features In Adobe Express",
+      "activityName": "Generate Images & Insert Objects using Gen AI - Playing with Insert Object",
+      "learningOutcomes": "• Get introduced to the Generative AI features of Adobe Express.\n• Understand the Generate Image (text to image ), Insert objects (generative ll),\nGenerate Template and Generate Text E ects features.\n• Learn how to access these features on Adobe Express.",
+      "instructions": "The teacher explains the Generate Image and Insert Objects features in Adobe Express. Assists students in inserting objects into the AI-generated scene. Complete Skill Check-up and Creativity Showcase activities from the Guidebook.\n\nTeacher demonstrates:\n• Create an AI-generated scene beforehand\n• Insert objects in the AI-generated scene\n• Saving project/Download\n• Creating a link\n• Sharing link\n\nFor E-Module activity: Teacher to guide students to log in to Adobe Express school Account; guide them towards Module 3 (Section 3.2.1, 3.2.2, and 3.2.3) of the online course on ‘Digital Creativity and AI Skills (Level-1).’",
+      "skillsInFocus": "Image Creation, Design Thinking, Creativity, Content Creation, Visual Design, Creativity",
+      "bookScreenshot": "M3,Page 74-75",
+      "bookScreenshotLink": "https://drive.google.com/file/d/1TW2LYNpnyiq2k7bULg_RP0AfXy5-Gwpb/view?usp=drive_link",
+      "activityLinkClassroom": "Click the activity link\n-https://adobe.ly/4fv4sEh",
+      "activityLinkClassroomUrl": "https://adobe.ly/4fv4sEh",
+      "activityLinkHomework": "Design your Id card-https://adobe.ly/4o6R2k3",
+      "activityLinkHomeworkUrl": "https://adobe.ly/4o6R2k3",
+      "activityNameHi": "जनरेटिव एआई द्वारा इमेज निर्माण और ऑब्जेक्ट जोड़ना",
+      "skillsInFocusHi": "इमेज निर्माण, डिज़ाइन थिंकिंग, दृश्य डिज़ाइन",
+      "learningOutcomesHi": "• टेक्स्ट प्रॉम्प्ट से नई छवियां बनाना।\n• मौजूदा छवि में नए ऑब्जेक्ट सम्मिलित करना ('Insert Object')।",
+      "instructionsHi": "छात्र प्रॉम्प्ट लिखकर नई छवियां उत्पन्न करते हैं और 'Insert Object' टूल से अपने प्रोजेक्ट को समृद्ध करते हैं।"
+    },
+    {
+      "id": "m_10",
+      "index": 10,
+      "month": "September",
+      "monthHi": "सितंबर",
+      "week": "September - Week 4",
+      "weekHi": "सितंबर - सप्ताह 4",
+      "moduleName": "Module 3: Exploring the Power of Generative AI in Adobe Express",
+      "moduleNameHi": "मॉड्यूल 3: Adobe Express में जनरेटिव AI की शक्ति का अन्वेषण",
+      "subtopic": "3.3 Writing Generative AI Prompts",
+      "activityName": "Art of Prompt Texting - Crafting Precise Prompts for Generative AI in Adobe Express",
+      "learningOutcomes": "• Understand what Generative AI Prompts are.\n• Learn to write the prompts to generate the desired image or text effects.",
+      "instructions": "The teacher explains the importance of clear and detailed prompts. Guide students to identify elements of an effective prompt and practice prompt writing through the assigned activity. Facilitate discussion on how prompts influence AI outputs.\nTeacher demonstrates:\n• Using Generative AI\n• Writing detailed prompts\n• Insert objects in the generated image\n• Saving project/Download\n• Creating a link\n• Sharing link\n\nFor E-Module activity: Teacher to guide students to log in to Adobe Express school Account; guide them towards Module 1 (Section 3.3.1 and 3.3.2) of the online course on ‘Digital Creativity and AI Skills (Level-1).’",
+      "skillsInFocus": "Prompt Engineering, Critical Thinking, Communication",
+      "bookScreenshot": "M3,Page 82-83",
+      "bookScreenshotLink": "https://drive.google.com/file/d/1kEvi-QiHu590F3nMZkV5jhnw1N2W6_PY/view?usp=drive_link",
+      "activityLinkClassroom": "Click the activity link\nhttps://adobe.ly/4atuO6f",
+      "activityLinkClassroomUrl": "https://adobe.ly/4atuO6f",
+      "activityLinkHomework": "",
+      "activityLinkHomeworkUrl": "",
+      "activityNameHi": "प्रॉम्प्ट लेखन की कला: प्रभावी एआई प्रॉम्प्ट्स",
+      "skillsInFocusHi": "प्रॉम्प्ट इंजीनियरिंग, आलोचनात्मक चिंतन",
+      "learningOutcomesHi": "• सटीक और विस्तृत प्रॉम्प्ट लिखने की कला सीखना।\n• वर्णनात्मक शब्दों और शैलियों का सही चयन करना।",
+      "instructionsHi": "छात्र विभिन्न प्रॉम्प्ट संरचनाओं के साथ प्रयोग करते हैं और सीखते हैं कि कैसे बेहतर निर्देश बेहतर परिणाम देते हैं।"
+    },
+    {
+      "id": "m_11",
+      "index": 11,
+      "month": "October",
+      "monthHi": "अक्टूबर",
+      "week": "October - Week 1",
+      "weekHi": "अक्टूबर - सप्ताह 1",
+      "moduleName": "Module 3: Exploring the Power of Generative AI in Adobe Express",
+      "moduleNameHi": "मॉड्यूल 3: Adobe Express में जनरेटिव AI की शक्ति का अन्वेषण",
+      "subtopic": "3.4 Text effects using Generative AI in Adobe Express",
+      "activityName": "Text Effects Exploration with Adobe Express - Typography Design Challenge",
+      "learningOutcomes": "• Explore the feature Generate Text Effects of Generative AI.\n• Customise the predefined styles.\n• Apply styles and textures to text using prompts.",
+      "instructions": "The teacher explores Generate Text Effects in Adobe Express. Creates a title/poster using AI-generated text styles and textures. Experiments with different prompts to customize text appearance.\n\nTeacher demonstrates:\n• Text Effects in Adobe Express.\n• Guide students in creating customized text styles using prompts.\n• Encourage experimentation with different effects and completion of the collaborative activity.\n\n\nFor E-Module activity: Teacher to guide students to log in to Adobe Express school Account; guide them towards Module 3 (Section 3.4.1 and 3.4.2) of the online course on ‘Digital Creativity and AI Skills (Level-1).’",
+      "skillsInFocus": "Typography, Creativity, Visual Communication",
+      "bookScreenshot": "M3,Page 90-91",
+      "bookScreenshotLink": "https://drive.google.com/file/d/17a-BEZ5Tcd7fJpZOJpS7GvEMLPWHwj-Q/view?usp=drive_link",
+      "activityLinkClassroom": "https://www.youtube.com/watch?v=iSBJDoYBNmI",
+      "activityLinkClassroomUrl": "https://www.youtube.com/watch?v=iSBJDoYBNmI",
+      "activityLinkHomework": "",
+      "activityLinkHomeworkUrl": "",
+      "activityNameHi": "एडोब एक्सप्रेस टेक्स्ट प्रभाव अन्वेषण (टाइपोग्राफी चुनौती)",
+      "skillsInFocusHi": "टाइपोग्राफी, रचनात्मकता, दृश्य संचार",
+      "learningOutcomesHi": "• टेक्स्ट इफेक्ट्स का रचनात्मक उपयोग सीखना।\n• अक्षरों पर अनूठी बनावट और सामग्री लागू करना।",
+      "instructionsHi": "छात्र सामान्य टेक्स्ट को एआई टेक्स्ट इफेक्ट्स से बदलकर आकर्षक शीर्षक बनाते हैं।"
+    },
+    {
+      "id": "m_12",
+      "index": 12,
+      "month": "October",
+      "monthHi": "अक्टूबर",
+      "week": "October - Week 5",
+      "weekHi": "अक्टूबर - सप्ताह 5",
+      "moduleName": "Module 4: Designing Graphics and Enhancing Productivity with Adobe Express",
+      "moduleNameHi": "मॉड्यूल 4: ग्राफिक्स डिज़ाइन और उत्पादकता वृद्धि",
+      "subtopic": "4.1 Exploring Templates in Adobe Express",
+      "activityName": "Design poster on Earth Day/ Indian Festivals/ National Science Day (Activity 4.1.1)",
+      "learningOutcomes": "• Explore a diverse range of templates available in Adobe Express to elevate designs and presentation.\n• Learn how to customize these templates to add personal touch.",
+      "instructions": "Variety of templates on Adobe Express, including specifically for educational, academic, and non-academic purposes. Templates such as videos, presentation templates, social media templates, posters, flyers, infographics.\n\nTeacher to demostrate:\n• Look through templates, choose a template that suits a project\n• After selecting template, personalize by changing text, colors, images\n• After completion of the work, save and share\n\nFor E-Module activity: Teacher to guide students to Module 4 (Section 4.1) of the online course on ‘Digital Creativity and AI Skills (Level-1).’",
+      "skillsInFocus": "Search and select templates, personalize and design templates as per requirements",
+      "bookScreenshot": "M4,Page 101-102",
+      "bookScreenshotLink": "https://drive.google.com/file/d/1RBBJ_phKNR48lMjKbSOy6x5Yj7YT_d50/view?usp=drive_link",
+      "activityLinkClassroom": "https://adobe.ly/4nHhKQh",
+      "activityLinkClassroomUrl": "https://adobe.ly/4nHhKQh",
+      "activityLinkHomework": "Click here for the activity link- https://adobe.ly/4nHhKQh",
+      "activityLinkHomeworkUrl": "https://adobe.ly/4nHhKQh",
+      "activityNameHi": "पृथ्वी दिवस / त्योहारों पर पोस्टर डिज़ाइन (एक्टिविटी 4.1.1)",
+      "skillsInFocusHi": "टेम्पलेट चयन, अनुकूलन व डिज़ाइन",
+      "learningOutcomesHi": "• सामाजिक व पर्यावरणीय मुद्दों पर जागरूकता पोस्टर बनाना।\n• रंगों और लेआउट का संतुलित प्रयोग करना।",
+      "instructionsHi": "छात्र पृथ्वी दिवस या किसी राष्ट्रीय त्योहार पर एडोब एक्सप्रेस टेम्पलेट्स की सहायता से पोस्टर बनाते हैं।"
+    },
+    {
+      "id": "m_13",
+      "index": 13,
+      "month": "November",
+      "monthHi": "नवंबर",
+      "week": "November - Week 1",
+      "weekHi": "नवंबर - सप्ताह 1",
+      "moduleName": "Module 4: Designing Graphics and Enhancing Productivity with Adobe Express",
+      "moduleNameHi": "मॉड्यूल 4: ग्राफिक्स डिज़ाइन और उत्पादकता वृद्धि",
+      "subtopic": "4.1 Exploring Templates in Adobe Express",
+      "activityName": "Activity 4.1.2: Collaborative template exploration of the Activity 4.1.1",
+      "learningOutcomes": "• Explore templates to elevate designs and presentation\n• Customize and personalize templates, in collaboration",
+      "instructions": "Teacher to:\n• Divide students into groups of 3 or 4. Each group to be given a task to create 2-3 awareness posters on Earth Day\n• Nominate 1 person from the group who would add other team members for collaboration\nGuide students to:\n- In an existing Earth Day poster file, click on ‘Invite’, to add other team members (school email IDs) to contribute to the file\n- Press 'invite to edit’ or ‘invite to comment’ button as per requirement\n- Create new posters by clicking on the ‘Add page’ and let the group complete the activity.\n- Once completed designing the poster, Click on Download\n- Next, click on ‘Share’ and go to ‘View only Link’ and ‘Create a Link’. Wait for Adobe Express to create a shareable link.\n- Copy the URL and submit the work at the provided location\n- Work can also be shared through ‘Google Classrooms’ and allow access to friends to collaborate on the poster.\n\nFor E-Module activity: Teacher to guide students to Module 4 (Section 4.1) of the online course on ‘Digital Creativity and AI Skills (Level-1).’",
+      "skillsInFocus": "Collaborative template exploration, share work and work together with other students",
+      "bookScreenshot": "M4,Page 101-102",
+      "bookScreenshotLink": "https://drive.google.com/file/d/1RBBJ_phKNR48lMjKbSOy6x5Yj7YT_d50/view?usp=drive_link",
+      "activityLinkClassroom": "https://express.adobe.com",
+      "activityLinkClassroomUrl": "https://express.adobe.com",
+      "activityLinkHomework": "",
+      "activityLinkHomeworkUrl": "",
+      "activityNameHi": "सहयोगात्मक टेम्पलेट अन्वेषण (एक्टिविटी 4.1.2)",
+      "skillsInFocusHi": "सहयोगात्मक कार्य एवं टीमवर्क",
+      "learningOutcomesHi": "• अन्य छात्रों के साथ लाइव प्रोजेक्ट साझा करना।\n• संयुक्त रूप से एक डिज़ाइन पर फीडबैक देना और सुधारना।",
+      "instructionsHi": "छात्र अपने प्रोजेक्ट को कक्षा के साथी के साथ शेयर करते हैं और मिलकर डिज़ाइन पूरा करते हैं।"
+    },
+    {
+      "id": "m_14",
+      "index": 14,
+      "month": "November",
+      "monthHi": "नवंबर",
+      "week": "November - Week 3",
+      "weekHi": "नवंबर - सप्ताह 3",
+      "moduleName": "Module 4: Designing Graphics and Enhancing Productivity with Adobe Express",
+      "moduleNameHi": "मॉड्यूल 4: ग्राफिक्स डिज़ाइन और उत्पादकता वृद्धि",
+      "subtopic": "4.2 Graphical features of Adobe Express",
+      "activityName": "Design a graphic that tells a six-word story from history (Activity 4.2.1)",
+      "learningOutcomes": "• Learn about various features available in Adobe Express to design graphic\n• Understand how to download the designed graphic and collaborate with peers",
+      "instructions": "Teacher to demonstrate:\nVarious features on Adobe Express to design a graphic: such as templates, media, text, elements, charts and grids.\n\n• Media Files: Such as, Adobe Stock images and videos, generative AI for custom image creation using text prompts, audio options like music, sound effects, and voiceovers.\n• Customizable Text Options Add and customize text in various fonts, colors, and styles. Options to also adjust size, spacing, alignment to fit a design.\n- Generative AI Text Effects, Add shadows and shapes, outlines, and highlights to words, Choose from a library of fonts, Animate Text\n• Elements: Includes, design assets, backgrounds, icons, shapes, charts etc. Design assets include creative elements like stickers, illustrations, and textures that add personality and style to the designs.\n\nFor E-Module activity: Teacher to guide students to Module 4 (Section 4.2) of the online course on ‘Digital Creativity and AI Skills (Level-1).’",
+      "skillsInFocus": "Create well-organized and visually striking projects. Demonstrate an idea/ understanding by designing a graphic that tells the story.",
+      "bookScreenshot": "M4,Page-108-109",
+      "bookScreenshotLink": "https://drive.google.com/file/d/1581hh8cbYUh1aNEDHaDGqy6urTsPj7od/view?usp=drive_link",
+      "activityLinkClassroom": "https://express.adobe.com",
+      "activityLinkClassroomUrl": "https://express.adobe.com",
+      "activityLinkHomework": "",
+      "activityLinkHomeworkUrl": "",
+      "activityNameHi": "इतिहास की छह शब्दों की कहानी का ग्राफिक डिज़ाइन (4.2.1)",
+      "skillsInFocusHi": "दृश्य कहानी और संक्षिप्त संचार",
+      "learningOutcomesHi": "• केवल छह शब्दों में एक ऐतिहासिक घटना को बयान करना।\n• उपयुक्त पृष्ठभूमि और टाइपोग्राफी से कहानी को जीवंत बनाना।",
+      "instructionsHi": "छात्र इतिहास की किसी प्रमुख घटना को 6 शब्दों में लिखते हैं और प्रभावशाली ग्राफिक तैयार करते हैं।"
+    },
+    {
+      "id": "m_15",
+      "index": 15,
+      "month": "November",
+      "monthHi": "नवंबर",
+      "week": "November - Week 4",
+      "weekHi": "नवंबर - सप्ताह 4",
+      "moduleName": "Module 4: Designing Graphics and Enhancing Productivity with Adobe Express",
+      "moduleNameHi": "मॉड्यूल 4: ग्राफिक्स डिज़ाइन और उत्पादकता वृद्धि",
+      "subtopic": "4.3 Step-by-Step Guide to Design a Graphic",
+      "activityName": "Graphic Design Challenge (Activity 4.3.1)",
+      "learningOutcomes": "• Learn about creating graphics from scratch.\n• Explore various methods to customize templates and incorporate unique elements into it.",
+      "instructions": "Teacher to explain and demonstrate:\n\nStep 1: Select a theme or Message (such as, patriotic, educational, environmental themes)\nStep 2: Select a Template in Adobe Express\nStep 3: Add and Customize Visual Elements\n• Customize the Template: Edit the text to reflect a message. Use large, bold fonts for headings, smaller fonts for details.\n• Add relevant images or icons from Adobe’s library.\n• Utilize shapes to organize layout, create emphasis, or enhance the overall design.\nStep 4: Review and Finalize the Design.\nEnsure that text is easy to read and the message is clear. Check for balance and alignment; arrange elements in a symmetrical and visually pleasing way.\n\nWhen complete, click “Download” to save the design. Then share and submit the link.\n\nFor E-Module activity: Teacher to guide students to Module 4 (Section 4.3) of the online course on ‘Digital Creativity and AI Skills (Level-1).’",
+      "skillsInFocus": "Apply planning and creativity to digital design. Create polished, impactful graphics that communicate ideas effectively.",
+      "bookScreenshot": "",
+      "bookScreenshotLink": "",
+      "activityLinkClassroom": "https://express.adobe.com",
+      "activityLinkClassroomUrl": "https://express.adobe.com",
+      "activityLinkHomework": "",
+      "activityLinkHomeworkUrl": "",
+      "activityNameHi": "संपूर्ण ग्राफिक डिज़ाइन चुनौती (एक्टिविटी 4.3.1)",
+      "skillsInFocusHi": "योजना, रचनात्मकता और डिज़ाइन निष्पादन",
+      "learningOutcomesHi": "• स्क्रैच से पूर्ण ग्राफिक डिज़ाइन तैयार करना।\n• संतुलित संयोजन, पदानुक्रम और सौंदर्यबोध का प्रदर्शन करना।",
+      "instructionsHi": "छात्र स्वतंत्र रूप से एक संपूर्ण डिज़ाइन प्रोजेक्ट (पोस्टर, ब्रोशर या सोशल पोस्ट) बनाते हैं।"
+    },
+    {
+      "id": "m_16",
+      "index": 16,
+      "month": "December",
+      "monthHi": "दिसंबर",
+      "week": "December - Week 1",
+      "weekHi": "दिसंबर - सप्ताह 1",
+      "moduleName": "Module 4: Designing Graphics and Enhancing Productivity with Adobe Express",
+      "moduleNameHi": "मॉड्यूल 4: ग्राफिक्स डिज़ाइन और उत्पादकता वृद्धि",
+      "subtopic": "4.3 Step-by-Step Guide to Design a Graphic",
+      "activityName": "Collaborative template exploration on given topics (Activity 4.3.2)",
+      "learningOutcomes": "• Learn about creating graphics from scratch.\n• Explore various methods to customize templates and incorporate unique elements into it.",
+      "instructions": "Teacher to guide students to work together, and design a project from given topics, download and share the link.\n\nTeacher to:\n• Form a group of 2-4 students, to work in collaboration, create and submit project\n• Assign roles within the group, such as project manager, designer, editor, and communicator, to ensure smooth collaboration\n• Guide students to define and divide the tasks among themselves\n• Direct students to collaboratively design and customize graphic, as per the step by step guide\n\nFor E-Module activity: Teacher to guide students to Module 4 (Section 4.3) of the online course on ‘Digital Creativity and AI Skills (Level-1).’",
+      "skillsInFocus": "Collaboratively design and customize graphic, on given topics. Collaborate with students by sharing work, and work together.",
+      "bookScreenshot": "M4,Page-108-109",
+      "bookScreenshotLink": "https://drive.google.com/file/d/1581hh8cbYUh1aNEDHaDGqy6urTsPj7od/view?usp=drive_link",
+      "activityLinkClassroom": "Click the activity link-https://adobe.ly/4dOufWQ",
+      "activityLinkClassroomUrl": "https://adobe.ly/4dOufWQ",
+      "activityLinkHomework": "",
+      "activityLinkHomeworkUrl": "",
+      "activityNameHi": "दिए गए विषयों पर सहयोगात्मक टेम्पलेट अन्वेषण (4.3.2)",
+      "skillsInFocusHi": "टीम सहयोग एवं रचनात्मक अनुकूलन",
+      "learningOutcomesHi": "• समसामयिक विषयों पर सहयोगात्मक प्रोजेक्ट पूरा करना।\n• टीम के साथ मिलकर अंतिम पोर्टफोलियो पीस तैयार करना।",
+      "instructionsHi": "छात्र दिए गए विषयों पर समूह में एडोब एक्सप्रेस में सहयोगात्मक डिज़ाइन तैयार करते हैं और अंतिम प्रस्तुति देते हैं।"
+    }
+  ],
+  "grades": [
+    {
+      "id": "6",
+      "nameEn": "Grade 6",
+      "nameHi": "कक्षा 6",
+      "count": 16,
+      "icon": "🎓",
+      "tagEn": "Middle School Level 1",
+      "tagHi": "मिडिल स्कूल स्तर 1"
+    },
+    {
+      "id": "7",
+      "nameEn": "Grade 7",
+      "nameHi": "कक्षा 7",
+      "count": 16,
+      "icon": "🎓",
+      "tagEn": "Middle School Level 2",
+      "tagHi": "मिडिल स्कूल स्तर 2"
+    },
+    {
+      "id": "8",
+      "nameEn": "Grade 8",
+      "nameHi": "कक्षा 8",
+      "count": 16,
+      "icon": "🎓",
+      "tagEn": "Middle School Level 3",
+      "tagHi": "मिडिल स्कूल स्तर 3"
+    }
+  ]
+};
+
+
+
+/* ===== LANGUAGE SYSTEM ===== */
+var currentLang = 'en';
+
+var LANG = {
+  en: {
+    hdrSub: 'Student Creative Studio',
+    hdrBadge: 'Student Portal',
+    heroTag: '🎨 Creative Studio - For Students',
+    heroTitle: 'Create Something New Every Month! 🎉',
+    heroSub: "Pick your project, watch a short video, create in Adobe Express, and show your teacher. It is that easy!",
+    flow1: 'Pick Month',
+    flow2: 'Watch Video',
+    flow3: 'Mid-Term Exam',
+    flow4: 'Submit!',
+    flowBootcamp: 'Autumn Bootcamp',
+    sBootTag: 'Special Initiative • Autumn Bootcamp',
+    sBootTitle: 'CBSE Digital Innovation Bootcamp',
+    sBootDesc: 'Join 3 fun live sessions: Comic-a-concept, Hero of My Nation, and My Childhood Memory. Use GenAI in Adobe Express!',
+    sBootHint: '3 Live Sessions • Templates & YouTube',
+    sBootBtn: 'Open Bootcamp →',
+    guideText: '<strong>Tap any box below</strong> to open it and start your creative work!',
+    backBtn: 'Back to Sections',
+    s1tag: 'Section 1',
+    s1title: 'Monthly Creative Activities',
+    s1desc: 'One fun art project for every month - January to December. Watch, make, submit!',
+    s1hint: '12 Fun Challenges',
+    s1btn: 'Open →',
+    s2tag: 'Section 2',
+    s2title: 'Skill Building Tracks',
+    s2desc: 'Learn step-by-step: design posters, make videos, create social posts, and more!',
+    s2hint: '5 Guided Tracks',
+    s2btn: 'Open →',
+    s3tag: 'Section 3 • DCAIS',
+    s3title: 'DCAIS Activities',
+    s3desc: '16 Weekly curriculum modules for Grades 6-8 from DCAIS. Select your grade, make posters, videos and earn your DCAIS certificate!',
+    s3hint: '16 Weekly Modules • Grades 6-8',
+    s3btn: 'Open →',
+    s4tag: 'Section 4 • Mid-Term Exam',
+    s4title: 'DCAIS Mid-Term Examination',
+    s4desc: 'Official regional examination forms for 16 CBSE Regional Offices. Open test link mid term and submit your exam.',
+    s4hint: '16 CBSE Regional Offices • Sem-1 Exam',
+    s4btn: 'Open →',
+    s5tag: 'Section 5',
+    s5title: 'How-To Videos',
+    s5desc: 'Short videos that show you exactly how to use Adobe Express tools. Easy to follow!',
+    s5hint: '5 Video Masterclasses',
+    s5btn: 'Open →',
+    s6tag: 'Section 6',
+    s6title: 'Creative Tools',
+    s6desc: 'Jump straight into making! Open posters, videos, cards, collages and more in Adobe Express.',
+    s6hint: '8 Quick Launch Tools',
+    s6btn: 'Open →',
+    s7tag: 'Section 7',
+    s7title: 'My Badges & Awards',
+    s7desc: 'See what badges you have won! Keep doing projects to unlock more cool rewards.',
+    s7hint: '6 Milestone Badges',
+    s7btn: 'Open →'
+  },
+  hi: {
+    hdrSub: 'छात्र क्रिएटिव स्टूडियो',
+    hdrBadge: 'छात्र पोर्टल',
+    heroTag: '🎨 क्रिएटिव स्टूडियो - छात्रों के लिए',
+    heroTitle: 'हर महीने कुछ नया बनाओ! 🎉',
+    heroSub: 'अपना प्रोजेक्ट चुनो, छोटा वीडियो देखो, Adobe Express में बनाओ, और टीचर को दिखाओ। बस इतना ही!',
+    flow1: 'महीना चुनो',
+    flow2: 'वीडियो देखो',
+    flow3: 'मिड-टर्म परीक्षा',
+    flow4: 'जमा करो!',
+    flowBootcamp: 'शरद ऋतु बूटकैंप',
+    sBootTag: 'विशेष पहल • शरद ऋतु बूटकैंप',
+    sBootTitle: 'केवीएस शरद ऋतु बूटकैंप',
+    sBootDesc: '3 लाइव सत्र: कॉमिक-ए-कॉन्सेप्ट, हीरो ऑफ़ माय नेशन, और माय चाइल्डहुड मेमोरी। एडोब एक्सप्रेस में जेन-एआई का उपयोग करें!',
+    sBootHint: '3 लाइव सत्र • टेम्पलेट्स और यूट्यूब',
+    sBootBtn: 'बूटकैंप खोलें →',
+    guideText: '<strong>नीचे किसी भी बॉक्स पर टैप करो</strong> और अपना क्रिएटिव काम शुरू करो!',
+    backBtn: 'वापस जाओ',
+    s1tag: 'सेक्शन 1',
+    s1title: 'मासिक क्रिएटिव एक्टिविटी',
+    s1desc: 'हर महीने एक मज़ेदार आर्ट प्रोजेक्ट - जनवरी से दिसंबर तक।',
+    s1hint: '12 मज़ेदार चैलेंज',
+    s1btn: 'खोलो →',
+    s2tag: 'सेक्शन 2',
+    s2title: 'स्किल ट्रैक्स',
+    s2desc: 'पोस्टर बनाओ, वीडियो बनाओ, सोशल पोस्ट बनाओ - कदम दर कदम सीखो!',
+    s2hint: '5 गाइडेड ट्रैक्स',
+    s2btn: 'खोलो →',
+    s3tag: 'सेक्शन 3 • DCAIS',
+    s3title: 'DCAIS एक्टिविटीज़',
+    s3desc: 'कक्षा 6 से 8 के लिए 16 साप्ताहिक DCAIS पाठ्यक्रम मॉड्यूल। अपनी कक्षा चुनें, पोस्टर, वीडियो बनाएं और DCAIS प्रमाणपत्र प्राप्त करें!',
+    s3hint: '16 साप्ताहिक मॉड्यूल • कक्षा 6-8',
+    s3btn: 'खोलो →',
+    s4tag: 'सेक्शन 4 • मिड-टर्म परीक्षा',
+    s4title: 'DCAIS मिड-टर्म परीक्षा',
+    s4desc: '15 CBSE संभागों के लिए आधिकारिक क्षेत्रीय परीक्षा फॉर्म। मिड-टर्म टेस्ट लिंक खोलें और परीक्षा सबमिट करें।',
+    s4hint: '15 CBSE संभाग • Sem-1 परीक्षा',
+    s4btn: 'खोलो →',
+    s5tag: 'सेक्शन 5',
+    s5title: 'कैसे करें वीडियो',
+    s5desc: 'छोटे वीडियो जो दिखाते हैं Adobe Express के टूल्स कैसे इस्तेमाल करें।',
+    s5hint: '5 वीडियो मास्टरक्लास',
+    s5btn: 'खोलो →',
+    s6tag: 'सेक्शन 6',
+    s6title: 'क्रिएटिव टूल्स',
+    s6desc: 'सीधे बनाना शुरू करो! पोस्टर, वीडियो, कार्ड्स और बहुत कुछ Adobe Express में बनाओ।',
+    s6hint: '8 त्वरित लॉन्च टूल्स',
+    s6btn: 'खोलो →',
+    s7tag: 'सेक्शन 7',
+    s7title: 'मेरे बैज और पुरस्कार',
+    s7desc: 'देखो तुमने कौन से बैज जीते हैं! और ज़्यादा प्रोजेक्ट करो, और पुरस्कार पाओ।',
+    s7hint: '6 मील के पत्थर के बैज',
+    s7btn: 'खोलो →'
+  }
+};
+
+var currentOpenSection = null;
+
+function toggleLang() {
+  currentLang = (currentLang === 'en') ? 'hi' : 'en';
+  var bEn = document.getElementById('langBtnEN');
+  var bHi = document.getElementById('langBtnHI');
+  if (bEn) bEn.classList.toggle('active', currentLang === 'en');
+  if (bHi) bHi.classList.toggle('active', currentLang === 'hi');
+  applyLang();
+  if (currentOpenSection) {
+    openSection(currentOpenSection, true);
+  }
+}
+
+function applyLang() {
+  var L = LANG[currentLang];
+  var set = function(id, val) {
+    var e = document.getElementById(id);
+    if (e) e.innerHTML = val;
+  };
+  set('hdrSubLabel', L.hdrSub);
+  set('hdrBadge', L.hdrBadge);
+  set('heroTagText', L.heroTag);
+  set('heroTitle', L.heroTitle);
+  set('heroSub', L.heroSub);
+  set('flow1', L.flow1);
+  set('flow2', L.flow2);
+  set('flow3', L.flow3);
+  set('flow4', L.flow4);
+  set('guideText', L.guideText);
+  set('backBtnLabel', L.backBtn);
+  set('crumbHome', currentLang === 'hi' ? 'होम' : 'Home');
+  set('s1-tag', L.s1tag); set('s1-title', L.s1title); set('s1-desc', L.s1desc); set('s1-hint', L.s1hint); set('s1-btn', L.s1btn);
+  set('s2-tag', L.s2tag); set('s2-title', L.s2title); set('s2-desc', L.s2desc); set('s2-hint', L.s2hint); set('s2-btn', L.s2btn);
+  set('s3-tag', L.s3tag); set('s3-title', L.s3title); set('s3-desc', L.s3desc); set('s3-hint', L.s3hint); set('s3-btn', L.s3btn);
+  set('s4-tag', L.s4tag); set('s4-title', L.s4title); set('s4-desc', L.s4desc); set('s4-hint', L.s4hint); set('s4-btn', L.s4btn);
+    set('flowBootcamp', L.flowBootcamp);
+  set('sBoot-tag', L.sBootTag); set('sBoot-title', L.sBootTitle); set('sBoot-desc', L.sBootDesc); set('sBoot-hint', L.sBootHint); set('sBoot-btn', L.sBootBtn);
+  set('s5-tag', L.s5tag); set('s5-title', L.s5title); set('s5-desc', L.s5desc); set('s5-hint', L.s5hint); set('s5-btn', L.s5btn);
+  set('s6-tag', L.s6tag); set('s6-title', L.s6title); set('s6-desc', L.s6desc); set('s6-hint', L.s6hint); set('s6-btn', L.s6btn);
+  set('s7-tag', L.s7tag); set('s7-title', L.s7title); set('s7-desc', L.s7desc); set('s7-hint', L.s7hint); set('s7-btn', L.s7btn);
+}
+
+/* ===== MONTH DATA ===== */
+var curMonth = 0;
+var MONTH_SUBMISSION_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScEzxzVqZp3ivr-C18TAimHJV-hXIFzVaVmR-q7Ab-031xVQA/viewform?usp=header';
+var MONTHS = [
+  { name: 'January', nameHi: 'जनवरी', theme: 'Republic Day', themeHi: 'गणतंत्र दिवस', activity: 'Republic Day Poster', activityHi: 'गणतंत्र दिवस पोस्टर', desc: 'Make a colourful poster to celebrate Republic Day! Use bright red, white, and blue colours. Add the Indian flag and a patriotic message.', descHi: 'गणतंत्र दिवस मनाने के लिए एक रंगीन पोस्टर बनाएं! चमकीले रंगों का उपयोग करें, भारतीय तिरंगा और देशभक्ति का संदेश जोड़ें।', dur: '45 min', durHi: '45 मिनट', skills: ['Poster Design','Colour','Typography'], skillsHi: ['पोस्टर डिज़ाइन','रंग संयोजन','टाइपोग्राफी'], tutorial: 'https://www.youtube.com/results?search_query=adobe+express+poster+tutorial', create: 'https://express.adobe.com/sp/design/posters', submit: MONTH_SUBMISSION_URL },
+  { name: 'February', nameHi: 'फ़रवरी', theme: 'Friendship Day', themeHi: 'मित्रता दिवस', activity: 'Friendship Greeting Card', activityHi: 'मित्रता ग्रीटिंग कार्ड', desc: 'Make a lovely card for your best friend or family. Use hearts, nice colours, and a sweet message inside!', descHi: 'अपने सबसे अच्छे दोस्त या परिवार के लिए एक प्यारा कार्ड बनाएं। सुंदर रंगों और प्यारे संदेश का उपयोग करें!', dur: '40 min', durHi: '40 मिनट', skills: ['Card Design','Colour Theory','Typography'], skillsHi: ['कार्ड डिज़ाइन','रंग सिद्धांत','टाइपोग्राफी'], tutorial: 'https://www.youtube.com/results?search_query=adobe+express+card+tutorial', create: 'https://express.adobe.com/sp/design/cards', submit: MONTH_SUBMISSION_URL },
+  { name: 'March', nameHi: 'मार्च', theme: 'Holi Festival', themeHi: 'होली उत्सव', activity: 'Holi Fest Flyer', activityHi: 'होली उत्सव फ़्लायर', desc: 'Create a fun, colourful flyer for the Holi festival! Use lots of colours - pink, green, yellow - and write where and when your school Holi event is.', descHi: 'होली उत्सव के लिए एक मज़ेदार, रंगीन फ़्लायर बनाएं! गुलाबी, हरे, पीले रंगों का उपयोग करें और स्कूल कार्यक्रम का विवरण लिखें।', dur: '45 min', durHi: '45 मिनट', skills: ['Flyer Design','Vibrant Colours','Layout'], skillsHi: ['फ़्लायर डिज़ाइन','रंग संयोजन','लेआउट'], tutorial: 'https://www.youtube.com/results?search_query=adobe+express+flyer+tutorial', create: 'https://express.adobe.com/sp/design/flyers', submit: MONTH_SUBMISSION_URL },
+  { name: 'April', nameHi: 'अप्रैल', theme: 'Earth Day', themeHi: 'पृथ्वी दिवस', activity: 'Save the Earth Poster', activityHi: 'पृथ्वी बचाओ पोस्टर', desc: 'Make a poster that tells people how to save the Earth. Draw trees, water, or animals and write a message like "Plant More Trees!"', descHi: 'पृथ्वी को बचाने का संदेश देने वाला पोस्टर बनाएं। पेड़, पानी या जानवरों के चित्र बनाएं और "अधिक पेड़ लगाएं!" जैसा संदेश लिखें।', dur: '50 min', durHi: '50 मिनट', skills: ['Social Awareness','Poster Design','Illustration'], skillsHi: ['सामाजिक जागरूकता','पोस्टर डिज़ाइन','चित्रण'], tutorial: 'https://www.youtube.com/results?search_query=adobe+express+poster+earth+day', create: 'https://express.adobe.com/sp/design/posters', submit: MONTH_SUBMISSION_URL },
+  { name: 'May', nameHi: 'मई', theme: 'Mothers Day', themeHi: 'मातृ दिवस', activity: 'Mothers Day Card & Video', activityHi: 'मातृ दिवस कार्ड और वीडियो', desc: 'Create a special card OR a short video message for your mom. Tell her why she is amazing! Share it with your family.', descHi: 'अपनी माँ के लिए एक विशेष कार्ड या छोटा वीडियो संदेश बनाएं। उन्हें बताएं कि वे कितनी खास हैं!', dur: '50 min', durHi: '50 मिनट', skills: ['Card Design','Video','Personal Message'], skillsHi: ['कार्ड डिज़ाइन','वीडियो','व्यक्तिगत संदेश'], tutorial: 'https://www.youtube.com/results?search_query=adobe+express+mothers+day', create: 'https://express.adobe.com/sp/design/cards', submit: MONTH_SUBMISSION_URL },
+  { name: 'June', nameHi: 'जून', theme: 'Yoga & Health', themeHi: 'योग और स्वास्थ्य', activity: 'International Yoga Day Post', activityHi: 'अंतर्राष्ट्रीय योग दिवस पोस्ट', desc: 'Make a social media post or poster about Yoga. Show a yoga pose or write about how yoga keeps us healthy.', descHi: 'योग के बारे में एक सोशल मीडिया पोस्ट या पोस्टर बनाएं। योगासन दिखाएं और योग से स्वस्थ रहने के लाभ लिखें।', dur: '40 min', durHi: '40 मिनट', skills: ['Health Awareness','Social Post Design','Layout'], skillsHi: ['स्वास्थ्य जागरूकता','सोशल पोस्ट डिज़ाइन','लेआउट'], tutorial: 'https://www.youtube.com/results?search_query=adobe+express+social+post', create: 'https://express.adobe.com/sp/design/social', submit: MONTH_SUBMISSION_URL },
+  { name: 'July', nameHi: 'जुलाई', theme: 'Independence Month', themeHi: 'स्वतंत्रता माह', activity: 'Freedom Comic Strip', activityHi: 'स्वतंत्रता कॉमिक स्ट्रिप', desc: 'Create a 4-panel comic strip about India freedom fighters. Use speech bubbles and bright illustrations.', descHi: 'भारत के स्वतंत्रता सेनानियों पर 4-पैनल वाली कॉमिक स्ट्रिप बनाएं। स्पीच बबल और सुंदर चित्रों का उपयोग करें।', dur: '60 min', durHi: '60 मिनट', skills: ['Comic Design','Storytelling','Illustration'], skillsHi: ['कॉमिक डिज़ाइन','कहानी','चित्रण'], tutorial: 'https://www.youtube.com/results?search_query=adobe+express+comic+strip', create: 'https://express.adobe.com/sp/design/comics', submit: MONTH_SUBMISSION_URL },
+  { name: 'August', nameHi: 'अगस्त', theme: 'Independence Day', themeHi: 'स्वतंत्रता दिवस', activity: 'Independence Day Celebration Video', activityHi: 'स्वतंत्रता दिवस समारोह वीडियो', desc: 'Make a short video (30-60 sec) to celebrate India Independence Day! Add photos, patriotic music, and your voice message.', descHi: 'स्वतंत्रता दिवस समारोह के लिए 30-60 सेकंड का वीडियो बनाएं! तस्वीरें, देशभक्ति संगीत और अपनी आवाज़ जोड़ें।', dur: '60 min', durHi: '60 मिनट', skills: ['Video Editing','Narration','Music'], skillsHi: ['वीडियो संपादन','कथावाचन','संगीत'], tutorial: 'https://www.youtube.com/results?search_query=adobe+express+video+tutorial', create: 'https://express.adobe.com/sp/design/videos', submit: MONTH_SUBMISSION_URL },
+  { name: 'September', nameHi: 'सितंबर', theme: 'Teachers Day', themeHi: 'शिक्षक दिवस', activity: 'Thank You Teacher Card', activityHi: 'थैंक यू टीचर कार्ड', desc: 'Design a beautiful card to thank your favourite teacher! Add their name, a nice photo or illustration, and a message from your heart.', descHi: 'अपने पसंदीदा शिक्षक को धन्यवाद देने के लिए एक सुंदर कार्ड डिज़ाइन करें! उनका नाम और दिल से आभार संदेश लिखें।', dur: '45 min', durHi: '45 मिनट', skills: ['Card Design','Personal Message','Typography'], skillsHi: ['कार्ड डिज़ाइन','व्यक्तिगत संदेश','टाइपोग्राफी'], tutorial: 'https://www.youtube.com/results?search_query=adobe+express+card', create: 'https://express.adobe.com/sp/design/cards', submit: MONTH_SUBMISSION_URL },
+  { name: 'October', nameHi: 'अक्टूबर', theme: 'Diwali Festive', themeHi: 'दीपावली उत्सव', activity: 'Diwali Greeting & Rangoli Design', activityHi: 'दीवाली ग्रीटिंग और रंगोली डिज़ाइन', desc: 'Create a Diwali greeting card with a beautiful digital rangoli design. Use gold, red, and orange colours. Wish everyone "Happy Diwali!"', descHi: 'सुंदर डिजिटल रंगोली डिज़ाइन के साथ दीवाली ग्रीटिंग कार्ड बनाएं। सुनहरे, लाल और नारंगी रंगों का उपयोग करें।', dur: '55 min', durHi: '55 मिनट', skills: ['Festival Design','Colour','Cultural Art'], skillsHi: ['उत्सव डिज़ाइन','रंग','पारंपरिक कला'], tutorial: 'https://www.youtube.com/results?search_query=adobe+express+diwali+poster', create: 'https://express.adobe.com/sp/design/cards', submit: MONTH_SUBMISSION_URL },
+  { name: 'November', nameHi: 'नवंबर', theme: "Children's Day • My Childhood Dreams", themeHi: 'बाल दिवस • मेरे बचपन के सपने', activity: 'MY CHILDHOOD DREAMS', activityHi: 'मेरे बचपन के सपने (My Childhood Dreams)', desc: 'Design your personal "My Childhood Dreams" creative poster or vision board celebrating Children\'s Day in Adobe Express! Express your hopes, aspirations, and favorite childhood memories.', descHi: 'एडोबी एक्सप्रेस में बाल दिवस के उपलक्ष्य पर अपना रचनात्मक "मेरे बचपन के सपने" पोस्टर या विज़न बोर्ड बनाएं! अपनी आकांक्षाओं, बचपन की यादों और सपनों को व्यक्त करें।', dur: '45 min', durHi: '45 मिनट', skills: ['Poster Design','Creative Expression','Visual Storytelling'], skillsHi: ['पोस्टर डिज़ाइन','रचनात्मक अभिव्यक्ति','विज़ुअल स्टोरीटेलिंग'], tutorial: 'https://www.youtube.com/watch?v=M1s8vTaJLrY', create: 'https://new.express.adobe.com/design/template/urn:aaid:sc:VA6C2:fcf64e48-8456-5141-9d68-55b0d404d468?category=search&pageId=7b5aebd5-bcab-42a5-a163-05d16f18e735', submit: MONTH_SUBMISSION_URL },
+  { name: 'December', nameHi: 'दिसंबर', theme: 'Year in Review', themeHi: 'वर्ष का पुनरावलोकन', activity: 'My Creative Year Portfolio', activityHi: 'मेरा रचनात्मक वर्ष पोर्टफ़ोलियो', desc: 'Look back at all 11 projects you made this year! Create a collage or presentation showing your 3 favourite works. You have come so far!', descHi: 'इस वर्ष आपके द्वारा बनाए गए सभी प्रोजेक्ट देखें! अपने 3 पसंदीदा कार्यों को दर्शाते हुए एक कोलाज या प्रस्तुति बनाएं।', dur: '60 min', durHi: '60 मिनट', skills: ['Portfolio Design','Reflection','Collage'], skillsHi: ['पोर्टफ़ोलियो डिज़ाइन','पुनरावलोकन','कोलाज'], tutorial: 'https://www.youtube.com/results?search_query=adobe+express+portfolio', create: 'https://express.adobe.com/sp/design/collages', submit: MONTH_SUBMISSION_URL }
+];
+
+function renderMonthSectionHtml() {
+  var isHi = (currentLang === 'hi');
+  var m = MONTHS[curMonth];
+  var pillsHtml = MONTHS.map(function(mo, i) {
+    var name = isHi ? mo.nameHi : mo.name;
+    return '<button class="mp' + (i === curMonth ? ' active' : '') + '" onclick="selectMonthTab(' + i + ')">' + name + '</button>';
+  }).join('');
+  var theme = isHi ? m.themeHi : m.theme;
+  var dur = isHi ? m.durHi : m.dur;
+  var activity = isHi ? m.activityHi : m.activity;
+  var desc = isHi ? m.descHi : m.desc;
+  var skills = isHi ? (m.skillsHi || m.skills) : m.skills;
+  var cardHtml =
+    '<div class="mcard">' +
+      '<div class="mcard-row">' +
+        '<span class="mcard-theme">' + theme + '</span>' +
+        '<span class="mcard-dur">⏱ ' + dur + '</span>' +
+      '</div>' +
+      '<h3>✨ ' + activity + '</h3>' +
+      '<p>' + desc + '</p>' +
+      '<div class="mcard-skills">' + skills.map(function(s){ return '<span class="mskill">' + s + '</span>'; }).join('') + '</div>' +
+      '<div class="mcard-actions">' +
+        '<a href="' + m.tutorial + '" target="_blank" class="btn btn-dark">' + (isHi ? '▶ ट्यूटोरियल देखें ↗' : '▶ Watch Tutorial ↗') + '</a>' +
+        '<a href="' + m.create + '" target="_blank" class="btn btn-primary">' + (isHi ? '🎨 Adobe Express में बनाएं ↗' : '🎨 Create in Adobe Express ↗') + '</a>' +
+        '<a href="' + m.submit + '" target="_blank" rel="noopener noreferrer" class="btn btn-outline">' + (isHi ? '📤 काम जमा करें ↗' : '📤 Submit My Work ↗') + '</a>' +
+      '</div>' +
+    '</div>';
+  return '<p style="font-size:.85rem;color:var(--ink-2);margin-bottom:14px;">' + (isHi ? 'अपनी गतिविधि देखने के लिए किसी महीने पर टैप करें:' : 'Tap a month to see your activity:') + '</p>' +
+    '<div class="month-pills">' + pillsHtml + '</div>' +
+    '<div id="activeMonthBox">' + cardHtml + '</div>';
+}
+
+function selectMonthTab(i) {
+  curMonth = i;
+  document.getElementById('secContent').innerHTML = renderMonthSectionHtml();
+}
+
+/* ===== FULL DCAIS CONTROLLER (GRADES 6-8 WEEKLY) ===== */
+var selectedAimGrade = null;
+var selectedAimMonth = 'all';
+var aimSearchQuery = '';
+
+function filterAimMonth(m) {
+  selectedAimMonth = m;
+  var container = document.getElementById('secContent');
+  if (container) container.innerHTML = renderDcaisSection();
+}
+
+function searchAimActivities(q) {
+  aimSearchQuery = q;
+  var container = document.getElementById('secContent');
+  if (container) container.innerHTML = renderDcaisSection();
+}
+
+
+// CBSE AIM & DCAIS Comprehensive Curriculum Engine
+var selectedAimGrade = null;
+var selectedAimSubject = 'all';
+var aimSearchQuery = '';
+var activeSubmissionActivity = null;
+
+// Configurable submission endpoint (Team can provide their Google Form / Apps Script / Webhook URL here)
+window.CBSE_SUBMISSION_ENDPOINT = window.CBSE_SUBMISSION_ENDPOINT || 'https://docs.google.com/forms/d/e/1FAIpQLScEzxzVqZp3ivr-C18TAimHJV-hXIFzVaVmR-q7Ab-031xVQA/viewform?usp=header';
+
+function selectAimGrade(gradeId) {
+  selectedAimGrade = gradeId;
+  selectedAimSubject = 'all';
+  aimSearchQuery = '';
+  var container = document.getElementById('secContent');
+  if (container) container.innerHTML = renderDcaisSection();
+  window.scrollTo({ top: 180, behavior: 'smooth' });
+}
+window.selectAimGrade = selectAimGrade;
+
+function filterAimSubject(subj) {
+  selectedAimSubject = subj;
+  var container = document.getElementById('secContent');
+  if (container) container.innerHTML = renderDcaisSection();
+}
+window.filterAimSubject = filterAimSubject;
+
+function searchAimActivities(val) {
+  aimSearchQuery = val;
+  var container = document.getElementById('secContent');
+  if (container) container.innerHTML = renderDcaisSection();
+}
+window.searchAimActivities = searchAimActivities;
+
+function openSubmissionModal(actName, gradeLabel) {
+  activeSubmissionActivity = { name: actName, grade: gradeLabel };
+  var modal = document.getElementById('cbse-submit-modal');
+  if (!modal) {
+    createSubmissionModal();
+    modal = document.getElementById('cbse-submit-modal');
+  }
+  document.getElementById('csm-act-name').value = actName || '';
+  document.getElementById('csm-grade').value = gradeLabel || (selectedAimGrade ? 'Grade ' + selectedAimGrade : '');
+  modal.style.display = 'flex';
+}
+window.openSubmissionModal = openSubmissionModal;
+
+function closeSubmissionModal() {
+  var modal = document.getElementById('cbse-submit-modal');
+  if (modal) modal.style.display = 'none';
+}
+window.closeSubmissionModal = closeSubmissionModal;
+
+function submitStudentProject(e) {
+  if (e && e.preventDefault) e.preventDefault();
+  var name = document.getElementById('csm-student-name').value.trim();
+  var school = document.getElementById('csm-school-name').value.trim();
+  var region = document.getElementById('csm-region').value;
+  var link = document.getElementById('csm-link').value.trim();
+  var act = document.getElementById('csm-act-name').value.trim();
+  var grade = document.getElementById('csm-grade').value.trim();
+
+  if (!name || !link) {
+    alert(currentLang === 'hi' ? 'कृपया अपना नाम और प्रोजेक्ट लिंक दर्ज करें।' : 'Please enter your name and project work link.');
+    return false;
+  }
+
+  // Save submission to localStorage
+  try {
+    var subs = JSON.parse(localStorage.getItem('cbse_submissions') || '[]');
+    subs.push({
+      name: name,
+      school: school,
+      region: region,
+      link: link,
+      activity: act,
+      grade: grade,
+      timestamp: new Date().toISOString()
+    });
+    localStorage.setItem('cbse_submissions', JSON.stringify(subs));
+  } catch(err) {}
+
+  closeSubmissionModal();
+  showToast(currentLang === 'hi' ? '🎉 आपकी गतिविधि सफलतापूर्वक सबमिट हो गई!' : '🎉 Project submitted successfully! Well done!');
+  return false;
+}
+window.submitStudentProject = submitStudentProject;
+
+function createSubmissionModal() {
+  if (document.getElementById('cbse-submit-modal')) return;
+  var isHi = (currentLang === 'hi');
+  var mHtml = document.createElement('div');
+  mHtml.id = 'cbse-submit-modal';
+  mHtml.style.cssText = 'position:fixed;inset:0;background:rgba(0,31,91,0.65);backdrop-filter:blur(6px);z-index:99999;display:none;align-items:center;justify-content:center;padding:16px;animation:viewFadeIn .2s ease;';
+  mHtml.innerHTML = 
+    '<div style="background:#FFF;border-radius:20px;max-width:540px;width:100%;box-shadow:0 24px 60px rgba(0,0,0,0.3);overflow:hidden;border:2px solid var(--border);position:relative;">' +
+      '<div style="background:linear-gradient(135deg, #001F5B 0%, #003087 100%);color:#FFF;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;">' +
+        '<div>' +
+          '<div style="font-size:0.7rem;font-weight:800;color:#FFB74D;text-transform:uppercase;letter-spacing:0.08em;">Official Submission</div>' +
+          '<h3 style="font-size:1.25rem;font-weight:900;margin:0;">' + (isHi ? 'प्रोजेक्ट सबमिट करें' : 'Submit Your Activity Work') + '</h3>' +
+        '</div>' +
+        '<button onclick="closeSubmissionModal()" style="background:rgba(255,255,255,0.15);border:none;color:#FFF;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;transition:background .18s;">✕</button>' +
+      '</div>' +
+      '<form onsubmit="return submitStudentProject(event)" style="padding:24px;display:flex;flex-direction:column;gap:14px;">' +
+        '<div>' +
+          '<label style="display:block;font-size:0.78rem;font-weight:800;color:var(--ink-2);margin-bottom:5px;text-transform:uppercase;">' + (isHi ? 'गतिविधि का नाम' : 'Activity Name') + '</label>' +
+          '<input type="text" id="csm-act-name" readonly style="width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:0.86rem;background:#F8F9FA;font-weight:700;color:var(--navy);">' +
+        '</div>' +
+        '<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">' +
+          '<div>' +
+            '<label style="display:block;font-size:0.78rem;font-weight:800;color:var(--ink-2);margin-bottom:5px;text-transform:uppercase;">' + (isHi ? 'कक्षा / ग्रेड' : 'Grade / Class') + '</label>' +
+            '<input type="text" id="csm-grade" readonly style="width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:0.86rem;background:#F8F9FA;font-weight:700;">' +
+          '</div>' +
+          '<div>' +
+            '<label style="display:block;font-size:0.78rem;font-weight:800;color:var(--ink-2);margin-bottom:5px;text-transform:uppercase;">' + (isHi ? 'CBSE क्षेत्र (Region)' : 'CBSE Region') + '</label>' +
+            '<select id="csm-region" style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:10px;font-size:0.86rem;background:#FFF;font-weight:600;">' +
+              '<option value="Delhi">Delhi East / West</option>' +
+              '<option value="Chennai">Chennai</option>' +
+              '<option value="Bengaluru">Bengaluru</option>' +
+              '<option value="Chandigarh">Chandigarh</option>' +
+              '<option value="Ajmer">Ajmer</option>' +
+              '<option value="Prayagraj">Prayagraj (Allahabad)</option>' +
+              '<option value="Patna">Patna</option>' +
+              '<option value="Bhubaneswar">Bhubaneswar</option>' +
+              '<option value="Thiruvananthapuram">Thiruvananthapuram</option>' +
+              '<option value="Dehradun">Dehradun</option>' +
+              '<option value="Pune">Pune</option>' +
+              '<option value="Bhopal">Bhopal</option>' +
+              '<option value="Noida">Noida</option>' +
+              '<option value="Panchkula">Panchkula</option>' +
+              '<option value="Guwahati">Guwahati</option>' +
+            '</select>' +
+          '</div>' +
+        '</div>' +
+        '<div>' +
+          '<label style="display:block;font-size:0.78rem;font-weight:800;color:var(--ink-2);margin-bottom:5px;text-transform:uppercase;">' + (isHi ? 'विद्यार्थी का पूरा नाम *' : 'Student Full Name *') + '</label>' +
+          '<input type="text" id="csm-student-name" required placeholder="e.g. Aarav Sharma" style="width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:0.88rem;outline:none;">' +
+        '</div>' +
+        '<div>' +
+          '<label style="display:block;font-size:0.78rem;font-weight:800;color:var(--ink-2);margin-bottom:5px;text-transform:uppercase;">' + (isHi ? 'स्कूल का नाम *' : 'CBSE Affiliated School Name *') + '</label>' +
+          '<input type="text" id="csm-school-name" required placeholder="e.g. Delhi Public School, R.K. Puram" style="width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:0.88rem;outline:none;">' +
+        '</div>' +
+        '<div>' +
+          '<label style="display:block;font-size:0.78rem;font-weight:800;color:var(--ink-2);margin-bottom:5px;text-transform:uppercase;">' + (isHi ? 'Adobe Express प्रोजेक्ट लिंक *' : 'Adobe Express Shared Project Link *') + '</label>' +
+          '<input type="url" id="csm-link" required placeholder="https://new.express.adobe.com/..." style="width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:0.88rem;outline:none;">' +
+          '<div style="font-size:0.72rem;color:var(--ink-3);margin-top:4px;">In Adobe Express, click Share → Copy Link and paste here.</div>' +
+        '</div>' +
+        '<div style="display:flex;gap:10px;margin-top:10px;">' +
+          '<button type="submit" class="btn btn-primary" style="flex:1;background:var(--saffron);color:#FFF;border:none;padding:12px;font-size:0.92rem;font-weight:800;border-radius:999px;cursor:pointer;box-shadow:0 4px 14px rgba(255,102,0,0.3);">' +
+            '🚀 ' + (isHi ? 'प्रोजेक्ट सबमिट करें' : 'Submit Project Work') +
+          '</button>' +
+          '<button type="button" onclick="closeSubmissionModal()" class="btn btn-ghost" style="padding:12px 20px;border-radius:999px;font-weight:800;">' + (isHi ? 'रद्द करें' : 'Cancel') + '</button>' +
+        '</div>' +
+      '</form>' +
+    '</div>';
+  document.body.appendChild(mHtml);
+}
+
+function renderDcaisSection() {
+  createSubmissionModal();
+  var isHi = (currentLang === 'hi');
+  var dcaisSubmissionUrl = window.CBSE_SUBMISSION_ENDPOINT;
+
+  var submissionBannerHtml =
+    '<div class="aim-submit-banner" style="background:linear-gradient(135deg, #001F5B 0%, #003087 50%, #0A4EB5 100%);color:#fff;border-radius:18px;padding:24px 28px;margin-bottom:24px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;box-shadow:0 8px 30px rgba(0,48,135,0.18);border:1.5px solid rgba(255,255,255,0.15);position:relative;overflow:hidden;">' +
+      '<div style="max-width:680px;position:relative;z-index:2;">' +
+        '<div style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.16);padding:4px 12px;border-radius:9999px;font-size:0.74rem;font-weight:800;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:8px;">' +
+          '<span>🎯</span> <span>' + (isHi ? 'CBSE AIM गतिविधि कार्यान्वयन योजना' : 'Official CBSE AIM Implementation Portal') + '</span>' +
+        '</div>' +
+        '<h3 style="font-size:1.38rem;font-weight:900;margin-bottom:6px;line-height:1.25;color:#fff;">' +
+          (isHi ? 'अपनी CBSE DCAIS / AIM गतिविधि सबमिट करें' : 'Explore Curriculum Activities & Submit Your Creative Work') +
+        '</h3>' +
+        '<p style="font-size:0.88rem;color:#E0E7FF;line-height:1.5;margin:0;">' +
+          (isHi ? 'अपनी कक्षा चुनें, विषय-वार एडोब एक्सप्रेस टेम्पलेट खोलें, नया डिज़ाइन तैयार करें और अपना काम सीधे सबमिट करें।' :
+                  'Select your grade below to explore 200+ activities (English, Hindi medium & Kaushal Bodh vocational skills). Create your design in Adobe Express and submit your work.') +
+        '</p>' +
+      '</div>' +
+      '<div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;position:relative;z-index:2;">' +
+        '<button onclick="openSubmissionModal('General Project', selectedAimGrade ? 'Grade ' + selectedAimGrade : '')" class="btn" style="background:#FF6600;color:#FFF;border:none;font-weight:800;font-size:0.9rem;padding:12px 24px;border-radius:9999px;box-shadow:0 4px 14px rgba(255,102,0,0.35);cursor:pointer;">' +
+          '🚀 ' + (isHi ? 'प्रोजेक्ट सबमिट करें' : 'Submit Activity Work') +
+        '</button>' +
+        '<a href="' + dcaisSubmissionUrl + '" target="_blank" class="btn" style="background:rgba(255,255,255,0.12);color:#FFF;border:1.5px solid rgba(255,255,255,0.4);font-weight:800;font-size:0.84rem;padding:11px 18px;border-radius:9999px;text-decoration:none;">' +
+          '📋 ' + (isHi ? 'Google Form खोलें ↗' : 'Google Form Portal ↗') +
+        '</a>' +
+      '</div>' +
+    '</div>';
+
+  if (!selectedAimGrade) {
+    var primaryGrades = [
+      { id: 'Grade 3', name: 'Grade 3', hindi: 'कक्षा 3', count: '32 Activities & Templates', icon: '📘', color: '#003087', desc: 'Foundational visual literacy, vocabulary cards & greeting cards' },
+      { id: 'Grade 4', name: 'Grade 4', hindi: 'कक्षा 4', count: '32 Activities & Templates', icon: '📗', color: '#059669', desc: 'Creative storytelling, nature posters & science flashcards' },
+      { id: 'Grade 5', name: 'Grade 5', hindi: 'कक्षा 5', count: '32 Activities & Templates', icon: '📙', color: '#D97706', desc: 'Social science infographics, book covers & event flyers' }
+    ];
+
+    var middleGrades = [
+      { id: 'Grade 6', name: 'Grade 6', hindi: 'कक्षा 6', count: '18 Activities + 16 Modules', icon: '📕', color: '#DC2626', desc: 'Digital communication, recycling campaigns & science journals' },
+      { id: 'Grade 7', name: 'Grade 7', hindi: 'कक्षा 7', count: '18 Activities + 16 Modules', icon: '📔', color: '#7C3AED', desc: 'Visual storytelling, historical timelines & energy conservation' },
+      { id: 'Grade 8', name: 'Grade 8', hindi: 'कक्षा 8', count: '18 Activities + 16 Modules', icon: '📓', color: '#2563EB', desc: 'Multimedia presentations, constitution awareness & data charts' }
+    ];
+
+    var hindiGrades = [
+      { id: 'Grade 6 (Hindi)', name: 'Grade 6 (हिंदी माध्यम)', hindi: 'कक्षा 6 (हिंदी माध्यम)', count: '18 Activities & Templates', icon: '🇮🇳', color: '#EA580C', desc: 'रचनात्मक लेखन, पर्यावरण पोस्टर और भाषा अभिव्यक्ति' },
+      { id: 'Grade 7 (Hindi)', name: 'Grade 7 (हिंदी माध्यम)', hindi: 'कक्षा 7 (हिंदी माध्यम)', count: '18 Activities & Templates', icon: '🇮🇳', color: '#D97706', desc: 'दृश्य कथावाचन, ऐतिहासिक चार्ट और विज्ञान गतिविधियाँ' },
+      { id: 'Grade 8 (Hindi)', name: 'Grade 8 (हिंदी माध्यम)', hindi: 'कक्षा 8 (हिंदी माध्यम)', count: '18 Activities & Templates', icon: '🇮🇳', color: '#B45309', desc: 'डिजिटल प्रोजेक्ट, सामाजिक चेतना और रचनात्मक प्रस्तुति' }
+    ];
+
+    var vocationalGrades = [
+      { id: 'Kaushal Bodh 6', name: 'Kaushal Bodh - Grade 6', hindi: 'कौशल बोध - कक्षा 6', count: '6 Vocational Projects (30 Hrs)', icon: '🌱', color: '#16A34A', desc: 'School Kitchen Garden, tools identification & digital growth book' },
+      { id: 'Kaushal Bodh 7', name: 'Kaushal Bodh - Grade 7', hindi: 'कौशल बोध - कक्षा 7', count: '6 Vocational Projects (30 Hrs)', icon: '🛠️', color: '#0891B2', desc: 'Basic electrical & home crafts, safety digital guide & documentation' },
+      { id: 'Kaushal Bodh 8', name: 'Kaushal Bodh - Grade 8', hindi: 'कौशल बोध - कक्षा 8', count: '6 Vocational Projects (30 Hrs)', icon: '💼', color: '#4F46E5', desc: 'Financial literacy, digital marketing flyer & entrepreneurship portfolio' }
+    ];
+
+    function renderGradeRow(title, titleHi, items) {
+      return '<div style="margin-bottom:28px;">' +
+        '<h3 style="font-size:1.15rem;font-weight:900;color:var(--navy);margin-bottom:14px;display:flex;align-items:center;gap:8px;">' +
+          '<span>' + (isHi ? titleHi : title) + '</span>' +
+          '<span style="font-size:0.75rem;font-weight:700;color:var(--ink-3);background:var(--surface-3);padding:2px 10px;border-radius:999px;">' + items.length + ' Categories</span>' +
+        '</h3>' +
+        '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;">' +
+        items.map(function(g) {
+          return '<div class="aim-gc" onclick="selectAimGrade(&quot;' + g.id + '&quot;)" style="background:#FFF;border:2px solid var(--border);border-radius:16px;padding:22px;cursor:pointer;transition:all .22s;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;justify-content:space-between;text-align:left;">' +
+            '<div>' +
+              '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">' +
+                '<span style="font-size:1.8rem;">' + g.icon + '</span>' +
+                '<span style="font-size:0.68rem;font-weight:800;padding:3px 10px;border-radius:999px;background:var(--navy-bg);color:var(--navy);border:1px solid var(--navy-border);text-transform:uppercase;">' + g.count.split('&')[0] + '</span>' +
+              '</div>' +
+              '<h4 style="font-size:1.15rem;font-weight:900;color:var(--ink);margin-bottom:4px;">' + (isHi ? g.hindi : g.name) + '</h4>' +
+              '<p style="font-size:0.8rem;color:var(--ink-2);line-height:1.45;margin-bottom:16px;">' + g.desc + '</p>' +
+            '</div>' +
+            '<div style="display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid var(--border);font-size:0.78rem;font-weight:800;color:var(--navy);">' +
+              '<span>' + (isHi ? 'गतिविधियाँ देखें' : 'Explore Activities') + '</span>' +
+              '<span>→</span>' +
+            '</div>' +
+          '</div>';
+        }).join('') +
+        '</div>' +
+      '</div>';
+    }
+
+    return submissionBannerHtml +
+      renderGradeRow('Primary School (Grades 3 – 5)', 'प्राथमिक विद्यालय (कक्षा 3 – 5)', primaryGrades) +
+      renderGradeRow('Middle School Curriculum (Grades 6 – 8)', 'माध्यमिक विद्यालय पाठ्यक्रम (कक्षा 6 – 8)', middleGrades) +
+      renderGradeRow('Hindi Medium (कक्षा 6 – 8 हिंदी माध्यम)', 'हिंदी माध्यम (कक्षा 6 – 8)', hindiGrades) +
+      renderGradeRow('Kaushal Bodh — Vocational & 21st-Century Skills', 'कौशल बोध — व्यावसायिक एवं 21वीं सदी के कौशल', vocationalGrades);
+  }
+
+  // Inside Grade View
+  var activities = [];
+  var isKb = selectedAimGrade.indexOf('Kaushal') !== -1;
+
+  if (window.DCAIS_DATA) {
+    if (isKb) {
+      var kbKey = selectedAimGrade.toLowerCase().replace('kaushal bodh ', 'grade ');
+      activities = (window.DCAIS_DATA.kaushalBodh && window.DCAIS_DATA.kaushalBodh[kbKey]) || [];
+    } else {
+      activities = (window.DCAIS_DATA.aimActivities && window.DCAIS_DATA.aimActivities[selectedAimGrade]) || [];
+      if (activities.length === 0 && window.DCAIS_DATA.weeklyModules) {
+        activities = window.DCAIS_DATA.weeklyModules;
+      }
+    }
+  }
+
+  // Fallback demo data if dcais-data.js was not ready
+  if (!activities || activities.length === 0) {
+    activities = [
+      { name: 'Creative on Recycling & Waste Management', col: 1, skills: 'Environmental literacy, visual communication', instructions: 'Create an engaging poster in Adobe Express highlighting 3 ways to reduce single-use plastic.', link: 'https://new.express.adobe.com', book: 'https://drive.google.com' },
+      { name: 'Science Laboratory Safety Infographic', col: 2, skills: 'Scientific inquiry, graphic design', instructions: 'Design a high-contrast safety rule infographic for middle school science labs.', link: 'https://new.express.adobe.com', book: 'https://drive.google.com' },
+      { name: 'Visual Book Review & Character Map', col: 3, skills: 'Language arts, critical thinking', instructions: 'Summarize your favorite library chapter book using Adobe Express collage templates.', link: 'https://new.express.adobe.com', book: 'https://drive.google.com' }
+    ];
+  }
+
+  // Filter by search query
+  var filtered = activities;
+  if (aimSearchQuery && aimSearchQuery.trim()) {
+    var q = aimSearchQuery.toLowerCase().trim();
+    filtered = filtered.filter(function(a) {
+      var t = (a.name || a.projectName || a.activityName || '').toLowerCase();
+      var s = (a.skills || a.skillsInFocus || a.formOfWork || '').toLowerCase();
+      var ins = (a.instructions || a.keyActivities || a.learningOutcomes || '').toLowerCase();
+      return t.indexOf(q) !== -1 || s.indexOf(q) !== -1 || ins.indexOf(q) !== -1;
+    });
+  }
+
+  var topNav =
+    '<div class="aim-top-nav" style="background:#FFF;border:1.5px solid var(--border);border-radius:16px;padding:16px 20px;margin-bottom:20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;box-shadow:var(--shadow-sm);">' +
+      '<button class="aim-back-grade" onclick="selectAimGrade(null)" style="background:var(--navy-bg);color:var(--navy);border:1.5px solid var(--navy-border);padding:8px 18px;border-radius:999px;font-size:0.82rem;font-weight:800;cursor:pointer;transition:all .18s;">' +
+        '← ' + (isHi ? 'सभी कक्षाएं देखें' : 'Back to Grades') +
+      '</button>' +
+      '<div style="font-weight:900;color:var(--navy);font-size:1.1rem;display:flex;align-items:center;gap:8px;">' +
+        '<span>📁</span> <span>' + selectedAimGrade + '</span>' +
+        '<span style="font-size:0.75rem;font-weight:800;background:var(--saffron-bg);color:var(--saffron);padding:2px 10px;border-radius:999px;border:1px solid rgba(255,102,0,0.3);">' + filtered.length + ' Activities</span>' +
+      '</div>' +
+      '<div class="aim-search" style="flex:1;min-width:220px;max-width:360px;">' +
+        '<input type="text" placeholder="' + (isHi ? 'गतिविधि या कौशल खोजें...' : 'Search activities, skills, keywords...') + '" ' +
+          'value="' + (aimSearchQuery ? aimSearchQuery.replace(/"/g, '&quot;') : '') + '" ' +
+          'oninput="searchAimActivities(this.value)" style="width:100%;padding:9px 16px;border:1.5px solid var(--border);border-radius:999px;font-size:0.84rem;outline:none;">' +
+      '</div>' +
+    '</div>';
+
+  var cardsHtml = '';
+  if (filtered.length === 0) {
+    cardsHtml = '<div style="background:#FFF;border:1.5px dashed var(--border);border-radius:18px;padding:48px 24px;text-align:center;color:var(--ink-3);">' +
+      '<div style="font-size:2.4rem;margin-bottom:8px;">🔍</div>' +
+      '<div style="font-weight:800;font-size:1.1rem;color:var(--ink);margin-bottom:4px;">' + (isHi ? 'कोई गतिविधि नहीं मिली' : 'No activities matched your search') + '</div>' +
+      '<p style="font-size:0.86rem;">' + (isHi ? 'कृपया अन्य कीवर्ड खोजें।' : 'Try different keywords or clear the search box.') + '</p>' +
+    '</div>';
+  } else {
+    cardsHtml = '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;">' +
+      filtered.map(function(act, idx) {
+        var title = act.name || act.projectName || act.activityName || ('Activity ' + (idx + 1));
+        var skills = act.skills || act.skillsInFocus || (act.formOfWork ? 'Form of Work: ' + act.formOfWork : 'Creative & Digital Literacy');
+        var instructions = act.instructions || act.keyActivities || act.learningOutcomes || 'Open the Adobe Express template, replace text & images with your original creative ideas, and download or share your project link.';
+        var templateLink = act.link || act.templateLink || act.activityLinkHomeworkUrl || 'https://new.express.adobe.com';
+        var bookLink = act.book || act.learningJournalLink || '';
+        var colNum = act.col || (idx + 1);
+
+        return '<div class="aim-card" style="background:#FFF;border:1.5px solid var(--border);border-radius:18px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:var(--shadow-sm);transition:all .22s;position:relative;">' +
+          '<div>' +
+            '<div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px;">' +
+              '<span style="background:var(--navy-bg);color:var(--navy);font-size:0.72rem;font-weight:900;padding:4px 12px;border-radius:999px;border:1px solid var(--navy-border);text-transform:uppercase;">' +
+                'Activity #' + colNum +
+              '</span>' +
+              (act.formOfWork ? '<span style="background:var(--surface-3);color:var(--ink-2);font-size:0.7rem;font-weight:700;padding:3px 10px;border-radius:6px;">' + act.formOfWork + '</span>' : '') +
+            '</div>' +
+            '<h4 style="font-size:1.15rem;font-weight:900;color:var(--ink);line-height:1.35;margin-bottom:8px;">' + title + '</h4>' +
+            '<div style="font-size:0.76rem;font-weight:800;color:var(--saffron);margin-bottom:10px;line-height:1.4;">' +
+              '🎯 ' + skills +
+            '</div>' +
+            '<div style="font-size:0.82rem;color:var(--ink-2);line-height:1.55;margin-bottom:18px;background:var(--surface-2);border-radius:10px;padding:12px;border:1px solid var(--border);">' +
+              instructions +
+            '</div>' +
+          '</div>' +
+          '<div style="display:flex;flex-direction:column;gap:8px;padding-top:14px;border-top:1px solid var(--border);">' +
+            '<div style="display:grid;grid-template-columns:' + (bookLink ? '1fr 1fr' : '1fr') + ';gap:8px;">' +
+              '<a href="' + templateLink + '" target="_blank" rel="noopener noreferrer" class="btn" style="background:var(--navy);color:#FFF;font-size:0.8rem;font-weight:800;padding:10px;border-radius:10px;text-align:center;text-decoration:none;box-shadow:0 2px 8px rgba(0,48,135,0.25);">' +
+                '🎨 Open Template ↗' +
+              '</a>' +
+              (bookLink ? 
+                '<a href="' + bookLink + '" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-size:0.8rem;font-weight:800;padding:10px;border-radius:10px;text-align:center;text-decoration:none;">' +
+                  '📖 Textbook Ref ↗' +
+                '</a>' : '') +
+            '</div>' +
+            '<button onclick="openSubmissionModal(&quot;' + title.replace(/"/g, '&quot;') + '&quot;, &quot;' + selectedAimGrade + '&quot;)" class="btn" style="background:var(--saffron);color:#FFF;font-size:0.82rem;font-weight:800;padding:10px;border-radius:10px;border:none;cursor:pointer;box-shadow:0 3px 10px rgba(255,102,0,0.25);">' +
+              '🚀 Submit Your Work' +
+            '</button>' +
+          '</div>' +
+        '</div>';
+      }).join('') +
+    '</div>';
+  }
+
+  return submissionBannerHtml + topNav + cardsHtml;
+}
+window.renderDcaisSection = renderDcaisSection;
+
+
+function showToast(msg) {
+  var old = document.querySelector('.exam-toast');
+  if (old) old.remove();
+  var toast = document.createElement('div');
+  toast.className = 'exam-toast';
+  toast.innerHTML = '<span>📋</span> <span>' + msg + '</span>';
+  document.body.appendChild(toast);
+  setTimeout(function() {
+    if (toast && toast.parentNode) toast.remove();
+  }, 3200);
+}
+
+function copyExamLink(url, regionName) {
+  var isHi = (currentLang === 'hi');
+  if (!url || url === '#' || url.trim() === '') {
+    showToast(isHi ? (regionName + ' का टेस्ट लिंक जल्द उपलब्ध कराया जाएगा!') : ('Test link for ' + regionName + ' will be available soon!'));
+    return;
+  }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(url).then(function() {
+      showToast(isHi ? (regionName + ' का मिड-टर्म टेस्ट लिंक कॉपी हो गया!') : ('Copied mid-term test link for ' + regionName + '!'));
+    }).catch(function() {
+      showToast(isHi ? 'लिंक: ' + url : 'Link: ' + url);
+    });
+  } else {
+    showToast(isHi ? 'लिंक: ' + url : 'Link: ' + url);
+  }
+}
+
+function filterStudentExamRegions(q) {
+  studentExamRegionQuery = q;
+  var isHi = (currentLang === 'hi');
+  var query = studentExamRegionQuery.toLowerCase().trim();
+  var grid = document.getElementById('studentExamRegionGrid');
+  if (!grid) return;
+
+  var filtered = CBSE_REGIONS.filter(function(r) {
+    if (!query) return true;
+    return r.nameEn.toLowerCase().indexOf(query) !== -1 ||
+           r.nameHi.toLowerCase().indexOf(query) !== -1 ||
+           r.stateEn.toLowerCase().indexOf(query) !== -1 ||
+           r.stateHi.toLowerCase().indexOf(query) !== -1;
+  });
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '<div style="grid-column:1/-1;background:var(--surface-2);border-radius:var(--radius);padding:32px;text-align:center;color:var(--ink-3);">' +
+      '<h4>' + (isHi ? 'कोई संभाग नहीं मिला' : 'No matching regions found') + '</h4>' +
+    '</div>';
+    return;
+  }
+
+  grid.innerHTML = filtered.map(function(r) {
+    var name = isHi ? r.nameHi : r.nameEn;
+    var state = isHi ? r.stateHi : r.stateEn;
+    var copyBtnLabel = isHi ? 'मिड-टर्म टेस्ट लिंक कॉपी करें 📋' : 'Copy test link mid term 📋';
+    var openBtnLabel = isHi ? 'मिड-टर्म टेस्ट लिंक खोलें ↗' : 'Open test link mid term ↗';
+    var hasLink = (r.link && r.link !== '#' && r.link.trim() !== '');
+    var openBtnHtml = hasLink ?
+      '<a href="' + r.link + '" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="justify-content:center;font-size:.8rem;padding:9px 16px;">' + openBtnLabel + '</a>' :
+      '<button type="button" onclick="showToast(&quot;' + (isHi ? name + ' का टेस्ट लिंक जल्द उपलब्ध कराया जाएगा!' : 'Test link for ' + name + ' will be available soon!') + '&quot;)" class="btn btn-primary" style="justify-content:center;font-size:.8rem;padding:9px 16px;opacity:0.88;">' + openBtnLabel + '</button>';
+    var linkBadge = hasLink ? '' :
+      '<span style="background:#FEF3C7;color:#92400E;font-size:.68rem;font-weight:800;padding:2px 8px;border-radius:999px;margin-left:6px;vertical-align:middle;">' + (isHi ? 'लिंक जल्द' : 'Link Soon') + '</span>';
+
+    return '<div class="exam-region-card">' +
+      '<div>' +
+        '<div class="exam-region-head">' +
+          '<div class="exam-region-icon">' + r.icon + '</div>' +
+          '<div>' +
+            '<h3 class="exam-region-title">' + name + linkBadge + '</h3>' +
+            '<div class="exam-region-sub">📍 ' + state + '</div>' +
+          '</div>' +
+        '</div>' +
+        '<p style="font-size:.8rem;color:var(--ink-2);line-height:1.45;margin-bottom:12px;">' +
+          (isHi ? 'सेमेस्टर-1 DCAIS परीक्षा के लिए आधिकारिक CBSE क्षेत्रीय लिंक।' : 'Official CBSE Regional examination form for DCAIS Semester-1 assessment.') +
+        '</p>' +
+      '</div>' +
+      '<div class="exam-region-actions">' +
+        openBtnHtml +
+        '<button type="button" onclick="copyExamLink(&quot;' + (r.link || '') + '&quot;, &quot;' + name + '&quot;)" class="btn btn-ghost" style="justify-content:center;font-size:.78rem;padding:8px 14px;background:#FFF;border:1.5px solid var(--border);color:var(--ink);">' + copyBtnLabel + '</button>' +
+      '</div>' +
+    '</div>';
+  }).join('');
+}
+
+function renderStudentExamSection() {
+  var isHi = (currentLang === 'hi');
+
+  var metaBanner =
+    '<div class="exam-meta-banner">' +
+      '<div>' +
+        '<div class="exam-meta-title">📝 ' + (isHi ? 'CBSE DCAIS मिड-टर्म परीक्षा (सेमेस्टर-1)' : 'CBSE DCAIS Mid-Term Examination (Semester-1)') + '</div>' +
+        '<p style="font-size:.84rem;color:var(--ink-2);margin-top:4px;">' +
+          (isHi ? 'अपने संभाग का चयन करें, "मिड-टर्म टेस्ट लिंक खोलें" पर क्लिक करके अपनी परीक्षा दें या लिंक कॉपी करें।' : 'Find your CBSE region, click "Open test link mid term ↗" to take your exam, or copy the test link.') +
+        '</p>' +
+      '</div>' +
+      '<div class="exam-meta-badges">' +
+        '<span class="exam-pill">16 CBSE Regional Offices</span>' +
+        '<span class="exam-pill">Semester-1 Exam</span>' +
+        '<span class="exam-pill">Google Forms</span>' +
+      '</div>' +
+    '</div>';
+
+  var guidelinesBox =
+    '<div class="exam-guidelines-box">' +
+      '<div class="exam-guidelines-title">📋 ' + (isHi ? 'छात्र परीक्षा निर्देश एवं दिशानिर्देश' : 'Student Examination Guidelines & Instructions') + '</div>' +
+      '<ul class="exam-guidelines-list">' +
+        '<li><span>1️⃣</span> <span>' + (isHi ? 'नीचे दी गई सूची से अपने संभाग (Region) का आधिकारिक टेस्ट लिंक चुनें।' : 'Select your official regional test link from the list below.') + '</span></li>' +
+        '<li><span>2️⃣</span> <span>' + (isHi ? 'फॉर्म खुलने पर अपना पूरा नाम, कक्षा/वर्ग, रोल नंबर और केन्द्रीय विद्यालय का नाम सही भरें।' : 'Enter your Full Name, Class/Section, Roll Number, and KV School Name accurately.') + '</span></li>' +
+        '<li><span>3️⃣</span> <span>' + (isHi ? 'सभी वस्तुनिष्ठ (MCQ) प्रश्नों को ध्यानपूर्वक हल करें और अपने रचनात्मक प्रोजेक्ट लिंक जोड़ें।' : 'Carefully attempt all MCQ questions and attach your creative project links.') + '</span></li>' +
+        '<li><span>4️⃣</span> <span>' + (isHi ? 'निर्धारित समय सीमा समाप्त होने से पहले "Submit" बटन दबाकर अपनी परीक्षा पूर्ण करें।' : 'Submit the form before the examination timer expires to register your marks.') + '</span></li>' +
+      '</ul>' +
+    '</div>';
+
+  var searchBar =
+    '<div class="exam-search-bar">' +
+      '<div class="exam-search-box">' +
+        '<input type="text" placeholder="' + (isHi ? 'संभाग या राज्य खोजें (जैसे Lucknow, Mumbai, Ahmedabad)...' : 'Search region or state (e.g. Lucknow, Mumbai, Ahmedabad)...') + '" value="' + studentExamRegionQuery + '" oninput="filterStudentExamRegions(this.value)">' +
+      '</div>' +
+      '<div style="font-size:.78rem;font-weight:700;color:var(--ink-3);">' +
+        (isHi ? 'कुल संभाग: ' + CBSE_REGIONS.length : 'Total Regions: ' + CBSE_REGIONS.length + ' Active') +
+      '</div>' +
+    '</div>';
+
+  var cardsHtml = CBSE_REGIONS.map(function(r) {
+    var name = isHi ? r.nameHi : r.nameEn;
+    var state = isHi ? r.stateHi : r.stateEn;
+    var copyBtnLabel = isHi ? 'मिड-टर्म टेस्ट लिंक कॉपी करें 📋' : 'Copy test link mid term 📋';
+    var openBtnLabel = isHi ? 'मिड-टर्म टेस्ट लिंक खोलें ↗' : 'Open test link mid term ↗';
+    var hasLink = (r.link && r.link !== '#' && r.link.trim() !== '');
+    var openBtnHtml = hasLink ?
+      '<a href="' + r.link + '" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="justify-content:center;font-size:.8rem;padding:9px 16px;">' + openBtnLabel + '</a>' :
+      '<button type="button" onclick="showToast(&quot;' + (isHi ? name + ' का टेस्ट लिंक जल्द उपलब्ध कराया जाएगा!' : 'Test link for ' + name + ' will be available soon!') + '&quot;)" class="btn btn-primary" style="justify-content:center;font-size:.8rem;padding:9px 16px;opacity:0.88;">' + openBtnLabel + '</button>';
+    var linkBadge = hasLink ? '' :
+      '<span style="background:#FEF3C7;color:#92400E;font-size:.68rem;font-weight:800;padding:2px 8px;border-radius:999px;margin-left:6px;vertical-align:middle;">' + (isHi ? 'लिंक जल्द' : 'Link Soon') + '</span>';
+
+    return '<div class="exam-region-card">' +
+      '<div>' +
+        '<div class="exam-region-head">' +
+          '<div class="exam-region-icon">' + r.icon + '</div>' +
+          '<div>' +
+            '<h3 class="exam-region-title">' + name + linkBadge + '</h3>' +
+            '<div class="exam-region-sub">📍 ' + state + '</div>' +
+          '</div>' +
+        '</div>' +
+        '<p style="font-size:.8rem;color:var(--ink-2);line-height:1.45;margin-bottom:12px;">' +
+          (isHi ? 'सेमेस्टर-1 DCAIS परीक्षा के लिए आधिकारिक CBSE क्षेत्रीय लिंक।' : 'Official CBSE Regional examination form for DCAIS Semester-1 assessment.') +
+        '</p>' +
+      '</div>' +
+      '<div class="exam-region-actions">' +
+        openBtnHtml +
+        '<button type="button" onclick="copyExamLink(&quot;' + (r.link || '') + '&quot;, &quot;' + name + '&quot;)" class="btn btn-ghost" style="justify-content:center;font-size:.78rem;padding:8px 14px;background:#FFF;border:1.5px solid var(--border);color:var(--ink);">' + copyBtnLabel + '</button>' +
+      '</div>' +
+    '</div>';
+  }).join('');
+
+  return metaBanner + guidelinesBox + searchBar + '<div class="exam-region-grid" id="studentExamRegionGrid">' + cardsHtml + '</div>';
+}
+
+
+/* ===== AUTUMN BOOTCAMP 2026 RENDERER ===== */
+function renderStudentBootcampSection() {
+  var isHi = (currentLang === 'hi');
+  var bootcampFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdRhrYIdIu18r_HV0oyuVslHN8NEgEhroRC8c5-BCnp1nbbHA/viewform?usp=header';
+
+  var heroBanner =
+    '<div class="bc-hero-banner">' +
+      '<div style="flex:1;min-width:280px;z-index:2;">' +
+        '<div class="bc-tag-pill">🚀 ' + (isHi ? 'केवीएस शरद ऋतु बूटकैंप 2026' : 'CBSE Digital Innovation Bootcamp 2026') + '</div>' +
+        '<div class="bc-timing-pill">📅 ' + (isHi ? '17 से 24 अक्टूबर 2026 • शाम 4:00 से 5:00 बजे' : '17th - 24th October, 2026 • Time: 4:00 PM - 5:00 PM') + '</div>' +
+        '<h2 style="font-size:1.6rem;font-weight:900;letter-spacing:-.03em;line-height:1.2;margin-bottom:8px;color:#FFF;">' +
+          (isHi ? 'एडोब एक्सप्रेस फॉर एजुकेशन ऑटम बूटकैंप' : 'CBSE Digital Innovation Bootcamp') +
+        '</h2>' +
+        '<p style="font-size:.88rem;color:rgba(255,255,255,0.85);max-width:580px;line-height:1.5;margin-bottom:14px;">' +
+          (isHi ? '3 लाइव इंटरैक्टिव यूट्यूब सत्र, आधिकारिक एडोब एक्सप्रेस टेम्पलेट्स, और जनरेटिव AI स्टोरीटेलिंग प्रोजेक्ट्स।' :
+                  '3 live interactive masterclasses on YouTube: Comic-a-concept, Hero of My Nation, and My Childhood Memory. Use Generative AI in Adobe Express to create digital stories!') +
+        '</p>' +
+        '<div style="font-size:.78rem;font-weight:800;color:#FCA5A5;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px;">' +
+          '✨ ' + (isHi ? 'नवाचार के माध्यम से • शिक्षा के माध्यम से • डिज़ाइन के माध्यम से' : 'Through Innovation. Through Education. Through Design.') +
+        '</div>' +
+        '<div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">' +
+          '<a href="' + bootcampFormUrl + '" target="_blank" class="btn btn-primary" style="background:#059669;color:#FFF;padding:8px 18px;border-radius:999px;font-weight:800;font-size:.82rem;text-decoration:none;box-shadow:0 3px 10px rgba(5,150,105,0.4);border:none;">' +
+            '📤 ' + (isHi ? 'प्रोजेक्ट सबमिट करें (Google Form) ↗' : 'Submit Project (Google Form) ↗') +
+          '</a>' +
+        '</div>' +
+      '</div>' +
+      '<div style="display:flex;flex-direction:column;align-items:center;gap:8px;z-index:2;">' +
+        '<img src="assets/autumn_bootcamp_banner.jpg?v=2" alt="CBSE Digital Innovation Bootcamp" class="bc-poster-thumb" onclick="window.open(\'assets/autumn_bootcamp_poster.jpg\', \'_blank\')" title="' + (isHi ? 'बड़ा बैनर देखें' : 'Click to view full banner') + '">' +
+        '<div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:center;">' +
+          '<a href="assets/autumn_bootcamp_banner.jpg" target="_blank" download class="btn btn-ghost" style="font-size:.74rem;padding:4px 10px;color:#FFF;border-color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.1);">' +
+            '🖼️ ' + (isHi ? 'बैनर देखें ↗' : 'View Banner ↗') +
+          '</a>' +
+          '<a href="assets/autumn_bootcamp_full_poster.jpg" target="_blank" download class="btn btn-ghost" style="font-size:.74rem;padding:4px 10px;color:#FFF;border-color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.1);">' +
+            '📄 ' + (isHi ? 'पूरा पोस्टर ↗' : 'Full Poster ↗') +
+          '</a>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+
+  var howToGuide =
+    '<div class="bc-guide-box">' +
+      '<div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:6px;">' +
+        '<h3 style="font-size:1.05rem;font-weight:900;color:var(--ink);">' +
+          '💡 ' + (isHi ? 'बूटकैंप में भाग कैसे लें?' : 'How to Participate in the Bootcamp') +
+        '</h3>' +
+        '<span style="font-size:.75rem;font-weight:800;background:var(--red-bg);color:var(--red);padding:3px 10px;border-radius:999px;border:1px solid var(--red-border);">' +
+          (isHi ? 'कक्षा 6 से 12 के छात्रों के लिए' : 'For Grades 6-12 Students') +
+        '</span>' +
+      '</div>' +
+      '<p style="font-size:.84rem;color:var(--ink-2);line-height:1.5;">' +
+        (isHi ? 'नीचे दिए गए तीनों सत्रों में भाग लें। शाम 4:00 बजे लाइव सेशन देखें, दिए गए टेम्पलेट्स को एडोब एक्सप्रेस में एडिट करें और अपनी रचना तैयार करें।' :
+                'Attend all 3 sessions! Watch the YouTube live stream at 4:00 PM, click the template links to remix in your Adobe Express school account, and prepare your project submissions.') +
+      '</p>' +
+      '<div class="bc-flow-steps">' +
+        '<div class="bc-step-item"><span class="bc-step-num">1</span><span>' + (isHi ? 'शाम 4:00 बजे लाइव क्लास देखें' : 'Watch Live at 4:00 PM') + '</span></div>' +
+        '<div class="bc-step-item"><span class="bc-step-num">2</span><span>' + (isHi ? 'एडोब एक्सप्रेस टेम्पलेट खोलें' : 'Open Express Template') + '</span></div>' +
+        '<div class="bc-step-item"><span class="bc-step-num">3</span><span>' + (isHi ? 'GenAI से अपनी कला बनाएं' : 'Create with Generative AI') + '</span></div>' +
+        '<div class="bc-step-item" style="cursor:pointer;" onclick="window.open(\'' + bootcampFormUrl + '\', \'_blank\')"><span class="bc-step-num" style="background:#059669;color:#FFF;">4</span><span style="font-weight:800;color:#059669;">' + (isHi ? 'गूगल फॉर्म में सबमिट करें ↗' : 'Submit via Google Form ↗') + '</span></div>' +
+      '</div>' +
+    '</div>';
+
+  var sessionsHtml =
+    '<div style="margin-bottom:16px;">' +
+      '<h3 style="font-size:1.2rem;font-weight:900;color:var(--ink);letter-spacing:-.02em;">' +
+        '📚 ' + (isHi ? 'बूटकैंप सत्र एवं संसाधन (3 लाइव सेशन):' : 'Bootcamp Sessions & Project Launchers (3 Live Sessions):') +
+      '</h3>' +
+    '</div>' +
+    '<div class="bc-sessions-grid">' +
+
+      /* SESSION 1 */
+      '<div class="bc-card session-1">' +
+        '<div>' +
+          '<div class="bc-card-hdr">' +
+            '<span class="bc-card-date">📅 17-Oct-2026 • 4:00 PM</span>' +
+            '<span class="bc-card-tag bc-tag-1">Session 1</span>' +
+          '</div>' +
+          '<div class="bc-card-body">' +
+            '<h4 class="bc-card-title">Comic-a-concept</h4>' +
+            '<p class="bc-card-desc">' +
+              (isHi ? 'एडोब एक्सप्रेस के जनरेटिव एआई फीचर का उपयोग करके कॉमिक स्ट्रिप्स के माध्यम से किसी भी वैज्ञानिक या सामाजिक विषय को समझाएं।' :
+                      'Use generative AI feature of Adobe Express to explain an educational concept using creative comic strips.') +
+            '</p>' +
+            '<div class="bc-tools-badge">🛠️ ' + (isHi ? 'टूल्स: कॉमिक स्ट्रिप मेकर, जेनरेटिव AI' : 'Tools: Comic Strip Maker, Generative AI') + '</div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="bc-card-actions">' +
+          '<a href="https://youtube.com/live/SoYiU1lR364?feature=share" target="_blank" class="bc-btn-yt">' +
+            '▶ ' + (isHi ? 'लाइव सेशन 1 देखें (YouTube) ↗' : 'Watch Live Session 1 (YouTube) ↗') +
+          '</a>' +
+          '<a href="https://express.adobe.com/sp/design/comics" target="_blank" class="bc-btn-tpl">' +
+            '<span>🎨 ' + (isHi ? 'कॉमिक कैनवास एडोब एक्सप्रेस में खोलें' : 'Open Comic Canvas in Express') + '</span> <span>↗</span>' +
+          '</a>' +
+          '<a href="' + bootcampFormUrl + '" target="_blank" class="bc-btn-sub">' +
+            '📤 ' + (isHi ? 'प्रोजेक्ट सबमिट करें (Google Form) ↗' : 'Submit Project (Google Form) ↗') +
+          '</a>' +
+        '</div>' +
+      '</div>' +
+
+      /* SESSION 2 */
+      '<div class="bc-card session-2">' +
+        '<div>' +
+          '<div class="bc-card-hdr">' +
+            '<span class="bc-card-date">📅 22-Oct-2026 • 4:00 PM</span>' +
+            '<span class="bc-card-tag bc-tag-2">Session 2</span>' +
+          '</div>' +
+          '<div class="bc-card-body">' +
+            '<h4 class="bc-card-title">Hero of My Nation</h4>' +
+            '<p class="bc-card-desc">' +
+              (isHi ? 'एक प्रेरक डिजिटल डिज़ाइन बनाकर अपने पसंदीदा राष्ट्रीय व्यक्तित्व या स्वतंत्रता सेनानी को श्रद्धांजलि अर्पित करें।' :
+                      'Pay tribute to your favourite national personality or freedom fighter by creating an inspiring digital design in Adobe Express.') +
+            '</p>' +
+            '<div class="bc-tools-badge">🛠️ ' + (isHi ? 'टूल्स: जेनरेटिव AI, डिज़ाइन एसेट्स, टेक्स्ट इफेक्ट्स' : 'Tools: Generative AI, Design Assets, Text Inputs') + '</div>' +
+            '<div style="font-size:.78rem;font-weight:800;color:var(--ink);margin-bottom:8px;">🎨 ' + (isHi ? 'आधिकारिक टेम्पलेट्स:' : 'Official Templates:') + '</div>' +
+            '<div class="bc-tpl-list">' +
+              '<a href="https://new.express.adobe.com/design/template/urn:aaid:sc:VA6C2:1678bef7-f487-5cdc-b36e-c9887bbc634e?category=text&taskID=poster&pageId=ea76ae65-fcfc-4788-99d2-f8941e51418f" target="_blank" class="bc-btn-tpl">' +
+                '<span>📄 ' + (isHi ? 'टेम्पलेट 1: नेशनल हीरो पोस्टर' : 'Template 1: National Hero Poster') + '</span> <span>↗</span>' +
+              '</a>' +
+              '<a href="https://express.adobe.com/design/template/urn:aaid:sc:VA6C2:2277d241-7c36-5eb6-8f97-41e18f206257?category=text&entryPoint=template&taskID=poster" target="_blank" class="bc-btn-tpl">' +
+                '<span>📄 ' + (isHi ? 'टेम्पलेट 2: हीरो ट्रिब्यूट डिज़ाइन' : 'Template 2: Hero Tribute Design') + '</span> <span>↗</span>' +
+              '</a>' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="bc-card-actions">' +
+          '<a href="https://youtube.com/live/TqbePtiMqmM?feature=share" target="_blank" class="bc-btn-yt">' +
+            '▶ ' + (isHi ? 'लाइव सेशन 2 देखें (YouTube) ↗' : 'Watch Live Session 2 (YouTube) ↗') +
+          '</a>' +
+          '<a href="' + bootcampFormUrl + '" target="_blank" class="bc-btn-sub">' +
+            '📤 ' + (isHi ? 'प्रोजेक्ट सबमिट करें (Google Form) ↗' : 'Submit Project (Google Form) ↗') +
+          '</a>' +
+        '</div>' +
+      '</div>' +
+
+      /* SESSION 3 */
+      '<div class="bc-card session-3">' +
+        '<div>' +
+          '<div class="bc-card-hdr">' +
+            '<span class="bc-card-date">📅 24-Oct-2026 • 4:00 PM</span>' +
+            '<span class="bc-card-tag bc-tag-3">Session 3</span>' +
+          '</div>' +
+          '<div class="bc-card-body">' +
+            '<h4 class="bc-card-title">My Childhood Memory</h4>' +
+            '<p class="bc-card-desc">' +
+              (isHi ? 'एडोब एक्सप्रेस का उपयोग करके एक रचनात्मक डिजिटल कहानी के माध्यम से अपनी पसंदीदा बचपन की स्मृति को जीवंत बनाएं।' :
+                      'Bring a favourite childhood memory to life through a creative digital story and visual narrative using Adobe Express.') +
+            '</p>' +
+            '<div class="bc-tools-badge">🛠️ ' + (isHi ? 'टूल्स: जेनरेटिव AI, विजुअल स्टोरीटेलिंग' : 'Tools: Generative AI, Storytelling, Collage') + '</div>' +
+            '<div style="font-size:.78rem;font-weight:800;color:var(--ink);margin-bottom:8px;">🎨 ' + (isHi ? 'आधिकारिक टेम्पलेट्स:' : 'Official Templates:') + '</div>' +
+            '<div class="bc-tpl-list">' +
+              '<a href="https://new.express.adobe.com/design/template/urn:aaid:sc:VA6C2:fcf64e48-8456-5141-9d68-55b0d404d468" target="_blank" class="bc-btn-tpl">' +
+                '<span>📄 ' + (isHi ? 'टेम्पलेट 1: चाइल्डहुड ड्रीम्स' : 'Template 1: Childhood Dreams') + '</span> <span>↗</span>' +
+              '</a>' +
+              '<a href="https://new.express.adobe.com/design/template/urn:aaid:sc:VA6C2:e1cb7d5d-5c61-5064-bfb1-a1d1e94b693e" target="_blank" class="bc-btn-tpl">' +
+                '<span>📄 ' + (isHi ? 'टेम्पलेट 2: मेमोरी कोलाज' : 'Template 2: Memory Collage') + '</span> <span>↗</span>' +
+              '</a>' +
+              '<a href="https://new.express.adobe.com/design/template/urn:aaid:sc:VA6C2:3fda717c-85e0-57ed-8cab-bf340edd76d9" target="_blank" class="bc-btn-tpl">' +
+                '<span>📄 ' + (isHi ? 'टेम्पलेट 3: डिजिटल कैनवास' : 'Template 3: Digital Canvas') + '</span> <span>↗</span>' +
+              '</a>' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="bc-card-actions">' +
+          '<a href="https://youtube.com/live/xY70phB0qiw?feature=share" target="_blank" class="bc-btn-yt">' +
+            '▶ ' + (isHi ? 'लाइव सेशन 3 देखें (YouTube) ↗' : 'Watch Live Session 3 (YouTube) ↗') +
+          '</a>' +
+          '<a href="' + bootcampFormUrl + '" target="_blank" class="bc-btn-sub">' +
+            '📤 ' + (isHi ? 'प्रोजेक्ट सबमिट करें (Google Form) ↗' : 'Submit Project (Google Form) ↗') +
+          '</a>' +
+        '</div>' +
+      '</div>' +
+
+    '</div>';
+
+  var noticeBox =
+    '<div style="background:var(--surface);border:1.5px solid #059669;border-left:5px solid #059669;border-radius:var(--radius);padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;box-shadow:0 4px 14px rgba(5,150,105,0.08);">' +
+      '<div style="flex:1;min-width:260px;">' +
+        '<div style="font-size:.74rem;font-weight:900;color:#059669;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;">' +
+          '✅ ' + (isHi ? 'आधिकारिक गूगल फॉर्म सबमिशन लिंक सक्रिय' : 'Official Google Form Submission Link Active') +
+        '</div>' +
+        '<h4 style="font-size:1.05rem;font-weight:900;color:var(--ink);margin-bottom:4px;">' +
+          (isHi ? 'ऑटम बूटकैंप 2026 प्रोजेक्ट सबमिशन फॉर्म' : 'Autumn Bootcamp 2026 Project Submission Form') +
+        '</h4>' +
+        '<p style="font-size:.85rem;color:var(--ink-2);margin:0;line-height:1.45;">' +
+          (isHi ? 'सभी 3 सत्रों (सत्र 1: कॉमिक-ए-कॉन्सेप्ट, सत्र 2: हीरो ऑफ माय नेशन, सत्र 3: माय चाइल्डहुड मेमोरी) के प्रोजेक्ट्स को इस आधिकारिक फॉर्म के माध्यम से सबमिट करें।' :
+                  'Submit your projects for all 3 sessions (Session 1: Comic-a-concept, Session 2: Hero of My Nation, Session 3: My Childhood Memory) using this official Google Form.') +
+        '</p>' +
+      '</div>' +
+      '<a href="' + bootcampFormUrl + '" target="_blank" class="btn btn-primary" style="background:#059669;color:#FFF;text-decoration:none;font-weight:800;padding:12px 24px;border-radius:999px;box-shadow:0 4px 14px rgba(5,150,105,0.35);font-size:.9rem;white-space:nowrap;">' +
+        '📤 ' + (isHi ? 'सबमिशन फॉर्म खोलें ↗' : 'Open Submission Form ↗') +
+      '</a>' +
+    '</div>';
+
+  return heroBanner + howToGuide + sessionsHtml + noticeBox;
+}
+
+/* ===== SECTIONS DATA ===== */
+var STUDENT_SECTIONS_DATA = {
+  'bootcamp': {
+    num: '🎒',
+    tagEn: 'Special Initiative • Autumn Bootcamp',
+    tagHi: 'विशेष पहल • शरद ऋतु बूटकैंप',
+    titleEn: 'CBSE Digital Innovation Bootcamp (17th - 24th October, 2026)',
+    titleHi: 'केवीएस शरद ऋतु बूटकैंप (17 - 24 अक्टूबर 2026)',
+    descEn: '3 Live interactive masterclasses from 4:00 PM to 5:00 PM: Comic-a-concept, Hero of My Nation, and My Childhood Memory. Use GenAI in Adobe Express!',
+    descHi: 'शाम 4:00 से 5:00 बजे तक 3 लाइव इंटरएक्टिव मास्टरक्लास। यूट्यूब पर देखें, आधिकारिक एडोब एक्सप्रेस टेम्पलेट्स का उपयोग करें और अपनी डिजिटल कहानियां बनाएं!',
+    render: function(lang) { return renderStudentBootcampSection(); }
+  },
+  '1': {
+    num: '📅',
+    tagEn: 'Section 1 • Monthly Activities',
+    tagHi: 'सेक्शन 1 • मासिक एक्टिविटीज़',
+    titleEn: 'Monthly Creative Activities',
+    titleHi: 'मासिक क्रिएटिव एक्टिविटीज़',
+    descEn: 'Pick your month, watch the tutorial video, make your art in Adobe Express, and submit it!',
+    descHi: 'अपना महीना चुनें, ट्यूटोरियल वीडियो देखें, Adobe Express में अपनी कला बनाएं और इसे जमा करें!',
+    render: function(lang) { return renderMonthSectionHtml(); }
+  },
+  '3': {
+    num: '🌟',
+    tagEn: 'Section 3 • DCAIS Activities',
+    tagHi: 'सेक्शन 3 • DCAIS एक्टिविटीज़',
+    titleEn: 'DCAIS Weekly Activities (Grades 6-8)',
+    titleHi: 'DCAIS साप्ताहिक एक्टिविटीज़ (कक्षा 6-8)',
+    descEn: '16 Weekly curriculum modules for Grades 6-8 from DCAIS. Select your grade, complete activities, and earn your DCAIS certificate!',
+    descHi: 'कक्षा 6 से 8 के लिए 16 साप्ताहिक DCAIS पाठ्यक्रम मॉड्यूल। अपनी कक्षा चुनें, गतिविधियाँ पूरी करें और DCAIS प्रमाणपत्र प्राप्त करें!',
+    render: function(lang) { return renderDcaisSection(); }
+  },
+  '4': {
+    num: '📝',
+    tagEn: 'Section 4 • Mid-Term Exam',
+    tagHi: 'सेक्शन 4 • मिड-टर्म परीक्षा',
+    titleEn: 'DCAIS Mid-Term Examination (Sem-1)',
+    titleHi: 'DCAIS मिड-टर्म परीक्षा (सेमेस्टर-1)',
+    descEn: 'Official CBSE Regional Mid-Term Examination Google Forms for Semester-1. Find your region, open the test link, and complete your assessment.',
+    descHi: 'सेमेस्टर-1 के लिए आधिकारिक CBSE क्षेत्रीय मिड-टर्म परीक्षा गूगल फॉर्म। अपना संभाग खोजें, टेस्ट लिंक खोलें और परीक्षा पूरी करें।',
+    render: function(lang) { return renderStudentExamSection(); }
+  }
+  /*
+  // Sections 5, 6, 7 [Commented out as not needed now]
+  ,
+  'old_4': {
+    num: '🖼️',
+    tag: 'Section 4 • My Portfolio',
+    title: 'My Creative Portfolio',
+    desc: 'All your art in one place! See how much you have made and share it with your teacher.',
+    render: function() {
+      return '<div class="pstats">' +
+        '<div class="pstat"><div class="pstat-n">9/12</div><div class="pstat-l">Months Done</div></div>' +
+        '<div class="pstat"><div class="pstat-n">83%</div><div class="pstat-l">Work Submitted</div></div>' +
+        '<div class="pstat"><div class="pstat-n">3/6</div><div class="pstat-l">Badges Won</div></div>' +
+        '<div class="pstat"><div class="pstat-n">14</div><div class="pstat-l">Projects Saved</div></div>' +
+      '</div>' +
+      '<div class="rg">' +
+        '<div class="rc"><img src="assets/guidebook/student_yearend_project.png" class="rc-thumb" crossorigin="anonymous" alt=""><div><div class="rc-badge">Submit</div><h4>Send My Project</h4><p>Upload your finished Adobe Express project link or file for your teacher to see and grade.</p></div><a href="https://docs.google.com/forms/d/e/1FAIpQLScEzxzVqZp3ivr-C18TAimHJV-hXIFzVaVmR-q7Ab-031xVQA/viewform?usp=header" target="_blank" class="btn btn-primary">Submit Project →</a></div>' +
+        '<div class="rc"><img src="assets/guidebook/student_magazine_portfolio.png" class="rc-thumb" crossorigin="anonymous" alt=""><div><div class="rc-badge">Library</div><h4>See All My Work</h4><p>Browse all the posters, cards, and videos you have made this year!</p></div><a href="https://express.adobe.com" target="_blank" class="btn btn-outline">Open Library →</a></div>' +
+        '<div class="rc"><img src="assets/guidebook/student_creative_challenge.png" class="rc-thumb" crossorigin="anonymous" alt=""><div><div class="rc-badge">Share</div><h4>Share With Friends</h4><p>Get a link to show your best art to your friends and family. They will love it!</p></div><a href="https://express.adobe.com" target="_blank" class="btn btn-outline">Share →</a></div>' +
+      '</div>';
+    }
+  },
+  '5': {
+    num: '🎬',
+    tag: 'Section 5 • Video Tutorials',
+    title: 'How-To Videos',
+    desc: 'Watch short videos to learn how to use Adobe Express. Follow along and make something amazing!',
+    render: function() {
+      return '<div class="rg">' +
+        '<div class="rc"><img src="assets/guidebook/dcais_quick_actions.png" class="rc-thumb" crossorigin="anonymous" alt=""><div><div class="rc-badge">Beginner • 5 min</div><h4>First Steps in Adobe Express</h4><p>Tour the workspace, find the basic tools, and make your first design in 5 minutes!</p></div><a href="https://www.youtube.com/results?search_query=adobe+express+beginner+tutorial" target="_blank" class="btn btn-dark">▶ Watch →</a></div>' +
+        '<div class="rc"><img src="assets/guidebook/student_creative_challenge.png" class="rc-thumb" crossorigin="anonymous" alt=""><div><div class="rc-badge">Easy • 8 min</div><h4>Make a School Poster</h4><p>Learn how to pick colours and make a beautiful poster for your school notice board!</p></div><a href="https://www.youtube.com/results?search_query=adobe+express+poster+tutorial" target="_blank" class="btn btn-dark">▶ Watch →</a></div>' +
+        '<div class="rc"><img src="assets/guidebook/student_generative_art.png" class="rc-thumb" crossorigin="anonymous" alt=""><div><div class="rc-badge">Medium • 12 min</div><h4>Make a Short Video</h4><p>Add music, your voice, and animated text to make a really cool short video!</p></div><a href="https://www.youtube.com/results?search_query=adobe+express+video+tutorial" target="_blank" class="btn btn-dark">▶ Watch →</a></div>' +
+        '<div class="rc"><img src="assets/guidebook/student_text_effects.png" class="rc-thumb" crossorigin="anonymous" alt=""><div><div class="rc-badge">Fun • 10 min</div><h4>Animated Stickers &amp; Text</h4><p>Make things move! Add cool animations to your designs and share as GIFs.</p></div><a href="https://www.youtube.com/results?search_query=adobe+express+animation+tutorial" target="_blank" class="btn btn-dark">▶ Watch →</a></div>' +
+        '<div class="rc"><img src="assets/guidebook/student_sticker_design.png" class="rc-thumb" crossorigin="anonymous" alt=""><div><div class="rc-badge">Advanced • 15 min</div><h4>Design Your Own Logo</h4><p>Create a personal logo and brand mark. Make it look like a real company or brand!</p></div><a href="https://www.youtube.com/results?search_query=adobe+express+logo+tutorial" target="_blank" class="btn btn-dark">▶ Watch →</a></div>' +
+      '</div>';
+    }
+  },
+  '6': {
+    num: '🛠️',
+    tag: 'Section 6 • Creative Tools',
+    title: 'Jump In and Create!',
+    desc: 'Tap any tool to start making right now. No need to wait - just pick and create!',
+    render: function() {
+      return '<div class="tools">' +
+        '<a href="https://express.adobe.com/sp/design/posters" target="_blank" class="tool"><div class="tool-ico">🪧</div><h4>Posters</h4><span>Flyers &amp; Art</span></a>' +
+        '<a href="https://express.adobe.com/sp/design/videos" target="_blank" class="tool"><div class="tool-ico">📹</div><h4>Videos</h4><span>Clips &amp; Reels</span></a>' +
+        '<a href="https://express.adobe.com/sp/design/cards" target="_blank" class="tool"><div class="tool-ico">💌</div><h4>Cards</h4><span>Greetings</span></a>' +
+        '<a href="https://express.adobe.com/sp/design/collages" target="_blank" class="tool"><div class="tool-ico">🖼️</div><h4>Collages</h4><span>Photo Grids</span></a>' +
+        '<a href="https://express.adobe.com/sp/tools/remove-background" target="_blank" class="tool"><div class="tool-ico">✂️</div><h4>Remove BG</h4><span>1-Click Clear</span></a>' +
+        '<a href="https://express.adobe.com/sp/design/bookcovers" target="_blank" class="tool"><div class="tool-ico">📚</div><h4>Book Covers</h4><span>Novel Layout</span></a>' +
+        '<a href="https://express.adobe.com/sp/design/comics" target="_blank" class="tool"><div class="tool-ico">🦸</div><h4>Comics</h4><span>4-Panel Strips</span></a>' +
+        '<a href="https://express.adobe.com/sp/design/social" target="_blank" class="tool"><div class="tool-ico">📱</div><h4>Social Posts</h4><span>Campaigns</span></a>' +
+      '</div>' +
+      '<div style="margin-top:24px;text-align:center">' +
+        '<a href="https://express.adobe.com" target="_blank" class="btn btn-primary" style="padding:12px 28px;font-size:.9rem;">🚀 Open Full Adobe Express ↗</a>' +
+      '</div>';
+    }
+  },
+  '7': {
+    num: '🏆',
+    tag: 'Section 7 • My Badges',
+    title: 'My Badges &amp; Awards',
+    desc: 'You earn badges by completing projects! Keep going to unlock more cool awards.',
+    render: function() {
+      return '<div class="ach-grid">' +
+        '<div class="ac earned"><div class="ac-icon">✓</div><h4>First Project Done!</h4><p>You finished your very first creative challenge. Amazing start!</p><span class="ac-tag">Earned ✓</span></div>' +
+        '<div class="ac earned"><div class="ac-icon">🔥</div><h4>3-Month Streak</h4><p>You submitted 3 months in a row! Great job keeping up!</p><span class="ac-tag">Earned ✓</span></div>' +
+        '<div class="ac earned"><div class="ac-icon">📁</div><h4>Portfolio Builder</h4><p>You saved 5 or more works to your portfolio. Well done!</p><span class="ac-tag">Earned ✓</span></div>' +
+        '<div class="ac locked"><div class="ac-icon">🔒</div><h4>Half-Year Creator</h4><p>Do 6 monthly projects to unlock this badge!</p><span class="ac-tag">Locked</span></div>' +
+        '<div class="ac locked"><div class="ac-icon">🔒</div><h4>Year Champion</h4><p>Complete all 12 monthly challenges to win this badge!</p><span class="ac-tag">Locked</span></div>' +
+        '<div class="ac locked"><div class="ac-icon">🔒</div><h4>Master Creator</h4><p>Get top marks across all your submissions to unlock this!</p><span class="ac-tag">Locked</span></div>' +
+      '</div>';
+    }
+  }
+  */
+};
+
+/* ===== NAVIGATION CONTROLLER ===== */
+function openSection(num, noScroll) {
+  if (!num) return;
+  var normKey = (num + '').toLowerCase() === 'bootcamp' ? 'bootcamp' : (num + '');
+  var data = STUDENT_SECTIONS_DATA[normKey] || STUDENT_SECTIONS_DATA[num];
+  if (!data) return;
+  currentOpenSection = normKey;
+  if (location.hash !== '#section-' + normKey) {
+    location.hash = '#section-' + normKey;
+  }
+
+  var isHi = (currentLang === 'hi');
+  var tag = isHi ? data.tagHi : data.tagEn;
+  var title = isHi ? data.titleHi : data.titleEn;
+  var desc = isHi ? data.descHi : data.descEn;
+
+  var crumbHome = document.getElementById('crumbHome');
+  if (crumbHome) crumbHome.innerHTML = isHi ? 'होम' : 'Home';
+  var crumb = document.getElementById('crumbName');
+  if (crumb) crumb.innerHTML = tag;
+  var badge = document.getElementById('secBadge');
+  if (badge) badge.innerHTML = data.num;
+  var secTag = document.getElementById('secTag');
+  if (secTag) secTag.innerHTML = tag;
+  var secTitle = document.getElementById('secTitle');
+  if (secTitle) secTitle.innerHTML = title;
+  var secDesc = document.getElementById('secDesc');
+  if (secDesc) secDesc.innerHTML = desc;
+  var content = document.getElementById('secContent');
+  if (content) content.innerHTML = data.render(currentLang);
+
+  var keys = Object.keys(STUDENT_SECTIONS_DATA);
+  var idx = keys.indexOf(normKey);
+  var nextPrevHtml = '';
+  if (idx > 0) nextPrevHtml += '<button class="btn btn-ghost" onclick="openSection(&quot;' + keys[idx-1] + '&quot;)">' + (isHi ? '← पिछला सेक्शन' : '← Prev Section') + '</button> ';
+  if (idx < keys.length-1) nextPrevHtml += '<button class="btn btn-primary" onclick="openSection(&quot;' + keys[idx+1] + '&quot;)">' + (isHi ? 'अगला सेक्शन →' : 'Next Section →') + '</button>';
+  var np = document.getElementById('secNextPrev');
+  if (np) np.innerHTML = nextPrevHtml;
+
+  var dv = document.getElementById('dashboardView');
+  if (dv) dv.style.display = 'none';
+  var mh = document.getElementById('mainHero');
+  if (mh) mh.style.display = 'none';
+  var sv = document.getElementById('sectionView');
+  if (sv) sv.style.display = 'block';
+
+  if (!noScroll) {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
+
+function showDashboard() {
+  currentOpenSection = null;
+  if (location.hash && location.hash !== '#') {
+    location.hash = '';
+  }
+  var sv = document.getElementById('sectionView');
+  if (sv) sv.style.display = 'none';
+  var dv = document.getElementById('dashboardView');
+  if (dv) dv.style.display = 'block';
+  var mh = document.getElementById('mainHero');
+  if (mh) mh.style.display = 'block';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+window.addEventListener('hashchange', function() {
+  var hash = location.hash;
+  if (hash.indexOf('#section-') === 0) {
+    var rawKey = hash.replace('#section-', '');
+    var normKey = rawKey.toLowerCase() === 'bootcamp' ? 'bootcamp' : rawKey;
+    if (STUDENT_SECTIONS_DATA[normKey] || STUDENT_SECTIONS_DATA[rawKey]) {
+      var resolved = STUDENT_SECTIONS_DATA[normKey] ? normKey : rawKey;
+      if (currentOpenSection !== resolved) {
+        openSection(resolved, true);
+      }
+      return;
+    }
+  }
+  if (!hash || hash === '#' || hash === '#dashboard') {
+    showDashboard();
+  }
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+  var hash = location.hash;
+  if (hash.indexOf('#section-') === 0) {
+    var rawKey = hash.replace('#section-', '');
+    var normKey = rawKey.toLowerCase() === 'bootcamp' ? 'bootcamp' : rawKey;
+    if (STUDENT_SECTIONS_DATA[normKey] || STUDENT_SECTIONS_DATA[rawKey]) {
+      var resolved = STUDENT_SECTIONS_DATA[normKey] ? normKey : rawKey;
+      openSection(resolved);
+      applyLang();
+      return;
+    }
+  }
+  showDashboard();
+  applyLang();
+});
+
+
+// Explicit global bindings
+window.openSection = openSection;
+window.showDashboard = showDashboard;
+window.toggleLang = toggleLang;
+window.selectMonthTab = selectMonthTab;
+window.selectAimGrade = selectAimGrade;
+window.filterAimMonth = filterAimMonth;
+window.searchAimActivities = searchAimActivities;
+window.filterStudentExamRegions = filterStudentExamRegions;
+window.copyExamLink = copyExamLink;
+window.showToast = showToast;
+
+// Event delegation for cards and hero flow pills
+document.addEventListener('click', function(e) {
+  var card = e.target.closest('.tile-card');
+  if (card) {
+    var sec = card.getAttribute('data-section');
+    if (sec && typeof window.openSection === 'function') {
+      window.openSection(sec);
+    }
+    return;
+  }
+  var flowStep = e.target.closest('.flow-step');
+  if (flowStep) {
+    var flowSec = flowStep.getAttribute('data-flow-section');
+    if (flowSec && typeof window.openSection === 'function') {
+      window.openSection(flowSec);
+    }
+    return;
+  }
+});
+
+// Keyboard support for accessible flow pills
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Enter' || e.key === ' ') {
+    var flowStep = e.target.closest('.flow-step');
+    if (flowStep) {
+      e.preventDefault();
+      var flowSec = flowStep.getAttribute('data-flow-section');
+      if (flowSec && typeof window.openSection === 'function') {
+        window.openSection(flowSec);
+      }
+    }
+  }
+});
+
+console.log('STUDENT PORTAL READY - ALL SCRIPTS INLINED');
+
+</script>
+</body>
+</html>

@@ -1,0 +1,389 @@
+{
+  "common": {
+    "siteTitle": {
+      "en": "Adobe Express for Education",
+      "hi": "एडोब एक्सप्रेस फॉर एजुकेशन"
+    },
+    "tagline": {
+      "en": "Empowering Teachers & Inspiring Students",
+      "hi": "शिक्षकों को सशक्त और विद्यार्थियों को प्रेरित करना"
+    },
+    "homeLink": {
+      "en": "Home",
+      "hi": "मुख्य पृष्ठ"
+    },
+    "teacherLink": {
+      "en": "Teacher Portal",
+      "hi": "शिक्षक पोर्टल"
+    },
+    "studentLink": {
+      "en": "Student Portal",
+      "hi": "विद्यार्थी पोर्टल"
+    },
+    "backHome": {
+      "en": "← Back to Home",
+      "hi": "← मुख्य पृष्ठ पर वापस"
+    },
+    "openBtn": {
+      "en": "Open",
+      "hi": "खोलें"
+    },
+    "watchTutorial": {
+      "en": "Watch Tutorial",
+      "hi": "ट्यूटोरियल देखें"
+    },
+    "openActivity": {
+      "en": "Open Activity",
+      "hi": "गतिविधि खोलें"
+    },
+    "submitActivity": {
+      "en": "Submit Activity",
+      "hi": "गतिविधि सबमिट करें"
+    }
+  },
+  "home": {
+    "welcomeTitle": {
+      "en": "Welcome to Adobe Express for Education",
+      "hi": "एडोब एक्सप्रेस फॉर एजुकेशन में आपका स्वागत है"
+    },
+    "welcomeSubtitle": {
+      "en": "Select your learning portal to get started",
+      "hi": "आरंभ करने के लिए अपना पोर्टल चुनें"
+    },
+    "teacherCardTitle": {
+      "en": "Teacher Portal",
+      "hi": "शिक्षक पोर्टल"
+    },
+    "teacherCardDesc": {
+      "en": "Access your Adobe ID credentials, 5 CPD training modules, and complete DCAIS curriculum resources.",
+      "hi": "अपनी एडोब आईडी, 5 सीपीडी प्रशिक्षण मॉड्यूल और संपूर्ण डीसीएआईएस पाठ्यक्रम सामग्री प्राप्त करें।"
+    },
+    "studentCardTitle": {
+      "en": "Student Portal",
+      "hi": "विद्यार्थी पोर्टल"
+    },
+    "studentCardDesc": {
+      "en": "Explore month-wise creative activities, video tutorials, and direct project submission links.",
+      "hi": "माहवार रचनात्मक गतिविधियां, वीडियो ट्यूटोरियल और परियोजना सबमिशन लिंक देखें।"
+    }
+  },
+  "teacher": {
+    "title": {
+      "en": "Teacher Dashboard",
+      "hi": "शिक्षक डैशबोर्ड"
+    },
+    "subtitle": {
+      "en": "Professional development, credential management, and classroom activity guides",
+      "hi": "व्यावसायिक विकास, क्रेडेंशियल प्रबंधन और कक्षा गतिविधि मार्गदर्शिकाएं"
+    },
+    "adobeIdSection": {
+      "title": {
+        "en": "A. Adobe ID & Password Section",
+        "hi": "ए. एडोब आईडी एवं पासवर्ड अनुभाग"
+      },
+      "desc": {
+        "en": "Manage your educator account, credentials, and institutional access to Adobe Express.",
+        "hi": "एडोब एक्सप्रेस के लिए अपने शिक्षक खाते, क्रेडेंशियल्स और संस्थागत पहुंच का प्रबंधन करें।"
+      },
+      "items": [
+        {
+          "id": "adobe-id",
+          "title": { "en": "Adobe ID / Institutional Email", "hi": "एडोब आईडी / संस्थागत ईमेल" },
+          "desc": { "en": "Use your registered school/institution email ID to log in.", "hi": "लॉग इन करने के लिए अपने पंजीकृत स्कूल/संस्थान ईमेल का उपयोग करें।" },
+          "link": "https://express.adobe.com",
+          "action": { "en": "View ID Guide", "hi": "आईडी गाइड देखें" }
+        },
+        {
+          "id": "credentials",
+          "title": { "en": "Password & Login Guidance", "hi": "पासवर्ड एवं लॉगिन मार्गदर्शन" },
+          "desc": { "en": "Best practices for setting and managing your secure education credentials.", "hi": "सुरक्षित शिक्षा क्रेडेंशियल्स सेट और प्रबंधित करने के सर्वोत्तम अभ्यास।" },
+          "link": "https://helpx.adobe.com/manage-account/using/create-update-adobe-id.html",
+          "action": { "en": "Login Guide", "hi": "लॉगिन गाइड" }
+        },
+        {
+          "id": "portal",
+          "title": { "en": "Adobe Express Education Portal", "hi": "एडोब एक्सप्रेस एजुकेशन पोर्टल" },
+          "desc": { "en": "Direct access to launch your Adobe Express creative workspace.", "hi": "अपने एडोब एक्सप्रेस रचनात्मक कार्यक्षेत्र को खोलने के लिए सीधा लिंक।" },
+          "link": "https://express.adobe.com",
+          "action": { "en": "Launch Express", "hi": "एक्सप्रेस खोलें" }
+        },
+        {
+          "id": "recovery",
+          "title": { "en": "Password Reset & Account Recovery", "hi": "पासवर्ड रीसेट एवं खाता पुनर्प्राप्ति" },
+          "desc": { "en": "Reset forgotten passwords or request account support.", "hi": "भूले हुए पासवर्ड को रीसेट करें या सहायता का अनुरोध करें।" },
+          "link": "https://account.adobe.com/reset-password",
+          "action": { "en": "Reset Password", "hi": "पासवर्ड रीसेट" }
+        },
+        {
+          "id": "sso",
+          "title": { "en": "Single Sign-On (SSO) Support", "hi": "सिंगल साइन-ऑन (एसएसओ) सहायता" },
+          "desc": { "en": "Step-by-step instructions for institutional Google/Microsoft SSO login.", "hi": "स्कूल गूगल/माइक्रोसॉफ्ट एसएसओ लॉगिन के लिए चरण-दर-चरण निर्देश।" },
+          "link": "https://helpx.adobe.com/enterprise/using/sso.html",
+          "action": { "en": "SSO Guide", "hi": "एसएसओ गाइड" }
+        }
+      ]
+    },
+    "cpdSection": {
+      "title": {
+        "en": "B. CPD – Continuous Professional Development",
+        "hi": "बी. सीपीडी – सतत व्यावसायिक विकास"
+      },
+      "desc": {
+        "en": "Complete all 5 CPD modules to enhance your digital teaching and design pedagogy.",
+        "hi": "अपने डिजिटल शिक्षण और डिजाइन कौशल को बढ़ाने के लिए सभी 5 सीपीडी मॉड्यूल पूरे करें।"
+      },
+      "modules": [
+        {
+          "id": "cpd-1",
+          "code": "CPD 1",
+          "title": { "en": "Introduction to Adobe Express in the Classroom", "hi": "कक्षा में एडोब एक्सप्रेस का परिचय" },
+          "objective": { "en": "Understand core layout tools, templates, and digital literacy frameworks for modern classrooms.", "hi": "आधुनिक कक्षाओं के लिए लेआउट टूल्स, टेम्प्लेट्स और डिजिटल साक्षरता को समझना।" },
+          "content": { "en": "Interactive video modules, step-by-step walk-throughs, and quick-start starter templates.", "hi": "इंटरैक्टिव वीडियो मॉड्यूल, चरण-दर-चरण वॉकथ्रू और क्विक-स्टार्ट टेम्प्लेट्स।" },
+          "contentLink": "#",
+          "assignment": { "en": "Create a personalized teacher classroom welcome poster or syllabus infographic.", "hi": "एक व्यक्तिगत शिक्षक कक्षा स्वागत पोस्टर या पाठ्यक्रम इन्फोग्राफिक बनाएं।" },
+          "assignmentLink": "#",
+          "submissionLink": "#"
+        },
+        {
+          "id": "cpd-2",
+          "code": "CPD 2",
+          "title": { "en": "Visual Storytelling & Graphic Design for Educators", "hi": "शिक्षकों के लिए दृश्य कहानी और ग्राफिक डिजाइन" },
+          "objective": { "en": "Master typography, color psychology, and visual hierarchy to create engaging lesson materials.", "hi": "आकर्षक पाठ सामग्री बनाने के लिए टाइपोग्राफी, रंग मनोविज्ञान और दृश्य पदानुक्रम में महारत हासिल करना।" },
+          "content": { "en": "Design principles PDF guide, Adobe color palette tools, and classroom visual assets.", "hi": "डिजाइन सिद्धांत पीडीएफ गाइड, एडोब रंग पैलेट टूल्स और कक्षा दृश्य सामग्री।" },
+          "contentLink": "#",
+          "assignment": { "en": "Design a multi-page subject concept guide or visual lesson summary.", "hi": "एक बहु-पृष्ठीय विषय अवधारणा गाइड या दृश्य पाठ सारांश डिजाइन करें।" },
+          "assignmentLink": "#",
+          "submissionLink": "#"
+        },
+        {
+          "id": "cpd-3",
+          "code": "CPD 3",
+          "title": { "en": "Interactive Media & Digital Video Projects", "hi": "इंटरैक्टिव मीडिया और डिजिटल वीडियो प्रोजेक्ट्स" },
+          "objective": { "en": "Integrate quick video creation, audio voiceovers, and student animation into lessons.", "hi": "पाठों में त्वरित वीडियो निर्माण, ऑडियो वॉयसओवर और छात्र एनीमेशन को शामिल करना।" },
+          "content": { "en": "Video editing micro-lessons, stock audio library access, and animation presets.", "hi": "वीडियो संपादन माइक्रो-पाठ, ऑडियो लाइब्रेरी और एनीमेशन प्रीसेट।" },
+          "contentLink": "#",
+          "assignment": { "en": "Produce a 60-second animated explainer video on a key academic topic.", "hi": "एक प्रमुख शैक्षणिक विषय पर 60 सेकंड का एनिमेटेड व्याख्यात्मक वीडियो बनाएं।" },
+          "assignmentLink": "#",
+          "submissionLink": "#"
+        },
+        {
+          "id": "cpd-4",
+          "code": "CPD 4",
+          "title": { "en": "Collaborative Student Portfolios & Web Pages", "hi": "सहयोगात्मक छात्र पोर्टफोलियो और वेब पेज" },
+          "objective": { "en": "Empower students to document projects, curate digital evidence, and publish web pages.", "hi": "छात्रों को परियोजनाओं का दस्तावेजीकरण करने और वेब पेज प्रकाशित करने के लिए सशक्त बनाना।" },
+          "content": { "en": "Express web page building guide, rubrics for digital portfolio assessment, and templates.", "hi": "एक्सप्रेस वेब पेज निर्माण गाइड, डिजिटल पोर्टफोलियो मूल्यांकन रूब्रिक्स और टेम्प्लेट्स।" },
+          "contentLink": "#",
+          "assignment": { "en": "Build an exemplary digital unit portfolio showcasing student learning artifacts.", "hi": "छात्रों के सीखने के उदाहरणों को प्रदर्शित करने वाला एक डिजिटल पोर्टफोलियो बनाएं।" },
+          "assignmentLink": "#",
+          "submissionLink": "#"
+        },
+        {
+          "id": "cpd-5",
+          "code": "CPD 5",
+          "title": { "en": "AI in Education & Creative Pedagogies", "hi": "शिक्षा में एआई और रचनात्मक शिक्षणशास्त्र" },
+          "objective": { "en": "Leverage generative AI responsibly in Adobe Express for creative ideation and lesson planning.", "hi": "रचनात्मक विचार निर्माण और पाठ योजना के लिए एडोब एक्सप्रेस में जनरेटिव एआई का जिम्मेदारी से उपयोग करना।" },
+          "content": { "en": "Generative prompt engineering for teachers, ethics in AI guidance, and practical examples.", "hi": "शिक्षकों के लिए जनरेटिव प्रॉम्प्ट इंजीनियरिंग, एआई में नैतिकता और व्यावहारिक उदाहरण।" },
+          "contentLink": "#",
+          "assignment": { "en": "Develop an AI-assisted lesson plan with multimodal student creative deliverables.", "hi": "मल्टीमॉडल छात्र रचनात्मक परिणामों के साथ एक एआई-सहायता प्राप्त पाठ योजना विकसित करें।" },
+          "assignmentLink": "#",
+          "submissionLink": "#"
+        }
+      ]
+    },
+    "dcaisSection": {
+      "title": {
+        "en": "C. DCAIS (Digital Creativity and Innovation Skills)",
+        "hi": "सी. डीसीएआईएस (डिजिटल रचनात्मकता और नवाचार कौशल)"
+      },
+      "desc": {
+        "en": "Comprehensive digital creativity curriculum materials, teacher manuals, and classroom activities.",
+        "hi": "व्यापक डिजिटल रचनात्मकता पाठ्यक्रम सामग्री, शिक्षक नियमावली और कक्षा गतिविधियां।"
+      },
+      "coreResources": [
+        {
+          "title": { "en": "DCAIS E-Modules", "hi": "डीसीएआईएस ई-मॉड्यूल" },
+          "desc": { "en": "Self-paced interactive digital modules for educators and students.", "hi": "शिक्षकों और छात्रों के लिए स्व-गति इंटरैक्टिव डिजिटल मॉड्यूल।" },
+          "link": "#"
+        },
+        {
+          "title": { "en": "Teacher Manual", "hi": "शिक्षक नियमावली (मैनुअल)" },
+          "desc": { "en": "Complete instructional guide with pedagogical frameworks and lesson plans.", "hi": "शैक्षणिक रूपरेखा और पाठ योजनाओं के साथ संपूर्ण निर्देश मार्गदर्शिका।" },
+          "link": "#"
+        },
+        {
+          "title": { "en": "DCAIS Book", "hi": "डीसीएआईएस पुस्तक" },
+          "desc": { "en": "Full official curriculum reference book in downloadable PDF format.", "hi": "डाउनलोड करने योग्य पीडीएफ प्रारूप में संपूर्ण आधिकारिक पाठ्यक्रम संदर्भ पुस्तक।" },
+          "link": "#"
+        }
+      ],
+      "activitiesTitle": {
+        "en": "Activities of DCAIS",
+        "hi": "डीसीएआईएस की गतिविधियां"
+      },
+      "modules": [
+        {
+          "code": "Module 1",
+          "title": { "en": "Module 1: Foundations of Digital Art", "hi": "मॉड्यूल 1: डिजिटल कला के आधार" },
+          "activities": [
+            { "name": { "en": "Activity 1.1: Basic Shapes & Vector Art", "hi": "गतिविधि 1.1: बुनियादी आकार और वेक्टर कला" }, "link": "#" },
+            { "name": { "en": "Activity 1.2: Color Palettes & Contrast", "hi": "गतिविधि 1.2: रंग पैलेट और कंट्रास्ट" }, "link": "#" },
+            { "name": { "en": "Activity 1.3: Digital Poster Composition", "hi": "गतिविधि 1.3: डिजिटल पोस्टर संरचना" }, "link": "#" }
+          ]
+        },
+        {
+          "code": "Module 2",
+          "title": { "en": "Module 2: Typography & Information Design", "hi": "मॉड्यूल 2: टाइपोग्राफी और सूचना डिजाइन" },
+          "activities": [
+            { "name": { "en": "Activity 2.1: Font Pairings & Readability", "hi": "गतिविधि 2.1: फ़ॉन्ट युग्मन और पठनीयता" }, "link": "#" },
+            { "name": { "en": "Activity 2.2: Infographics & Data Visuals", "hi": "गतिविधि 2.2: इन्फोग्राफिक्स और डेटा विज़ुअल्स" }, "link": "#" },
+            { "name": { "en": "Activity 2.3: Educational Flyers & Fact Sheets", "hi": "गतिविधि 2.3: शैक्षणिक फ़्लायर्स और फैक्ट शीट्स" }, "link": "#" }
+          ]
+        },
+        {
+          "code": "Module 3",
+          "title": { "en": "Module 3: Video & Motion Storytelling", "hi": "मॉड्यूल 3: वीडियो और मोशन स्टोरीटेलिंग" },
+          "activities": [
+            { "name": { "en": "Activity 3.1: Storyboarding & Scene Timing", "hi": "गतिविधि 3.1: स्टोरीबोर्डिंग और सीन टाइमिंग" }, "link": "#" },
+            { "name": { "en": "Activity 3.2: Voiceover & Audio Narration", "hi": "गतिविधि 3.2: वॉयसओवर और ऑडियो वर्णन" }, "link": "#" },
+            { "name": { "en": "Activity 3.3: Animated Video Presentation", "hi": "गतिविधि 3.3: एनिमेटेड वीडियो प्रस्तुति" }, "link": "#" }
+          ]
+        },
+        {
+          "code": "Module 4",
+          "title": { "en": "Module 4: Web Pages & Portfolio Publishing", "hi": "मॉड्यूल 4: वेब पेज और पोर्टफोलियो प्रकाशन" },
+          "activities": [
+            { "name": { "en": "Activity 4.1: Responsive Web Story Layouts", "hi": "गतिविधि 4.1: रिस्पॉन्सिव वेब स्टोरी लेआउट" }, "link": "#" },
+            { "name": { "en": "Activity 4.2: Photo Galleries & Glideshows", "hi": "गतिविधि 4.2: फोटो गैलरी और ग्लाइड शो" }, "link": "#" },
+            { "name": { "en": "Activity 4.3: Digital Showcase & Capstone", "hi": "गतिविधि 4.3: डिजिटल शोकेस और कैपस्टोन" }, "link": "#" }
+          ]
+        }
+      ]
+    }
+  },
+  "student": {
+    "title": {
+      "en": "Student Activity Dashboard",
+      "hi": "विद्यार्थी गतिविधि डैशबोर्ड"
+    },
+    "subtitle": {
+      "en": "Pick your current month to watch tutorials, create in Adobe Express, and submit projects.",
+      "hi": "ट्यूटोरियल देखने, एडोब एक्सप्रेस में बनाने और प्रोजेक्ट सबमिट करने के लिए अपना महीना चुनें।"
+    },
+    "flowSteps": [
+      { "step": "1", "en": "Select Month", "hi": "महीना चुनें" },
+      { "step": "2", "en": "Watch Tutorial", "hi": "ट्यूटोरियल देखें" },
+      { "step": "3", "en": "Open Activity", "hi": "गतिविधि खोलें" },
+      { "step": "4", "en": "Submit Activity", "hi": "गतिविधि सबमिट करें" }
+    ],
+    "months": [
+      {
+        "id": "january",
+        "monthName": { "en": "January", "hi": "जनवरी" },
+        "activityName": { "en": "Republic Day Poster Design", "hi": "गणतंत्र दिवस पोस्टर डिजाइन" },
+        "desc": { "en": "Design a patriotic, creative poster celebrating India's Constitution and national heritage using Adobe Express graphics and typography.", "hi": "एडोब एक्सप्रेस ग्राफिक्स और टाइपोग्राफी का उपयोग करके भारत के संविधान और राष्ट्रीय विरासत का जश्न मनाने वाला एक देशभक्ति पोस्टर डिजाइन करें।" },
+        "tutorialLink": "https://www.youtube.com/results?search_query=adobe+express+poster+tutorial",
+        "activityLink": "https://express.adobe.com/sp/design/posters",
+        "submissionLink": "https://forms.google.com"
+      },
+      {
+        "id": "february",
+        "monthName": { "en": "February", "hi": "फरवरी" },
+        "activityName": { "en": "My Favourite Festival Graphic", "hi": "मेरा पसंदीदा त्योहार ग्राफिक" },
+        "desc": { "en": "Illustrate a vibrant greeting card or graphic celebrating cultural festivities and unity.", "hi": "सांस्कृतिक उत्सव और एकता का जश्न मनाने वाला एक जीवंत ग्रीटिंग कार्ड या ग्राफिक बनाएं।" },
+        "tutorialLink": "https://www.youtube.com/results?search_query=adobe+express+card+tutorial",
+        "activityLink": "https://express.adobe.com/sp/design/cards",
+        "submissionLink": "https://forms.google.com"
+      },
+      {
+        "id": "march",
+        "monthName": { "en": "March", "hi": "मार्च" },
+        "activityName": { "en": "Women's Day Tribute Story", "hi": "महिला दिवस श्रद्धांजलि कहानी" },
+        "desc": { "en": "Create a visual collage or social story celebrating inspiring women leaders, scientists, or personal role models.", "hi": "प्रेरक महिला नेताओं, वैज्ञानिकों या व्यक्तिगत आदर्शों का जश्न मनाने वाला एक दृश्य कोलाज बनाएं।" },
+        "tutorialLink": "https://www.youtube.com/results?search_query=adobe+express+collage+tutorial",
+        "activityLink": "https://express.adobe.com/sp/design/social",
+        "submissionLink": "https://forms.google.com"
+      },
+      {
+        "id": "april",
+        "monthName": { "en": "April", "hi": "अप्रैल" },
+        "activityName": { "en": "Earth Day Awareness Poster", "hi": "पृथ्वी दिवस जागरूकता पोस्टर" },
+        "desc": { "en": "Produce an impactful environmental awareness poster focusing on climate action, reforestation, or water conservation.", "hi": "जलवायु कार्रवाई, वनीकरण या जल संरक्षण पर केंद्रित एक प्रभावशाली पर्यावरण जागरूकता पोस्टर बनाएं।" },
+        "tutorialLink": "https://www.youtube.com/results?search_query=adobe+express+infographic+tutorial",
+        "activityLink": "https://express.adobe.com/sp/design/posters",
+        "submissionLink": "https://forms.google.com"
+      },
+      {
+        "id": "may",
+        "monthName": { "en": "May", "hi": "मई" },
+        "activityName": { "en": "Summer Vacation Scrapbook", "hi": "ग्रीष्मावकाश स्क्रैपबुक" },
+        "desc": { "en": "Document summer hobbies, book reviews, or travel memories in an artistic digital photo album.", "hi": "एक कलात्मक डिजिटल फोटो एलबम में ग्रीष्मकालीन शौक, पुस्तक समीक्षा या यात्रा की यादों को संजोएं।" },
+        "tutorialLink": "https://www.youtube.com/results?search_query=adobe+express+scrapbook+tutorial",
+        "activityLink": "https://express.adobe.com/sp/design/photo",
+        "submissionLink": "https://forms.google.com"
+      },
+      {
+        "id": "june",
+        "monthName": { "en": "June", "hi": "जून" },
+        "activityName": { "en": "Environment Day Campaign Video", "hi": "पर्यावरण दिवस अभियान वीडियो" },
+        "desc": { "en": "Create a 30-to-60-second video campaign encouraging eco-friendly school practices.", "hi": "पर्यावरण-अनुकूल स्कूल प्रथाओं को प्रोत्साहित करने वाला 30 से 60 सेकंड का वीडियो अभियान बनाएं।" },
+        "tutorialLink": "https://www.youtube.com/results?search_query=adobe+express+video+tutorial",
+        "activityLink": "https://express.adobe.com/sp/design/videos",
+        "submissionLink": "https://forms.google.com"
+      },
+      {
+        "id": "july",
+        "monthName": { "en": "July", "hi": "जुलाई" },
+        "activityName": { "en": "My Favourite Book Cover, Redesigned", "hi": "मेरी पसंदीदा पुस्तक का नया कवर" },
+        "desc": { "en": "Reimagine the front and back cover of your favourite novel with modern typography and illustrations.", "hi": "आधुनिक टाइपोग्राफी और चित्रों के साथ अपने पसंदीदा उपन्यास के कवर की पुनर्कल्पना करें।" },
+        "tutorialLink": "https://www.youtube.com/results?search_query=adobe+express+book+cover+tutorial",
+        "activityLink": "https://express.adobe.com/sp/design/bookcovers",
+        "submissionLink": "https://forms.google.com"
+      },
+      {
+        "id": "august",
+        "monthName": { "en": "August", "hi": "अगस्त" },
+        "activityName": { "en": "Independence Day Digital Collage", "hi": "स्वतंत्रता दिवस डिजिटल कोलाज" },
+        "desc": { "en": "Celebrate the spirit of freedom and unity with historic imagery, tri-color design elements, and quotes.", "hi": "ऐतिहासिक चित्रों, तिरंगे डिजाइन तत्वों और उद्धरणों के साथ स्वतंत्रता और एकता का जश्न मनाएं।" },
+        "tutorialLink": "https://www.youtube.com/results?search_query=adobe+express+collage+tutorial",
+        "activityLink": "https://express.adobe.com/sp/design/collages",
+        "submissionLink": "https://forms.google.com"
+      },
+      {
+        "id": "september",
+        "monthName": { "en": "September", "hi": "सितंबर" },
+        "activityName": { "en": "Teachers' Day Thank-You Card", "hi": "शिक्षक दिवस धन्यवाद कार्ड" },
+        "desc": { "en": "Design a heartwarming, custom digital card to express gratitude to your teachers and mentors.", "hi": "अपने शिक्षकों और गुरुओं के प्रति आभार व्यक्त करने के लिए एक हार्दिक डिजिटल कार्ड बनाएं।" },
+        "tutorialLink": "https://www.youtube.com/results?search_query=adobe+express+greeting+card+tutorial",
+        "activityLink": "https://express.adobe.com/sp/design/cards",
+        "submissionLink": "https://forms.google.com"
+      },
+      {
+        "id": "october",
+        "monthName": { "en": "October", "hi": "अक्टूबर" },
+        "activityName": { "en": "Gandhi Jayanti Peace Poster", "hi": "गांधी जयंती शांति पोस्टर" },
+        "desc": { "en": "Illustrate messages of truth, non-violence, and cleanliness inspired by Mahatma Gandhi.", "hi": "महात्मा गांधी से प्रेरित सत्य, अहिंसा और स्वच्छता के संदेशों को दर्शाने वाला पोस्टर बनाएं।" },
+        "tutorialLink": "https://www.youtube.com/results?search_query=adobe+express+poster+tutorial",
+        "activityLink": "https://express.adobe.com/sp/design/posters",
+        "submissionLink": "https://forms.google.com"
+      },
+      {
+        "id": "november",
+        "monthName": { "en": "November", "hi": "नवंबर" },
+        "activityName": { "en": "Children's Day Comic Strip", "hi": "बाल दिवस कॉमिक स्ट्रिप" },
+        "desc": { "en": "Craft an entertaining 4-panel comic strip or character illustration depicting childhood adventures.", "hi": "बचपन के रोमांच को दर्शाने वाली 4-पैनल वाली मनोरंजक कॉमिक स्ट्रिप या चरित्र चित्रण तैयार करें।" },
+        "tutorialLink": "https://www.youtube.com/watch?v=M1s8vTaJLrY",
+        "activityLink": "https://express.adobe.com/sp/design/comics",
+        "submissionLink": "https://forms.google.com"
+      },
+      {
+        "id": "december",
+        "monthName": { "en": "December", "hi": "दिसंबर" },
+        "activityName": { "en": "Year-End Reflection Video", "hi": "वर्ष-अंत समीक्षा वीडियो" },
+        "desc": { "en": "Create a personal highlight reel or video presentation reflecting on your achievements and goals.", "hi": "अपनी उपलब्धियों और लक्ष्यों को दर्शाते हुए एक व्यक्तिगत वीडियो प्रस्तुति बनाएं।" },
+        "tutorialLink": "https://www.youtube.com/results?search_query=adobe+express+recap+video+tutorial",
+        "activityLink": "https://express.adobe.com/sp/design/videos",
+        "submissionLink": "https://forms.google.com"
+      }
+    ]
+  }
+}

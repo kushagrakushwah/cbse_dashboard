@@ -1,0 +1,11 @@
+.vercel
+.env*
+English Enhancement Guidebook- Final-15 june (1) (4).pdf
+UrjaGram_PPT_v25.pdf
+*.docx
+*.xlsx
+scratch/
+scratch_*
+*.py
+aim_api_data.json
+__pycache__/
