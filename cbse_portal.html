@@ -1,0 +1,1791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>CBSE Unified Portal – Teacher & Student Hub | Adobe Express</title>
+<meta name="description" content="CBSE unified portal for teachers and students. CPD professional development, DCAIS curriculum, creative challenges, and certifications.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23003087'/><text y='.85em' font-size='46' x='8' fill='white' font-weight='900'>CBSE</text></svg>">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#F0F4FF;color:#1C1C1E;line-height:1.5;min-height:100vh}
+:root{
+  --navy:#003087;--navy-dk:#001f5b;--navy-bg:#EEF2FF;--navy-border:rgba(0,48,135,.18);
+  --saffron:#FF6600;--saffron-dk:#CC5200;--saffron-bg:#FFF3EA;--saffron-border:rgba(255,102,0,.2);
+  --ink:#1C1C1E;--ink-2:#48484A;--ink-3:#8E8E93;
+  --surface:#FFFFFF;--surface-2:#F8F7F5;--surface-3:#F2F0ED;
+  --border:#E5E3DF;
+  --radius-sm:8px;--radius:14px;--radius-lg:20px;
+  --shadow-sm:0 1px 4px rgba(0,0,0,.07);
+  --shadow:0 4px 16px rgba(0,0,0,.09);
+  --shadow-lg:0 12px 40px rgba(0,0,0,.12);
+}
+
+/* ===== ROLE SWITCHER BAR ===== */
+.role-bar{background:var(--navy-dk);padding:0 28px;display:flex;align-items:center;justify-content:center}
+.role-bar-in{max-width:1160px;width:100%;display:flex;align-items:center;justify-content:center;gap:0;height:48px}
+.role-tab{display:inline-flex;align-items:center;gap:9px;padding:0 28px;height:100%;font-size:.84rem;font-weight:800;color:rgba(255,255,255,.6);cursor:pointer;border-bottom:3px solid transparent;transition:all .2s ease;letter-spacing:.02em;user-select:none}
+.role-tab:hover{color:rgba(255,255,255,.9);background:rgba(255,255,255,.06)}
+.role-tab.active{color:#FFF;border-bottom-color:var(--saffron);background:rgba(255,255,255,.08)}
+.role-tab-icon{font-size:1rem}
+.role-divider{width:1px;height:24px;background:rgba(255,255,255,.18);margin:0 8px}
+
+/* ===== HEADER ===== */
+.hdr{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--border);padding:0 28px}
+.hdr-in{max-width:1160px;margin:0 auto;height:62px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:inherit;cursor:pointer}
+.brand-mark{width:42px;height:42px;border-radius:10px;background:var(--navy);border:1.5px solid var(--navy-border);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 6px rgba(0,48,135,.18);transition:all .18s ease}
+.brand:hover .brand-mark{transform:scale(1.05);box-shadow:0 4px 14px rgba(0,48,135,.28)}
+.brand-logo-text{color:#FFF;font-size:.82rem;font-weight:900;letter-spacing:.04em;line-height:1}
+.brand-text{line-height:1.2}
+.brand-name{font-size:.9rem;font-weight:700;color:var(--navy);letter-spacing:-.01em}
+.brand-sub{font-size:.68rem;font-weight:600;color:var(--ink-3);letter-spacing:.04em;text-transform:uppercase}
+.hdr-right{display:flex;align-items:center;gap:10px}
+.hdr-badge{background:var(--navy);color:#FFF;font-size:.72rem;font-weight:700;padding:5px 14px;border-radius:999px;letter-spacing:.03em;transition:background .2s}
+.hdr-badge.student-mode{background:var(--saffron)}
+.lang-toggle{display:flex;align-items:center;background:var(--surface-3);border:1.5px solid var(--border);border-radius:999px;padding:3px;cursor:pointer}
+.lang-btn{padding:4px 12px;border-radius:999px;font-size:.72rem;font-weight:800;color:var(--ink-3);transition:all .18s;user-select:none}
+.lang-btn.active{background:var(--navy);color:#FFF;box-shadow:0 2px 6px rgba(0,48,135,.25)}
+.lang-btn.active.student-mode{background:var(--saffron)}
+
+/* ===== HERO ===== */
+.hero{background:linear-gradient(150deg,#003087 0%,#001f5b 55%,#000d2e 100%);color:#FFF;padding:28px 28px 22px;position:relative;overflow:hidden}
+.hero.student-hero{background:linear-gradient(150deg,#CC5200 0%,#993D00 55%,#662900 100%)}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FFFFFF' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
+.hero-in{max-width:1160px;margin:0 auto;position:relative}
+.hero-tag{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.9);font-size:.72rem;font-weight:700;padding:4px 12px;border-radius:999px;margin-bottom:8px;letter-spacing:.03em}
+.hero-tag-dot{width:6px;height:6px;border-radius:50%;background:#FFD60A}
+.hero h1{font-size:clamp(1.3rem,2.8vw,1.85rem);font-weight:900;letter-spacing:-.035em;line-height:1.2;margin-bottom:6px;max-width:680px}
+.hero-sub{font-size:.84rem;color:rgba(255,255,255,.84);max-width:560px;line-height:1.5;margin-bottom:14px}
+
+/* STATS ROW */
+.hero-stats{display:flex;gap:0;flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;margin-bottom:14px;scrollbar-width:none}
+.hero-stats::-webkit-scrollbar{display:none}
+.hstat{display:flex;flex-direction:column;align-items:flex-start;padding:0 24px 0 0;border-right:1px solid rgba(255,255,255,.18);margin-right:24px;flex-shrink:0}
+.hstat:last-child{border-right:none;margin-right:0}
+.hstat-n{font-size:1.55rem;font-weight:900;color:#FFF;line-height:1.1;letter-spacing:-.03em}
+.hstat-l{font-size:.68rem;font-weight:700;color:rgba(255,255,255,.65);text-transform:uppercase;letter-spacing:.04em;margin-top:3px}
+
+/* FLOW */
+.flow{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.flow-step{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:5px 13px;border-radius:999px;font-size:.76rem;font-weight:700;color:#FFF;white-space:nowrap;cursor:pointer;user-select:none;transition:all .2s cubic-bezier(.16,1,.3,1)}
+.flow-step:hover{background:rgba(255,255,255,.28);border-color:rgba(255,255,255,.6);transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.25)}
+.flow-step:active{transform:translateY(0);background:rgba(255,255,255,.38)}
+.flow-n{width:18px;height:18px;border-radius:50%;background:#FFF;color:var(--navy);font-size:.68rem;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.flow-n.student-n{color:var(--saffron-dk)}
+.flow-arr{color:rgba(255,255,255,.45);font-size:.8rem;font-weight:900}
+
+/* ===== MAIN ===== */
+.main{max-width:1160px;margin:0 auto;padding:26px 28px 80px}
+
+/* GUIDE BAR */
+.guide{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--navy);border-radius:var(--radius);padding:12px 18px;margin-bottom:22px;box-shadow:var(--shadow-sm)}
+.guide-icon{font-size:1.1rem;flex-shrink:0}
+.guide p{font-size:.85rem;color:var(--ink-2);line-height:1.5}
+.guide strong{color:var(--ink)}
+.guide.student-guide{border-left-color:var(--saffron)}
+
+/* SECTION HEADING */
+.sec-heading{font-size:1.15rem;font-weight:900;color:var(--ink);letter-spacing:-.02em;margin-bottom:4px}
+.sec-heading-sub{font-size:.82rem;color:var(--ink-3);margin-bottom:18px}
+.sec-label{font-size:.72rem;font-weight:800;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;margin-top:20px;margin-bottom:10px}
+
+/* ===== TILES GRID ===== */
+.tiles-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.tile-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;cursor:pointer;user-select:none;transition:all .22s cubic-bezier(.16,1,.3,1);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;position:relative;height:100%}
+.tile-img-wrap{overflow:hidden;position:relative;flex-shrink:0;height:100px;background:linear-gradient(135deg,var(--navy-bg) 0%,#D0DAFF 100%);display:flex;align-items:center;justify-content:center}
+.tile-img-icon{font-size:2.8rem;opacity:.6}
+.tile-img-wrap.saffron-bg{background:linear-gradient(135deg,var(--saffron-bg) 0%,#FFD5B3 100%)}
+.tile-img-wrap.green-bg{background:linear-gradient(135deg,#ECFDF5 0%,#BBF7D0 100%)}
+.tile-img-wrap.purple-bg{background:linear-gradient(135deg,#F5F3FF 0%,#DDD6FE 100%)}
+.tile-img-wrap.teal-bg{background:linear-gradient(135deg,#F0FDFA 0%,#B2F5EA 100%)}
+.tile-img-wrap.gold-bg{background:linear-gradient(135deg,#FEFCE8 0%,#FDE68A 100%)}
+.tile-body{padding:16px 18px;flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:10px}
+.tile-card:hover{border-color:var(--navy);transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,48,135,.14)}
+.tile-card.student-card:hover{border-color:var(--saffron);box-shadow:0 8px 24px rgba(255,102,0,.14)}
+.tile-tag{font-size:.62rem;font-weight:800;color:var(--navy);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+.tile-tag.student-tag{color:var(--saffron-dk)}
+.tile-title{font-size:.98rem;font-weight:800;color:var(--ink);line-height:1.3;margin-bottom:4px}
+.tile-desc{font-size:.78rem;color:var(--ink-3);line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:0}
+.tile-footer{display:flex;align-items:center;justify-content:space-between;gap:8px;padding-top:10px;border-top:1px solid var(--border)}
+.tile-hint{font-size:.72rem;color:var(--ink-3);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+.tile-btn{display:inline-flex;align-items:center;gap:5px;background:var(--navy-bg);color:var(--navy);font-size:.75rem;font-weight:800;padding:5px 12px;border-radius:999px;transition:all .18s;border:1px solid var(--navy-border);white-space:nowrap;flex-shrink:0}
+.tile-card:hover .tile-btn{background:var(--navy);color:#FFF;border-color:var(--navy)}
+.tile-card.student-card .tile-btn{background:var(--saffron-bg);color:var(--saffron-dk);border-color:var(--saffron-border)}
+.tile-card.student-card:hover .tile-btn{background:var(--saffron);color:#FFF}
+.cpd-coming-soon{opacity:.6;filter:grayscale(.4);cursor:default}
+.cpd-coming-soon:hover{transform:none;border-color:var(--border);box-shadow:var(--shadow-sm)}
+.cpd-coming-soon:hover .tile-btn{background:var(--navy-bg);color:var(--navy);border-color:var(--navy-border)}
+.soon-badge{position:absolute;top:10px;right:10px;background:var(--ink-3);color:#FFF;font-size:.62rem;font-weight:800;padding:3px 10px;border-radius:999px;text-transform:uppercase;letter-spacing:.05em}
+
+/* ===== CPD DETAIL VIEW ===== */
+.section-full-view{display:none;animation:viewFadeIn .28s ease}
+@keyframes viewFadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.sec-nav-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;gap:12px;flex-wrap:wrap}
+.back-btn{display:inline-flex;align-items:center;gap:8px;background:var(--surface);color:var(--navy);border:1.5px solid var(--navy);padding:9px 18px;border-radius:999px;font-size:.84rem;font-weight:800;cursor:pointer;transition:all .18s;box-shadow:var(--shadow-sm)}
+.back-btn:hover{background:var(--navy);color:#FFF;transform:translateX(-2px)}
+.back-btn.student-back{color:var(--saffron-dk);border-color:var(--saffron)}
+.back-btn.student-back:hover{background:var(--saffron);color:#FFF}
+.sec-breadcrumb{font-size:.84rem;color:var(--ink-3);font-weight:700}
+.sec-breadcrumb strong{color:var(--ink)}
+.sec-hero-card{background:var(--surface);border:2px solid var(--navy);border-radius:var(--radius-lg);padding:22px 26px;margin-bottom:22px;box-shadow:0 8px 30px rgba(0,48,135,.08);display:flex;align-items:center;gap:18px}
+.sec-hero-card.student-card-hero{border-color:var(--saffron);box-shadow:0 8px 30px rgba(255,102,0,.08)}
+.sec-hero-badge{width:50px;height:50px;border-radius:14px;background:var(--navy);color:#FFF;display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:900;flex-shrink:0}
+.sec-hero-badge.student-badge{background:var(--saffron)}
+.sec-hero-body{flex:1;min-width:0}
+.sec-hero-tag{font-size:.68rem;font-weight:800;color:var(--navy);text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px}
+.sec-hero-tag.student-tag-hero{color:var(--saffron-dk)}
+.sec-hero-title{font-size:1.45rem;font-weight:900;color:var(--ink);letter-spacing:-.02em;margin-bottom:4px;line-height:1.2}
+.sec-hero-desc{font-size:.86rem;color:var(--ink-2);line-height:1.5}
+.sec-content-box{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius-lg);padding:26px;box-shadow:var(--shadow-sm);margin-bottom:22px}
+.sec-bottom-bar{display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid var(--border);gap:12px;flex-wrap:wrap}
+
+/* ===== BUTTONS ===== */
+.btn{display:inline-flex;align-items:center;gap:6px;padding:9px 20px;border-radius:999px;font-size:.82rem;font-weight:700;text-decoration:none;border:none;cursor:pointer;white-space:nowrap;transition:all .16s;line-height:1}
+.btn-primary{background:var(--navy);color:#FFF;box-shadow:0 2px 8px rgba(0,48,135,.25)}
+.btn-primary:hover{background:var(--navy-dk);transform:translateY(-1px)}
+.btn-saffron{background:var(--saffron);color:#FFF;box-shadow:0 2px 8px rgba(255,102,0,.25)}
+.btn-saffron:hover{background:var(--saffron-dk);transform:translateY(-1px)}
+.btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}
+.btn-outline:hover{background:var(--navy);color:#FFF}
+.btn-outline-saffron{background:transparent;color:var(--saffron-dk);border:1.5px solid var(--saffron)}
+.btn-outline-saffron:hover{background:var(--saffron);color:#FFF}
+.btn-dark{background:var(--ink);color:#FFF}
+.btn-dark:hover{background:#333;transform:translateY(-1px)}
+.btn-ghost{background:var(--surface-2);color:var(--ink-2);border:1.5px solid var(--border)}
+.btn-ghost:hover{border-color:var(--navy);color:var(--navy);background:var(--navy-bg)}
+.btn-green{background:#059669;color:#FFF}
+.btn-green:hover{background:#047857;color:#FFF;transform:translateY(-1px)}
+
+/* ===== CPD TRACKER ===== */
+.cpd-tracker-card{background:linear-gradient(135deg,#EEF2FF 0%,#E0E7FF 100%);border:1.5px solid var(--navy-border);border-radius:var(--radius-lg);padding:22px;margin-bottom:22px}
+.cpd-tracker-title{font-size:1rem;font-weight:900;color:var(--navy);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.cpd-tracker-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-bottom:18px}
+.cpd-stat-box{background:#FFF;border:1.5px solid var(--navy-border);border-radius:var(--radius);padding:14px;text-align:center}
+.cpd-stat-n{font-size:1.8rem;font-weight:900;color:var(--navy);line-height:1}
+.cpd-stat-l{font-size:.68rem;font-weight:700;color:var(--ink-3);text-transform:uppercase;letter-spacing:.04em;margin-top:4px}
+.cpd-bar-wrap{margin-bottom:10px}
+.cpd-bar-label{display:flex;justify-content:space-between;font-size:.84rem;font-weight:700;color:var(--ink);margin-bottom:5px}
+.cpd-bar-pct{color:var(--navy);font-weight:900}
+.cpd-bar{height:9px;background:rgba(0,48,135,.12);border-radius:999px;overflow:hidden}
+.cpd-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--navy),#4F46E5)}
+.cpd-fill.online-fill{background:linear-gradient(90deg,var(--saffron),#FF9A4D)}
+
+/* CPD Stepper */
+.cpd-steps{display:flex;align-items:center;gap:0;overflow-x:auto;padding:20px 0;margin-bottom:24px;scrollbar-width:thin}
+.cpd-step{display:flex;flex-direction:column;align-items:center;gap:6px;padding:0 14px;flex-shrink:0}
+.cpd-step-n{width:44px;height:44px;border-radius:50%;background:var(--navy);color:#FFF;font-size:1rem;font-weight:900;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,48,135,.28)}
+.cpd-step-n.done{background:#059669}
+.cpd-step-n.coming{background:var(--ink-3)}
+.cpd-step-l{font-size:.72rem;font-weight:700;color:var(--ink-2);text-align:center;max-width:80px;line-height:1.3}
+.cpd-connector{flex:1;height:3px;background:linear-gradient(90deg,var(--navy),rgba(0,48,135,.2));min-width:24px}
+
+/* CPD Module Detail Tabs */
+.cpd-tabs-nav{display:flex;gap:8px;overflow-x:auto;padding-bottom:10px;margin-bottom:22px;scrollbar-width:thin}
+.cpd-tab-btn{padding:9px 20px;border-radius:999px;font-size:.84rem;font-weight:800;border:1.5px solid var(--border);background:var(--surface);color:var(--ink-2);cursor:pointer;white-space:nowrap;transition:all .18s ease;flex-shrink:0;display:inline-flex;align-items:center;gap:8px}
+.cpd-tab-btn:hover{border-color:var(--navy);color:var(--navy);background:var(--navy-bg)}
+.cpd-tab-btn.active{background:var(--navy);border-color:var(--navy);color:#FFF;box-shadow:0 3px 10px rgba(0,48,135,.25)}
+
+/* Action List */
+.al{display:flex;flex-direction:column;gap:12px}
+.ai{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--surface-2);border:1.5px solid var(--border);border-radius:var(--radius);padding:16px 18px;transition:all .18s}
+.ai:hover{border-color:var(--navy);background:var(--surface);box-shadow:0 4px 12px rgba(0,48,135,.08)}
+.ai-l{display:flex;align-items:flex-start;gap:12px;flex:1;min-width:0}
+.ai-dot{width:8px;height:8px;border-radius:50%;background:var(--navy);flex-shrink:0;margin-top:6px}
+.ai-dot.saffron-dot{background:var(--saffron)}
+.ai-t{font-size:.92rem;font-weight:800;color:var(--ink);margin-bottom:3px}
+.ai-d{font-size:.8rem;color:var(--ink-2);line-height:1.5}
+.ai-r{flex-shrink:0}
+
+/* Notice */
+.notice{background:var(--navy-bg);border:1px solid var(--navy-border);border-radius:var(--radius);padding:16px 18px;margin-bottom:20px}
+.notice-t{font-size:.88rem;font-weight:800;color:var(--navy);margin-bottom:4px}
+.notice-d{font-size:.82rem;color:var(--ink-2);line-height:1.5}
+.notice.saffron-notice{background:var(--saffron-bg);border-color:var(--saffron-border)}
+.notice.saffron-notice .notice-t{color:var(--saffron-dk)}
+
+/* Resource Grid */
+.rg{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.rc{background:var(--surface-2);border:1.5px solid var(--border);border-radius:var(--radius);padding:20px;transition:all .18s;display:flex;flex-direction:column;justify-content:space-between}
+.rc:hover{border-color:var(--navy);background:var(--surface);box-shadow:0 6px 20px rgba(0,48,135,.1);transform:translateY(-2px)}
+.rc-badge{display:inline-block;background:var(--navy-bg);color:var(--navy);font-size:.66rem;font-weight:800;padding:3px 10px;border-radius:999px;margin-bottom:10px;border:1px solid var(--navy-border);text-transform:uppercase;letter-spacing:.04em}
+.rc-badge.saffron-rc{background:var(--saffron-bg);color:var(--saffron-dk);border-color:var(--saffron-border)}
+.rc h4{font-size:.95rem;font-weight:800;color:var(--ink);margin-bottom:6px;line-height:1.3}
+.rc p{font-size:.82rem;color:var(--ink-2);margin-bottom:14px;line-height:1.55}
+
+/* Achievements */
+.ach-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.ac{background:var(--surface-2);border:1.5px solid var(--border);border-radius:var(--radius);padding:20px 16px;text-align:center;transition:all .18s}
+.ac.earned{background:var(--navy-bg);border-color:var(--navy-border)}
+.ac.earned.saffron-earn{background:var(--saffron-bg);border-color:var(--saffron-border)}
+.ac:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.ac-icon{width:44px;height:44px;border-radius:50%;margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:900}
+.ac.earned .ac-icon{background:var(--navy);color:#FFF}
+.ac.earned.saffron-earn .ac-icon{background:var(--saffron);color:#FFF}
+.ac.locked .ac-icon{background:var(--border);color:var(--ink-3)}
+.ac h4{font-size:.9rem;font-weight:800;color:var(--ink);margin-bottom:4px}
+.ac p{font-size:.74rem;color:var(--ink-3);line-height:1.45;margin-bottom:10px}
+.ac-tag{font-size:.66rem;font-weight:800;padding:3px 12px;border-radius:999px;text-transform:uppercase}
+.ac.earned .ac-tag{background:var(--navy);color:#FFF}
+.ac.earned.saffron-earn .ac-tag{background:var(--saffron);color:#FFF}
+.ac.locked .ac-tag{background:var(--border);color:var(--ink-3)}
+
+/* ===== DCAIS – TEACHER MONITOR ===== */
+.aim-grade-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:14px;margin-bottom:24px}
+.aim-gc{background:var(--surface);border:2px solid var(--border);border-radius:var(--radius-lg);padding:20px 16px;text-align:center;cursor:pointer;user-select:none;transition:all .22s cubic-bezier(.16,1,.3,1);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;align-items:center}
+.aim-gc:hover{border-color:var(--navy);transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,48,135,.14)}
+.aim-gc.active{border-color:var(--navy);background:#F0F4FF;box-shadow:0 8px 24px rgba(0,48,135,.18)}
+.aim-gc-icon{width:52px;height:52px;border-radius:50%;background:var(--navy-bg);border:1.5px solid var(--navy-border);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:12px;transition:all .2s}
+.aim-gc:hover .aim-gc-icon,.aim-gc.active .aim-gc-icon{background:var(--navy);color:#FFF}
+.aim-gc h3{font-size:1.1rem;font-weight:900;color:var(--ink);margin-bottom:3px}
+.aim-gc-cnt{font-size:.75rem;color:var(--ink-3);font-weight:700;margin-bottom:10px}
+.aim-gc-btn{font-size:.74rem;font-weight:800;color:var(--navy);display:inline-flex;align-items:center;gap:4px;border-top:1px solid var(--border);padding-top:10px;width:100%;justify-content:center}
+.aim-top-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--surface-2);border:1.5px solid var(--border);border-radius:var(--radius);padding:12px 16px;margin-bottom:18px;flex-wrap:wrap}
+.aim-back-grade{display:inline-flex;align-items:center;gap:6px;background:var(--surface);color:var(--ink-2);border:1.5px solid var(--border);padding:6px 14px;border-radius:999px;font-size:.78rem;font-weight:800;cursor:pointer;transition:all .18s}
+.aim-back-grade:hover{border-color:var(--navy);color:var(--navy)}
+.aim-search{flex:1;min-width:200px;max-width:340px;position:relative}
+.aim-search input{width:100%;padding:7px 14px 7px 32px;border:1.5px solid var(--border);border-radius:999px;font-size:.8rem;outline:none;font-family:inherit;transition:all .18s}
+.aim-search input:focus{border-color:var(--navy)}
+.aim-search::before{content:'🔍';position:absolute;left:10px;top:50%;transform:translateY(-50%);font-size:.78rem;opacity:.5}
+.aim-sub-filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.aim-sub-btn{padding:5px 14px;border-radius:999px;font-size:.76rem;font-weight:800;border:1.5px solid var(--border);background:var(--surface);color:var(--ink-2);cursor:pointer;transition:all .18s}
+.aim-sub-btn:hover{border-color:var(--navy);color:var(--navy)}
+.aim-sub-btn.active{background:var(--navy);border-color:var(--navy);color:#FFF;box-shadow:0 2px 6px rgba(0,48,135,.25)}
+.aim-weekly-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.aim-weekly-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius-lg);padding:20px;display:flex;flex-direction:column;justify-content:space-between;transition:all .22s cubic-bezier(.16,1,.3,1);box-shadow:var(--shadow-sm)}
+.aim-weekly-card:hover{border-color:var(--navy);transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,48,135,.12)}
+.aim-card-header{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:10px}
+.aim-week-badge{background:var(--navy-bg);color:var(--navy);font-size:.72rem;font-weight:800;padding:4px 12px;border-radius:999px;border:1px solid var(--navy-border);text-transform:uppercase;letter-spacing:.03em;white-space:nowrap}
+.aim-mod-badge{background:var(--surface-3);color:var(--ink-2);font-size:.7rem;font-weight:700;padding:4px 10px;border-radius:999px;border:1px solid var(--border)}
+.aim-card-actname{font-size:1.05rem;font-weight:900;color:var(--ink);margin-bottom:8px;line-height:1.3}
+.aim-card-outcomes{font-size:.78rem;color:var(--ink-2);line-height:1.5;margin-bottom:10px;background:var(--surface-2);border-radius:8px;padding:10px 12px;border:1px solid var(--border)}
+.aim-card-skills{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.aim-skill-pill{background:var(--navy-bg);color:var(--navy);font-size:.7rem;font-weight:700;padding:3px 10px;border-radius:6px;border:1px solid var(--navy-border)}
+.aim-actions{display:flex;flex-direction:column;gap:7px;padding-top:12px;border-top:1px solid var(--border)}
+
+/* ===== STUDENT – MONTHLY CHALLENGES ===== */
+.month-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.month-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;cursor:pointer;transition:all .22s cubic-bezier(.16,1,.3,1);box-shadow:var(--shadow-sm);display:flex;flex-direction:column}
+.month-card:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(255,102,0,.14);border-color:var(--saffron)}
+.month-card-top{height:80px;display:flex;align-items:center;justify-content:center;font-size:2.6rem;position:relative}
+.month-card-top.apr{background:linear-gradient(135deg,#FFF1F2,#FFE4E6)}
+.month-card-top.may{background:linear-gradient(135deg,#F0FDF4,#BBFBE0)}
+.month-card-top.jun{background:linear-gradient(135deg,#EFF6FF,#BFDBFE)}
+.month-card-top.jul{background:linear-gradient(135deg,#FDF4FF,#F5D0FE)}
+.month-card-top.aug{background:linear-gradient(135deg,#FFF7ED,#FED7AA)}
+.month-card-top.sep{background:linear-gradient(135deg,#ECFDF5,#A7F3D0)}
+.month-card-top.oct{background:linear-gradient(135deg,#FEFCE8,#FDE68A)}
+.month-card-top.nov{background:linear-gradient(135deg,#F0F9FF,#BAE6FD)}
+.month-card-top.dec{background:linear-gradient(135deg,#EEF2FF,#E0E7FF)}
+.month-card-top.jan{background:linear-gradient(135deg,#FFF5F5,#FFE4E6)}
+.month-card-top.feb{background:linear-gradient(135deg,#FFF1F2,#FBCFE8)}
+.month-card-top.mar{background:linear-gradient(135deg,#F7FEE7,#D9F99D)}
+.month-label{position:absolute;top:8px;left:10px;font-size:.64rem;font-weight:900;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);background:rgba(255,255,255,.8);padding:2px 8px;border-radius:999px}
+.month-card-body{padding:14px 16px;flex:1;display:flex;flex-direction:column;gap:8px}
+.month-challenge-title{font-size:.9rem;font-weight:800;color:var(--ink);line-height:1.3}
+.month-challenge-desc{font-size:.75rem;color:var(--ink-3);line-height:1.4}
+.month-card-footer{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-top:1px solid var(--border);background:var(--surface-2)}
+.month-status{font-size:.68rem;font-weight:800;padding:3px 10px;border-radius:999px;text-transform:uppercase;letter-spacing:.03em}
+.month-status.active{background:#ECFDF5;color:#059669;border:1px solid #A7F3D0}
+.month-status.upcoming{background:var(--saffron-bg);color:var(--saffron-dk);border:1px solid var(--saffron-border)}
+.month-status.completed{background:var(--navy-bg);color:var(--navy);border:1px solid var(--navy-border)}
+.month-start-btn{font-size:.74rem;font-weight:800;color:var(--saffron-dk);display:inline-flex;align-items:center;gap:4px}
+
+/* ===== STUDENT – VIDEO MASTERCLASS ===== */
+.video-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.video-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:all .22s ease;box-shadow:var(--shadow-sm);cursor:pointer}
+.video-card:hover{border-color:var(--saffron);transform:translateY(-3px);box-shadow:0 8px 24px rgba(255,102,0,.12)}
+.video-thumb{height:90px;background:linear-gradient(135deg,#1a1a2e,#16213e);display:flex;align-items:center;justify-content:center;position:relative}
+.video-play{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.95);display:flex;align-items:center;justify-content:center;font-size:1rem;box-shadow:0 4px 14px rgba(0,0,0,.3);transition:transform .2s}
+.video-card:hover .video-play{transform:scale(1.1)}
+.video-duration{position:absolute;bottom:8px;right:10px;background:rgba(0,0,0,.7);color:#FFF;font-size:.66rem;font-weight:800;padding:2px 7px;border-radius:4px}
+.video-body{padding:14px 16px}
+.video-level{font-size:.65rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--saffron-dk);margin-bottom:5px}
+.video-title{font-size:.9rem;font-weight:800;color:var(--ink);line-height:1.35;margin-bottom:5px}
+.video-meta{font-size:.74rem;color:var(--ink-3)}
+
+/* ===== STUDENT – PROJECT LAUNCHER ===== */
+.project-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.project-card{background:var(--surface);border:2px solid var(--border);border-radius:var(--radius-lg);padding:22px;display:flex;flex-direction:column;gap:14px;transition:all .22s;box-shadow:var(--shadow-sm)}
+.project-card:hover{border-color:var(--saffron);transform:translateY(-3px);box-shadow:0 10px 28px rgba(255,102,0,.12)}
+.project-header{display:flex;align-items:flex-start;gap:14px}
+.project-icon{width:50px;height:50px;border-radius:14px;background:var(--saffron-bg);border:1.5px solid var(--saffron-border);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0}
+.project-info{flex:1;min-width:0}
+.project-level{font-size:.65rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--saffron-dk);margin-bottom:3px}
+.project-title{font-size:1.05rem;font-weight:900;color:var(--ink);line-height:1.3}
+.project-desc{font-size:.8rem;color:var(--ink-2);line-height:1.5}
+.project-tags{display:flex;flex-wrap:wrap;gap:6px}
+.project-tag{font-size:.7rem;font-weight:700;padding:3px 10px;border-radius:6px;background:var(--surface-2);border:1px solid var(--border);color:var(--ink-2)}
+.project-footer{display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid var(--border);gap:10px}
+.project-xp{font-size:.78rem;font-weight:800;color:var(--saffron-dk)}
+
+/* ===== SEARCH BAR ===== */
+.search-bar{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+.search-box{flex:1;min-width:240px;position:relative}
+.search-input{width:100%;padding:10px 16px 10px 38px;border:1.5px solid var(--border);border-radius:999px;font-size:.84rem;outline:none;font-family:inherit;transition:all .16s;background:var(--surface)}
+.search-input:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(0,48,135,.1)}
+.search-input.student-search:focus{border-color:var(--saffron);box-shadow:0 0 0 3px rgba(255,102,0,.1)}
+.search-ico{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:.9rem;color:var(--ink-3);pointer-events:none}
+.filter-chips{display:flex;gap:8px;flex-wrap:wrap}
+.fchip{padding:7px 16px;border-radius:999px;font-size:.78rem;font-weight:700;border:1.5px solid var(--border);background:var(--surface);color:var(--ink-2);cursor:pointer;white-space:nowrap;transition:all .16s}
+.fchip:hover{border-color:var(--navy);color:var(--navy);background:var(--navy-bg)}
+.fchip.active{background:var(--navy);border-color:var(--navy);color:#FFF}
+.fchip.s-active{background:var(--saffron);border-color:var(--saffron);color:#FFF}
+
+/* ===== CERTIFICATE / UPLOAD SECTION ===== */
+.upload-zone{border:2px dashed var(--navy-border);border-radius:var(--radius);padding:32px;text-align:center;background:var(--navy-bg);transition:all .18s;cursor:pointer;margin-bottom:18px}
+.upload-zone:hover{border-color:var(--navy);background:#E5EEFF}
+.upload-icon{font-size:2.5rem;margin-bottom:10px}
+.upload-title{font-size:.95rem;font-weight:800;color:var(--navy);margin-bottom:4px}
+.upload-sub{font-size:.78rem;color:var(--ink-3)}
+
+/* ===== PSTAT (Progress Stats) ===== */
+.pstats{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-bottom:24px}
+.pstat{background:var(--surface-2);border:1.5px solid var(--border);border-radius:var(--radius);padding:16px 14px;text-align:center}
+.pstat-n{font-size:1.8rem;font-weight:900;color:var(--navy);line-height:1.1}
+.pstat-n.saffron-n{color:var(--saffron-dk)}
+.pstat-l{font-size:.7rem;font-weight:700;color:var(--ink-3);text-transform:uppercase;letter-spacing:.04em;margin-top:4px}
+
+/* ===== TOAST ===== */
+.toast{position:fixed;bottom:24px;right:24px;z-index:9999;background:var(--ink);color:#FFF;padding:12px 22px;border-radius:999px;font-size:.84rem;font-weight:800;box-shadow:0 8px 30px rgba(0,0,0,.25);display:flex;align-items:center;gap:10px;animation:toastIn .25s ease;max-width:340px}
+@keyframes toastIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+/* ===== FOOTER ===== */
+footer{background:var(--navy-dk);padding:28px;text-align:center;color:rgba(255,255,255,.38);font-size:.82rem}
+footer p+p{margin-top:5px}
+footer a{color:rgba(255,255,255,.55);text-decoration:none}
+footer a:hover{color:#FFF}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:760px){
+  .role-bar{padding:0 12px}
+  .hdr{padding:0 16px}
+  .hero{padding:20px 16px 16px}
+  .main{padding:20px 14px 60px}
+  .tiles-grid{grid-template-columns:1fr}
+  .month-grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+  .flow{flex-direction:column;align-items:flex-start}
+  .flow-arr{display:none}
+  .sec-hero-card{flex-direction:column;align-items:flex-start;padding:18px}
+  .sec-content-box{padding:18px 14px}
+  .ai{flex-direction:column;align-items:flex-start}
+  .ai-r{align-self:flex-end}
+  .hdr-right{gap:6px}
+  .hero-stats{gap:0}
+  .hstat{padding:0 16px 0 0;margin-right:16px}
+  .cpd-steps{flex-direction:column;align-items:flex-start}
+  .cpd-connector{width:3px;height:20px;min-width:unset;margin:0 0 0 21px;background:var(--navy)}
+}
+@media(max-width:480px){
+  .role-tab{padding:0 14px;font-size:.76rem}
+  .brand-name{font-size:.8rem}
+  .hdr-badge{display:none}
+}
+
+/* ===== CPD CATEGORIES ===== */
+.cpd-cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-bottom:22px}
+.cpd-cat{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:18px;display:flex;gap:14px;align-items:flex-start;transition:all .18s}
+.cpd-cat:hover{border-color:var(--navy);box-shadow:0 6px 18px rgba(0,48,135,.1);transform:translateY(-2px)}
+.cpd-cat-icon{width:42px;height:42px;border-radius:12px;background:var(--navy-bg);border:1.5px solid var(--navy-border);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.cpd-cat-body{flex:1;min-width:0}
+.cpd-cat-title{font-size:.9rem;font-weight:800;color:var(--ink);margin-bottom:3px}
+.cpd-cat-desc{font-size:.76rem;color:var(--ink-2);line-height:1.45;margin-bottom:8px}
+.cpd-cat-hrs{font-size:.8rem;font-weight:800;color:var(--navy)}
+
+/* Principal verification */
+.verif-flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:16px 0}
+.verif-step{background:var(--surface-2);border:1.5px solid var(--border);border-radius:var(--radius);padding:16px;display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.verif-num{width:30px;height:30px;border-radius:50%;background:var(--navy);color:#FFF;font-size:.84rem;font-weight:900;display:flex;align-items:center;justify-content:center}
+.verif-title{font-size:.88rem;font-weight:800;color:var(--ink)}
+.verif-desc{font-size:.75rem;color:var(--ink-2);line-height:1.45}
+
+/* Cert path cards */
+.cert-path{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.cert-card{background:var(--surface);border:2px solid var(--border);border-radius:var(--radius-lg);padding:20px;display:flex;flex-direction:column;gap:10px;transition:all .2s}
+.cert-card:hover{border-color:var(--navy);transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,48,135,.1)}
+.cert-card.active-cert{border-color:var(--navy);background:var(--navy-bg)}
+.cert-badge-icon{width:48px;height:48px;border-radius:14px;background:var(--navy);color:#FFF;display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+.cert-title{font-size:1rem;font-weight:900;color:var(--ink)}
+.cert-desc{font-size:.78rem;color:var(--ink-2);line-height:1.5}
+.cert-req{font-size:.74rem;font-weight:700;color:var(--navy)}
+
+/* ===== PLATFORM PILLS (DIKSHA, NISHTHA, SWAYAM, iGOT) ===== */
+.platform-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.pplatform{display:inline-flex;align-items:center;gap:6px;padding:7px 16px;border-radius:999px;font-size:.78rem;font-weight:800;border:1.5px solid;cursor:pointer;transition:all .18s;text-decoration:none}
+.pp-diksha{background:#EFF6FF;color:#1D4ED8;border-color:#BFDBFE}
+.pp-diksha:hover{background:#1D4ED8;color:#FFF;border-color:#1D4ED8}
+.pp-nishtha{background:#F0FDF4;color:#15803D;border-color:#BBF7D0}
+.pp-nishtha:hover{background:#15803D;color:#FFF;border-color:#15803D}
+.pp-swayam{background:#FFF7ED;color:#C2410C;border-color:#FED7AA}
+.pp-swayam:hover{background:#C2410C;color:#FFF;border-color:#C2410C}
+.pp-igot{background:#FAF5FF;color:#7C3AED;border-color:#DDD6FE}
+.pp-igot:hover{background:#7C3AED;color:#FFF;border-color:#7C3AED}
+
+/* Tab switch animation */
+.role-section{display:none}
+.role-section.active{display:block;animation:viewFadeIn .3s ease}
+</style>
+</head>
+<body>
+
+<!-- ===== ROLE SWITCHER BAR ===== -->
+<div class="role-bar">
+  <div class="role-bar-in">
+    <div class="role-tab active" id="teacherTab" onclick="switchRole('teacher')">
+      <span class="role-tab-icon">👨‍🏫</span>
+      <span>Teacher Portal</span>
+    </div>
+    <div class="role-divider"></div>
+    <div class="role-tab" id="studentTab" onclick="switchRole('student')">
+      <span class="role-tab-icon">🎓</span>
+      <span>Student Portal</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== STICKY HEADER ===== -->
+<header class="hdr">
+  <div class="hdr-in">
+    <div class="brand" onclick="showDashboard()">
+      <div class="brand-mark">
+        <span class="brand-logo-text">CBSE</span>
+      </div>
+      <div class="brand-text">
+        <div class="brand-name">CBSE Unified Portal</div>
+        <div class="brand-sub" id="hdrSubLabel">Educator &amp; Student Hub</div>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <div class="lang-toggle" onclick="toggleLang()" title="Switch Language">
+        <div class="lang-btn active" id="langBtnEN">EN</div>
+        <div class="lang-btn" id="langBtnHI">हिं</div>
+      </div>
+      <div class="hdr-badge" id="hdrBadge">Teacher Portal</div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO SECTION ===== -->
+<section class="hero" id="mainHero">
+  <div class="hero-in">
+    <div class="hero-tag">
+      <span class="hero-tag-dot"></span>
+      <span id="heroTagText">CBSE Educator &amp; Student Hub · Adobe Express</span>
+    </div>
+    <h1 id="heroTitle">CBSE Unified Portal</h1>
+    <p class="hero-sub" id="heroSub">CPD professional development, DCAIS curriculum monitoring, creative student challenges — all in one place for CBSE schools.</p>
+
+    <!-- Live Stats -->
+    <div class="hero-stats">
+      <div class="hstat">
+        <div class="hstat-n">26,054</div>
+        <div class="hstat-l">CBSE Schools</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-n">2.5 Cr+</div>
+        <div class="hstat-l">Students</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-n">10 L+</div>
+        <div class="hstat-l">Teachers</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-n">6</div>
+        <div class="hstat-l">CPD Modules Live</div>
+      </div>
+    </div>
+
+    <!-- Flow Steps (Teacher) -->
+    <div class="flow" id="teacherFlow">
+      <div class="flow-step" onclick="openTeacherSection('cpd')"><span class="flow-n">1</span><span>CPD Module</span></div>
+      <span class="flow-arr">→</span>
+      <div class="flow-step" onclick="openTeacherSection('dcais')"><span class="flow-n">2</span><span>DCAIS Monitor</span></div>
+      <span class="flow-arr">→</span>
+      <div class="flow-step" onclick="openTeacherSection('resources')"><span class="flow-n">3</span><span>Resources</span></div>
+      <span class="flow-arr">→</span>
+      <div class="flow-step" onclick="openTeacherSection('certification')"><span class="flow-n">4</span><span>Certification</span></div>
+    </div>
+    <!-- Flow Steps (Student) -->
+    <div class="flow" id="studentFlow" style="display:none">
+      <div class="flow-step" onclick="openStudentSection('challenges')"><span class="flow-n flow-n student-n">1</span><span>12-Month Challenges</span></div>
+      <span class="flow-arr">→</span>
+      <div class="flow-step" onclick="openStudentSection('masterclass')"><span class="flow-n student-n">2</span><span>Video Masterclass</span></div>
+      <span class="flow-arr">→</span>
+      <div class="flow-step" onclick="openStudentSection('projects')"><span class="flow-n student-n">3</span><span>Project Launcher</span></div>
+      <span class="flow-arr">→</span>
+      <div class="flow-step" onclick="openStudentSection('achievements')"><span class="flow-n student-n">4</span><span>Achievements</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MAIN ===== -->
+<main class="main">
+
+  <!-- ===== TEACHER ROLE SECTION ===== -->
+  <div id="teacherSection" class="role-section active">
+
+    <!-- Dashboard Tiles View -->
+    <div id="teacherDashboard">
+      <div class="guide" id="teacherGuide">
+        <span class="guide-icon">📋</span>
+        <p><strong>Welcome, Educator!</strong> Click any section below to access CPD modules, curriculum tools, and resources for your CBSE classroom.</p>
+      </div>
+
+      <!-- Search -->
+      <div class="search-bar" style="margin-bottom:22px">
+        <div class="search-box">
+          <span class="search-ico">🔍</span>
+          <input class="search-input" type="text" placeholder="Search sections, CPD modules…" oninput="filterTeacherTiles(this.value)">
+        </div>
+        <div class="filter-chips">
+          <div class="fchip active" onclick="filterTeacherCategory('all',this)">All</div>
+          <div class="fchip" onclick="filterTeacherCategory('cpd',this)">CPD</div>
+          <div class="fchip" onclick="filterTeacherCategory('dcais',this)">DCAIS</div>
+          <div class="fchip" onclick="filterTeacherCategory('resources',this)">Resources</div>
+        </div>
+      </div>
+
+      <div class="tiles-grid" id="teacherTilesGrid">
+
+        <!-- CPD Module Tile -->
+        <div class="tile-card" data-section="cpd" data-cat="cpd" onclick="openTeacherSection('cpd')">
+          <div class="tile-img-wrap">
+            <span class="tile-img-icon">📚</span>
+          </div>
+          <div class="tile-body">
+            <div>
+              <div class="tile-tag">Section B • CPD</div>
+              <h2 class="tile-title">Continuous Professional Development</h2>
+              <p class="tile-desc">50-hour annual CPD framework. 6 live modules covering NEP 2020, digital pedagogy, and creative education.</p>
+            </div>
+            <div class="tile-footer">
+              <span class="tile-hint">CPD 01–06 Live · 4 Coming Soon</span>
+              <span class="tile-btn">Open CPD →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- DCAIS Monitor Tile -->
+        <div class="tile-card" data-section="dcais" data-cat="dcais" onclick="openTeacherSection('dcais')">
+          <div class="tile-img-wrap teal-bg">
+            <span class="tile-img-icon">🔭</span>
+          </div>
+          <div class="tile-body">
+            <div>
+              <div class="tile-tag">Section C • DCAIS</div>
+              <h2 class="tile-title">DCAIS Curriculum Monitor</h2>
+              <p class="tile-desc">Grade-wise activity management for Grades 6–12. Weekly activity cards, lesson plans, and subject filters.</p>
+            </div>
+            <div class="tile-footer">
+              <span class="tile-hint">Grades 6–12 · Weekly Activities</span>
+              <span class="tile-btn">Open DCAIS →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resources Tile -->
+        <div class="tile-card" data-section="resources" data-cat="resources" onclick="openTeacherSection('resources')">
+          <div class="tile-img-wrap green-bg">
+            <span class="tile-img-icon">📝</span>
+          </div>
+          <div class="tile-body">
+            <div>
+              <div class="tile-tag">Section D • Resources</div>
+              <h2 class="tile-title">Classroom Resources &amp; Lesson Plans</h2>
+              <p class="tile-desc">Adobe Express templates, lesson plan downloads, rubrics, worksheets aligned with CBSE curriculum.</p>
+            </div>
+            <div class="tile-footer">
+              <span class="tile-hint">Templates · Rubrics · Lesson Plans</span>
+              <span class="tile-btn">Open →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certification Tile -->
+        <div class="tile-card" data-section="certification" data-cat="cpd" onclick="openTeacherSection('certification')">
+          <div class="tile-img-wrap gold-bg">
+            <span class="tile-img-icon">🏆</span>
+          </div>
+          <div class="tile-body">
+            <div>
+              <div class="tile-tag">Section E • Certification</div>
+              <h2 class="tile-title">Certification Path &amp; Badges</h2>
+              <p class="tile-desc">Upload certificates, get Principal verification, and earn your Adobe Certified CBSE Educator badge.</p>
+            </div>
+            <div class="tile-footer">
+              <span class="tile-hint">4 Certification Levels</span>
+              <span class="tile-btn">Open →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Digital Platforms Tile -->
+        <div class="tile-card" data-section="platforms" data-cat="cpd" onclick="openTeacherSection('platforms')">
+          <div class="tile-img-wrap purple-bg">
+            <span class="tile-img-icon">🌐</span>
+          </div>
+          <div class="tile-body">
+            <div>
+              <div class="tile-tag">Section F • Online CPD</div>
+              <h2 class="tile-title">DIKSHA · NISHTHA · SWAYAM · iGOT</h2>
+              <p class="tile-desc">Track 20 online CPD hours via DIKSHA, NISHTHA, SWAYAM, and iGOT platforms for the 50-hour framework.</p>
+            </div>
+            <div class="tile-footer">
+              <span class="tile-hint">20h Online + 30h Face-to-Face</span>
+              <span class="tile-btn">Open →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CPD Tracker Overview Tile -->
+        <div class="tile-card" data-section="tracker" data-cat="cpd" onclick="openTeacherSection('tracker')">
+          <div class="tile-img-wrap saffron-bg">
+            <span class="tile-img-icon">📊</span>
+          </div>
+          <div class="tile-body">
+            <div>
+              <div class="tile-tag">Section G • Progress</div>
+              <h2 class="tile-title">CPD Hours Tracker</h2>
+              <p class="tile-desc">Monitor offline (face-to-face) and online (digital) CPD hours. Log activities and get Principal sign-off.</p>
+            </div>
+            <div class="tile-footer">
+              <span class="tile-hint">50h Annual Framework</span>
+              <span class="tile-btn">Open →</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /teacherDashboard -->
+
+    <!-- Teacher Section Detail View -->
+    <div id="teacherSectionView" class="section-full-view">
+      <div class="sec-nav-bar">
+        <button class="back-btn" onclick="showTeacherDashboard()">← Back to Sections</button>
+        <div class="sec-breadcrumb">Home / <strong id="tCrumbName">Section</strong></div>
+        <div style="display:flex;gap:8px">
+          <button class="btn btn-ghost" onclick="window.print()" style="font-size:.76rem;padding:7px 14px">🖨 Print</button>
+          <button class="btn btn-ghost" onclick="showToast('📋 Copied to clipboard!')" style="font-size:.76rem;padding:7px 14px">📋 Share</button>
+        </div>
+      </div>
+      <div class="sec-hero-card" id="tSecHeroCard">
+        <div class="sec-hero-badge" id="tSecBadge">📚</div>
+        <div class="sec-hero-body">
+          <div class="sec-hero-tag" id="tSecTag">Section</div>
+          <div class="sec-hero-title" id="tSecTitle">Title</div>
+          <div class="sec-hero-desc" id="tSecDesc">Description</div>
+        </div>
+      </div>
+      <div class="sec-content-box">
+        <div id="tSecContent"></div>
+      </div>
+    </div>
+
+  </div><!-- /teacherSection -->
+
+  <!-- ===== STUDENT ROLE SECTION ===== -->
+  <div id="studentSection" class="role-section">
+
+    <!-- Dashboard Tiles View -->
+    <div id="studentDashboard">
+      <div class="guide student-guide">
+        <span class="guide-icon">🎓</span>
+        <p><strong>Welcome, Student!</strong> Explore your 12-month creative challenges, watch video masterclasses, launch projects, and earn achievements!</p>
+      </div>
+
+      <!-- Search -->
+      <div class="search-bar" style="margin-bottom:22px">
+        <div class="search-box">
+          <span class="search-ico">🔍</span>
+          <input class="search-input student-search" type="text" placeholder="Search challenges, masterclasses, projects…" oninput="filterStudentTiles(this.value)">
+        </div>
+        <div class="filter-chips">
+          <div class="fchip s-active" onclick="filterStudentCategory('all',this)">All</div>
+          <div class="fchip" onclick="filterStudentCategory('challenges',this)">Challenges</div>
+          <div class="fchip" onclick="filterStudentCategory('video',this)">Videos</div>
+          <div class="fchip" onclick="filterStudentCategory('projects',this)">Projects</div>
+        </div>
+      </div>
+
+      <div class="tiles-grid" id="studentTilesGrid">
+
+        <!-- Challenges Tile -->
+        <div class="tile-card student-card" data-scat="challenges" onclick="openStudentSection('challenges')">
+          <div class="tile-img-wrap apr">
+            <span class="tile-img-icon">🎨</span>
+          </div>
+          <div class="tile-body">
+            <div>
+              <div class="tile-tag student-tag">Creative Challenges</div>
+              <h2 class="tile-title">12-Month Creative Challenges</h2>
+              <p class="tile-desc">One creative challenge every month, from April to March. Design posters, infographics, greetings, and more!</p>
+            </div>
+            <div class="tile-footer">
+              <span class="tile-hint">April → March · 12 Challenges</span>
+              <span class="tile-btn">Start Creating →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- DCAIS Student Tile -->
+        <div class="tile-card student-card" data-scat="dcais" onclick="openStudentSection('dcais')">
+          <div class="tile-img-wrap teal-bg">
+            <span class="tile-img-icon">📱</span>
+          </div>
+          <div class="tile-body">
+            <div>
+              <div class="tile-tag student-tag">DCAIS · Student</div>
+              <h2 class="tile-title">DCAIS Activities &amp; Modules</h2>
+              <p class="tile-desc">Month-wise creative activities and digital skill modules designed for CBSE students Grades 6–12.</p>
+            </div>
+            <div class="tile-footer">
+              <span class="tile-hint">Grades 6–12 · Monthly Modules</span>
+              <span class="tile-btn">Explore →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Masterclass Tile -->
+        <div class="tile-card student-card" data-scat="video" onclick="openStudentSection('masterclass')">
+          <div class="tile-img-wrap purple-bg">
+            <span class="tile-img-icon">🎬</span>
+          </div>
+          <div class="tile-body">
+            <div>
+              <div class="tile-tag student-tag">Video Masterclass</div>
+              <h2 class="tile-title">Video Tutorials &amp; Masterclasses</h2>
+              <p class="tile-desc">Step-by-step video tutorials on Adobe Express tools — from basics to advanced design and digital storytelling.</p>
+            </div>
+            <div class="tile-footer">
+              <span class="tile-hint">10+ Videos · Beginner to Advanced</span>
+              <span class="tile-btn">Watch Now →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Launcher Tile -->
+        <div class="tile-card student-card" data-scat="projects" onclick="openStudentSection('projects')">
+          <div class="tile-img-wrap green-bg">
+            <span class="tile-img-icon">🚀</span>
+          </div>
+          <div class="tile-body">
+            <div>
+              <div class="tile-tag student-tag">Project Launcher</div>
+              <h2 class="tile-title">Project Submission Launcher</h2>
+              <p class="tile-desc">Start a new creative project, choose your template, build your portfolio, and submit for review.</p>
+            </div>
+            <div class="tile-footer">
+              <span class="tile-hint">Portfolio · Templates · Submit</span>
+              <span class="tile-btn">Launch Project →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Achievements Tile -->
+        <div class="tile-card student-card" data-scat="achievements" onclick="openStudentSection('achievements')">
+          <div class="tile-img-wrap gold-bg">
+            <span class="tile-img-icon">🏅</span>
+          </div>
+          <div class="tile-body">
+            <div>
+              <div class="tile-tag student-tag">Achievements</div>
+              <h2 class="tile-title">Badges &amp; Achievements</h2>
+              <p class="tile-desc">Earn digital badges for completing challenges, submitting projects, and mastering Adobe Express skills.</p>
+            </div>
+            <div class="tile-footer">
+              <span class="tile-hint">12 Badges · 4 Milestone Trophies</span>
+              <span class="tile-btn">View Achievements →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- DCAIS Exam (Student) -->
+        <div class="tile-card student-card" data-scat="exam" onclick="openStudentSection('exam')">
+          <div class="tile-img-wrap saffron-bg">
+            <span class="tile-img-icon">📝</span>
+          </div>
+          <div class="tile-body">
+            <div>
+              <div class="tile-tag student-tag">DCAIS Exam</div>
+              <h2 class="tile-title">Digital Skills Assessment</h2>
+              <p class="tile-desc">Test your digital creativity skills with CBSE DCAIS assessments. Practice questions, mock tests, and answer keys.</p>
+            </div>
+            <div class="tile-footer">
+              <span class="tile-hint">Practice · Mock Test · Answer Key</span>
+              <span class="tile-btn">Attempt Now →</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /studentDashboard -->
+
+    <!-- Student Section Detail View -->
+    <div id="studentSectionView" class="section-full-view">
+      <div class="sec-nav-bar">
+        <button class="back-btn student-back" onclick="showStudentDashboard()">← Back to Sections</button>
+        <div class="sec-breadcrumb">Home / <strong id="sCrumbName">Section</strong></div>
+        <div style="display:flex;gap:8px">
+          <button class="btn btn-ghost" onclick="window.print()" style="font-size:.76rem;padding:7px 14px">🖨 Print</button>
+          <button class="btn btn-ghost" onclick="showToast('📋 Copied to clipboard!')" style="font-size:.76rem;padding:7px 14px">📋 Share</button>
+        </div>
+      </div>
+      <div class="sec-hero-card student-card-hero" id="sSecHeroCard">
+        <div class="sec-hero-badge student-badge" id="sSecBadge">🎨</div>
+        <div class="sec-hero-body">
+          <div class="sec-hero-tag student-tag-hero" id="sSecTag">Section</div>
+          <div class="sec-hero-title" id="sSecTitle">Title</div>
+          <div class="sec-hero-desc" id="sSecDesc">Description</div>
+        </div>
+      </div>
+      <div class="sec-content-box">
+        <div id="sSecContent"></div>
+      </div>
+    </div>
+
+  </div><!-- /studentSection -->
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:8px">
+    <div style="width:32px;height:32px;border-radius:8px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:900;color:#FFF;letter-spacing:.03em">CBSE</div>
+    <strong style="color:rgba(255,255,255,.7)">CBSE Unified Portal · Adobe Express for Education</strong>
+  </div>
+  <p>Central Board of Secondary Education · <a href="https://www.cbse.gov.in" target="_blank" rel="noopener">cbse.gov.in</a></p>
+  <p>Portal built with Adobe Express for Education. For support: <a href="mailto:cbse@adobe.com">cbse@adobe.com</a></p>
+  <p style="margin-top:10px">© 2026 CBSE &amp; Adobe Inc. All rights reserved.</p>
+</footer>
+
+<!-- ===== TOAST CONTAINER ===== -->
+<div id="toastEl" style="display:none" class="toast"></div>
+
+<script>
+/* ==================== ROLE SWITCHER ==================== */
+let currentRole = 'teacher';
+
+function switchRole(role) {
+  currentRole = role;
+  document.getElementById('teacherTab').classList.toggle('active', role === 'teacher');
+  document.getElementById('studentTab').classList.toggle('active', role === 'student');
+  document.getElementById('teacherSection').classList.toggle('active', role === 'teacher');
+  document.getElementById('studentSection').classList.toggle('active', role === 'student');
+  document.getElementById('teacherFlow').style.display = role === 'teacher' ? 'flex' : 'none';
+  document.getElementById('studentFlow').style.display = role === 'student' ? 'flex' : 'none';
+  const hero = document.getElementById('mainHero');
+  hero.classList.toggle('student-hero', role === 'student');
+  const badge = document.getElementById('hdrBadge');
+  badge.textContent = role === 'teacher' ? 'Teacher Portal' : 'Student Portal';
+  badge.classList.toggle('student-mode', role === 'student');
+  document.getElementById('langBtnEN').classList.toggle('student-mode', role === 'student');
+  document.getElementById('heroTitle').textContent = role === 'teacher' ? 'CBSE Teacher & Educator Hub' : 'CBSE Student Creative Hub';
+  document.getElementById('heroSub').textContent = role === 'teacher'
+    ? 'CPD professional development, DCAIS curriculum monitoring, classroom resources and certification — all in one place.'
+    : 'Monthly creative challenges, video masterclasses, project launcher, and achievements — your creative journey starts here!';
+  // Reset views
+  showTeacherDashboard();
+  showStudentDashboard();
+  showToast(role === 'teacher' ? '👨‍🏫 Switched to Teacher Portal' : '🎓 Switched to Student Portal');
+}
+
+/* ==================== TEACHER NAV ==================== */
+function showDashboard() {
+  if (currentRole === 'teacher') showTeacherDashboard();
+  else showStudentDashboard();
+}
+function showTeacherDashboard() {
+  document.getElementById('teacherDashboard').style.display = '';
+  document.getElementById('teacherSectionView').style.display = 'none';
+}
+function showStudentDashboard() {
+  document.getElementById('studentDashboard').style.display = '';
+  document.getElementById('studentSectionView').style.display = 'none';
+}
+
+function openTeacherSection(key) {
+  document.getElementById('teacherDashboard').style.display = 'none';
+  const view = document.getElementById('teacherSectionView');
+  view.style.display = 'block';
+  const sections = {
+    cpd: {
+      badge: '📚', tag: 'Section B • CPD', badgeClass: '',
+      title: 'Continuous Professional Development (CPD)',
+      desc: '50-hour annual CPD framework for CBSE educators. 6 live modules covering NEP 2020 integration, digital pedagogy, and creative leadership.',
+      content: renderCPDContent()
+    },
+    dcais: {
+      badge: '🔭', tag: 'Section C • DCAIS Monitor',
+      title: 'DCAIS Curriculum Monitor – Grades 6–12',
+      desc: 'Grade-wise activity management for Data Centralized Administration & Information System. Monitor weekly activities, lesson plans, and student progress.',
+      content: renderDCAISTeacherContent()
+    },
+    resources: {
+      badge: '📝', tag: 'Section D • Classroom Resources',
+      title: 'Classroom Resources &amp; Lesson Plans',
+      desc: 'Adobe Express templates, CBSE-aligned worksheets, lesson plans, and creative rubrics for Grades 6–12.',
+      content: renderTeacherResourcesContent()
+    },
+    certification: {
+      badge: '🏆', tag: 'Section E • Certification',
+      title: 'Adobe Certified CBSE Educator Path',
+      desc: 'Upload CPD certificates, obtain Principal verification, and earn your Adobe Certified Educator credential.',
+      content: renderCertificationContent()
+    },
+    platforms: {
+      badge: '🌐', tag: 'Section F • Online CPD Platforms',
+      title: 'Online CPD Platforms',
+      desc: 'Track your 20 online CPD hours through DIKSHA, NISHTHA, SWAYAM, and iGOT platforms.',
+      content: renderPlatformsContent()
+    },
+    tracker: {
+      badge: '📊', tag: 'Section G • CPD Hours Tracker',
+      title: 'CPD Hours Tracker &amp; Progress',
+      desc: 'Monitor your offline (face-to-face) and online CPD hours toward the annual 50-hour framework.',
+      content: renderTrackerContent()
+    }
+  };
+  const s = sections[key] || sections.cpd;
+  document.getElementById('tCrumbName').textContent = s.title.replace(/&amp;/g, '&');
+  document.getElementById('tSecBadge').textContent = s.badge;
+  document.getElementById('tSecTag').textContent = s.tag;
+  document.getElementById('tSecTitle').innerHTML = s.title;
+  document.getElementById('tSecDesc').textContent = s.desc;
+  document.getElementById('tSecContent').innerHTML = s.content;
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+/* ==================== TEACHER CONTENT RENDERERS ==================== */
+function renderCPDContent() {
+  return `
+  <div class="cpd-tabs-nav">
+    <button class="cpd-tab-btn active" onclick="setCPDTab('overview',this)">📋 Overview</button>
+    <button class="cpd-tab-btn" onclick="setCPDTab('modules',this)">📚 CPD Modules</button>
+    <button class="cpd-tab-btn" onclick="setCPDTab('categories',this)">🗂 Categories</button>
+    <button class="cpd-tab-btn" onclick="setCPDTab('upload',this)">📤 Upload Certificate</button>
+  </div>
+  <div id="cpdTabContent">${renderCPDOverview()}</div>`;
+}
+
+function setCPDTab(tab, btn) {
+  document.querySelectorAll('.cpd-tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const renders = { overview: renderCPDOverview, modules: renderCPDModules, categories: renderCPDCategories, upload: renderCPDUpload };
+  document.getElementById('cpdTabContent').innerHTML = (renders[tab] || renderCPDOverview)();
+}
+
+function renderCPDOverview() {
+  return `
+  <div class="notice">
+    <div class="notice-t">📢 CBSE CPD Framework 2025–26</div>
+    <div class="notice-d">All CBSE educators must complete <strong>50 CPD hours annually</strong> — 30 hours face-to-face training + 20 hours online (DIKSHA/NISHTHA/SWAYAM/iGOT). Submit evidence by March 31, 2026.</div>
+  </div>
+  <div class="cpd-tracker-card">
+    <div class="cpd-tracker-title">📊 Your CPD Progress</div>
+    <div class="cpd-tracker-grid">
+      <div class="cpd-stat-box"><div class="cpd-stat-n">32</div><div class="cpd-stat-l">Hours Completed</div></div>
+      <div class="cpd-stat-box"><div class="cpd-stat-n">18</div><div class="cpd-stat-l">Hours Remaining</div></div>
+      <div class="cpd-stat-box"><div class="cpd-stat-n">64%</div><div class="cpd-stat-l">Overall Progress</div></div>
+      <div class="cpd-stat-box"><div class="cpd-stat-n">6</div><div class="cpd-stat-l">Modules Done</div></div>
+    </div>
+    <div class="cpd-bar-wrap">
+      <div class="cpd-bar-label"><span>Face-to-Face (Offline) · 20/30h</span><span class="cpd-bar-pct">67%</span></div>
+      <div class="cpd-bar"><div class="cpd-fill" style="width:67%"></div></div>
+    </div>
+    <div class="cpd-bar-wrap">
+      <div class="cpd-bar-label"><span>Online (DIKSHA/NISHTHA/SWAYAM/iGOT) · 12/20h</span><span class="cpd-bar-pct">60%</span></div>
+      <div class="cpd-bar"><div class="cpd-fill online-fill" style="width:60%"></div></div>
+    </div>
+  </div>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px">
+    <button class="btn btn-primary" onclick="setCPDTab('modules', document.querySelectorAll('.cpd-tab-btn')[1])">📚 Browse CPD Modules</button>
+    <button class="btn btn-outline" onclick="setCPDTab('upload', document.querySelectorAll('.cpd-tab-btn')[3])">📤 Upload Certificate</button>
+    <button class="btn btn-ghost" onclick="showToast('📊 Report downloaded!')">⬇ Download Report</button>
+  </div>
+  <div class="sec-label">CPD JOURNEY STEPS</div>
+  <div class="cpd-steps">
+    <div class="cpd-step"><div class="cpd-step-n done">✓</div><div class="cpd-step-l">Enrol in CPD</div></div>
+    <div class="cpd-connector"></div>
+    <div class="cpd-step"><div class="cpd-step-n done">✓</div><div class="cpd-step-l">Complete Module</div></div>
+    <div class="cpd-connector"></div>
+    <div class="cpd-step"><div class="cpd-step-n">3</div><div class="cpd-step-l">Upload Certificate</div></div>
+    <div class="cpd-connector"></div>
+    <div class="cpd-step"><div class="cpd-step-n coming">4</div><div class="cpd-step-l">Principal Verification</div></div>
+    <div class="cpd-connector"></div>
+    <div class="cpd-step"><div class="cpd-step-n coming">5</div><div class="cpd-step-l">Earn Badge</div></div>
+  </div>`;
+}
+
+function renderCPDModules() {
+  const modules = [
+    { id:'01', title:'Adobe Express Fundamentals & CBSE Curriculum Integration', desc:'Master Adobe Express interface, create CBSE-aligned digital content, and integrate design tools into daily classroom practice.', hrs:8, status:'done', topics:['Interface & Tools','Template Customisation','CBSE Alignment','Classroom Integration'] },
+    { id:'02', title:'Digital Content Creation for NEP 2020 Classrooms', desc:'Design interactive content aligned with NEP 2020 competencies — infographics, posters, and multimedia presentations for effective teaching.', hrs:8, status:'done', topics:['NEP 2020 Framework','Infographic Design','Multimedia','Competency Mapping'] },
+    { id:'03', title:'Assessment Design & Creative Rubrics', desc:'Build creative assessment rubrics, design project-based assessment tools, and evaluate student portfolios using Adobe Express.', hrs:8, status:'done', topics:['Rubric Creation','Portfolio Assessment','Project-Based Learning','Peer Review'] },
+    { id:'04', title:'Inclusive Digital Education Practices', desc:'Learn strategies for inclusive classrooms using adaptive digital tools. Design materials for diverse learning needs and accessibility.', hrs:8, status:'done', topics:['Universal Design','Accessibility','Differentiated Instruction','Adaptive Tools'] },
+    { id:'05', title:'Advanced Media Literacy & Communication', desc:'Develop advanced media literacy skills. Teach students critical evaluation of digital content, visual communication, and media creation.', hrs:8, status:'done', topics:['Media Literacy','Critical Thinking','Visual Communication','Digital Citizenship'] },
+    { id:'06', title:'CBSE Leadership & Creative Pedagogy', desc:'Lead your school\'s digital transformation. Build mentoring capacities, develop school-wide creative pedagogy frameworks.', hrs:10, status:'done', topics:['Leadership','Creative Pedagogy','Mentoring','School Transformation'] },
+    { id:'07', title:'AI in CBSE Education', desc:'Coming Soon — Integrate AI tools ethically into CBSE education. Understand generative AI, ethical use, and creative applications.', hrs:8, status:'soon', topics:[] },
+    { id:'08', title:'Digital Portfolio & Documentation', desc:'Coming Soon — Build and maintain teacher & student digital portfolios using Adobe Express and cloud tools.', hrs:6, status:'soon', topics:[] },
+    { id:'09', title:'Parent & Community Engagement', desc:'Coming Soon — Use digital storytelling to engage parents and the community in school learning journeys.', hrs:6, status:'soon', topics:[] },
+    { id:'10', title:'Advanced Certification Workshop', desc:'Coming Soon — Intensive workshop for Adobe Certified CBSE Educator Master credential.', hrs:12, status:'soon', topics:[] },
+  ];
+  return `
+  <div class="notice">
+    <div class="notice-t">6 of 10 CPD Modules Live · 4 Coming Soon</div>
+    <div class="notice-d">Completing all 10 modules earns you the <strong>Adobe Certified CBSE Master Educator</strong> credential. Each module contributes toward the 50-hour annual CPD requirement.</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px">
+  ${modules.map(m => `
+  <div style="background:var(--surface);border:1.5px solid ${m.status==='done'?'var(--navy-border)':'var(--border)'};border-radius:var(--radius-lg);padding:20px;display:flex;flex-direction:column;gap:12px;transition:all .2s;box-shadow:var(--shadow-sm);${m.status==='soon'?'opacity:.65':''}" class="${m.status==='done'?'':'cpd-coming-soon'}">
+    <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px">
+      <div style="width:44px;height:44px;border-radius:12px;background:${m.status==='done'?'var(--navy)':'var(--border)'};color:#FFF;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:900;flex-shrink:0">CPD${m.id}</div>
+      <span style="background:${m.status==='done'?'#ECFDF5':'var(--surface-2)'};color:${m.status==='done'?'#059669':'var(--ink-3)'};border:1px solid ${m.status==='done'?'#A7F3D0':'var(--border)'};font-size:.66rem;font-weight:800;padding:3px 10px;border-radius:999px;text-transform:uppercase;white-space:nowrap">${m.status==='done'?'✓ Live':'Coming Soon'}</span>
+    </div>
+    <div>
+      <div style="font-size:.98rem;font-weight:900;color:var(--ink);line-height:1.3;margin-bottom:5px">CPD ${m.id}: ${m.title}</div>
+      <div style="font-size:.78rem;color:var(--ink-2);line-height:1.45">${m.desc}</div>
+    </div>
+    ${m.topics.length ? `<div style="display:flex;flex-wrap:wrap;gap:5px">${m.topics.map(t=>`<span style="background:var(--navy-bg);color:var(--navy);font-size:.68rem;font-weight:700;padding:3px 9px;border-radius:6px;border:1px solid var(--navy-border)">${t}</span>`).join('')}</div>` : ''}
+    <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border)">
+      <span style="font-size:.78rem;font-weight:800;color:var(--navy)">⏱ ${m.hrs} CPD Hours</span>
+      ${m.status==='done'?`<button class="btn btn-primary" style="font-size:.74rem;padding:6px 14px" onclick="showToast('📚 Opening CPD ${m.id}…')">Start Module →</button>`:`<span style="font-size:.74rem;color:var(--ink-3);font-weight:700">Launching Q2 2026</span>`}
+    </div>
+  </div>`).join('')}
+  </div>`;
+}
+
+function renderCPDCategories() {
+  const cats = [
+    { icon:'🎓', title:'Training & Capacity Building', desc:'Face-to-face workshops, school-based training sessions, regional CBSE workshops, and cluster-level programmes.', hrs:'Up to 20h', color:'var(--navy)' },
+    { icon:'💻', title:'Digital Courses', desc:'Online courses via DIKSHA, NISHTHA, SWAYAM, and iGOT platforms. Self-paced and instructor-led digital learning.', hrs:'Up to 20h', color:'#7C3AED' },
+    { icon:'📖', title:'Academic Contributions', desc:'Lesson plan creation, curriculum development, textbook review participation, and academic committee contributions.', hrs:'Up to 10h', color:'#059669' },
+    { icon:'📰', title:'Publications & Research', desc:'Writing articles, research papers, educational blogs, creating teaching resources, and book authorship.', hrs:'Up to 10h', color:'#D97706' },
+  ];
+  return `
+  <div class="notice">
+    <div class="notice-t">4 CPD Categories · 50 Hours Annual Target</div>
+    <div class="notice-d">Hours can be distributed across all four categories. At least <strong>30 hours must be from Training & Digital Courses</strong>, with the remaining from Academic Contributions and Publications.</div>
+  </div>
+  <div class="cpd-cat-grid">
+  ${cats.map(c=>`
+  <div class="cpd-cat">
+    <div class="cpd-cat-icon" style="background:${c.color}1A;border-color:${c.color}30"><span style="font-size:1.4rem">${c.icon}</span></div>
+    <div class="cpd-cat-body">
+      <div class="cpd-cat-title">${c.title}</div>
+      <div class="cpd-cat-desc">${c.desc}</div>
+      <div class="cpd-cat-hrs">Maximum: ${c.hrs}</div>
+    </div>
+  </div>`).join('')}
+  </div>
+  <div style="background:var(--surface-2);border:1.5px solid var(--border);border-radius:var(--radius);padding:18px;margin-top:4px">
+    <div style="font-size:.9rem;font-weight:800;color:var(--ink);margin-bottom:12px">📋 CPD Hours Log</div>
+    <div class="al">
+      <div class="ai"><div class="ai-l"><div class="ai-dot"></div><div><div class="ai-t">Face-to-Face Training — Regional CBSE Workshop</div><div class="ai-d">Date: 15 Sep 2025 · Duration: 6 hours · Verified: Principal</div></div></div><div class="ai-r"><span style="background:#ECFDF5;color:#059669;font-size:.72rem;font-weight:800;padding:3px 10px;border-radius:999px;border:1px solid #A7F3D0">✓ Verified</span></div></div>
+      <div class="ai"><div class="ai-l"><div class="ai-dot"></div><div><div class="ai-t">Online Course — NISHTHA 3.0 Digital Classroom</div><div class="ai-d">Platform: DIKSHA · Duration: 10 hours · Certificate: Uploaded</div></div></div><div class="ai-r"><span style="background:#ECFDF5;color:#059669;font-size:.72rem;font-weight:800;padding:3px 10px;border-radius:999px;border:1px solid #A7F3D0">✓ Verified</span></div></div>
+      <div class="ai"><div class="ai-l"><div class="ai-dot"></div><div><div class="ai-t">CPD Module 05 — Advanced Media Literacy</div><div class="ai-d">Platform: Adobe Express · Duration: 8 hours · Status: Pending verification</div></div></div><div class="ai-r"><span style="background:#FFF7ED;color:#C2410C;font-size:.72rem;font-weight:800;padding:3px 10px;border-radius:999px;border:1px solid #FED7AA">⏳ Pending</span></div></div>
+    </div>
+    <div style="margin-top:14px"><button class="btn btn-primary" onclick="showToast('➕ Log entry added!')">+ Add CPD Activity</button></div>
+  </div>`;
+}
+
+function renderCPDUpload() {
+  return `
+  <div class="notice">
+    <div class="notice-t">📤 Certificate Upload & Principal Verification</div>
+    <div class="notice-d">Upload your CPD completion certificates here. Your Principal will verify and digitally sign off on your hours within 5 working days.</div>
+  </div>
+  <div class="upload-zone" onclick="showToast('📁 File picker opened!')">
+    <div class="upload-icon">📄</div>
+    <div class="upload-title">Click to Upload CPD Certificate</div>
+    <div class="upload-sub">PDF, JPG, PNG · Max 5MB per file · Multiple files allowed</div>
+  </div>
+  <div class="sec-label">PRINCIPAL VERIFICATION FLOW</div>
+  <div class="verif-flow">
+    <div class="verif-step"><div class="verif-num">1</div><div class="verif-title">Upload Certificate</div><div class="verif-desc">Upload scanned certificate or digital badge from CPD platform</div></div>
+    <div class="verif-step"><div class="verif-num">2</div><div class="verif-title">System Notification</div><div class="verif-desc">Principal receives auto-notification via CBSE portal email</div></div>
+    <div class="verif-step"><div class="verif-num">3</div><div class="verif-title">Principal Review</div><div class="verif-desc">Principal logs in, reviews certificate, and approves/returns</div></div>
+    <div class="verif-step"><div class="verif-num">4</div><div class="verif-title">Hours Credited</div><div class="verif-desc">CPD hours auto-credited to your annual tracker upon approval</div></div>
+  </div>
+  <div class="al" style="margin-top:16px">
+    <div class="ai"><div class="ai-l"><div class="ai-dot"></div><div><div class="ai-t">CPD 01 Certificate — Adobe Express Fundamentals</div><div class="ai-d">Uploaded: 12 Aug 2025 · 8 hours</div></div></div><div class="ai-r"><span style="background:#ECFDF5;color:#059669;font-size:.72rem;font-weight:800;padding:3px 10px;border-radius:999px">✓ Verified</span></div></div>
+    <div class="ai"><div class="ai-l"><div class="ai-dot"></div><div><div class="ai-t">CPD 02 Certificate — Digital Content Creation</div><div class="ai-d">Uploaded: 18 Sep 2025 · 8 hours</div></div></div><div class="ai-r"><span style="background:#ECFDF5;color:#059669;font-size:.72rem;font-weight:800;padding:3px 10px;border-radius:999px">✓ Verified</span></div></div>
+    <div class="ai"><div class="ai-l"><div class="ai-dot"></div><div><div class="ai-t">NISHTHA 3.0 Online Certificate</div><div class="ai-d">Uploaded: 05 Oct 2025 · 10 hours · Awaiting Principal</div></div></div><div class="ai-r"><span style="background:#FFF7ED;color:#C2410C;font-size:.72rem;font-weight:800;padding:3px 10px;border-radius:999px">⏳ Pending</span></div></div>
+  </div>`;
+}
+
+/* ==================== DCAIS TEACHER ==================== */
+const GRADES_DATA = [
+  { grade:6, label:'Grade 6', topic:'Basics of Digital Communication', emoji:'📡', count:8 },
+  { grade:7, label:'Grade 7', topic:'Visual Storytelling', emoji:'📸', count:10 },
+  { grade:8, label:'Grade 8', topic:'Infographic Design', emoji:'📊', count:9 },
+  { grade:9, label:'Grade 9', topic:'Multimedia Presentations', emoji:'🎞', count:11 },
+  { grade:10, label:'Grade 10', topic:'Digital Portfolio Creation', emoji:'🗂', count:10 },
+  { grade:11, label:'Grade 11', topic:'Advanced Graphic Design', emoji:'🎨', count:12 },
+  { grade:12, label:'Grade 12', topic:'Professional Digital Communication', emoji:'💼', count:10 },
+];
+
+const DCAIS_ACTIVITIES = {
+  6: [
+    { week:'Week 1', activity:'Introduction to Adobe Express', skills:'Navigation, Templates, Basics', outcomes:'Students can log in and navigate the interface confidently.' },
+    { week:'Week 2', activity:'Creating a Digital Name Badge', skills:'Text Tools, Shapes, Colour', outcomes:'Students design a personalised name badge using digital tools.' },
+    { week:'Week 3', activity:'School Rules Poster', skills:'Poster Design, Typography, Layout', outcomes:'Students communicate rules through creative visual design.' },
+    { week:'Week 4', activity:'My School Map Infographic', skills:'Infographic Basics, Icons, Spatial Layout', outcomes:'Students represent spatial information through illustrated maps.' },
+  ],
+  7: [
+    { week:'Week 1', activity:'Photo Story — A Day in School', skills:'Photo Editing, Captions, Storytelling', outcomes:'Students use photos to narrate a compelling visual story.' },
+    { week:'Week 2', activity:'Heritage Site Visual Report', skills:'Research, Layout, Typography', outcomes:'Students present heritage information visually.' },
+    { week:'Week 3', activity:'Book Cover Design', skills:'Cover Design, Typography, Visual Hierarchy', outcomes:'Students redesign a textbook cover with design principles.' },
+    { week:'Week 4', activity:'Community Heroes Poster Series', skills:'Social Awareness, Design Ethics, Portrait Layout', outcomes:'Students highlight community heroes through creative posters.' },
+  ],
+  8: [
+    { week:'Week 1', activity:'Climate Change Infographic', skills:'Data Visualisation, Charts, Icons', outcomes:'Students translate data into impactful visual formats.' },
+    { week:'Week 2', activity:'Nutrition & Health Dashboard', skills:'Dashboard Design, Colour Coding, Charts', outcomes:'Students design data-driven health awareness visuals.' },
+    { week:'Week 3', activity:'Science Experiment Visual Guide', skills:'Step-by-Step Layout, Diagrams, Instruction Design', outcomes:'Students create visual instructional materials.' },
+    { week:'Week 4', activity:'Year-End Digital Magazine', skills:'Multi-page Layout, Branding, Editorial Design', outcomes:'Students collaborate on a class digital magazine.' },
+  ],
+  9: [
+    { week:'Week 1', activity:'Career Paths Presentation', skills:'Slide Design, Visual Hierarchy, Storytelling', outcomes:'Students present career information persuasively.' },
+    { week:'Week 2', activity:'Historical Timeline — India', skills:'Timeline Design, Research, Chronology', outcomes:'Students create visually rich historical timelines.' },
+    { week:'Week 3', activity:'Social Issue Awareness Campaign', skills:'Campaign Design, Messaging, Audience Awareness', outcomes:'Students design multi-asset awareness campaigns.' },
+    { week:'Week 4', activity:'Debate Visual Aid', skills:'Argument Mapping, Evidence Presentation, Visual Logic', outcomes:'Students support arguments with visual evidence.' },
+  ],
+  10: [
+    { week:'Week 1', activity:'Personal Achievement Portfolio', skills:'Portfolio Design, Self-Reflection, Documentation', outcomes:'Students create professional digital portfolios.' },
+    { week:'Week 2', activity:'Board Exam Preparation Infographic', skills:'Study Strategy Visualisation, Key Points', outcomes:'Students make visual study aids for Board preparation.' },
+    { week:'Week 3', activity:'Science Project Visual Report', skills:'Scientific Communication, Data Viz, Clarity', outcomes:'Students present science projects visually.' },
+    { week:'Week 4', activity:'Future Goals Vision Board', skills:'Vision Board, Aspiration Design, Inspiration', outcomes:'Students visualise their post-Board aspirations.' },
+  ],
+  11: [
+    { week:'Week 1', activity:'Subject-Specific Magazine', skills:'Editorial Design, Branding, Specialisation', outcomes:'Students create subject-specific publications.' },
+    { week:'Week 2', activity:'Research Paper Poster', skills:'Academic Poster, Data Presentation, Academic Communication', outcomes:'Students present research findings on academic posters.' },
+    { week:'Week 3', activity:'Entrepreneurship Pitch Deck', skills:'Business Communication, Slide Design, Persuasion', outcomes:'Students design compelling pitch decks.' },
+    { week:'Week 4', activity:'Social Media Campaign for School', skills:'Social Media Design, Brand Voice, Multi-Format', outcomes:'Students build multi-format social campaigns.' },
+  ],
+  12: [
+    { week:'Week 1', activity:'Professional Resume & Portfolio', skills:'Professional Design, Resume Layout, Portfolio', outcomes:'Students create job-ready professional portfolios.' },
+    { week:'Week 2', activity:'College Application Visual Essay', skills:'Narrative Design, Personal Statement, Visual Storytelling', outcomes:'Students design compelling college application materials.' },
+    { week:'Week 3', activity:'Capstone Project Presentation', skills:'Capstone Design, Advanced Layout, Professional Finish', outcomes:'Students create their final year capstone presentation.' },
+    { week:'Week 4', activity:'School Legacy Project', skills:'Brand Legacy, Community Design, Contribution', outcomes:'Students leave a designed legacy for the school community.' },
+  ],
+};
+
+let selectedGrade = null;
+
+function renderDCAISTeacherContent() {
+  selectedGrade = null;
+  return `
+  <div id="dcaisGradeView">
+    <div class="notice">
+      <div class="notice-t">🔭 DCAIS Curriculum Monitor — Grades 6–12</div>
+      <div class="notice-d">Select a grade to view weekly activity cards, learning outcomes, subject filters, and lesson plan resources aligned with CBSE curriculum.</div>
+    </div>
+    <div class="aim-top-nav" style="margin-bottom:18px">
+      <div style="font-size:.9rem;font-weight:800;color:var(--ink)">Select Grade to Monitor</div>
+      <div class="aim-search"><input type="text" placeholder="Search activities…" oninput="filterDCAIS(this.value)"></div>
+    </div>
+    <div class="aim-grade-cards" id="gradeCards">
+    ${GRADES_DATA.map(g=>`
+    <div class="aim-gc" onclick="showGradeActivities(${g.grade})">
+      <div class="aim-gc-icon">${g.emoji}</div>
+      <h3>${g.label}</h3>
+      <div class="aim-gc-cnt">${g.topic}</div>
+      <div class="aim-gc-cnt">${g.count} activities</div>
+      <div class="aim-gc-btn">Open Monitor →</div>
+    </div>`).join('')}
+    </div>
+  </div>
+  <div id="dcaisActivitiesView" style="display:none"></div>`;
+}
+
+function showGradeActivities(grade) {
+  selectedGrade = grade;
+  const g = GRADES_DATA.find(x=>x.grade===grade);
+  const acts = DCAIS_ACTIVITIES[grade] || [];
+  const html = `
+  <div class="aim-top-nav">
+    <button class="aim-back-grade" onclick="backToGrades()">← All Grades</button>
+    <div style="font-size:1rem;font-weight:900;color:var(--ink)">${g.emoji} ${g.label} — ${g.topic}</div>
+    <div class="aim-search"><input type="text" placeholder="Search activities…"></div>
+  </div>
+  <div class="aim-sub-filters" style="margin-bottom:18px">
+    <button class="aim-sub-btn active">All</button>
+    <button class="aim-sub-btn">English</button>
+    <button class="aim-sub-btn">Hindi</button>
+    <button class="aim-sub-btn">Science</button>
+    <button class="aim-sub-btn">Social Science</button>
+    <button class="aim-sub-btn">Maths</button>
+  </div>
+  <div class="aim-weekly-grid">
+  ${acts.map(a=>`
+  <div class="aim-weekly-card">
+    <div class="aim-card-header">
+      <span class="aim-week-badge">${a.week}</span>
+      <span class="aim-mod-badge">${g.label}</span>
+    </div>
+    <div class="aim-card-actname">${a.activity}</div>
+    <div style="font-size:.72rem;font-weight:800;color:var(--navy);text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px">SKILLS IN FOCUS</div>
+    <div class="aim-card-outcomes" style="font-size:.76rem;color:var(--navy-dk);font-weight:600">${a.skills}</div>
+    <div style="font-size:.72rem;font-weight:800;color:var(--ink-3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px">LEARNING OUTCOMES</div>
+    <div class="aim-card-outcomes">${a.outcomes}</div>
+    <div class="aim-card-skills">
+      <span class="aim-skill-pill">Design Thinking</span>
+      <span class="aim-skill-pill">Digital Literacy</span>
+      <span class="aim-skill-pill">Creativity</span>
+    </div>
+    <div class="aim-actions">
+      <button class="btn btn-primary" style="font-size:.76rem;width:100%;justify-content:center" onclick="showToast('📋 Lesson plan opened!')">📋 Open Lesson Plan</button>
+      <button class="btn btn-ghost" style="font-size:.76rem;width:100%;justify-content:center" onclick="showToast('🎨 Template opened in Adobe Express!')">🎨 Open Template</button>
+    </div>
+  </div>`).join('')}
+  </div>`;
+  document.getElementById('dcaisGradeView').style.display = 'none';
+  document.getElementById('dcaisActivitiesView').style.display = '';
+  document.getElementById('dcaisActivitiesView').innerHTML = html;
+  // Subject filter logic
+  document.querySelectorAll('.aim-sub-btn').forEach(btn=>{
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.aim-sub-btn').forEach(b=>b.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+}
+
+function backToGrades() {
+  document.getElementById('dcaisGradeView').style.display = '';
+  document.getElementById('dcaisActivitiesView').style.display = 'none';
+}
+
+function filterDCAIS(q) {
+  const cards = document.querySelectorAll('.aim-gc');
+  q = q.toLowerCase();
+  cards.forEach(c=>{
+    const text = c.textContent.toLowerCase();
+    c.style.display = text.includes(q) ? '' : 'none';
+  });
+}
+
+function renderTeacherResourcesContent() {
+  return `
+  <div class="notice">
+    <div class="notice-t">📝 CBSE Classroom Resources — Grades 6–12</div>
+    <div class="notice-d">Adobe Express templates, CBSE-aligned worksheets, lesson plans and creative rubrics. Click any resource to open or download.</div>
+  </div>
+  <div class="rg">
+    <div class="rc">
+      <div><div class="rc-badge">Lesson Plans</div><h4>Grade 6–8 Lesson Plan Pack</h4><p>20 complete lesson plans covering digital communication, visual storytelling and infographic design. Aligned with CBSE CCE framework.</p></div>
+      <button class="btn btn-primary" style="font-size:.76rem" onclick="showToast('📥 Downloading lesson plans…')">⬇ Download PDF</button>
+    </div>
+    <div class="rc">
+      <div><div class="rc-badge">Lesson Plans</div><h4>Grade 9–12 Lesson Plan Pack</h4><p>Advanced lesson plans for multimedia presentations, digital portfolios, professional communication and capstone projects.</p></div>
+      <button class="btn btn-primary" style="font-size:.76rem" onclick="showToast('📥 Downloading lesson plans…')">⬇ Download PDF</button>
+    </div>
+    <div class="rc">
+      <div><div class="rc-badge">Templates</div><h4>Adobe Express Template Library — CBSE</h4><p>200+ pre-built Adobe Express templates specifically tagged to CBSE grade levels and subject areas.</p></div>
+      <a class="btn btn-primary" style="font-size:.76rem" href="https://www.adobe.com/express/templates" target="_blank" rel="noopener">🎨 Open Template Library</a>
+    </div>
+    <div class="rc">
+      <div><div class="rc-badge">Rubrics</div><h4>Creative Assessment Rubrics Pack</h4><p>Grade-appropriate assessment rubrics for evaluating student design projects, portfolios, and creative presentations.</p></div>
+      <button class="btn btn-primary" style="font-size:.76rem" onclick="showToast('📥 Downloading rubrics…')">⬇ Download Pack</button>
+    </div>
+    <div class="rc">
+      <div><div class="rc-badge">Worksheets</div><h4>Digital Literacy Worksheets — All Grades</h4><p>Printable and digital worksheets for digital citizenship, media literacy, and Adobe Express skill practice.</p></div>
+      <button class="btn btn-primary" style="font-size:.76rem" onclick="showToast('📥 Downloading worksheets…')">⬇ Download Pack</button>
+    </div>
+    <div class="rc">
+      <div><div class="rc-badge">Videos</div><h4>Teacher Tutorial Videos</h4><p>Step-by-step video walkthroughs for every CPD module and classroom activity — curated for CBSE educators.</p></div>
+      <button class="btn btn-primary" style="font-size:.76rem" onclick="showToast('▶ Opening video library…')">▶ Open Videos</button>
+    </div>
+  </div>`;
+}
+
+function renderCertificationContent() {
+  return `
+  <div class="notice">
+    <div class="notice-t">🏆 Adobe Certified CBSE Educator Credential</div>
+    <div class="notice-d">Complete CPD modules and collect verified hours to progress through the certification levels. Each level unlocks a digital badge you can share on LinkedIn, CBSE portals, and school profiles.</div>
+  </div>
+  <div class="cert-path">
+    <div class="cert-card">
+      <div class="cert-badge-icon" style="background:#6B7280">🌱</div>
+      <div class="cert-title">CBSE Digital Educator — Foundation</div>
+      <div class="cert-desc">Complete CPD 01 & 02, log 10+ CPD hours, get Principal verification.</div>
+      <div class="cert-req">Requirements: 10 CPD Hours · 2 Modules</div>
+      <button class="btn btn-ghost" style="font-size:.76rem" onclick="showToast('🌱 Foundation badge claimed!')">Claim Badge</button>
+    </div>
+    <div class="cert-card active-cert">
+      <div class="cert-badge-icon" style="background:var(--navy)">🎖</div>
+      <div class="cert-title">CBSE Digital Educator — Practitioner</div>
+      <div class="cert-desc">Complete CPD 01–04, log 25+ CPD hours, submit 2 classroom projects.</div>
+      <div class="cert-req">Requirements: 25 CPD Hours · 4 Modules</div>
+      <button class="btn btn-primary" style="font-size:.76rem" onclick="showToast('🎖 Practitioner badge claimed!')">Claim Badge ✓ Ready</button>
+    </div>
+    <div class="cert-card">
+      <div class="cert-badge-icon" style="background:#D97706">🏅</div>
+      <div class="cert-title">CBSE Digital Educator — Advanced</div>
+      <div class="cert-desc">Complete CPD 01–06, log 40+ CPD hours, conduct 1 peer training session.</div>
+      <div class="cert-req">Requirements: 40 CPD Hours · 6 Modules</div>
+      <button class="btn btn-ghost" style="font-size:.76rem;opacity:.6">In Progress</button>
+    </div>
+    <div class="cert-card">
+      <div class="cert-badge-icon" style="background:#9333EA">🏆</div>
+      <div class="cert-title">Adobe Certified CBSE Master Educator</div>
+      <div class="cert-desc">Complete all 10 CPD modules, 50+ hours, lead school-wide digital transformation.</div>
+      <div class="cert-req">Requirements: 50 CPD Hours · 10 Modules</div>
+      <button class="btn btn-ghost" style="font-size:.76rem;opacity:.5">Locked</button>
+    </div>
+  </div>`;
+}
+
+function renderPlatformsContent() {
+  return `
+  <div class="notice">
+    <div class="notice-t">🌐 Online CPD Platforms — Track 20 Online Hours</div>
+    <div class="notice-d">Complete courses on DIKSHA, NISHTHA, SWAYAM, or iGOT platforms and upload certificates here. Online hours count toward the 20h online component of the 50-hour CPD framework.</div>
+  </div>
+  <div class="platform-pills" style="margin-bottom:22px">
+    <a class="pplatform pp-diksha" href="https://diksha.gov.in" target="_blank" rel="noopener">📱 DIKSHA Portal</a>
+    <a class="pplatform pp-nishtha" href="https://itpd.ncert.gov.in/" target="_blank" rel="noopener">🎓 NISHTHA</a>
+    <a class="pplatform pp-swayam" href="https://swayam.gov.in" target="_blank" rel="noopener">🌐 SWAYAM</a>
+    <a class="pplatform pp-igot" href="https://igot.gov.in" target="_blank" rel="noopener">💡 iGOT</a>
+  </div>
+  <div class="rg">
+    <div class="rc">
+      <div><div class="rc-badge" style="background:#EFF6FF;color:#1D4ED8;border-color:#BFDBFE">DIKSHA</div><h4>NISHTHA 3.0 Courses</h4><p>National Initiative for School Heads and Teachers Holistic Advancement. 18 foundational courses aligned with NEP 2020. Each course: 3–6 hours.</p></div>
+      <a class="btn btn-primary" href="https://diksha.gov.in" target="_blank" rel="noopener" style="font-size:.76rem">Open DIKSHA →</a>
+    </div>
+    <div class="rc">
+      <div><div class="rc-badge" style="background:#F0FDF4;color:#15803D;border-color:#BBF7D0">NISHTHA</div><h4>NISHTHA 4.0 — NEP 2020 Integration</h4><p>Advanced NISHTHA courses on competency-based assessment, FLN, foundational literacy, and inclusive education. Certificate on completion.</p></div>
+      <a class="btn btn-primary" href="https://itpd.ncert.gov.in/" target="_blank" rel="noopener" style="font-size:.76rem">Open NISHTHA →</a>
+    </div>
+    <div class="rc">
+      <div><div class="rc-badge" style="background:#FFF7ED;color:#C2410C;border-color:#FED7AA">SWAYAM</div><h4>SWAYAM — MOOC Courses for Educators</h4><p>Free online courses by IITs, IIMs, and central universities. Earn credit-linked certificates in education, pedagogy, and subject areas.</p></div>
+      <a class="btn btn-primary" href="https://swayam.gov.in" target="_blank" rel="noopener" style="font-size:.76rem">Open SWAYAM →</a>
+    </div>
+    <div class="rc">
+      <div><div class="rc-badge" style="background:#FAF5FF;color:#7C3AED;border-color:#DDD6FE">iGOT</div><h4>iGOT Karmayogi — Professional Development</h4><p>Government of India's integrated learning platform for civil servants and educators. Role-specific learning paths and certifications.</p></div>
+      <a class="btn btn-primary" href="https://igot.gov.in" target="_blank" rel="noopener" style="font-size:.76rem">Open iGOT →</a>
+    </div>
+  </div>`;
+}
+
+function renderTrackerContent() {
+  return `
+  <div class="cpd-tracker-card">
+    <div class="cpd-tracker-title">📊 Annual CPD Hours — 2025–26</div>
+    <div class="cpd-tracker-grid">
+      <div class="cpd-stat-box"><div class="cpd-stat-n" style="color:var(--navy)">32</div><div class="cpd-stat-l">Total Hours</div></div>
+      <div class="cpd-stat-box"><div class="cpd-stat-n" style="color:#059669">20</div><div class="cpd-stat-l">Face-to-Face</div></div>
+      <div class="cpd-stat-box"><div class="cpd-stat-n" style="color:var(--saffron-dk)">12</div><div class="cpd-stat-l">Online Hours</div></div>
+      <div class="cpd-stat-box"><div class="cpd-stat-n" style="color:#6B7280">18</div><div class="cpd-stat-l">Hrs Remaining</div></div>
+    </div>
+    <div class="cpd-bar-wrap">
+      <div class="cpd-bar-label"><span>Total Progress (32/50 hours)</span><span class="cpd-bar-pct">64%</span></div>
+      <div class="cpd-bar"><div class="cpd-fill" style="width:64%"></div></div>
+    </div>
+    <div class="cpd-bar-wrap">
+      <div class="cpd-bar-label"><span>Face-to-Face (20/30 hours)</span><span class="cpd-bar-pct">67%</span></div>
+      <div class="cpd-bar"><div class="cpd-fill" style="width:67%"></div></div>
+    </div>
+    <div class="cpd-bar-wrap">
+      <div class="cpd-bar-label"><span>Online Hours (12/20 hours)</span><span class="cpd-bar-pct">60%</span></div>
+      <div class="cpd-bar"><div class="cpd-fill online-fill" style="width:60%"></div></div>
+    </div>
+  </div>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px">
+    <button class="btn btn-primary" onclick="showToast('➕ Add activity form opened!')">+ Log CPD Activity</button>
+    <button class="btn btn-ghost" onclick="showToast('📊 Report generated!')">⬇ Download Report</button>
+    <button class="btn btn-ghost" onclick="showToast('📧 Sent to Principal!')">📧 Send to Principal</button>
+  </div>
+  <div class="sec-label">ACTIVITY LOG</div>
+  <div class="al">
+    <div class="ai"><div class="ai-l"><div class="ai-dot"></div><div><div class="ai-t">CPD Module 01 — Adobe Express Fundamentals</div><div class="ai-d">Category: Training · 8 hours · 12 Aug 2025 · Verified ✓</div></div></div><div class="ai-r"><button class="btn btn-ghost" style="font-size:.72rem;padding:5px 12px" onclick="showToast('✏ Edit mode')">Edit</button></div></div>
+    <div class="ai"><div class="ai-l"><div class="ai-dot"></div><div><div class="ai-t">Regional CBSE Workshop — Digital Pedagogy</div><div class="ai-d">Category: Face-to-Face Training · 6 hours · 15 Sep 2025 · Verified ✓</div></div></div><div class="ai-r"><button class="btn btn-ghost" style="font-size:.72rem;padding:5px 12px" onclick="showToast('✏ Edit mode')">Edit</button></div></div>
+    <div class="ai"><div class="ai-l"><div class="ai-dot"></div><div><div class="ai-t">NISHTHA 3.0 — Competency Based Education</div><div class="ai-d">Category: Online · 6 hours · 02 Oct 2025 · Verified ✓</div></div></div><div class="ai-r"><button class="btn btn-ghost" style="font-size:.72rem;padding:5px 12px" onclick="showToast('✏ Edit mode')">Edit</button></div></div>
+    <div class="ai"><div class="ai-l"><div class="ai-dot saffron-dot"></div><div><div class="ai-t">CPD Module 05 — Media Literacy (In Progress)</div><div class="ai-d">Category: Training · 8 hours · Started 20 Oct 2025 · Pending verification</div></div></div><div class="ai-r"><button class="btn btn-ghost" style="font-size:.72rem;padding:5px 12px" onclick="showToast('📤 Upload certificate')">Upload</button></div></div>
+  </div>`;
+}
+
+/* ==================== STUDENT NAV ==================== */
+function openStudentSection(key) {
+  document.getElementById('studentDashboard').style.display = 'none';
+  const view = document.getElementById('studentSectionView');
+  view.style.display = 'block';
+  const sections = {
+    challenges: {
+      badge: '🎨', tag: 'Creative Challenges · April–March',
+      title: '12-Month Creative Challenges',
+      desc: 'One creative challenge every month! Explore, create, and submit your designs using Adobe Express. Earn badges for completing each challenge.',
+      content: renderStudentChallenges()
+    },
+    dcais: {
+      badge: '📱', tag: 'DCAIS · Student Module',
+      title: 'DCAIS Activities & Digital Skills',
+      desc: 'Month-wise creative activities and digital skill modules for CBSE students. Build your digital portfolio step by step.',
+      content: renderStudentDCAIS()
+    },
+    masterclass: {
+      badge: '🎬', tag: 'Video Masterclass · Adobe Express',
+      title: 'Video Tutorials & Masterclasses',
+      desc: 'Watch step-by-step tutorials to master Adobe Express tools. From beginner basics to advanced design and digital storytelling.',
+      content: renderStudentMasterclass()
+    },
+    projects: {
+      badge: '🚀', tag: 'Project Launcher',
+      title: 'Project Submission Launcher',
+      desc: 'Start a new creative project from scratch or use a CBSE-curated template. Build, refine, and submit your best work.',
+      content: renderStudentProjects()
+    },
+    achievements: {
+      badge: '🏅', tag: 'Badges & Achievements',
+      title: 'Your Achievements & Digital Badges',
+      desc: 'Track your earned badges, milestone trophies, and creative portfolio highlights.',
+      content: renderStudentAchievements()
+    },
+    exam: {
+      badge: '📝', tag: 'DCAIS Assessment',
+      title: 'Digital Skills Assessment — CBSE',
+      desc: 'Test your digital creativity skills with CBSE DCAIS assessments. Practice questions, grade-wise mock tests, and reviewed answer keys.',
+      content: renderStudentExam()
+    }
+  };
+  const s = sections[key] || sections.challenges;
+  document.getElementById('sCrumbName').textContent = s.title.replace(/&amp;/g, '&');
+  document.getElementById('sSecBadge').textContent = s.badge;
+  document.getElementById('sSecTag').textContent = s.tag;
+  document.getElementById('sSecTitle').innerHTML = s.title;
+  document.getElementById('sSecDesc').textContent = s.desc;
+  document.getElementById('sSecContent').innerHTML = s.content;
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+/* ==================== STUDENT CONTENT RENDERERS ==================== */
+const CHALLENGES = [
+  { m:'apr', month:'April', emoji:'🖌️', title:'Introduction to Digital Art', desc:'Create your first digital artwork using Adobe Express. Explore shapes, colours, and text to make a vibrant self-portrait or abstract design.', status:'completed', xp:100 },
+  { m:'may', month:'May', emoji:'🌍', title:'Poster Design for Environment Day', desc:'Design an eye-catching poster for World Environment Day (5 June). Use impactful visuals and bold typography to spread awareness.', status:'completed', xp:120 },
+  { m:'jun', month:'June', emoji:'💧', title:'Infographic: Water Conservation', desc:'Create an informative infographic about water conservation with data visualisation, icons, and a clear call-to-action.', status:'active', xp:130 },
+  { m:'jul', month:'July', emoji:'📢', title:'Social Awareness Campaign Poster', desc:'Pick a social issue you care about — child education, women empowerment, or road safety — and design a compelling campaign poster.', status:'upcoming', xp:130 },
+  { m:'aug', month:'August', emoji:'🇮🇳', title:'Independence Day Creative', desc:'Celebrate India\'s Independence Day with a patriotic design — poster, social card, or illustrated timeline of India\'s freedom journey.', status:'upcoming', xp:150 },
+  { m:'sep', month:'September', emoji:'❤️', title:"Teacher's Day Card Design", desc:"Design a heartfelt digital greeting card for Teachers' Day. Include a personal message, portrait illustration, and school branding.", status:'upcoming', xp:110 },
+  { m:'oct', month:'October', emoji:'🎉', title:'Navratri / Festival Celebration Design', desc:'Celebrate the festival season with a vibrant digital design — Navratri greetings, Dussehra artwork, or festival event poster.', status:'upcoming', xp:120 },
+  { m:'nov', month:'November', emoji:'🔬', title:'Science Exhibition Display', desc:'Create a visual display board for the science exhibition — diagrams, process flows, results visualisation, and experiment summaries.', status:'upcoming', xp:140 },
+  { m:'dec', month:'December', emoji:'❄️', title:'Winter / Christmas Greeting', desc:'Design a beautiful winter or Christmas greeting card, featuring snowflakes, festive typography, and warm wishes.', status:'upcoming', xp:100 },
+  { m:'jan', month:'January', emoji:'🗓', title:'Republic Day Special', desc:"Create a Republic Day design celebrating India's Constitution. Incorporate the tricolour, national symbols, and historical milestones.", status:'upcoming', xp:150 },
+  { m:'feb', month:'February', emoji:'💌', title:'Valentine / Friendship Card', desc:'Design a creative Valentine\'s Day or Friendship Day card — playful, heartfelt, or artistic — to share with friends and family.', status:'upcoming', xp:100 },
+  { m:'mar', month:'March', emoji:'📚', title:'Annual Exam Preparation Infographic', desc:"Create a study strategy infographic for CBSE Board exams — subject-wise time plans, tips, revision charts, and motivational design.", status:'upcoming', xp:140 },
+];
+
+function renderStudentChallenges() {
+  const statusNow = CHALLENGES.findIndex(c=>c.status==='active');
+  return `
+  <div class="notice saffron-notice">
+    <div class="notice-t">🎨 Current Challenge — ${CHALLENGES[statusNow]?.month}: ${CHALLENGES[statusNow]?.title}</div>
+    <div class="notice-d">Click the active challenge card to start creating in Adobe Express! Complete and submit before the end of the month to earn your badge.</div>
+  </div>
+  <div class="pstats">
+    <div class="pstat"><div class="pstat-n saffron-n">2</div><div class="pstat-l">Completed</div></div>
+    <div class="pstat"><div class="pstat-n saffron-n">1</div><div class="pstat-l">Active Now</div></div>
+    <div class="pstat"><div class="pstat-n">9</div><div class="pstat-l">Upcoming</div></div>
+    <div class="pstat"><div class="pstat-n saffron-n">250</div><div class="pstat-l">XP Earned</div></div>
+  </div>
+  <div class="month-grid">
+  ${CHALLENGES.map(c=>`
+  <div class="month-card" onclick="${c.status!=='upcoming'?`showToast('🎨 Opening ${c.title} in Adobe Express!')`:''}" style="${c.status==='upcoming'?'cursor:default;opacity:.8':''}">
+    <div class="month-card-top ${c.m}">
+      <span class="month-label">${c.month}</span>
+      <span style="font-size:2.4rem">${c.emoji}</span>
+    </div>
+    <div class="month-card-body">
+      <div class="month-challenge-title">${c.title}</div>
+      <div class="month-challenge-desc">${c.desc}</div>
+    </div>
+    <div class="month-card-footer">
+      <span class="month-status ${c.status}">${c.status==='completed'?'✓ Completed':c.status==='active'?'● Active Now':'○ Upcoming'}</span>
+      ${c.status!=='upcoming'?`<span class="month-start-btn">${c.status==='completed'?'View →':'Start →'}</span>`:`<span style="font-size:.72rem;color:var(--ink-3)">+${c.xp} XP</span>`}
+    </div>
+  </div>`).join('')}
+  </div>`;
+}
+
+function renderStudentDCAIS() {
+  return `
+  <div class="notice saffron-notice">
+    <div class="notice-t">📱 DCAIS Student Activities — Your Curriculum Journey</div>
+    <div class="notice-d">These activities are assigned by your teacher through the DCAIS portal. Complete each activity to build your digital skills and earn portfolio pieces.</div>
+  </div>
+  <div class="pstats">
+    <div class="pstat"><div class="pstat-n saffron-n">4</div><div class="pstat-l">Completed</div></div>
+    <div class="pstat"><div class="pstat-n saffron-n">1</div><div class="pstat-l">In Progress</div></div>
+    <div class="pstat"><div class="pstat-n">7</div><div class="pstat-l">Assigned</div></div>
+  </div>
+  <div class="aim-weekly-grid">
+    ${[
+      {w:'Week 1',a:'Introduction to Adobe Express',s:'Navigation, Templates, Colour',done:true},
+      {w:'Week 2',a:'Digital Name Badge',s:'Text Tools, Shapes, Branding',done:true},
+      {w:'Week 3',a:'School Rules Poster',s:'Typography, Layout, Poster Design',done:true},
+      {w:'Week 4',a:'Infographic — My Neighbourhood',s:'Infographic Basics, Icons, Maps',done:true},
+      {w:'Week 5',a:'Photo Story — My Weekend',s:'Photo Editing, Captions, Storytelling',done:false,active:true},
+      {w:'Week 6',a:'Heritage Site Report',s:'Research, Layout, Typography',done:false},
+      {w:'Week 7',a:'Science Experiment Visual',s:'Diagrams, Step-by-Step Layout',done:false},
+      {w:'Week 8',a:'Year-End Portfolio',s:'Portfolio, Branding, Curation',done:false},
+    ].map(a=>`
+    <div class="aim-weekly-card" style="${a.done?'border-color:#A7F3D0;background:#F0FFF8;':''}${a.active?'border-color:var(--saffron);background:var(--saffron-bg);':''}">
+      <div class="aim-card-header">
+        <span class="aim-week-badge" style="${a.active?'background:var(--saffron);color:#FFF;border-color:var(--saffron)':''}">${a.w}</span>
+        <span style="font-size:.7rem;font-weight:800;padding:3px 9px;border-radius:999px;${a.done?'background:#ECFDF5;color:#059669;border:1px solid #A7F3D0':a.active?'background:var(--saffron-bg);color:var(--saffron-dk);border:1px solid var(--saffron-border)':'background:var(--surface-2);color:var(--ink-3);border:1px solid var(--border)'}">${a.done?'✓ Done':a.active?'● Active':'Upcoming'}</span>
+      </div>
+      <div class="aim-card-actname">${a.a}</div>
+      <div class="aim-card-outcomes" style="font-size:.76px;color:var(--ink-2)">${a.s}</div>
+      <div class="aim-actions">
+        <button class="btn ${a.done?'btn-ghost':'btn-saffron'}" style="font-size:.76rem;width:100%;justify-content:center" onclick="showToast('${a.done?'📂 Opening submission':'🎨 Opening Adobe Express'}...')">${a.done?'📂 View Submission':'🎨 Start Activity'}</button>
+      </div>
+    </div>`).join('')}
+  </div>`;
+}
+
+function renderStudentMasterclass() {
+  const videos = [
+    { level:'Beginner', title:'Getting Started with Adobe Express', duration:'12:34', thumb:'🎨', views:'45K' },
+    { level:'Beginner', title:'Creating Your First Poster', duration:'15:20', thumb:'📄', views:'38K' },
+    { level:'Beginner', title:'Working with Text & Typography', duration:'10:45', thumb:'🔤', views:'32K' },
+    { level:'Intermediate', title:'Designing Infographics from Scratch', duration:'22:10', thumb:'📊', views:'27K' },
+    { level:'Intermediate', title:'Photo Editing & Effects', duration:'18:55', thumb:'📸', views:'21K' },
+    { level:'Intermediate', title:'Building a Digital Portfolio', duration:'25:30', thumb:'🗂', views:'19K' },
+    { level:'Advanced', title:'Advanced Typography & Branding', duration:'28:15', thumb:'🎯', views:'15K' },
+    { level:'Advanced', title:'Animated Social Media Graphics', duration:'20:40', thumb:'✨', views:'12K' },
+    { level:'Advanced', title:'Complete Presentation Design', duration:'35:00', thumb:'🖥', views:'10K' },
+    { level:'Advanced', title:'Professional Portfolio Masterclass', duration:'42:20', thumb:'🏆', views:'8K' },
+  ];
+  return `
+  <div class="notice saffron-notice">
+    <div class="notice-t">🎬 10 Video Masterclasses — Beginner to Advanced</div>
+    <div class="notice-d">Watch at your own pace! Each video teaches a specific Adobe Express skill. Start with Beginner videos and progress to Advanced masterclasses to unlock all badge levels.</div>
+  </div>
+  <div class="search-bar" style="margin-bottom:16px">
+    <div class="search-box"><span class="search-ico">🔍</span><input class="search-input student-search" type="text" placeholder="Search tutorials…"></div>
+    <div class="filter-chips">
+      <div class="fchip s-active" onclick="filterVideoLevel('All',this)">All</div>
+      <div class="fchip" onclick="filterVideoLevel('Beginner',this)">Beginner</div>
+      <div class="fchip" onclick="filterVideoLevel('Intermediate',this)">Intermediate</div>
+      <div class="fchip" onclick="filterVideoLevel('Advanced',this)">Advanced</div>
+    </div>
+  </div>
+  <div class="video-grid" id="videoGrid">
+  ${videos.map((v,i)=>`
+  <div class="video-card" onclick="showToast('▶ Playing: ${v.title}')">
+    <div class="video-thumb" style="background:linear-gradient(135deg,${['#0F172A','#1E1B4B','#064E3B','#7C2D12','#4C1D95','#0C4A6E','#14532D','#831843','#1C1917','#1E293B'][i%10]},#334155)">
+      <div class="video-play">▶</div>
+      <div class="video-duration">${v.duration}</div>
+    </div>
+    <div class="video-body">
+      <div class="video-level">${v.level}</div>
+      <div class="video-title">${v.title}</div>
+      <div class="video-meta">👁 ${v.views} views</div>
+    </div>
+  </div>`).join('')}
+  </div>`;
+}
+
+function filterVideoLevel(level, btn) {
+  document.querySelectorAll('.filter-chips .fchip').forEach(b=>{b.classList.remove('s-active'); b.classList.remove('active')});
+  btn.classList.add('s-active');
+}
+
+function renderStudentProjects() {
+  const projects = [
+    { icon:'🌍', level:'Beginner', title:'Environment Awareness Poster', desc:'Create a poster raising awareness about an environmental issue using Adobe Express templates.', tags:['Poster Design','Awareness','Typography'], xp:120 },
+    { icon:'📊', level:'Intermediate', title:'Science Infographic', desc:'Visualise a science concept or experiment result as a clear, data-driven infographic.', tags:['Infographic','Science','Data Viz'], xp:150 },
+    { icon:'📱', level:'Intermediate', title:'Social Media Campaign', desc:'Design a 3-post social media campaign for a cause you care about. Consistent branding required.', tags:['Social Media','Branding','Campaign'], xp:180 },
+    { icon:'🗂', level:'Advanced', title:'Digital Portfolio — Year 1', desc:'Create a professional digital portfolio showcasing all your best projects from the academic year.', tags:['Portfolio','Professional','Curation'], xp:250 },
+    { icon:'🎬', level:'Advanced', title:'Video Presentation Script & Slides', desc:'Design a compelling slide deck and script for a 5-minute presentation on any CBSE subject topic.', tags:['Presentation','Slides','Script'], xp:200 },
+    { icon:'📰', level:'Expert', title:'School Magazine Cover Design', desc:'Design the official cover for your school\'s annual magazine. Must include school name, branding, and original artwork.', tags:['Editorial','Branding','Cover Art'], xp:300 },
+  ];
+  return `
+  <div class="notice saffron-notice">
+    <div class="notice-t">🚀 Project Launcher — Start Your Creative Project</div>
+    <div class="notice-d">Choose a project type, customise your template in Adobe Express, and submit for teacher review. Each completed project earns XP points and adds to your digital portfolio.</div>
+  </div>
+  <div class="project-grid">
+  ${projects.map(p=>`
+  <div class="project-card">
+    <div class="project-header">
+      <div class="project-icon">${p.icon}</div>
+      <div class="project-info">
+        <div class="project-level">${p.level}</div>
+        <div class="project-title">${p.title}</div>
+      </div>
+    </div>
+    <div class="project-desc">${p.desc}</div>
+    <div class="project-tags">${p.tags.map(t=>`<span class="project-tag">${t}</span>`).join('')}</div>
+    <div class="project-footer">
+      <div class="project-xp">⭐ +${p.xp} XP on completion</div>
+      <button class="btn btn-saffron" style="font-size:.76rem" onclick="showToast('🚀 Opening project in Adobe Express!')">Launch →</button>
+    </div>
+  </div>`).join('')}
+  </div>`;
+}
+
+function renderStudentAchievements() {
+  const badges = [
+    { emoji:'🌱', title:'First Design', desc:'Completed your very first digital design on Adobe Express.', earned:true },
+    { emoji:'🎨', title:'Creative Challenger', desc:'Completed your first monthly creative challenge.', earned:true },
+    { emoji:'🏞', title:'Environment Champion', desc:'Submitted the Environment Day Poster challenge.', earned:true },
+    { emoji:'💧', title:'Water Warrior', desc:'Submitted the Water Conservation Infographic.', earned:false },
+    { emoji:'📸', title:'Visual Storyteller', desc:'Completed 3 visual storytelling projects.', earned:false },
+    { emoji:'🔤', title:'Typography Master', desc:'Mastered text and typography tools in Adobe Express.', earned:false },
+    { emoji:'📊', title:'Data Designer', desc:'Created 2 data-driven infographics.', earned:false },
+    { emoji:'🇮🇳', title:'Patriot Creator', desc:'Completed Independence Day or Republic Day challenge.', earned:false },
+    { emoji:'📚', title:'Academic Designer', desc:'Created 5 academic subject-related designs.', earned:false },
+    { emoji:'🗂', title:'Portfolio Builder', desc:'Created your first digital portfolio.', earned:false },
+    { emoji:'🌟', title:'Half-Year Hero', desc:'Completed 6 monthly challenges.', earned:false },
+    { emoji:'🏆', title:'Full Year Champion', desc:'Completed all 12 monthly creative challenges!', earned:false },
+  ];
+  return `
+  <div class="pstats">
+    <div class="pstat"><div class="pstat-n saffron-n">3</div><div class="pstat-l">Badges Earned</div></div>
+    <div class="pstat"><div class="pstat-n saffron-n">250</div><div class="pstat-l">Total XP</div></div>
+    <div class="pstat"><div class="pstat-n">9</div><div class="pstat-l">Badges to Unlock</div></div>
+    <div class="pstat"><div class="pstat-n saffron-n">Starter</div><div class="pstat-l">Current Level</div></div>
+  </div>
+  <div class="sec-label">YOUR BADGES</div>
+  <div class="ach-grid">
+  ${badges.map(b=>`
+  <div class="ac ${b.earned?'earned saffron-earn':'locked'}">
+    <div class="ac-icon"><span style="font-size:1.3rem">${b.emoji}</span></div>
+    <h4>${b.title}</h4>
+    <p>${b.desc}</p>
+    <span class="ac-tag">${b.earned?'✓ Earned':'Locked'}</span>
+  </div>`).join('')}
+  </div>
+  <div style="background:linear-gradient(135deg,var(--saffron-bg),#FFD5B3);border:1.5px solid var(--saffron-border);border-radius:var(--radius-lg);padding:22px;margin-top:22px;text-align:center">
+    <div style="font-size:1.8rem;margin-bottom:8px">🏆</div>
+    <div style="font-size:1rem;font-weight:900;color:var(--saffron-dk);margin-bottom:4px">Full Year Champion Trophy</div>
+    <div style="font-size:.82rem;color:var(--ink-2);margin-bottom:14px">Complete all 12 monthly challenges to unlock the ultimate trophy and earn your Adobe Creative Excellence Certificate!</div>
+    <button class="btn btn-saffron" onclick="openStudentSection('challenges')">View All Challenges →</button>
+  </div>`;
+}
+
+function renderStudentExam() {
+  return `
+  <div class="notice saffron-notice">
+    <div class="notice-t">📝 CBSE DCAIS Digital Skills Assessment</div>
+    <div class="notice-d">Test your knowledge of digital creativity, Adobe Express tools, and design principles. Choose your grade level to begin the practice assessment.</div>
+  </div>
+  <div class="pstats">
+    <div class="pstat"><div class="pstat-n saffron-n">2</div><div class="pstat-l">Attempted</div></div>
+    <div class="pstat"><div class="pstat-n saffron-n">78%</div><div class="pstat-l">Best Score</div></div>
+    <div class="pstat"><div class="pstat-n">5</div><div class="pstat-l">Practice Sets</div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-bottom:22px">
+  ${[6,7,8,9,10,11,12].map(g=>`
+  <div style="background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius-lg);padding:18px;display:flex;flex-direction:column;gap:10px;transition:all .2s;cursor:pointer;box-shadow:var(--shadow-sm)" onclick="showToast('📝 Opening Grade ${g} Assessment…')" onmouseover="this.style.borderColor='var(--saffron)'" onmouseout="this.style.borderColor='var(--border)'">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="width:40px;height:40px;border-radius:12px;background:var(--saffron-bg);border:1.5px solid var(--saffron-border);display:flex;align-items:center;justify-content:center;font-size:.92rem;font-weight:900;color:var(--saffron-dk)">G${g}</div>
+      <div>
+        <div style="font-size:.9rem;font-weight:900;color:var(--ink)">Grade ${g} Practice Test</div>
+        <div style="font-size:.72rem;color:var(--ink-3)">25 Questions · 45 Minutes</div>
+      </div>
+    </div>
+    <div style="font-size:.76rem;color:var(--ink-2)">Topics: Digital Communication, Adobe Express Tools, Design Principles</div>
+    <button class="btn btn-saffron" style="font-size:.76rem;width:100%;justify-content:center" onclick="event.stopPropagation();showToast('📝 Starting Grade ${g} test…')">Start Test →</button>
+  </div>`).join('')}
+  </div>
+  <div style="background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:20px">
+    <div style="font-size:.95rem;font-weight:900;color:var(--ink);margin-bottom:14px">📋 Sample Question</div>
+    <div style="background:var(--surface-2);border:1.5px solid var(--border);border-radius:var(--radius);padding:18px">
+      <div style="font-size:.82rem;font-weight:900;color:var(--saffron-dk);margin-bottom:8px">Q1 · Design Fundamentals · 2 Marks</div>
+      <div style="font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:14px">Which of the following best describes the principle of "Visual Hierarchy" in design?</div>
+      <div style="display:grid;gap:8px">
+        ${['Using only one font throughout a design','Arranging elements to guide the viewer\'s eye in order of importance','Making all elements the same size for consistency','Using bright colours to attract attention'].map((opt,i)=>`
+        <div style="background:#FFF;border:1.5px solid ${i===1?'#22C55E':'var(--border)'};border-radius:10px;padding:12px 14px;font-size:.84rem;color:${i===1?'#15803D':'var(--ink-2)'};font-weight:${i===1?800:500};cursor:pointer;transition:all .18s;display:flex;align-items:center;gap:10px" onclick="showToast('${i===1?'✅ Correct! Visual hierarchy guides the viewer\'s attention.':'❌ Not quite — think about how a designer guides the viewer\'s eye.'}')">${['A','B','C','D'][i]}. ${opt}${i===1?` <span style="margin-left:auto;background:#22C55E;color:#FFF;font-size:.64rem;font-weight:900;padding:2px 7px;border-radius:999px;white-space:nowrap">Correct Answer</span>`:''}</div>`).join('')}
+      </div>
+    </div>
+  </div>`;
+}
+
+/* ==================== FILTER FUNCTIONS ==================== */
+function filterTeacherTiles(q) {
+  const tiles = document.querySelectorAll('#teacherTilesGrid .tile-card');
+  q = q.toLowerCase();
+  tiles.forEach(t => {
+    const text = t.textContent.toLowerCase();
+    t.style.display = text.includes(q) ? '' : 'none';
+  });
+}
+
+function filterTeacherCategory(cat, btn) {
+  document.querySelectorAll('.filter-chips .fchip').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const tiles = document.querySelectorAll('#teacherTilesGrid .tile-card');
+  tiles.forEach(t => {
+    t.style.display = (cat === 'all' || t.dataset.cat === cat) ? '' : 'none';
+  });
+}
+
+function filterStudentTiles(q) {
+  const tiles = document.querySelectorAll('#studentTilesGrid .tile-card');
+  q = q.toLowerCase();
+  tiles.forEach(t => {
+    const text = t.textContent.toLowerCase();
+    t.style.display = text.includes(q) ? '' : 'none';
+  });
+}
+
+function filterStudentCategory(cat, btn) {
+  document.querySelectorAll('.filter-chips .fchip').forEach(b => { b.classList.remove('s-active'); b.classList.remove('active'); });
+  btn.classList.add('s-active');
+  const tiles = document.querySelectorAll('#studentTilesGrid .tile-card');
+  tiles.forEach(t => {
+    t.style.display = (cat === 'all' || t.dataset.scat === cat) ? '' : 'none';
+  });
+}
+
+/* ==================== LANGUAGE TOGGLE ==================== */
+let currentLang = 'en';
+function toggleLang() {
+  currentLang = currentLang === 'en' ? 'hi' : 'en';
+  document.getElementById('langBtnEN').classList.toggle('active', currentLang === 'en');
+  document.getElementById('langBtnHI').classList.toggle('active', currentLang === 'hi');
+  if (currentLang === 'hi') {
+    showToast('🌐 Hindi language support coming soon!');
+    currentLang = 'en';
+    document.getElementById('langBtnEN').classList.add('active');
+    document.getElementById('langBtnHI').classList.remove('active');
+  } else {
+    showToast('🌐 Switched to English');
+  }
+}
+
+/* ==================== TOAST ==================== */
+let toastTimer;
+function showToast(msg, duration = 3000) {
+  const el = document.getElementById('toastEl');
+  el.textContent = msg;
+  el.style.display = 'flex';
+  el.style.animation = 'none';
+  requestAnimationFrame(() => { el.style.animation = 'toastIn .25s ease'; });
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { el.style.display = 'none'; }, duration);
+}
+
+/* ==================== KEYBOARD NAV ==================== */
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    showTeacherDashboard();
+    showStudentDashboard();
+  }
+});
+
+/* ==================== INIT ==================== */
+document.addEventListener('DOMContentLoaded', () => {
+  // Animate stats
+  const nums = document.querySelectorAll('.hstat-n');
+  nums.forEach(n => {
+    n.style.opacity = '0';
+    setTimeout(() => { n.style.transition = 'opacity .4s ease'; n.style.opacity = '1'; }, 300);
+  });
+});
+</script>
+</body>
+</html>
