@@ -263,6 +263,58 @@ footer p+p{margin-top:5px}
 
 
 /* ===== DCAIS CONSOLIDATED RESOURCES & CPD LEADERSHIP STYLES ===== */
+.cpd-lead-subtabs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 8px 12px;
+  margin-bottom: 22px;
+  box-shadow: var(--shadow-sm);
+  flex-wrap: wrap;
+}
+.cpd-lead-subtab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-size: .86rem;
+  font-weight: 800;
+  border: 1.5px solid transparent;
+  background: transparent;
+  color: var(--ink-2);
+  cursor: pointer;
+  transition: all .18s cubic-bezier(.16,1,.3,1);
+  text-decoration: none;
+}
+.cpd-lead-subtab-btn:hover {
+  background: var(--surface-2);
+  color: var(--ink);
+}
+.cpd-lead-subtab-btn.active {
+  background: #003087;
+  color: #FFF;
+  border-color: #003087;
+  box-shadow: 0 4px 14px rgba(0,48,135,.25);
+}
+.cpd-lead-subtab-badge {
+  font-size: .68rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.2);
+  color: #FFF;
+}
+.cpd-lead-subtab-btn:not(.active) .cpd-lead-subtab-badge {
+  background: #EEF2FF;
+  color: #003087;
+  border: 1px solid #C7D2FE;
+}
 .dcais-top-tab-nav {
   display: flex;
   align-items: center;
@@ -726,7 +778,7 @@ footer p+p{margin-top:5px}
       <span class="flow-arr">→</span>
       <div class="flow-step" data-flow-section="leadership" onclick="openSection('leadership')" role="button" tabindex="0" title="Go to CPD Leadership"><span class="flow-n">★</span><span id="flowLead">CPD Leadership</span></div>
       <span class="flow-arr">→</span>
-      <div class="flow-step" data-flow-section="C" onclick="openSection('C')" role="button" tabindex="0" title="Go to Section C: Student DCAIS Monitor"><span class="flow-n">3</span><span id="flow3">DCAIS Monitor</span></div>
+      <div class="flow-step" data-flow-section="C" onclick="openSection('C')" role="button" tabindex="0" title="Go to Section C: DCAIS Resources"><span class="flow-n">3</span><span id="flow3">DCAIS Resources</span></div>
       <span class="flow-arr">→</span>
       <div class="flow-step" data-flow-section="D" onclick="openSection('D')" role="button" tabindex="0" title="Go to Section D: Classroom Resources"><span class="flow-n">4</span><span id="flow4">Classroom Resources</span></div>
       <span class="flow-arr">→</span>
@@ -808,7 +860,7 @@ footer p+p{margin-top:5px}
         </div>
       </div>
 
-      <!-- Section C: DCAIS Student Monitor -->
+      <!-- Section C: DCAIS Resources -->
       <div class="tile-card" data-section="C" onclick="openSection('C')">
         <div class="tile-img-wrap">
           <img class="tile-img" src="assets/guidebook/dcais_editor_workspace.png" alt="DCAIS" crossorigin="anonymous">
@@ -816,9 +868,9 @@ footer p+p{margin-top:5px}
         </div>
         <div class="tile-body">
           <div>
-            <div class="tile-tag" id="sC-tag">Section C • DCAIS</div>
-            <h2 class="tile-title" id="sC-title">Student DCAIS Activities</h2>
-            <p class="tile-desc" id="sC-desc">Access student weekly activities (Grades 6-8) and the new consolidated Teacher Resources tab: E-Modules, Excel telemetry, and curriculum guides.</p>
+            <div class="tile-tag" id="sC-tag">Section C • DCAIS Resources</div>
+            <h2 class="tile-title" id="sC-title">DCAIS Resources</h2>
+            <p class="tile-desc" id="sC-desc">Consolidated repository for middle school educators: Official E-Module, DCAIS implementation instructions presentation, Guide Book soft copy, Excel telemetry workbooks, and weekly student activities.</p>
           </div>
           <div class="tile-footer">
             <span class="tile-hint" id="sC-hint">Grades 6-8 • Resources Hub</span>
@@ -1423,14 +1475,14 @@ var LANG = {
     hdrSub:'Educator Workspace', hdrBadge:'Teacher CBSE Portal',
     heroTag:'Educator &amp; Curriculum Hub', heroTitle:'Teacher CBSE Portal',
     heroSub:'Manage school access, CPD training, student DCAIS monitoring, classroom resources, and certification - all in one place.',
-    flow1:'School Access', flow2:'CPD Training', flow3:'DCAIS Monitor', flow4:'Classroom Resources',
+    flow1:'School Access', flow2:'CPD Training', flow3:'DCAIS Resources', flow4:'Classroom Resources',
     guideText:'<strong>Click any section card below</strong> to open its complete workspace in full-screen view.',
     backBtn:'Back to Sections',
     crumbHome:'Home',
     sAtag:'Section A • Institutional Access', sAtitle:'Adobe ID &amp; Password Access', sAdesc:'Teacher ID directory, missing ID creation request, and step-by-step mobile &amp; desktop login video tutorials.', sAhint:'4 Core Access Portals', sAbtn:'Open Section &rarr;',
     sBtag:'Section B', sBtitle:'CPD Module', sBdesc:'CPD 1-6 completed, 10 total modules to complete covering NEP 2020 & GenAI pedagogies.', sBhint:'CPD 1–6 Complete (10 Modules) • 25 Hrs', sBbtn:'Open &rarr;',
-    sLeadTag:'CPD Leadership • Principal &amp; School Leaders', sLeadTitle:'CPD Leadership', sLeadDesc:'Assignment CPD 3: My Vision Board 2028: Future-Ready School. Create Vision Board in Adobe Express & submit Google Form.', sLeadHint:'PPT • Dashboard • CPD 3 Recording', sLeadBtn:'Open &rarr;', flowLead:'CPD Leadership',
-    sCtag:'Section C • DCAIS', sCtitle:'Student DCAIS Activities', sCdesc: 'Access student weekly activities (Grades 6-8) and the new consolidated Teacher Resources tab: E-Modules, Excel telemetry, and curriculum guides.', sChint: 'Grades 6-8 • Resources Hub', sCbtn:'Open &rarr;',
+    sLeadTag:'CPD Leadership • Principal &amp; School Leaders', sLeadTitle:'CPD Leadership & Resources 3', sLeadDesc:'CPD Resources 3 (Presentation, Principal Dashboard, CPD 3 Recording) & Assignment CPD 3: My Vision Board 2028.', sLeadHint:'CPD Resources 3 • Vision Board', sLeadBtn:'Open &rarr;', flowLead:'CPD Leadership',
+    sCtag:'Section C • DCAIS Resources', sCtitle:'DCAIS Resources', sCdesc: 'Consolidated repository for middle school educators: Official E-Module, DCAIS implementation instructions presentation, Guide Book soft copy, Excel telemetry workbooks, and weekly student activities.', sChint: 'Grades 6-8 • Resources Hub', sCbtn:'Open &rarr;',
     sDtag:'Section D', sDtitle:'Classroom Resources', sDdesc:'Curriculum worksheets & Adobe Express design templates for Grades 6-8: Direct links across English, Hindi, Science, Social Science & Maths.', sDhint:'Grades 6–8 Worksheets & Templates', sDbtn:'Open &rarr;',
     flow5:'DCAIS Exam', sEtag:'Section E • DCAIS Exam', sEtitle:'DCAIS Exam &amp; Answer Key', sEdesc:'CBSE Semester-1 examination portal: 16 regional Google Form links, exam guidelines, and verified Answer Key.', sEhint:'15 Regions • Answer Key', sEbtn:'Open &rarr;',
     flowBootcamp: 'Autumn Bootcamp',
@@ -1444,14 +1496,14 @@ var LANG = {
     hdrSub:'शिक्षक कार्यक्षेत्र', hdrBadge:'शिक्षक पोर्टल',
     heroTag:'शिक्षक पैनल', heroTitle:'शिक्षक हब और पाठ्यक्रम विभाग',
     heroSub:'स्कूल एक्सेस, CPD प्रशिक्षण, DCAIS मॉनिटरिंग और कक्षा संसाधन सब एक जगह पर।',
-    flow1:'स्कूल एक्सेस', flow2:'CPD प्रशिक्षण', flow3:'DCAIS मॉनिटर', flow4:'कक्षा संसाधन',
+    flow1:'स्कूल एक्सेस', flow2:'CPD प्रशिक्षण', flow3:'DCAIS संसाधन', flow4:'कक्षा संसाधन',
     guideText:'<strong>नीचे किसी भी सेक्शन कार्ड पर क्लिक करें</strong> और उसे पूरी स्क्रीन पर खोलें।',
     backBtn:'वापस जाएं',
     crumbHome:'होम',
     sAtag:'सेक्शन A • संस्थागत एक्सेस', sAtitle:'Adobe ID और पासवर्ड एक्सेस', sAdesc:'शिक्षक ID डायरेक्टरी, नई ID अनुरोध फ़ॉर्म, और मोबाइल व डेस्कटॉप लॉगिन वीडियो ट्यूटोरियल।', sAhint:'4 मुख्य एक्सेस टूल्स', sAbtn:'सेक्शन खोलें &rarr;',
     sBtag:'सेक्शन B', sBtitle:'CPD मॉड्यूल', sBdesc:'CPD 1-6 पूर्ण, पूरा करने के लिए कुल 10 मॉड्यूल (NEP 2020 एवं GenAI शिक्षाशास्त्र)।', sBhint:'CPD 1–6 पूर्ण (कुल 10 मॉड्यूल) • 25 घंटे', sBbtn:'खोलें &rarr;',
-    sLeadTag:'CPD लीडरशिप • प्राचार्य एवं विद्यालय नेतृत्व', sLeadTitle:'CPD लीडरशिप', sLeadDesc:'असाइनमेंट CPD 3: मेरा विज़न बोर्ड 2028: भविष्य के लिए तैयार विद्यालय। Adobe Express में विज़न बोर्ड बनाएं और Google Form द्वारा सबमिट करें।', sLeadHint:'असाइनमेंट CPD 3 • 3.5 घंटे', sLeadBtn:'खोलें &rarr;', flowLead:'CPD लीडरशिप',
-    sCtag:'सेक्शन C • DCAIS', sCtitle:'छात्र DCAIS गतिविधियाँ', sCdesc: 'देखें कक्षा 6 से 8 तक आपके छात्र कौन सी DCAIS गतिविधियाँ कर रहे हैं।', sChint: 'कक्षा 6-8 गतिविधियाँ', sCbtn:'खोलें &rarr;',
+    sLeadTag:'CPD लीडरशिप • प्राचार्य एवं विद्यालय नेतृत्व', sLeadTitle:'CPD लीडरशिप एवं संसाधन 3', sLeadDesc:'CPD संसाधन 3 (प्रस्तुति, प्राचार्य डैशबोर्ड, CPD 3 रिकॉर्डिंग) एवं असाइनमेंट CPD 3: मेरा विज़न बोर्ड 2028।', sLeadHint:'CPD संसाधन 3 • विज़न बोर्ड', sLeadBtn:'खोलें &rarr;', flowLead:'CPD लीडरशिप',
+    sCtag:'सेक्शन C • DCAIS संसाधन', sCtitle:'DCAIS संसाधन', sCdesc: 'कक्षा 6 से 8 के शिक्षकों के लिए एकल समेकित हब: आधिकारिक ई-मॉड्यूल, DCAIS क्रियान्वयन निर्देश प्रस्तुति, गाइडबुक सॉफ्ट कॉपी, टेलीमेट्री एक्सेल कार्यपुस्तिकाएं और साप्ताहिक गतिविधियाँ।', sChint: 'कक्षा 6-8 • संसाधन हब', sCbtn:'खोलें &rarr;',
     sDtag:'सेक्शन D', sDtitle:'कक्षा संसाधन', sDdesc:'कक्षा 6-8 के लिए कार्यपत्रक (Worksheets) और Adobe Express टेम्पलेट्स: अंग्रेज़ी, हिंदी, विज्ञान, सामाजिक विज्ञान और गणित के सीधे लिंक।', sDhint:'कक्षा 6-8 कार्यपत्रक और टेम्पलेट्स', sDbtn:'खोलें &rarr;',
     flow5:'DCAIS परीक्षा', sEtag:'सेक्शन E • DCAIS परीक्षा', sEtitle:'DCAIS परीक्षा और उत्तर कुंजी', sEdesc:'CBSE सेमेस्टर-1 परीक्षा पोर्टल: 15 क्षेत्रीय गूगल फॉर्म लिंक, परीक्षा दिशानिर्देश और सत्यापित उत्तर कुंजी।', sEhint:'15 क्षेत्र • उत्तर कुंजी', sEbtn:'खोलें &rarr;',
     flowBootcamp: 'शरद ऋतु बूटकैंप',
@@ -2049,6 +2101,16 @@ function renderCpdSectionHtml() {
 }
 
 /* ===== CPD LEADERSHIP FOR PRINCIPALS RENDERER ===== */
+var activeCpdLeadershipTab = 'resources3'; // 'resources3' (default) or 'assignment'
+
+function switchCpdLeadershipTab(tab) {
+  activeCpdLeadershipTab = tab;
+  var target = document.getElementById('secContent');
+  if (target) {
+    target.innerHTML = renderCpdLeadershipSection(currentLang === 'hi');
+  }
+}
+
 function renderCpdLeadershipSection(isHi) {
   var leadBanner =
     '<div class="cpd-lead-banner">' +
@@ -2071,11 +2133,24 @@ function renderCpdLeadershipSection(isHi) {
           '</div>' +
         '</div>' +
         '<div style="display:flex;align-items:center;min-width:200px;">' +
-          '<a href="../principal/" target="_blank" class="btn" style="background:#003087;color:#FFF;font-weight:800;font-size:.88rem;padding:12px 22px;border-radius:999px;box-shadow:0 4px 14px rgba(0,48,135,0.35);text-align:center;white-space:nowrap;text-decoration:none;width:100%;">' +
+          '<a href="https://kushagrakushwah.github.io/kvspdashboard/" target="_blank" rel="noopener noreferrer" class="btn" style="background:#003087;color:#FFF;font-weight:800;font-size:.88rem;padding:12px 22px;border-radius:999px;box-shadow:0 4px 14px rgba(0,48,135,0.35);text-align:center;white-space:nowrap;text-decoration:none;width:100%;">' +
             (isHi ? 'प्राचार्य कमान केंद्र खोलें ↗' : 'Principal Command Center ↗') +
           '</a>' +
         '</div>' +
       '</div>' +
+    '</div>';
+
+  /* SUB-TABS: CPD Resources 3 vs Leadership Framework & Assignment 1 */
+  var leadSubtabsHtml =
+    '<div class="cpd-lead-subtabs">' +
+      '<button class="cpd-lead-subtab-btn' + (activeCpdLeadershipTab === 'resources3' ? ' active' : '') + '" onclick="switchCpdLeadershipTab(\'resources3\')">' +
+        '<span>📚</span> <span>' + (isHi ? 'CPD संसाधन 3 (CPD Resources 3)' : 'CPD Resources 3') + '</span>' +
+        '<span class="cpd-lead-subtab-badge">' + (isHi ? 'मुख्य संसाधन' : 'Official Resources') + '</span>' +
+      '</button>' +
+      '<button class="cpd-lead-subtab-btn' + (activeCpdLeadershipTab === 'assignment' ? ' active' : '') + '" onclick="switchCpdLeadershipTab(\'assignment\')">' +
+        '<span>🎓</span> <span>' + (isHi ? 'लीडरशिप रूपरेखा एवं असाइनमेंट 1' : 'Leadership Framework & Assignment 1') + '</span>' +
+        '<span class="cpd-lead-subtab-badge">Vision Board 2028</span>' +
+      '</button>' +
     '</div>';
 
   /* ===== OFFICIAL EXECUTIVE LEADERSHIP RESOURCES GRID (PPT, DASHBOARD, CPD 3 RECORDING) ===== */
@@ -2087,11 +2162,11 @@ function renderCpdLeadershipSection(isHi) {
             '🎯 ' + (isHi ? 'प्राचार्य एवं संस्थागत नेतृत्व संसाधन' : 'Institutional Leadership Toolkits & Telemetry') +
           '</div>' +
           '<h3 style="font-size:1.25rem;font-weight:900;color:#0F172A;letter-spacing:-.02em;margin:0 0 4px;">' +
-            (isHi ? 'CPD लीडरशिप कार्यकारी संसाधन' : 'CPD Leadership Executive Resources') +
+            (isHi ? 'CPD संसाधन 3 — आधिकारिक कार्यकारी संसाधन' : 'CPD Resources 3 — Official Executive Resources') +
           '</h3>' +
           '<p style="font-size:.84rem;color:#64748B;margin:0;">' +
-            (isHi ? 'प्रस्तुति डेक (PPT), रीयल-टाइम डैशबोर्ड कमान केंद्र और आधिकारिक CPD 3 प्रशिक्षण रिकॉर्डिंग।' :
-                    'Official presentation deck, live telemetry command center, and accredited CPD 3 masterclass recording.') +
+            (isHi ? 'आधिकारिक प्रस्तुति डेक (PPT), रीयल-टाइम डैशबोर्ड कमान केंद्र और CPD 3 डिजिटल साक्षरता प्रशिक्षण रिकॉर्डिंग।' :
+                    'Official presentation deck, live telemetry command center, and accredited CPD 3 digital literacy masterclass recording.') +
           '</p>' +
         '</div>' +
       '</div>' +
@@ -2099,7 +2174,7 @@ function renderCpdLeadershipSection(isHi) {
       '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;">' +
 
         '<!-- 1. CPD Leadership PPT -->' +
-        '<div class="cpd-lead-res-card" style="border:2px solid #C7D2FE;">' +
+        '<div class="cpd-lead-res-card" style="border:2.5px solid #003087;box-shadow:0 6px 20px rgba(0,48,135,0.08);">' +
           '<div>' +
             '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">' +
               '<span style="font-size:.7rem;font-weight:900;color:#003087;background:#EEF2FF;padding:3px 10px;border-radius:999px;border:1px solid #C7D2FE;">📊 PPTX / PDF</span>' +
@@ -2113,18 +2188,28 @@ function renderCpdLeadershipSection(isHi) {
                       'Executive presentation deck for Principals covering NEP 2020 digital creativity roadmap, Safe GenAI governance protocols, lab scheduling, and institutional adoption.') +
             '</p>' +
           '</div>' +
-          '<div style="display:flex;gap:8px;flex-wrap:wrap;border-top:1px solid #F1F5F9;padding-top:14px;">' +
-            '<a href="assets/CPD_Leadership_Presentation.pdf" download="CPD_Leadership_Presentation.pdf" class="btn btn-primary" style="background:#003087;border-color:#003087;font-size:.82rem;font-weight:800;padding:9px 16px;border-radius:999px;text-decoration:none;flex:1;text-align:center;box-shadow:0 3px 10px rgba(0,48,135,0.25);">' +
-              '📥 ' + (isHi ? 'डाउनलोड PPT (डेक)' : 'Download PPT (Deck)') +
-            '</a>' +
-            '<button onclick="openLeadershipSlidePreview()" class="btn btn-outline" style="border:1.5px solid #CBD5E1;color:#003087;font-size:.82rem;font-weight:800;padding:9px 14px;border-radius:999px;cursor:pointer;background:#F8FAFC;">' +
-              '👁️ ' + (isHi ? 'स्लाइड पूर्वावलोकन' : 'Preview Slides') +
-            '</button>' +
+          '<div style="display:flex;flex-direction:column;gap:8px;border-top:1px solid #F1F5F9;padding-top:14px;">' +
+            '<div style="display:flex;gap:8px;flex-wrap:wrap;">' +
+              '<a href="https://tinyurl.com/CPD3principalPPT" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background:#003087;border-color:#003087;font-size:.82rem;font-weight:800;padding:9px 16px;border-radius:999px;text-decoration:none;flex:1;text-align:center;box-shadow:0 3px 10px rgba(0,48,135,0.25);">' +
+                '📥 ' + (isHi ? 'प्रस्तुति खोलें (tinyurl) ↗' : 'Open Presentation (tinyurl) ↗') +
+              '</a>' +
+              '<a href="assets/CPD_Leadership_Presentation.pdf" download="CPD_Leadership_Presentation.pdf" class="btn btn-outline" style="border:1.5px solid #003087;color:#003087;font-size:.82rem;font-weight:800;padding:9px 14px;border-radius:999px;text-decoration:none;background:#F8FAFC;">' +
+                '📄 PDF ⤓' +
+              '</a>' +
+            '</div>' +
+            '<div style="display:flex;gap:8px;flex-wrap:wrap;">' +
+              '<button onclick="openLeadershipSlidePreview()" class="btn btn-ghost" style="border:1.5px solid #CBD5E1;color:#003087;font-size:.8rem;font-weight:800;padding:7px 12px;border-radius:999px;cursor:pointer;flex:1;background:#F8FAFC;">' +
+                '👁️ ' + (isHi ? 'स्लाइड पूर्वावलोकन' : 'Preview Slides') +
+              '</button>' +
+              '<button onclick="navigator.clipboard.writeText(\'https://tinyurl.com/CPD3principalPPT\').then(function(){ showResourceToast(\'' + (isHi ? 'प्रस्तुति लिंक कॉपी हो गया!' : 'Presentation link copied!') + '\'); })" class="btn btn-ghost" style="border:1.5px solid #CBD5E1;color:#475569;font-size:.8rem;font-weight:800;padding:7px 12px;border-radius:999px;cursor:pointer;">' +
+                '📋 ' + (isHi ? 'लिंक कॉपी' : 'Copy Link') +
+              '</button>' +
+            '</div>' +
           '</div>' +
         '</div>' +
 
         '<!-- 2. Dashboard Link -->' +
-        '<div class="cpd-lead-res-card" style="border:2.5px solid #003087;box-shadow:0 8px 24px rgba(0,48,135,0.1);">' +
+        '<div class="cpd-lead-res-card" style="border:2.5px solid #003087;box-shadow:0 8px 24px rgba(0,48,135,0.12);background:linear-gradient(180deg,#FFFFFF 0%,#F8FAFC 100%);">' +
           '<div>' +
             '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">' +
               '<span style="font-size:.7rem;font-weight:900;color:#FFF;background:#003087;padding:3px 10px;border-radius:999px;">🚀 ' + (isHi ? 'कमान केंद्र' : 'Command Center') + '</span>' +
@@ -2138,38 +2223,68 @@ function renderCpdLeadershipSection(isHi) {
                       'Live telemetry dashboard for school leaders: Track educator 25-hr CPD completions, regional benchmarks, school participation rosters, and student DCAIS analytics.') +
             '</p>' +
           '</div>' +
-          '<div style="border-top:1px solid #F1F5F9;padding-top:14px;">' +
-            '<a href="../principal/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background:#003087;border-color:#003087;font-size:.84rem;font-weight:800;padding:10px 18px;border-radius:999px;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 14px rgba(0,48,135,0.3);width:100%;box-sizing:border-box;">' +
-              '📊 ' + (isHi ? 'प्राचार्य डैशबोर्ड खोलें ↗' : 'Launch Principal Dashboard ↗') +
+          '<div style="display:flex;flex-direction:column;gap:8px;border-top:1px solid #F1F5F9;padding-top:14px;">' +
+            '<a href="https://kushagrakushwah.github.io/kvspdashboard/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background:#003087;border-color:#003087;font-size:.84rem;font-weight:800;padding:10px 18px;border-radius:999px;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 14px rgba(0,48,135,0.3);width:100%;box-sizing:border-box;">' +
+              '📊 ' + (isHi ? 'प्राचार्य डैशबोर्ड खोलें (kvspdashboard) ↗' : 'Launch Principal Dashboard (kvspdashboard) ↗') +
             '</a>' +
+            '<button onclick="navigator.clipboard.writeText(\'https://kushagrakushwah.github.io/kvspdashboard/\').then(function(){ showResourceToast(\'' + (isHi ? 'डैशबोर्ड लिंक कॉपी हो गया!' : 'Dashboard link copied!') + '\'); })" class="btn btn-ghost" style="border:1.5px solid #CBD5E1;color:#475569;font-size:.8rem;font-weight:800;padding:7px 12px;border-radius:999px;cursor:pointer;width:100%;">' +
+              '📋 ' + (isHi ? 'डैशबोर्ड URL कॉपी करें' : 'Copy Dashboard URL') +
+            '</button>' +
           '</div>' +
         '</div>' +
 
         '<!-- 3. CPD 3 Training Recording -->' +
-        '<div class="cpd-lead-res-card" style="border:2px solid #FCA5A5;">' +
+        '<div class="cpd-lead-res-card" style="border:2.5px solid #DC2626;box-shadow:0 6px 20px rgba(220,38,38,0.08);">' +
           '<div>' +
             '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">' +
               '<span style="font-size:.7rem;font-weight:900;color:#DC2626;background:#FEE2E2;padding:3px 10px;border-radius:999px;border:1px solid #FCA5A5;">🎬 ' + (isHi ? 'सत्र रिकॉर्डिंग' : 'Session Recording') + '</span>' +
               '<span style="font-size:.7rem;font-weight:800;color:#475569;background:#F1F5F9;padding:2px 8px;border-radius:999px;">⏱ 45 ' + (isHi ? 'मिनट' : 'Mins') + '</span>' +
             '</div>' +
             '<h4 style="font-size:1.08rem;font-weight:900;color:#0F172A;margin-bottom:6px;">' +
-              (isHi ? 'CPD 3 प्रशिक्षण रिकॉर्डिंग (मास्टरक्लास)' : 'CPD 3 Training Recording (Masterclass)') +
+              (isHi ? 'CPD 3 डिजिटल साक्षरता प्रशिक्षण रिकॉर्डिंग' : 'CPD 3 Digital Literacy Training Recording') +
             '</h4>' +
             '<p style="font-size:.83rem;color:#475569;line-height:1.5;margin-bottom:14px;">' +
               (isHi ? 'CPD 3 का पूर्ण रिकॉर्डेड सत्र: इंटरएक्टिव मीडिया, कक्षा वीडियो स्टोरीटेलिंग और असाइनमेंट 1 (विज़न बोर्ड 2028: फ्यूचर-रेडी स्कूल) का चरण-दर-चरण मार्गदर्शन।' :
                       'Complete accredited video recording of CPD 3: Interactive Media, Video Storytelling & step-by-step guidance for Assignment 1 (Vision Board 2028: Future-Ready School).') +
             '</p>' +
           '</div>' +
-          '<div style="display:flex;gap:8px;flex-wrap:wrap;border-top:1px solid #F1F5F9;padding-top:14px;">' +
-            '<button onclick="playCpd3VideoModal()" class="btn btn-primary" style="background:#DC2626;border-color:#DC2626;font-size:.82rem;font-weight:800;padding:9px 16px;border-radius:999px;cursor:pointer;flex:1;text-align:center;box-shadow:0 3px 10px rgba(220,38,38,0.25);">' +
-              '▶ ' + (isHi ? 'रिकॉर्डिंग देखें' : 'Watch Recording') +
+          '<div style="display:flex;flex-direction:column;gap:8px;border-top:1px solid #F1F5F9;padding-top:14px;">' +
+            '<div style="display:flex;gap:8px;flex-wrap:wrap;">' +
+              '<a href="https://tinyurl.com/cpd3principaldigitalliteracy" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background:#DC2626;border-color:#DC2626;font-size:.82rem;font-weight:800;padding:9px 16px;border-radius:999px;text-decoration:none;flex:1;text-align:center;box-shadow:0 3px 10px rgba(220,38,38,0.25);">' +
+                '🎬 ' + (isHi ? 'रिकॉर्डिंग खोलें (tinyurl) ↗' : 'Watch Recording (tinyurl) ↗') +
+              '</a>' +
+              '<button onclick="playCpd3VideoModal()" class="btn btn-outline" style="border:1.5px solid #FCA5A5;color:#DC2626;font-size:.82rem;font-weight:800;padding:9px 14px;border-radius:999px;cursor:pointer;background:#FFF5F5;">' +
+                '▶ ' + (isHi ? 'प्लेयर' : 'Play') +
+              '</button>' +
+            '</div>' +
+            '<button onclick="navigator.clipboard.writeText(\'https://tinyurl.com/cpd3principaldigitalliteracy\').then(function(){ showResourceToast(\'' + (isHi ? 'रिकॉर्डिंग लिंक कॉपी हो गया!' : 'Recording link copied!') + '\'); })" class="btn btn-ghost" style="border:1.5px solid #CBD5E1;color:#475569;font-size:.8rem;font-weight:800;padding:7px 12px;border-radius:999px;cursor:pointer;width:100%;">' +
+              '📋 ' + (isHi ? 'रिकॉर्डिंग URL कॉपी करें' : 'Copy Recording URL') +
             '</button>' +
-            '<a href="https://www.youtube.com/watch?v=M1s8vTaJLrY" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border:1.5px solid #FCA5A5;color:#DC2626;font-size:.82rem;font-weight:800;padding:9px 14px;border-radius:999px;text-decoration:none;background:#FFF5F5;">' +
-              'YouTube ↗' +
-            '</a>' +
           '</div>' +
         '</div>' +
 
+      '</div>' +
+    '</div>';
+
+  /* LEADERSHIP ASSIGNMENT SUMMARY BANNER (Shown under CPD Resources 3) */
+  var leadAssignmentSummaryBanner =
+    '<div style="background:#FFFFFF;border:2px solid #C7D2FE;border-radius:var(--radius-lg);padding:22px 26px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;box-shadow:0 4px 16px rgba(0,48,135,0.06);margin-bottom:24px;">' +
+      '<div style="max-width:700px;">' +
+        '<div style="display:inline-flex;align-items:center;gap:6px;font-size:.74rem;font-weight:900;text-transform:uppercase;letter-spacing:.05em;background:#EEF2FF;color:#003087;padding:3px 10px;border-radius:999px;margin-bottom:6px;">' +
+          '🎯 ' + (isHi ? 'असाइनमेंट CPD 3 • विज़न बोर्ड 2028' : 'Assignment CPD 3 • Vision Board 2028') +
+        '</div>' +
+        '<h4 style="font-size:1.15rem;font-weight:900;color:#0F172A;margin:0 0 4px;">' +
+          (isHi ? 'Assignment - 1: My Vision Board 2028: Future-Ready School' : 'Assignment - 1: My Vision Board 2028: Future-Ready School') +
+        '</h4>' +
+        '<p style="font-size:.84rem;color:#475569;margin:0;line-height:1.5;">' +
+          (isHi ? 'एडोब एक्सप्रेस में एक-पृष्ठीय विज़न बोर्ड बनाएं, स्कूल की तस्वीरें जोड़ें, भविष्य की आधुनिक सुविधाएं दर्शाएं और आधिकारिक गूगल फॉर्म पर जमा करें।' :
+                  'Design a one-page vision board in Adobe Express showcasing future-ready facilities and school vision under NEP 2020, then submit via official Google Form.') +
+        '</p>' +
+      '</div>' +
+      '<div style="display:flex;gap:10px;flex-wrap:wrap;">' +
+        '<button onclick="switchCpdLeadershipTab(\'assignment\')" class="btn btn-primary" style="background:#003087;border-color:#003087;font-weight:800;font-size:.84rem;padding:10px 20px;border-radius:999px;box-shadow:0 3px 10px rgba(0,48,135,0.25);">' +
+          '🎯 ' + (isHi ? 'असाइनमेंट 1 व मॉड्यूल्स देखें →' : 'View Assignment 1 & Modules →') +
+        '</button>' +
       '</div>' +
     '</div>';
 
@@ -2256,7 +2371,7 @@ function renderCpdLeadershipSection(isHi) {
       descHi: 'संस्थागत डिजिटल रचनात्मकता रोडमैप तैयार करना। कंप्यूटर लैब समय सारिणी, NEP 2020 लक्ष्यों का संरेखण और विद्यालय-व्यापी प्रगति की निगरानी।',
       target: 'Principals & Vice-Principals',
       tools: 'Principal Command Center, Institutional Roadmap Builder',
-      actionUrl: '../principal/',
+      actionUrl: 'https://kushagrakushwah.github.io/kvspdashboard/',
       actionLabelEn: 'Open Command Center ↗',
       actionLabelHi: 'कमान केंद्र खोलें ↗',
       guidelines: [
@@ -2360,9 +2475,12 @@ function renderCpdLeadershipSection(isHi) {
     '</div>';
   }).join('');
 
-  return leadBanner + leadExecutiveResourcesHtml + leadAssignmentCard + '<div class="cpd-lead-grid">' + leadCardsHtml + '</div>';
-}
+  if (activeCpdLeadershipTab === 'resources3') {
+    return leadBanner + leadSubtabsHtml + leadExecutiveResourcesHtml + leadAssignmentSummaryBanner;
+  }
 
+  return leadBanner + leadSubtabsHtml + leadAssignmentCard + '<div class="cpd-lead-grid">' + leadCardsHtml + '</div>';
+}
 
 /* ===== AUTUMN BOOTCAMP TEACHER MENTORSHIP RENDERER ===== */
 function renderTeacherBootcampSection() {
@@ -2556,7 +2674,7 @@ function renderTeacherBootcampSection() {
 }
 
 /* ===== DCAIS EDUCATOR CURRICULUM CONTROLLER (GRADES 6-8 WEEKLY) ===== */
-var activeDcaisSectionTab = 'curriculum'; // 'curriculum' or 'resources'
+var activeDcaisSectionTab = 'resources'; // 'resources' (default) or 'curriculum'
 var teacherMonitorGrade = null;
 
 function switchDcaisSectionTab(tab) {
@@ -2572,93 +2690,126 @@ function renderDcaisTeacherResources(isHi) {
     '<div style="background:linear-gradient(135deg,#003087 0%,#1E1B4B 100%);color:#FFF;border-radius:var(--radius-lg);padding:24px 28px;margin-bottom:26px;box-shadow:0 8px 24px rgba(0,48,135,0.15);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">' +
       '<div style="max-width:700px;">' +
         '<div style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.3);padding:4px 12px;border-radius:999px;font-size:.74rem;font-weight:900;letter-spacing:.05em;text-transform:uppercase;margin-bottom:10px;">' +
-          '📚 ' + (isHi ? 'शिक्षक संसाधन एवं क्रियान्वयन हब' : 'Teacher Resource & Implementation Hub') +
+          '📚 ' + (isHi ? 'DCAIS शिक्षक संसाधन एवं क्रियान्वयन हब' : 'DCAIS Teacher Resource & Implementation Hub') +
         '</div>' +
         '<h3 style="font-size:1.45rem;font-weight:900;letter-spacing:-.02em;line-height:1.25;margin-bottom:8px;">' +
-          (isHi ? 'DCAIS शिक्षक संसाधन — एकल समेकित हब (Consolidated Resources)' : 'DCAIS Teacher Resources — Consolidated Repository') +
+          (isHi ? 'DCAIS संसाधन — एकल समेकित हब (DCAIS Resources)' : 'DCAIS Resources — Consolidated Repository') +
         '</h3>' +
         '<p style="font-size:.88rem;color:rgba(255,255,255,0.9);line-height:1.55;margin-bottom:12px;">' +
-          (isHi ? 'कक्षा 6 से 8 के शिक्षकों के लिए आधिकारिक ई-मॉड्यूल, टेलीमेट्री एक्सेल कार्यपुस्तिकाएं, शिक्षण नियमावली और सीबीएसई/NEP 2020 सामग्री का एकल सुव्यवस्थित संग्रह।' :
-                  'Consolidated repository for middle school educators (Grades 6-8): Official E-Module courseware, telemetry Excel workbooks, lesson plan guides, answer keys, and CBSE/NEP 2020 resources.') +
+          (isHi ? 'कक्षा 6 से 8 के शिक्षकों के लिए आधिकारिक ई-मॉड्यूल, DCAIS क्रियान्वयन निर्देश प्रस्तुति, गाइडबुक सॉफ्ट कॉपी, टेलीमेट्री एक्सेल कार्यपुस्तिकाएं और शिक्षण नियमावली का एकल सुव्यवस्थित संग्रह।' :
+                  'Consolidated repository for middle school educators (Grades 6-8): Official E-Module, DCAIS implementation instructions presentation, Guide Book soft copy, telemetry Excel workbooks, and verified answer keys.') +
         '</p>' +
         '<div style="display:flex;gap:10px;flex-wrap:wrap;font-size:.76rem;font-weight:800;color:#C7D2FE;">' +
-          '<span>✓ Official E-Module Courseware</span> • ' +
-          '<span>✓ Real-Time Excel Telemetry</span> • ' +
-          '<span>✓ Guidebook Scans & Answer Keys</span>' +
+          '<span>✓ Live E-Module (Articulate 360)</span> • ' +
+          '<span>✓ Implementation Instructions (PPT)</span> • ' +
+          '<span>✓ Guide Book Soft Copy (Google Drive)</span> • ' +
+          '<span>✓ Real-Time Excel Telemetry</span>' +
         '</div>' +
       '</div>' +
       '<div>' +
         '<button onclick="switchDcaisSectionTab(\'curriculum\')" class="btn" style="background:#FFF;color:#003087;font-weight:900;font-size:.85rem;padding:11px 22px;border-radius:999px;box-shadow:0 4px 12px rgba(0,0,0,0.12);">' +
-          '← ' + (isHi ? 'साप्ताहिक गतिविधियों पर वापस जाएं' : 'Back to Weekly Activities') +
+          '📋 ' + (isHi ? 'साप्ताहिक गतिविधियों पर जाएं →' : 'View Weekly Activities →') +
         '</button>' +
       '</div>' +
     '</div>';
 
-  /* SECTION 1: E-MODULE (To be shared separately) */
+  /* SECTION 1: DCAIS CORE DIRECTIVES & INTERACTIVE COURSEWARE */
   var emoduleSection =
     '<div style="margin-bottom:30px;">' +
       '<div class="dcais-res-section-title">' +
         '<div>' +
           '<div style="font-size:.72rem;font-weight:900;color:var(--red);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;">' +
-            'CATEGORY 1 • ONLINE COURSEWARE' +
+            'CATEGORY 1 • CORE DIRECTIVES & INTERACTIVE COURSEWARE' +
           '</div>' +
-          '<h3>💻 ' + (isHi ? 'DCAIS ई-मॉड्यूल (ऑनलाइन कोर्सवेयर)' : 'DCAIS E-Module (Interactive Courseware)') + '</h3>' +
+          '<h3>💻 ' + (isHi ? 'DCAIS ई-मॉड्यूल, क्रियान्वयन निर्देश एवं गाइडबुक' : 'DCAIS E-Module, Implementation Instructions & Guide Book') + '</h3>' +
         '</div>' +
-        '<span class="dcais-res-badge dcais-res-badge-pending" style="font-size:.76rem;padding:4px 12px;">' +
-          '⏳ ' + (isHi ? 'अलग से साझा किया जाएगा (To be shared separately)' : 'To be shared separately') +
-        '</span>' +
+        '<span class="dcais-res-badge dcais-res-badge-ready" style="font-size:.76rem;padding:4px 12px;">' +
+          '✓ ' + (isHi ? 'सक्रिय एवं अद्यतित' : 'Active & Up-to-date') + '</span>' +
       '</div>' +
 
-      '<div class="dcais-res-card" style="border:2.5px solid #F59E0B;background:linear-gradient(180deg,#FFFDF7 0%,#FFFFFF 100%);box-shadow:0 6px 20px rgba(245,158,11,0.08);">' +
-        '<div>' +
-          '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px;">' +
-            '<span class="dcais-res-badge dcais-res-badge-pending">' +
-              '🚀 ' + (isHi ? 'आधिकारिक डिजिटल ई-कोर्स' : 'Official Digital E-Course') +
-            '</span>' +
-            '<span style="font-size:.76rem;font-weight:800;color:#92400E;background:#FEF3C7;padding:3px 10px;border-radius:999px;border:1px solid #FDE68A;">' +
-              'Grades 6–8 • Level 1 & Level 2' +
-            '</span>' +
-          '</div>' +
-          '<h4 style="font-size:1.25rem;font-weight:900;color:#1E293B;margin-bottom:8px;">' +
-            (isHi ? 'DCAIS ई-मॉड्यूल: डिजिटल रचनात्मकता और एआई कौशल (लेवल 1 और 2)' : 'DCAIS E-Module: Digital Creativity & Artificial Intelligence Skills') +
-          '</h4>' +
-          '<p style="font-size:.88rem;color:#475569;line-height:1.6;margin-bottom:16px;">' +
-            (isHi ? 'केंद्रीय विद्यालय एवं सीबीएसई संबद्ध विद्यालयों के छात्रों के लिए एडोब एक्सप्रेस का आधिकारिक इंटरएक्टिव ई-लर्निंग मॉड्यूल। इसमें स्व-गति से सीखने योग्य पाठ, दृश्य डिज़ाइन के मूल सिद्धांत, डिजिटल नागरिकता और जिम्मेदार जनरेटिव एआई साक्षरता शामिल है।' :
-                    'Official interactive e-learning courseware designed by Adobe Express for Education for CBSE/CBSE middle school students. Covers self-paced creative bite-sized learning, design thinking fundamentals, visual composition, and responsible generative AI literacy.') +
-          '</p>' +
+      '<div class="dcais-res-grid">' +
 
-          '<div style="background:#FFFBEB;border:1.5px solid #FDE68A;border-left:4px solid #F59E0B;border-radius:10px;padding:14px 18px;margin-bottom:18px;">' +
-            '<div style="font-size:.8rem;font-weight:900;color:#92400E;margin-bottom:4px;display:flex;align-items:center;gap:6px;">' +
-              '<span>📌</span> <span>' + (isHi ? 'ई-मॉड्यूल आवंटन एवं एक्सेस सूचना:' : 'E-Module Deployment & Access Notice:') + '</span>' +
+        '<!-- Card 1: Implementation Instructions Presentation -->' +
+        '<div class="dcais-res-card" style="border:2.5px solid #003087;box-shadow:0 6px 20px rgba(0,48,135,0.08);">' +
+          '<div>' +
+            '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">' +
+              '<span class="dcais-res-badge dcais-res-badge-blue">📊 Instructions Presentation</span>' +
+              '<span style="font-size:.72rem;font-weight:800;color:#003087;background:#EEF2FF;padding:2px 8px;border-radius:999px;">tinyurl</span>' +
             '</div>' +
-            '<p style="font-size:.82rem;color:#78350F;line-height:1.5;margin:0;">' +
-              (isHi ? 'ई-मॉड्यूल का लाइव कोर्स लिंक एवं स्कूल एनरोलमेंट क्रेडेंशियल्स एडोब एक्सप्रेस एजुकेशन टीम द्वारा अलग से परिपत्र/ईमेल के माध्यम से साझा किया जाएगा। शिक्षक नीचे दिए गए बटन से कोर्स सिलेबस का पूर्वावलोकन कर सकते हैं एवं अलर्ट के लिए अनुरोध दर्ज कर सकते हैं।' :
-                      'The live interactive E-Module access portal link and school enrollment keys are being shared separately by the Adobe Express Education team via official circular/email. Teachers can preview the complete course syllabus below and register for priority access notification.') +
+            '<h4>' + (isHi ? 'DCAIS क्रियान्वयन निर्देश प्रस्तुति (Implementation Instructions)' : 'DCAIS Implementation Instructions Presentation') + '</h4>' +
+            '<p>' +
+              (isHi ? 'विद्यालय प्रमुखों एवं शिक्षकों के लिए DCAIS क्रियान्वयन रोडमैप: 35-मिनट साप्ताहिक लैब समय-सारिणी, कक्षा 6-8 पाठ्यक्रम रूपरेखा, शिक्षक दायित्व और चरण-दर-चरण विद्यालय निष्पादन निर्देश।' :
+                      'Official operational presentation for school leaders and teachers: 35-minute lab scheduling, Grades 6–8 curriculum roadmap, pedagogical framework, and step-by-step school execution instructions.') +
             '</p>' +
           '</div>' +
-
-          '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:18px;">' +
-            '<div style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:8px;padding:12px 14px;">' +
-              '<div style="font-size:.74rem;font-weight:900;color:#003087;text-transform:uppercase;">' + (isHi ? 'लेवल 1 (कक्षा 6–7)' : 'Level 1 (Grades 6–7)') + '</div>' +
-              '<div style="font-size:.82rem;font-weight:700;color:#1E293B;margin-top:2px;">' + (isHi ? 'डिजिटल डिज़ाइन की नींव, लेआउट एवं रंग सिद्धांत' : 'Foundations of Design, Layout & Color') + '</div>' +
-            '</div>' +
-            '<div style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:8px;padding:12px 14px;">' +
-              '<div style="font-size:.74rem;font-weight:900;color:#003087;text-transform:uppercase;">' + (isHi ? 'लेवल 2 (कक्षा 8)' : 'Level 2 (Grade 8)') + '</div>' +
-              '<div style="font-size:.82rem;font-weight:700;color:#1E293B;margin-top:2px;">' + (isHi ? 'मल्टीमीडिया स्टोरीटेलिंग, ब्रांडिंग एवं GenAI साक्षरता' : 'Multimedia Storytelling, Branding & GenAI') + '</div>' +
+          '<div class="dcais-res-footer">' +
+            '<div style="display:flex;gap:8px;width:100%;flex-wrap:wrap;">' +
+              '<a href="https://tinyurl.com/KVSDCAISinstructions" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background:#003087;border-color:#003087;font-size:.82rem;font-weight:800;padding:9px 18px;border-radius:999px;flex:1;text-align:center;text-decoration:none;box-shadow:0 3px 10px rgba(0,48,135,0.25);">' +
+                '📥 ' + (isHi ? 'प्रस्तुति खोलें (tinyurl) ↗' : 'Open Presentation (tinyurl) ↗') +
+              '</a>' +
+              '<button onclick="navigator.clipboard.writeText(\'https://tinyurl.com/KVSDCAISinstructions\').then(function(){ showResourceToast(\'' + (isHi ? 'प्रस्तुति लिंक कॉपी हो गया!' : 'Presentation link copied!') + '\'); })" class="btn btn-ghost" style="border:1.5px solid #CBD5E1;color:#475569;font-size:.8rem;font-weight:800;padding:7px 12px;border-radius:999px;cursor:pointer;">' +
+                '📋 ' + (isHi ? 'कॉपी' : 'Copy') +
+              '</button>' +
             '</div>' +
           '</div>' +
         '</div>' +
 
-        '<div class="dcais-res-footer" style="padding-top:16px;">' +
-          '<div style="display:flex;gap:10px;flex-wrap:wrap;width:100%;">' +
-            '<button onclick="openEmoduleSyllabusModal()" class="btn btn-primary" style="background:#003087;border-color:#003087;font-size:.84rem;font-weight:800;padding:10px 20px;border-radius:999px;box-shadow:0 4px 12px rgba(0,48,135,0.25);">' +
-              '📋 ' + (isHi ? 'कोर्स सिलेबस एवं लर्निंग आउटकम्स देखें' : 'View Course Syllabus & Outcomes') +
-            '</button>' +
-            '<button onclick="showResourceToast(\'' + (isHi ? 'एक्सेस अलर्ट अनुरोध दर्ज कर लिया गया है। आधिकारिक रिलीज पर आपको सूचित किया जाएगा।' : 'Access alert registered. You will be notified on official release.') + '\')" class="btn btn-outline" style="border:1.5px solid #D97706;color:#B45309;background:#FFFBEB;font-size:.84rem;font-weight:800;padding:10px 18px;border-radius:999px;">' +
-              '🔔 ' + (isHi ? 'रिलीज होने पर मुझे सूचित करें' : 'Notify Me on Release') +
-            '</button>' +
+        '<!-- Card 2: E-MODULE (Articulate 360) -->' +
+        '<div class="dcais-res-card" style="border:2.5px solid #10B981;background:linear-gradient(180deg,#FFFDF7 0%,#FFFFFF 100%);box-shadow:0 6px 20px rgba(16,185,129,0.08);">' +
+          '<div>' +
+            '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">' +
+              '<span class="dcais-res-badge dcais-res-badge-ready">🚀 Live E-Module</span>' +
+              '<span style="font-size:.72rem;font-weight:800;color:#047857;background:#ECFDF5;padding:2px 8px;border-radius:999px;">Articulate 360</span>' +
+            '</div>' +
+            '<h4>' + (isHi ? 'DCAIS ई-मॉड्यूल: डिजिटल रचनात्मकता और एआई कौशल (आर्टिकुलेट 360)' : 'DCAIS E-Module: Digital Creativity & AI Skills (Articulate 360)') + '</h4>' +
+            '<p>' +
+              (isHi ? 'केंद्रीय विद्यालय एवं सीबीएसई मध्य विद्यालय के छात्रों और शिक्षकों के लिए आधिकारिक इंटरएक्टिव ई-लर्निंग कोर्सवेयर। इसमें स्व-गति से सीखने योग्य पाठ, दृश्य डिज़ाइन के मूल सिद्धांत, डिजिटल नागरिकता और जिम्मेदार जनरेटिव एआई साक्षरता शामिल है।' :
+                      'Official interactive e-learning courseware on Articulate 360 for middle school students (Grades 6–8) and educators. Features self-paced bite-sized learning, design fundamentals, visual hierarchy, digital storytelling, and responsible AI literacy.') +
+            '</p>' +
+          '</div>' +
+          '<div class="dcais-res-footer">' +
+            '<div style="display:flex;gap:8px;width:100%;flex-wrap:wrap;">' +
+              '<a href="https://360.articulate.com/review/content/56299152-1dd5-42df-984f-3f3a54e2426c/review" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background:#059669;border-color:#059669;font-size:.82rem;font-weight:800;padding:9px 18px;border-radius:999px;flex:1;text-align:center;text-decoration:none;box-shadow:0 3px 10px rgba(5,150,105,0.25);">' +
+                '🚀 ' + (isHi ? 'ई-मॉड्यूल लाइव खोलें ↗' : 'Launch E-Module ↗') +
+              '</a>' +
+              '<button onclick="openEmoduleSyllabusModal()" class="btn btn-outline" style="border:1.5px solid #059669;color:#059669;font-size:.8rem;font-weight:800;padding:7px 12px;border-radius:999px;cursor:pointer;background:#F0FDF4;">' +
+                '📋 ' + (isHi ? 'सिलेबस' : 'Syllabus') +
+              '</button>' +
+              '<button onclick="navigator.clipboard.writeText(\'https://360.articulate.com/review/content/56299152-1dd5-42df-984f-3f3a54e2426c/review\').then(function(){ showResourceToast(\'' + (isHi ? 'ई-मॉड्यूल लिंक कॉपी हो गया!' : 'E-Module link copied!') + '\'); })" class="btn btn-ghost" style="border:1.5px solid #CBD5E1;color:#475569;font-size:.8rem;font-weight:800;padding:7px 12px;border-radius:999px;cursor:pointer;">' +
+                '📋 ' + (isHi ? 'कॉपी' : 'Copy') +
+              '</button>' +
+            '</div>' +
           '</div>' +
         '</div>' +
+
+        '<!-- Card 3: Guide Book Soft Copy -->' +
+        '<div class="dcais-res-card" style="border:2.5px solid #F59E0B;box-shadow:0 6px 20px rgba(245,158,11,0.08);">' +
+          '<div>' +
+            '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">' +
+              '<span class="dcais-res-badge" style="background:#FEF3C7;color:#D97706;border:1px solid #FDE68A;">📖 GUIDE BOOK SOFT COPY</span>' +
+              '<span style="font-size:.72rem;font-weight:800;color:#92400E;background:#FEF3C7;padding:2px 8px;border-radius:999px;">Google Drive</span>' +
+            '</div>' +
+            '<h4>' + (isHi ? 'गाइड बुक सॉफ्ट कॉपी — DCAIS बुक 2026 (गूगल ड्राइव)' : 'GUIDE BOOK SOFT COPY — DCAIS Book 2026 (Google Drive)') + '</h4>' +
+            '<p>' +
+              (isHi ? 'DCAIS 2026 पाठ्यपुस्तक एवं पाठ्यक्रम गाइड की आधिकारिक पूर्ण सॉफ्ट कॉपी। इसमें कक्षा में कराने योग्य व्यावहारिक अभ्यास, चरण-दर-चरण विज़ुअल निर्देश, प्रोजेक्ट प्रॉम्प्ट्स और शिक्षण नियमावली शामिल है।' :
+                      'Official complete curriculum soft copy of the DCAIS 2026 textbook. Contains classroom instructions, exercises, project prompts, and visual guides across all modules for middle school.') +
+            '</p>' +
+          '</div>' +
+          '<div class="dcais-res-footer">' +
+            '<div style="display:flex;gap:8px;width:100%;flex-wrap:wrap;">' +
+              '<a href="https://drive.google.com/file/d/1XPaOTOnlwvfgk5tj_E8ruZduKZsIfmTR/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background:#D97706;border-color:#D97706;font-size:.82rem;font-weight:800;padding:9px 18px;border-radius:999px;flex:1;text-align:center;text-decoration:none;box-shadow:0 3px 10px rgba(217,119,6,0.25);">' +
+                '📖 ' + (isHi ? 'गाइड बुक सॉफ्ट कॉपी ↗' : 'Open Guide Book Soft Copy ↗') +
+              '</a>' +
+              '<a href="https://drive.google.com/file/d/1581hh8cbYUh1aNEDHaDGqy6urTsPj7od/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border:1.5px solid #D97706;color:#D97706;font-size:.8rem;font-weight:800;padding:7px 12px;border-radius:999px;text-decoration:none;background:#FFFBEB;">' +
+                '📄 ' + (isHi ? 'पेज स्कैन' : 'Scans') + ' ↗' +
+              '</a>' +
+              '<button onclick="navigator.clipboard.writeText(\'https://drive.google.com/file/d/1XPaOTOnlwvfgk5tj_E8ruZduKZsIfmTR/view?usp=sharing\').then(function(){ showResourceToast(\'' + (isHi ? 'गाइड बुक लिंक कॉपी हो गया!' : 'Guide Book link copied!') + '\'); })" class="btn btn-ghost" style="border:1.5px solid #CBD5E1;color:#475569;font-size:.8rem;font-weight:800;padding:7px 12px;border-radius:999px;cursor:pointer;">' +
+                '📋 ' + (isHi ? 'कॉपी' : 'Copy') +
+              '</button>' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+
       '</div>' +
     '</div>';
 
@@ -2733,7 +2884,7 @@ function renderDcaisTeacherResources(isHi) {
             '</p>' +
           '</div>' +
           '<div class="dcais-res-footer">' +
-            '<a href="downloads/CBSE_evaluation_sheet.xlsx" download="CBSE_evaluation_sheet.xlsx" class="btn btn-primary" style="background:#003087;border-color:#003087;font-size:.82rem;font-weight:800;padding:9px 18px;border-radius:999px;width:100%;text-align:center;text-decoration:none;box-shadow:0 4px 12px rgba(0,48,135,0.25);">' +
+            '<a href="downloads/KVS_evaluation_sheet.xlsx" download="KVS_evaluation_sheet.xlsx" class="btn btn-primary" style="background:#003087;border-color:#003087;font-size:.82rem;font-weight:800;padding:9px 18px;border-radius:999px;width:100%;text-align:center;text-decoration:none;box-shadow:0 4px 12px rgba(0,48,135,0.25);">' +
               '📥 ' + (isHi ? 'डाउनलोड रूब्रिक शीट (10 KB) ⤓' : 'Download Scoring Sheet (10 KB) ⤓') +
             '</a>' +
           '</div>' +
@@ -2776,28 +2927,8 @@ function renderDcaisTeacherResources(isHi) {
 
       '<div class="dcais-res-grid">' +
 
-        '<!-- Resource 1: Guidebook Scans -->' +
-        '<div class="dcais-res-card">' +
-          '<div>' +
-            '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">' +
-              '<span class="dcais-res-badge dcais-res-badge-blue">📖 Curriculum Guidebook</span>' +
-              '<span style="font-size:.72rem;font-weight:800;color:#003087;background:#EEF2FF;padding:2px 8px;border-radius:999px;">Google Drive</span>' +
-            '</div>' +
-            '<h4>' + (isHi ? 'DCAIS पाठ्यपुस्तक एवं गाइडबुक स्कैन' : 'DCAIS Textbook & Guidebook Scans') + '</h4>' +
-            '<p>' +
-              (isHi ? 'मॉड्यूल 1 से 4 के आधिकारिक गाइडबुक पृष्ठ, चरण-दर-चरण विज़ुअल निर्देश, और स्मार्टबोर्ड प्रदर्शन हेतु उच्च-गुणवत्ता स्कैन प्रतियां।' :
-                      'Complete curriculum guidebook chapters, step-by-step visual exercises, and high-resolution scanned pages for smartboard projection.') +
-            '</p>' +
-          '</div>' +
-          '<div class="dcais-res-footer">' +
-            '<a href="https://drive.google.com/file/d/1581hh8cbYUh1aNEDHaDGqy6urTsPj7od/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border:1.5px solid #003087;color:#003087;font-size:.82rem;font-weight:800;padding:8px 16px;border-radius:999px;width:100%;text-align:center;text-decoration:none;">' +
-              '📄 ' + (isHi ? 'गाइडबुक खोलें (Google Drive) ↗' : 'Open Guidebook Scans ↗') +
-            '</a>' +
-          '</div>' +
-        '</div>' +
-
-        '<!-- Resource 2: Verified Answer Key -->' +
-        '<div class="dcais-res-card">' +
+        '<!-- Resource 1: Verified Answer Key -->' +
+        '<div class="dcais-res-card" style="border:2px solid #10B981;">' +
           '<div>' +
             '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">' +
               '<span class="dcais-res-badge dcais-res-badge-ready">✓ Verified Key</span>' +
@@ -2816,7 +2947,7 @@ function renderDcaisTeacherResources(isHi) {
           '</div>' +
         '</div>' +
 
-        '<!-- Resource 3: NEP 2020 Framework -->' +
+        '<!-- Resource 2: NEP 2020 Framework -->' +
         '<div class="dcais-res-card">' +
           '<div>' +
             '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">' +
@@ -2836,7 +2967,7 @@ function renderDcaisTeacherResources(isHi) {
           '</div>' +
         '</div>' +
 
-        '<!-- Resource 4: Subject Starter Kits -->' +
+        '<!-- Resource 3: Subject Starter Kits -->' +
         '<div class="dcais-res-card">' +
           '<div>' +
             '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">' +
@@ -2922,15 +3053,15 @@ function renderDcaisMonitor() {
         (isHi ? 'छात्र DCAIS स्टूडियो खोलें ↗' : 'Open Student DCAIS Studio ↗') + '</a>' +
     '</div>';
 
-  /* ===== DCAIS TOP NAVIGATION TABS (ACTIVITIES vs CONSOLIDATED RESOURCES) ===== */
+  /* ===== DCAIS TOP NAVIGATION TABS (RESOURCES vs WEEKLY ACTIVITIES) ===== */
   var topTabNav =
     '<div class="dcais-top-tab-nav">' +
-      '<button class="dcais-main-tab' + (activeDcaisSectionTab === 'curriculum' ? ' active' : '') + '" onclick="switchDcaisSectionTab(\'curriculum\')">' +
-        '<span>📋</span> <span>' + (isHi ? 'साप्ताहिक पाठ्यक्रम एवं गतिविधियाँ' : 'Weekly Curriculum Activities') + '</span>' +
-      '</button>' +
       '<button class="dcais-main-tab' + (activeDcaisSectionTab === 'resources' ? ' active' : '') + '" onclick="switchDcaisSectionTab(\'resources\')">' +
-        '<span>📚</span> <span>' + (isHi ? 'संसाधन (Resources)' : 'Resources') + '</span>' +
-        '<span class="dcais-main-tab-badge">' + (isHi ? 'समेकित हब' : 'Consolidated Hub') + '</span>' +
+        '<span>📚</span> <span>' + (isHi ? 'DCAIS संसाधन (Resources)' : 'DCAIS Resources') + '</span>' +
+        '<span class="dcais-main-tab-badge">' + (isHi ? 'एकल समेकित हब' : 'Consolidated Hub') + '</span>' +
+      '</button>' +
+      '<button class="dcais-main-tab' + (activeDcaisSectionTab === 'curriculum' ? ' active' : '') + '" onclick="switchDcaisSectionTab(\'curriculum\')">' +
+        '<span>📋</span> <span>' + (isHi ? 'साप्ताहिक छात्र गतिविधियाँ (कक्षा 6–8)' : 'Weekly Student Activities (Grades 6–8)') + '</span>' +
       '</button>' +
     '</div>';
 
@@ -4667,10 +4798,10 @@ var TEACHER_SECTIONS_DATA = {
     letter: '★',
     tagEn: 'CPD Leadership • Principal &amp; School Leaders',
     tagHi: 'CPD लीडरशिप • प्राचार्य एवं विद्यालय नेतृत्व',
-    titleEn: 'CPD Leadership — Executive Development &amp; Assignment CPD 3',
-    titleHi: 'CPD लीडरशिप — कार्यकारी विकास एवं असाइनमेंट CPD 3',
-    descEn: 'Executive leadership framework for CBSE Principals and School Leaders under NEP 2020. Includes Assignment CPD 3 (My Vision Board 2028: Future-Ready School), institutional roadmaps, and mentorship circles.',
-    descHi: 'NEP 2020 के तहत केवीएस प्राचार्यों एवं विद्यालय नेतृत्व के लिए कार्यकारी विकास कार्यक्रम। इसमें असाइनमेंट CPD 3 (माय विज़न बोर्ड 2028), संस्थागत रोडमैप और परामर्श मंडल शामिल हैं।',
+    titleEn: 'CPD Leadership — CPD Resources 3 &amp; Executive Assignment',
+    titleHi: 'CPD लीडरशिप — CPD संसाधन 3 एवं कार्यकारी असाइनमेंट',
+    descEn: 'Executive leadership framework for CBSE Principals and School Leaders under NEP 2020. Includes CPD Resources 3 (Presentation, Dashboard, CPD 3 Recording), Assignment CPD 3 (My Vision Board 2028), and institutional roadmaps.',
+    descHi: 'NEP 2020 के तहत केंद्रीय विद्यालय प्राचार्यों एवं विद्यालय नेतृत्व के लिए कार्यकारी विकास कार्यक्रम। इसमें CPD संसाधन 3 (प्रस्तुति, डैशबोर्ड, CPD 3 रिकॉर्डिंग) और असाइनमेंट CPD 3 (माय विज़न बोर्ड 2028) शामिल हैं।',
     render: function(lang) {
       activeCpdTab = 'leadership';
       return renderCpdLeadershipSection(lang === 'hi');
@@ -4678,12 +4809,12 @@ var TEACHER_SECTIONS_DATA = {
   },
   'C': {
     letter: '🔭',
-    tagEn: 'Section C • Student DCAIS Activities & Resources',
-    tagHi: 'सेक्शन C • छात्र DCAIS गतिविधियाँ',
-    titleEn: 'Student DCAIS Activities & Teacher Resources',
-    titleHi: 'छात्र DCAIS गतिविधियाँ',
-    descEn: 'Explore the full DCAIS activity catalog (Grades 6-8) and access consolidated teacher resources: E-Modules, telemetry Excel sheets, and curriculum manuals.',
-    descHi: 'कक्षा 6 से 8 तक की पूर्ण DCAIS गतिविधि सूची का निरीक्षण करें। टेम्पलेट, निर्देश देखें और गतिविधियों का परीक्षण करें।',
+    tagEn: 'Section C • DCAIS Resources',
+    tagHi: 'सेक्शन C • DCAIS संसाधन',
+    titleEn: 'DCAIS Resources',
+    titleHi: 'DCAIS संसाधन',
+    descEn: 'Consolidated repository for middle school educators: Official E-Module, DCAIS implementation instructions presentation, Guide Book soft copy, Excel telemetry workbooks, and weekly student activities (Grades 6–8).',
+    descHi: 'कक्षा 6 से 8 के शिक्षकों के लिए एकल समेकित हब: आधिकारिक ई-मॉड्यूल, DCAIS क्रियान्वयन निर्देश प्रस्तुति, गाइडबुक सॉफ्ट कॉपी, टेलीमेट्री एक्सेल कार्यपुस्तिकाएं और साप्ताहिक गतिविधियाँ (कक्षा 6-8)।',
     render: function(lang) { return renderDcaisMonitor(); }
   },
   'D': {
@@ -4881,6 +5012,14 @@ window.openSection = openSection;
 window.showDashboard = showDashboard;
 window.toggleLang = toggleLang;
 
+window.switchCpdLeadershipTab = switchCpdLeadershipTab;
+window.switchDcaisSectionTab = switchDcaisSectionTab;
+window.openLeadershipSlidePreview = openLeadershipSlidePreview;
+window.playCpd3VideoModal = playCpd3VideoModal;
+window.openEmoduleSyllabusModal = openEmoduleSyllabusModal;
+window.closeAppModal = closeAppModal;
+window.showResourceToast = showResourceToast;
+
 window.setResourceGrade = setResourceGrade;
 window.setResourceSubject = setResourceSubject;
 window.searchResources = searchResources;
@@ -4980,10 +5119,15 @@ function playCpd3VideoModal() {
           '</ul>' +
         '</div>' +
         '<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;">' +
-          '<a href="https://www.youtube.com/watch?v=M1s8vTaJLrY" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border:1.5px solid #FCA5A5;color:#DC2626;font-size:.82rem;font-weight:800;padding:8px 16px;border-radius:999px;">' +
-            'YouTube पर खोलें ↗' +
-          '</a>' +
-          '<button onclick="closeAppModal()" class="btn btn-primary" style="background:#0F172A;border-color:#0F172A;font-size:.82rem;font-weight:800;padding:8px 20px;border-radius:999px;">' +
+          '<div style="display:flex;gap:8px;flex-wrap:wrap;">' +
+            '<a href="https://tinyurl.com/cpd3principaldigitalliteracy" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background:#DC2626;border-color:#DC2626;font-size:.82rem;font-weight:800;padding:8px 16px;border-radius:999px;text-decoration:none;">' +
+              '🎬 ' + (isHi ? 'सत्र लिंक (tinyurl) ↗' : 'Official Recording (tinyurl) ↗') +
+            '</a>' +
+            '<a href="https://www.youtube.com/watch?v=M1s8vTaJLrY" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border:1.5px solid #FCA5A5;color:#DC2626;font-size:.82rem;font-weight:800;padding:8px 16px;border-radius:999px;text-decoration:none;">' +
+              'YouTube ↗' +
+            '</a>' +
+          '</div>' +
+          '<button onclick="closeAppModal()" class="btn btn-outline" style="border:1.5px solid #CBD5E1;color:#475569;font-size:.82rem;font-weight:800;padding:8px 20px;border-radius:999px;">' +
             (isHi ? 'बंद करें' : 'Close Player') +
           '</button>' +
         '</div>' +
@@ -5094,9 +5238,12 @@ function openEmoduleSyllabusModal() {
           '</ul>' +
         '</div>' +
 
-        '<div style="display:flex;justify-content:flex-end;gap:10px;border-top:1px solid #E2E8F0;padding-top:14px;">' +
-          '<button onclick="closeAppModal()" class="btn btn-primary" style="background:#0F172A;border-color:#0F172A;font-size:.82rem;font-weight:800;padding:8px 20px;border-radius:999px;">' +
-            (isHi ? 'समझ गया' : 'Got It') +
+        '<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;border-top:1px solid #E2E8F0;padding-top:14px;">' +
+          '<a href="https://360.articulate.com/review/content/56299152-1dd5-42df-984f-3f3a54e2426c/review" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background:#003087;border-color:#003087;font-size:.82rem;font-weight:800;padding:8px 18px;border-radius:999px;text-decoration:none;">' +
+            '🚀 ' + (isHi ? 'ई-मॉड्यूल लाइव खोलें (Articulate 360) ↗' : 'Launch Live E-Module (Articulate 360) ↗') +
+          '</a>' +
+          '<button onclick="closeAppModal()" class="btn btn-outline" style="border:1.5px solid #CBD5E1;color:#475569;font-size:.82rem;font-weight:800;padding:8px 20px;border-radius:999px;">' +
+            (isHi ? 'बंद करें' : 'Close') +
           '</button>' +
         '</div>' +
       '</div>' +
