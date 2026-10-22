@@ -419,7 +419,7 @@ window.ADOBE_DATA = {
         "duration": "30 mins",
         "tutorialLink": "https://www.youtube.com/results?search_query=adobe+express+poster+tutorial",
         "activityLink": "https://express.adobe.com/sp/design/posters",
-        "submissionLink": "https://forms.google.com"
+        "submissionLink": "https://forms.gle/gHbX1TfefpdyNE4B6"
       },
       {
         "id": "february",
@@ -434,7 +434,7 @@ window.ADOBE_DATA = {
         "duration": "25 mins",
         "tutorialLink": "https://www.youtube.com/results?search_query=adobe+express+card+tutorial",
         "activityLink": "https://express.adobe.com/sp/design/cards",
-        "submissionLink": "https://forms.google.com"
+        "submissionLink": "https://forms.gle/gHbX1TfefpdyNE4B6"
       },
       {
         "id": "march",
@@ -449,7 +449,7 @@ window.ADOBE_DATA = {
         "duration": "35 mins",
         "tutorialLink": "https://www.youtube.com/results?search_query=adobe+express+collage+tutorial",
         "activityLink": "https://express.adobe.com/sp/design/social",
-        "submissionLink": "https://forms.google.com"
+        "submissionLink": "https://forms.gle/gHbX1TfefpdyNE4B6"
       },
       {
         "id": "april",
@@ -464,7 +464,7 @@ window.ADOBE_DATA = {
         "duration": "40 mins",
         "tutorialLink": "https://www.youtube.com/results?search_query=adobe+express+infographic+tutorial",
         "activityLink": "https://express.adobe.com/sp/design/posters",
-        "submissionLink": "https://forms.google.com"
+        "submissionLink": "https://forms.gle/gHbX1TfefpdyNE4B6"
       },
       {
         "id": "may",
@@ -479,7 +479,7 @@ window.ADOBE_DATA = {
         "duration": "45 mins",
         "tutorialLink": "https://www.youtube.com/results?search_query=adobe+express+scrapbook+tutorial",
         "activityLink": "https://express.adobe.com/sp/design/photo",
-        "submissionLink": "https://forms.google.com"
+        "submissionLink": "https://forms.gle/gHbX1TfefpdyNE4B6"
       },
       {
         "id": "june",
@@ -494,7 +494,7 @@ window.ADOBE_DATA = {
         "duration": "45 mins",
         "tutorialLink": "https://www.youtube.com/results?search_query=adobe+express+video+tutorial",
         "activityLink": "https://express.adobe.com/sp/design/videos",
-        "submissionLink": "https://forms.google.com"
+        "submissionLink": "https://forms.gle/gHbX1TfefpdyNE4B6"
       },
       {
         "id": "july",
@@ -509,7 +509,7 @@ window.ADOBE_DATA = {
         "duration": "35 mins",
         "tutorialLink": "https://www.youtube.com/results?search_query=adobe+express+book+cover+tutorial",
         "activityLink": "https://express.adobe.com/sp/design/bookcovers",
-        "submissionLink": "https://forms.google.com"
+        "submissionLink": "https://forms.gle/gHbX1TfefpdyNE4B6"
       },
       {
         "id": "august",
@@ -524,7 +524,7 @@ window.ADOBE_DATA = {
         "duration": "30 mins",
         "tutorialLink": "https://www.youtube.com/results?search_query=adobe+express+collage+tutorial",
         "activityLink": "https://express.adobe.com/sp/design/collages",
-        "submissionLink": "https://forms.google.com"
+        "submissionLink": "https://forms.gle/gHbX1TfefpdyNE4B6"
       },
       {
         "id": "september",
@@ -539,7 +539,7 @@ window.ADOBE_DATA = {
         "duration": "25 mins",
         "tutorialLink": "https://www.youtube.com/results?search_query=adobe+express+greeting+card+tutorial",
         "activityLink": "https://express.adobe.com/sp/design/cards",
-        "submissionLink": "https://forms.google.com"
+        "submissionLink": "https://forms.gle/gHbX1TfefpdyNE4B6"
       },
       {
         "id": "october",
@@ -554,7 +554,7 @@ window.ADOBE_DATA = {
         "duration": "30 mins",
         "tutorialLink": "https://www.youtube.com/results?search_query=adobe+express+poster+tutorial",
         "activityLink": "https://express.adobe.com/sp/design/posters",
-        "submissionLink": "https://forms.google.com"
+        "submissionLink": "https://forms.gle/gHbX1TfefpdyNE4B6"
       },
       {
         "id": "november",
@@ -569,7 +569,7 @@ window.ADOBE_DATA = {
         "duration": "45 mins",
         "tutorialLink": "https://youtu.be/eRA7DjSb5gs?si=TJkotAxLC9WsvJON",
         "activityLink": "https://new.express.adobe.com/design/template/urn:aaid:sc:VA6C2:fcf64e48-8456-5141-9d68-55b0d404d468?category=search&pageId=7b5aebd5-bcab-42a5-a163-05d16f18e735",
-        "submissionLink": "https://docs.google.com/forms/d/e/1FAIpQLScEzxzVqZp3ivr-C18TAimHJV-hXIFzVaVmR-q7Ab-031xVQA/viewform?usp=header"
+        "submissionLink": "https://forms.gle/gHbX1TfefpdyNE4B6"
       },
       {
         "id": "december",
@@ -584,7 +584,7 @@ window.ADOBE_DATA = {
         "duration": "45 mins",
         "tutorialLink": "https://www.youtube.com/results?search_query=adobe+express+recap+video+tutorial",
         "activityLink": "https://express.adobe.com/sp/design/videos",
-        "submissionLink": "https://forms.google.com"
+        "submissionLink": "https://forms.gle/gHbX1TfefpdyNE4B6"
       }
     ]
   }

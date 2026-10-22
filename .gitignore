@@ -9,3 +9,5 @@ scratch_*
 *.py
 aim_api_data.json
 __pycache__/
+
+.vercel
