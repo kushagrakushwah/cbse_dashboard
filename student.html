@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>CBSE Student Creative Studio & AIM Hub - CBSE × Adobe Express for Education</title>
+<title>Student CBSE Portal - Adobe Express for Education</title>
 <meta name="description" content="Your 12-month creative journey with Adobe Express.">
 <meta name="robots" content="noindex">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -325,7 +325,7 @@ footer p+p{margin-top:5px}
         </svg>
       </div>
       <div class="brand-text">
-        <div class="brand-name">Adobe Express for Education</div>
+        <div class="brand-name">Student CBSE Portal</div>
         <div class="brand-sub" id="hdrSubLabel">Student Creative Studio</div>
       </div>
     </div>
@@ -346,18 +346,18 @@ footer p+p{margin-top:5px}
     <div class="hero-left">
       <div class="hero-tag">
         <span class="hero-tag-dot"></span>
-        <span id="heroTagText">🎨 Creative Studio - For Students</span>
+        <span id="heroTagText">Student CBSE Portal</span>
       </div>
-      <h1 id="heroTitle">Create Something New Every Month! 🎉</h1>
-      <p class="hero-sub" id="heroSub">Pick your project, watch a short video, create in Adobe Express, and show your teacher. It's that easy!</p>
+      <h1 id="heroTitle">Student CBSE Portal</h1>
+      <p class="hero-sub" id="heroSub">Explore verified CBSE DCAIS activities, design with curriculum-aligned Adobe Express templates, and submit your creative project work.</p>
       <div class="flow">
-        <div class="flow-step" data-flow-section="1" onclick="openSection('1')" role="button" tabindex="0" title="Go to Section 1: 12-Month Creative Activities"><span class="flow-n">1</span><span id="flow1">Pick Month</span></div>
+        <span class="flow-step" onclick="selectAimGrade(null); openSection('3');"><span class="flow-n">1</span> Choose Grade</span>
         <span class="flow-arr">→</span>
-        <div class="flow-step" data-flow-section="3" onclick="openSection('3')" role="button" tabindex="0" title="Go to Section 3: DCAIS Activities"><span class="flow-n">2</span><span id="flow2">DCAIS Activities</span></div>
+        <span class="flow-step" onclick="selectAimGrade(null); openSection('3');"><span class="flow-n">2</span> Select Activity</span>
         <span class="flow-arr">→</span>
-        <div class="flow-step" data-flow-section="4" onclick="openSection('4')" role="button" tabindex="0" title="Go to Section 4: DCAIS Mid-Term Examination"><span class="flow-n">3</span><span id="flow3">Mid-Term Exam</span></div>
+        <span class="flow-step"><span class="flow-n">3</span> Design in Express</span>
         <span class="flow-arr">→</span>
-        <div class="flow-step" data-flow-section="bootcamp" onclick="openSection('bootcamp')" role="button" tabindex="0" title="Go to Autumn Bootcamp 2026"><span class="flow-n">🎒</span><span id="flowBootcamp">Autumn Bootcamp</span></div>
+        <span class="flow-step" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScEzxzVqZp3ivr-C18TAimHJV-hXIFzVaVmR-q7Ab-031xVQA/viewform?usp=header', '_blank');"><span class="flow-n">4</span> Submit Work</span>
       </div>
     </div>
   </div>
@@ -374,159 +374,119 @@ footer p+p{margin-top:5px}
     </div>
 
     <div class="tiles-grid">
-      <!-- Section 1 -->
-      <div class="tile-card" data-section="1" onclick="openSection('1')">
+      <!-- Card 1: Primary School DCAIS -->
+      <div class="tile-card" onclick="selectAimGrade('Grade 3'); openSection('3');">
         <div class="tile-img-wrap">
-          <img class="tile-img" src="assets/guidebook/student_creative_challenge.png" alt="Monthly Activities" crossorigin="anonymous">
-          <div class="tile-img-ov">📅</div>
+          <img class="tile-img" src="assets/guidebook/student_creative_challenge.png" alt="Primary School Activities" crossorigin="anonymous">
+          <div class="tile-img-ov">📘</div>
         </div>
         <div class="tile-body">
           <div>
-            <div class="tile-tag" id="s1-tag">Section 1</div>
-            <h2 class="tile-title" id="s1-title">Monthly Creative Activities</h2>
-            <p class="tile-desc" id="s1-desc">One fun art project for every month - January to December. Watch, make, submit!</p>
+            <div class="tile-tag">DCAIS &bull; Primary School</div>
+            <h2 class="tile-title">Primary School Activities (Grades 3–5)</h2>
+            <p class="tile-desc">32 curriculum-aligned creative activities per grade across visual storytelling, science flashcards, and book reviews in Adobe Express.</p>
           </div>
           <div class="tile-footer">
-            <span class="tile-hint" id="s1-hint">12 Fun Challenges</span>
-            <span class="tile-btn" id="s1-btn">Open →</span>
+            <span class="tile-hint">96 Primary Activities &bull; Grades 3–5</span>
+            <span class="tile-btn">Open Grade 3–5 →</span>
           </div>
         </div>
       </div>
 
-      <!-- Section 2 [Commented out as not needed now]
-      <div class="tile-card" data-section="2" onclick="openSection('2')">
+      <!-- Card 2: Middle School DCAIS -->
+      <div class="tile-card" onclick="selectAimGrade('Grade 6'); openSection('3');">
         <div class="tile-img-wrap">
-          <img class="tile-img" src="assets/guidebook/student_generative_art.png" alt="Skill Tracks" crossorigin="anonymous">
-          <div class="tile-img-ov">🎯</div>
+          <img class="tile-img" src="assets/guidebook/dcais_quick_actions.png" alt="Middle School DCAIS" crossorigin="anonymous">
+          <div class="tile-img-ov">📕</div>
         </div>
         <div class="tile-body">
           <div>
-            <div class="tile-tag" id="s2-tag">Section 2</div>
-            <h2 class="tile-title" id="s2-title">Skill Building Tracks</h2>
-            <p class="tile-desc" id="s2-desc">Learn step-by-step: design posters, make videos, create social posts, and more!</p>
+            <div class="tile-tag">DCAIS &bull; Middle School</div>
+            <h2 class="tile-title">Middle School DCAIS (Grades 6–8)</h2>
+            <p class="tile-desc">Curriculum activities &amp; weekly modules for Grades 6, 7, and 8. Design posters, infographics, science journals, and history charts.</p>
           </div>
           <div class="tile-footer">
-            <span class="tile-hint" id="s2-hint">5 Guided Tracks</span>
-            <span class="tile-btn" id="s2-btn">Open →</span>
-          </div>
-        </div>
-      </div>
-      -->
-
-      <!-- Section 3: Full DCAIS / AIM Activities -->
-      <div class="tile-card" data-section="3" onclick="openSection('3')">
-        <div class="tile-img-wrap">
-          <img class="tile-img" src="assets/guidebook/dcais_quick_actions.png" alt="DCAIS Activities" crossorigin="anonymous">
-          <div class="tile-img-ov">🌟</div>
-        </div>
-        <div class="tile-body">
-          <div>
-            <div class="tile-tag" id="s3-tag">Section 3 • DCAIS</div>
-            <h2 class="tile-title" id="s3-title">DCAIS Activities</h2>
-            <p class="tile-desc" id="s3-desc">Complete curriculum for Grades 6-8 from DCAIS. Select your grade, make posters, videos and earn badges!</p>
-          </div>
-          <div class="tile-footer">
-            <span class="tile-hint" id="s3-hint">54+ Activities • Grades 6-8</span>
-            <span class="tile-btn" id="s3-btn">Open →</span>
+            <span class="tile-hint">54 Activities + 16 Modules</span>
+            <span class="tile-btn">Open Grade 6–8 →</span>
           </div>
         </div>
       </div>
 
-      <!-- Section 4: DCAIS Mid-Term Examination -->
-      <div class="tile-card" data-section="4" onclick="openSection('4')">
+      <!-- Card 3: Hindi Medium DCAIS -->
+      <div class="tile-card" onclick="selectAimGrade('Grade 6 (Hindi)'); openSection('3');">
+        <div class="tile-img-wrap">
+          <img class="tile-img" src="assets/guidebook/dcais_storytelling_history.png" alt="Hindi Medium DCAIS" crossorigin="anonymous">
+          <div class="tile-img-ov">🇮🇳</div>
+        </div>
+        <div class="tile-body">
+          <div>
+            <div class="tile-tag">DCAIS &bull; हिंदी माध्यम</div>
+            <h2 class="tile-title">हिंदी माध्यम गतिविधियाँ (कक्षा 6–8)</h2>
+            <p class="tile-desc">रचनात्मक लेखन, पर्यावरण चेतना और सामाजिक विज्ञान गतिविधियों के लिए विशेष हिंदी माध्यम एडोब एक्सप्रेस टेम्पलेट्स।</p>
+          </div>
+          <div class="tile-footer">
+            <span class="tile-hint">54 हिंदी माध्यम गतिविधियाँ</span>
+            <span class="tile-btn">खोलें →</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4: Kaushal Bodh Vocational Skills -->
+      <div class="tile-card" onclick="selectAimGrade('Kaushal Bodh 6'); openSection('3');">
+        <div class="tile-img-wrap">
+          <img class="tile-img" src="assets/guidebook/student_game_art_design.png" alt="Kaushal Bodh Vocational Skills" crossorigin="anonymous">
+          <div class="tile-img-ov">🛠️</div>
+        </div>
+        <div class="tile-body">
+          <div>
+            <div class="tile-tag">DCAIS &bull; Vocational Skills</div>
+            <h2 class="tile-title">Kaushal Bodh Skill Projects</h2>
+            <p class="tile-desc">Practical hands-on vocational projects (30 Hours): School Kitchen Garden, Digital Growth Book, Electrical Safety, Financial Literacy.</p>
+          </div>
+          <div class="tile-footer">
+            <span class="tile-hint">18 Practical Projects &bull; Grades 6–8</span>
+            <span class="tile-btn">Open Projects →</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5: Official Project Submission -->
+      <div class="tile-card" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScEzxzVqZp3ivr-C18TAimHJV-hXIFzVaVmR-q7Ab-031xVQA/viewform?usp=header', '_blank');">
+        <div class="tile-img-wrap" style="background:#001F5B;">
+          <img class="tile-img" src="assets/guidebook/student_yearend_project.png" alt="Project Submission" crossorigin="anonymous">
+          <div class="tile-img-ov">🚀</div>
+        </div>
+        <div class="tile-body">
+          <div>
+            <div class="tile-tag">Official Submission</div>
+            <h2 class="tile-title">Submit DCAIS Project Work</h2>
+            <p class="tile-desc">Finished your creative activity? Submit your completed Adobe Express project link using the official Google Form portal.</p>
+          </div>
+          <div class="tile-footer">
+            <span class="tile-hint">Official Google Form Portal</span>
+            <span class="tile-btn" style="background:#FF6600;color:#FFF;border-color:#FF6600;">Submit Project ↗</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6: DCAIS Mid-Term Examination -->
+      <div class="tile-card" onclick="openSection('4');">
         <div class="tile-img-wrap">
           <img class="tile-img" src="assets/guidebook/dcais_exam_assessment.png" alt="Mid-Term Examination" crossorigin="anonymous">
           <div class="tile-img-ov">📝</div>
         </div>
         <div class="tile-body">
           <div>
-            <div class="tile-tag" id="s4-tag">Section 4 • Mid-Term Exam</div>
-            <h2 class="tile-title" id="s4-title">DCAIS Mid-Term Examination</h2>
-            <p class="tile-desc" id="s4-desc">Official regional examination forms for 16 CBSE Regional Offices. Open test link mid term and submit your exam.</p>
+            <div class="tile-tag">Assessment &bull; Mid-Term Exam</div>
+            <h2 class="tile-title">DCAIS Examination Guidelines</h2>
+            <p class="tile-desc">Official regional examination forms and instructions for 16 CBSE Regional Offices. Open your regional link to review.</p>
           </div>
           <div class="tile-footer">
-            <span class="tile-hint" id="s4-hint">16 CBSE Regional Offices • Sem-1 Exam</span>
-            <span class="tile-btn" id="s4-btn">Open →</span>
+            <span class="tile-hint">16 CBSE Regions &bull; Exam Portal</span>
+            <span class="tile-btn">Open Guidelines →</span>
           </div>
         </div>
       </div>
-
-      <!-- Section Bootcamp: CBSE Digital Innovation Bootcamp -->
-      <div class="tile-card" data-section="bootcamp" onclick="openSection('bootcamp')">
-        <div class="tile-img-wrap" style="background:#02B6F9;">
-          <img class="tile-img" src="assets/autumn_bootcamp_banner.jpg?v=2" alt="CBSE Digital Innovation Bootcamp" crossorigin="anonymous" style="object-fit:contain;background:#02B6F9;">
-          <div class="tile-img-ov">🎒</div>
-        </div>
-        <div class="tile-body">
-          <div>
-            <div class="tile-tag" id="sBoot-tag">Autumn Bootcamp • 17–24 Oct 2026</div>
-            <h2 class="tile-title" id="sBoot-title">CBSE Digital Innovation Bootcamp</h2>
-            <p class="tile-desc" id="sBoot-desc">Join 3 fun live sessions: Comic-a-concept, Hero of My Nation, and My Childhood Memory. Use GenAI in Adobe Express!</p>
-          </div>
-          <div class="tile-footer">
-            <span class="tile-hint" id="sBoot-hint">3 Live Sessions • Templates & YouTube</span>
-            <span class="tile-btn" id="sBoot-btn">Open Bootcamp →</span>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- Sections 5, 6, 7 [Commented out as not needed now]
-
-      <div class="tile-card" data-section="5" onclick="openSection('5')">
-        <div class="tile-img-wrap">
-          <img class="tile-img" src="assets/guidebook/student_text_effects.png" alt="Tutorials" crossorigin="anonymous">
-          <div class="tile-img-ov">🎬</div>
-        </div>
-        <div class="tile-body">
-          <div>
-            <div class="tile-tag" id="s5-tag">Section 5</div>
-            <h2 class="tile-title" id="s5-title">How-To Videos</h2>
-            <p class="tile-desc" id="s5-desc">Short videos that show you exactly how to use Adobe Express tools. Easy to follow!</p>
-          </div>
-          <div class="tile-footer">
-            <span class="tile-hint" id="s5-hint">5 Video Masterclasses</span>
-            <span class="tile-btn" id="s5-btn">Open →</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="tile-card" data-section="6" onclick="openSection('6')">
-        <div class="tile-img-wrap">
-          <img class="tile-img" src="assets/guidebook/student_sticker_design.png" alt="Creative Tools" crossorigin="anonymous">
-          <div class="tile-img-ov">🛠️</div>
-        </div>
-        <div class="tile-body">
-          <div>
-            <div class="tile-tag" id="s6-tag">Section 6</div>
-            <h2 class="tile-title" id="s6-title">Creative Tools</h2>
-            <p class="tile-desc" id="s6-desc">Jump straight into making! Open posters, videos, cards, collages and more in Adobe Express.</p>
-          </div>
-          <div class="tile-footer">
-            <span class="tile-hint" id="s6-hint">8 Quick Launch Tools</span>
-            <span class="tile-btn" id="s6-btn">Open →</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="tile-card" data-section="7" onclick="openSection('7')">
-        <div class="tile-img-wrap">
-          <img class="tile-img" src="assets/guidebook/student_game_art_design.png" alt="Achievements" crossorigin="anonymous">
-          <div class="tile-img-ov">🏆</div>
-        </div>
-        <div class="tile-body">
-          <div>
-            <div class="tile-tag" id="s7-tag">Section 7</div>
-            <h2 class="tile-title" id="s7-title">My Badges &amp; Awards</h2>
-            <p class="tile-desc" id="s7-desc">See what badges you have won! Keep doing projects to unlock more cool rewards.</p>
-          </div>
-          <div class="tile-footer">
-            <span class="tile-hint" id="s7-hint">6 Milestone Badges</span>
-            <span class="tile-btn" id="s7-btn">Open →</span>
-          </div>
-        </div>
-      </div>
-      -->
     </div>
   </div>
 
@@ -1011,7 +971,7 @@ var LANG = {
     hdrSub: 'Student Creative Studio',
     hdrBadge: 'Student Portal',
     heroTag: '🎨 Creative Studio - For Students',
-    heroTitle: 'Create Something New Every Month! 🎉',
+    heroTitle: 'Student CBSE Portal',
     heroSub: "Pick your project, watch a short video, create in Adobe Express, and show your teacher. It is that easy!",
     flow1: 'Pick Month',
     flow2: 'Watch Video',
@@ -1174,7 +1134,7 @@ var MONTHS = [
   { name: 'August', nameHi: 'अगस्त', theme: 'Independence Day', themeHi: 'स्वतंत्रता दिवस', activity: 'Independence Day Celebration Video', activityHi: 'स्वतंत्रता दिवस समारोह वीडियो', desc: 'Make a short video (30-60 sec) to celebrate India Independence Day! Add photos, patriotic music, and your voice message.', descHi: 'स्वतंत्रता दिवस समारोह के लिए 30-60 सेकंड का वीडियो बनाएं! तस्वीरें, देशभक्ति संगीत और अपनी आवाज़ जोड़ें।', dur: '60 min', durHi: '60 मिनट', skills: ['Video Editing','Narration','Music'], skillsHi: ['वीडियो संपादन','कथावाचन','संगीत'], tutorial: 'https://www.youtube.com/results?search_query=adobe+express+video+tutorial', create: 'https://express.adobe.com/sp/design/videos', submit: MONTH_SUBMISSION_URL },
   { name: 'September', nameHi: 'सितंबर', theme: 'Teachers Day', themeHi: 'शिक्षक दिवस', activity: 'Thank You Teacher Card', activityHi: 'थैंक यू टीचर कार्ड', desc: 'Design a beautiful card to thank your favourite teacher! Add their name, a nice photo or illustration, and a message from your heart.', descHi: 'अपने पसंदीदा शिक्षक को धन्यवाद देने के लिए एक सुंदर कार्ड डिज़ाइन करें! उनका नाम और दिल से आभार संदेश लिखें।', dur: '45 min', durHi: '45 मिनट', skills: ['Card Design','Personal Message','Typography'], skillsHi: ['कार्ड डिज़ाइन','व्यक्तिगत संदेश','टाइपोग्राफी'], tutorial: 'https://www.youtube.com/results?search_query=adobe+express+card', create: 'https://express.adobe.com/sp/design/cards', submit: MONTH_SUBMISSION_URL },
   { name: 'October', nameHi: 'अक्टूबर', theme: 'Diwali Festive', themeHi: 'दीपावली उत्सव', activity: 'Diwali Greeting & Rangoli Design', activityHi: 'दीवाली ग्रीटिंग और रंगोली डिज़ाइन', desc: 'Create a Diwali greeting card with a beautiful digital rangoli design. Use gold, red, and orange colours. Wish everyone "Happy Diwali!"', descHi: 'सुंदर डिजिटल रंगोली डिज़ाइन के साथ दीवाली ग्रीटिंग कार्ड बनाएं। सुनहरे, लाल और नारंगी रंगों का उपयोग करें।', dur: '55 min', durHi: '55 मिनट', skills: ['Festival Design','Colour','Cultural Art'], skillsHi: ['उत्सव डिज़ाइन','रंग','पारंपरिक कला'], tutorial: 'https://www.youtube.com/results?search_query=adobe+express+diwali+poster', create: 'https://express.adobe.com/sp/design/cards', submit: MONTH_SUBMISSION_URL },
-  { name: 'November', nameHi: 'नवंबर', theme: "Children's Day • My Childhood Dreams", themeHi: 'बाल दिवस • मेरे बचपन के सपने', activity: 'MY CHILDHOOD DREAMS', activityHi: 'मेरे बचपन के सपने (My Childhood Dreams)', desc: 'Design your personal "My Childhood Dreams" creative poster or vision board celebrating Children\'s Day in Adobe Express! Express your hopes, aspirations, and favorite childhood memories.', descHi: 'एडोबी एक्सप्रेस में बाल दिवस के उपलक्ष्य पर अपना रचनात्मक "मेरे बचपन के सपने" पोस्टर या विज़न बोर्ड बनाएं! अपनी आकांक्षाओं, बचपन की यादों और सपनों को व्यक्त करें।', dur: '45 min', durHi: '45 मिनट', skills: ['Poster Design','Creative Expression','Visual Storytelling'], skillsHi: ['पोस्टर डिज़ाइन','रचनात्मक अभिव्यक्ति','विज़ुअल स्टोरीटेलिंग'], tutorial: 'https://www.youtube.com/watch?v=M1s8vTaJLrY', create: 'https://new.express.adobe.com/design/template/urn:aaid:sc:VA6C2:fcf64e48-8456-5141-9d68-55b0d404d468?category=search&pageId=7b5aebd5-bcab-42a5-a163-05d16f18e735', submit: MONTH_SUBMISSION_URL },
+  { name: 'November', nameHi: 'नवंबर', theme: "Children's Day • My Childhood Dreams", themeHi: 'बाल दिवस • मेरे बचपन के सपने', activity: 'MY CHILDHOOD DREAMS', activityHi: 'मेरे बचपन के सपने (My Childhood Dreams)', desc: 'Design your personal "My Childhood Dreams" creative poster or vision board celebrating Children\'s Day in Adobe Express! Express your hopes, aspirations, and favorite childhood memories.', descHi: 'एडोबी एक्सप्रेस में बाल दिवस के उपलक्ष्य पर अपना रचनात्मक "मेरे बचपन के सपने" पोस्टर या विज़न बोर्ड बनाएं! अपनी आकांक्षाओं, बचपन की यादों और सपनों को व्यक्त करें।', dur: '45 min', durHi: '45 मिनट', skills: ['Poster Design','Creative Expression','Visual Storytelling'], skillsHi: ['पोस्टर डिज़ाइन','रचनात्मक अभिव्यक्ति','विज़ुअल स्टोरीटेलिंग'], tutorial: 'https://youtu.be/eRA7DjSb5gs?si=TJkotAxLC9WsvJON', create: 'https://new.express.adobe.com/design/template/urn:aaid:sc:VA6C2:fcf64e48-8456-5141-9d68-55b0d404d468?category=search&pageId=7b5aebd5-bcab-42a5-a163-05d16f18e735', submit: MONTH_SUBMISSION_URL },
   { name: 'December', nameHi: 'दिसंबर', theme: 'Year in Review', themeHi: 'वर्ष का पुनरावलोकन', activity: 'My Creative Year Portfolio', activityHi: 'मेरा रचनात्मक वर्ष पोर्टफ़ोलियो', desc: 'Look back at all 11 projects you made this year! Create a collage or presentation showing your 3 favourite works. You have come so far!', descHi: 'इस वर्ष आपके द्वारा बनाए गए सभी प्रोजेक्ट देखें! अपने 3 पसंदीदा कार्यों को दर्शाते हुए एक कोलाज या प्रस्तुति बनाएं।', dur: '60 min', durHi: '60 मिनट', skills: ['Portfolio Design','Reflection','Collage'], skillsHi: ['पोर्टफ़ोलियो डिज़ाइन','पुनरावलोकन','कोलाज'], tutorial: 'https://www.youtube.com/results?search_query=adobe+express+portfolio', create: 'https://express.adobe.com/sp/design/collages', submit: MONTH_SUBMISSION_URL }
 ];
 
