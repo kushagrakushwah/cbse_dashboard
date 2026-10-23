@@ -372,13 +372,13 @@ footer p+p{margin-top:5px}
       <h1 id="heroTitle">Student CBSE Portal</h1>
       <p class="hero-sub" id="heroSub">Explore verified CBSE DCAIS activities, design with curriculum-aligned Adobe Express templates, and submit your creative project work.</p>
       <div class="flow">
-        <span class="flow-step" onclick="selectAimGrade(null); openSection('3');"><span class="flow-n">1</span> Choose Grade</span>
+        <div class="flow-step" data-flow-section="1" onclick="openSection('1');" role="button" tabindex="0" title="Go to Section 1: Monthly Creative Activities"><span class="flow-n">📅</span> <span id="flow1">Monthly Activities</span></div>
         <span class="flow-arr">→</span>
-        <span class="flow-step" onclick="selectAimGrade(null); openSection('3');"><span class="flow-n">2</span> Select Activity</span>
+        <div class="flow-step" data-flow-section="3" onclick="selectAimGrade(null); openSection('3');" role="button" tabindex="0" title="Go to DCAIS Curriculum Activities"><span class="flow-n">1</span> <span id="flow2">DCAIS Activities</span></div>
         <span class="flow-arr">→</span>
-        <span class="flow-step"><span class="flow-n">3</span> Design in Express</span>
+        <div class="flow-step" data-flow-section="4" onclick="openSection('4');" role="button" tabindex="0" title="Go to DCAIS Mid-Term Examination"><span class="flow-n">2</span> <span id="flow3">Mid-Term Exam</span></div>
         <span class="flow-arr">→</span>
-        <span class="flow-step" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScEzxzVqZp3ivr-C18TAimHJV-hXIFzVaVmR-q7Ab-031xVQA/viewform?usp=header', '_blank');"><span class="flow-n">4</span> Submit Work</span>
+        <div class="flow-step" onclick="window.open('https://forms.gle/gHbX1TfefpdyNE4B6', '_blank');" role="button" tabindex="0" title="Submit Monthly Project Work"><span class="flow-n">📤</span> <span id="flow4">Submit Work</span></div>
       </div>
     </div>
   </div>
@@ -395,10 +395,29 @@ footer p+p{margin-top:5px}
     </div>
 
     <div class="tiles-grid">
-      <!-- Card 1: Primary School DCAIS -->
+      <!-- Card 1: Monthly Creative Activities -->
+      <div class="tile-card" data-section="1" onclick="openSection('1');">
+        <div class="tile-img-wrap">
+          <img class="tile-img" src="assets/guidebook/student_creative_challenge.png" alt="Monthly Activities" crossorigin="anonymous">
+          <div class="tile-img-ov">📅</div>
+        </div>
+        <div class="tile-body">
+          <div>
+            <div class="tile-tag" id="s1-tag">Section 1 • Monthly Challenges</div>
+            <h2 class="tile-title" id="s1-title">Monthly Creative Activities</h2>
+            <p class="tile-desc" id="s1-desc">One fun art project for every month - January to December. Watch tutorial, design in Adobe Express, and submit!</p>
+          </div>
+          <div class="tile-footer">
+            <span class="tile-hint" id="s1-hint">12 Month Challenges • All Grades</span>
+            <span class="tile-btn" id="s1-btn">Open Challenges →</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Primary School DCAIS -->
       <div class="tile-card" onclick="selectAimGrade('Grade 3'); openSection('3');">
         <div class="tile-img-wrap">
-          <img class="tile-img" src="assets/guidebook/student_creative_challenge.png" alt="Primary School Activities" crossorigin="anonymous">
+          <img class="tile-img" src="assets/guidebook/dcais_educational_templates.png" alt="Primary School Activities" crossorigin="anonymous">
           <div class="tile-img-ov">📘</div>
         </div>
         <div class="tile-body">
@@ -994,10 +1013,10 @@ var LANG = {
     heroTag: '🎨 Creative Studio - For Students',
     heroTitle: 'Student CBSE Portal',
     heroSub: "Pick your project, watch a short video, create in Adobe Express, and show your teacher. It is that easy!",
-    flow1: 'Pick Month',
-    flow2: 'Watch Video',
+    flow1: 'Monthly Activities',
+    flow2: 'DCAIS Activities',
     flow3: 'Mid-Term Exam',
-    flow4: 'Submit!',
+    flow4: 'Submit Work',
     flowBootcamp: 'Autumn Bootcamp',
     sBootTag: 'Special Initiative • Autumn Bootcamp',
     sBootTitle: 'CBSE Digital Innovation Bootcamp',
@@ -1006,11 +1025,11 @@ var LANG = {
     sBootBtn: 'Open Bootcamp →',
     guideText: '<strong>Tap any box below</strong> to open it and start your creative work!',
     backBtn: 'Back to Sections',
-    s1tag: 'Section 1',
+    s1tag: 'Section 1 • Monthly Challenges',
     s1title: 'Monthly Creative Activities',
-    s1desc: 'One fun art project for every month - January to December. Watch, make, submit!',
-    s1hint: '12 Fun Challenges',
-    s1btn: 'Open →',
+    s1desc: 'One fun art project for every month - January to December. Watch tutorial, design in Adobe Express, and submit!',
+    s1hint: '12 Month Challenges • All Grades',
+    s1btn: 'Open Challenges →',
     s2tag: 'Section 2',
     s2title: 'Skill Building Tracks',
     s2desc: 'Learn step-by-step: design posters, make videos, create social posts, and more!',
@@ -1048,23 +1067,23 @@ var LANG = {
     heroTag: '🎨 क्रिएटिव स्टूडियो - छात्रों के लिए',
     heroTitle: 'हर महीने कुछ नया बनाओ! 🎉',
     heroSub: 'अपना प्रोजेक्ट चुनो, छोटा वीडियो देखो, Adobe Express में बनाओ, और टीचर को दिखाओ। बस इतना ही!',
-    flow1: 'महीना चुनो',
-    flow2: 'वीडियो देखो',
+    flow1: 'मासिक गतिविधियाँ',
+    flow2: 'DCAIS एक्टिविटीज़',
     flow3: 'मिड-टर्म परीक्षा',
-    flow4: 'जमा करो!',
+    flow4: 'काम जमा करें',
     flowBootcamp: 'शरद ऋतु बूटकैंप',
     sBootTag: 'विशेष पहल • शरद ऋतु बूटकैंप',
-    sBootTitle: 'केवीएस शरद ऋतु बूटकैंप',
+    sBootTitle: 'सीबीएसई डिजिटल इनोवेशन बूटकैंप',
     sBootDesc: '3 लाइव सत्र: कॉमिक-ए-कॉन्सेप्ट, हीरो ऑफ़ माय नेशन, और माय चाइल्डहुड मेमोरी। एडोब एक्सप्रेस में जेन-एआई का उपयोग करें!',
     sBootHint: '3 लाइव सत्र • टेम्पलेट्स और यूट्यूब',
     sBootBtn: 'बूटकैंप खोलें →',
     guideText: '<strong>नीचे किसी भी बॉक्स पर टैप करो</strong> और अपना क्रिएटिव काम शुरू करो!',
     backBtn: 'वापस जाओ',
-    s1tag: 'सेक्शन 1',
-    s1title: 'मासिक क्रिएटिव एक्टिविटी',
-    s1desc: 'हर महीने एक मज़ेदार आर्ट प्रोजेक्ट - जनवरी से दिसंबर तक।',
-    s1hint: '12 मज़ेदार चैलेंज',
-    s1btn: 'खोलो →',
+    s1tag: 'सेक्शन 1 • मासिक चुनौतियाँ',
+    s1title: 'मासिक क्रिएटिव एक्टिविटीज़',
+    s1desc: 'हर महीने एक मज़ेदार आर्ट प्रोजेक्ट - जनवरी से दिसंबर। ट्यूटोरियल देखें, एडोब एक्सप्रेस में बनाएं और जमा करें!',
+    s1hint: '12 मासिक चुनौतियाँ • सभी कक्षाएं',
+    s1btn: 'चुनौतियाँ खोलें →',
     s2tag: 'सेक्शन 2',
     s2title: 'स्किल ट्रैक्स',
     s2desc: 'पोस्टर बनाओ, वीडियो बनाओ, सोशल पोस्ट बनाओ - कदम दर कदम सीखो!',
@@ -1257,13 +1276,13 @@ function renderMonthSectionHtml() {
           '<div>' +
             '<div class="track-box-title">' +
               (isExisting
-                ? (isHi ? 'मौजूदा केवीएस विद्यालयों के लिए टेम्पलेट: बचपन की यादें (Childhood Memories)' : 'Template for Existing KVS Schools: Childhood Memories')
-                : (isHi ? 'नए केवीएस विद्यालयों के लिए टेम्पलेट: मेरे बचपन के सपने (My Childhood Dreams)' : 'Template for Newly Added KVS Schools: My Childhood Dreams')) +
+                ? (isHi ? 'मौजूदा विद्यालयों के लिए टेम्पलेट: बचपन की यादें (Childhood Memories)' : 'Template for Existing Schools: Childhood Memories')
+                : (isHi ? 'नए विद्यालयों के लिए टेम्पलेट: मेरे बचपन के सपने (My Childhood Dreams)' : 'Template for Newly Added Schools: My Childhood Dreams')) +
             '</div>' +
             '<div class="track-box-desc">' +
               (isExisting
-                ? (isHi ? 'यह टेम्पलेट मौजूदा केवीएस पीएम श्री विद्यालयों के लिए "Childhood Memories" थीम पर तैयार किया गया है।' : 'Specially curated "Childhood Memories" template for Existing KVS PM SHRI schools.')
-                : (isHi ? 'यह टेम्पलेट नए शामिल हुए केवीएस पीएम श्री विद्यालयों के लिए "My Childhood Dreams" थीम पर तैयार किया गया है।' : 'Specially curated "My Childhood Dreams" template for Newly Added KVS PM SHRI schools.')) +
+                ? (isHi ? 'यह टेम्पलेट मौजूदा विद्यालयों के लिए "Childhood Memories" थीम पर तैयार किया गया है।' : 'Specially curated "Childhood Memories" template for Existing schools.')
+                : (isHi ? 'यह टेम्पलेट नए शामिल हुए विद्यालयों के लिए "My Childhood Dreams" थीम पर तैयार किया गया है।' : 'Specially curated "My Childhood Dreams" template for Newly Added schools.')) +
             '</div>' +
           '</div>' +
         '</div>' +
@@ -1272,8 +1291,8 @@ function renderMonthSectionHtml() {
     switchLinkHtml =
       '<div style="font-size:.78rem;color:var(--ink-2);margin-top:12px;">' +
         (isExisting
-          ? (isHi ? 'क्या आप नए विद्यालय से हैं? <a href="javascript:void(0)" onclick="setNovSchoolType(\'new\')" style="color:var(--red);font-weight:700;text-decoration:underline;">नए विद्यालय के टेम्पलेट (My Childhood Dreams) पर जाएँ →</a>' : 'From a newly onboarded KVS school? <a href="javascript:void(0)" onclick="setNovSchoolType(\'new\')" style="color:var(--red);font-weight:700;text-decoration:underline;">Switch to New Schools template (My Childhood Dreams) →</a>')
-          : (isHi ? 'क्या आप मौजूदा विद्यालय से हैं? <a href="javascript:void(0)" onclick="setNovSchoolType(\'existing\')" style="color:var(--red);font-weight:700;text-decoration:underline;">मौजूदा विद्यालय के टेम्पलेट (Childhood Memories) पर जाएँ →</a>' : 'From an existing KVS school? <a href="javascript:void(0)" onclick="setNovSchoolType(\'existing\')" style="color:var(--red);font-weight:700;text-decoration:underline;">Switch to Existing Schools template (Childhood Memories) →</a>')) +
+          ? (isHi ? 'क्या आप नए विद्यालय से हैं? <a href="javascript:void(0)" onclick="setNovSchoolType(\'new\')" style="color:var(--red);font-weight:700;text-decoration:underline;">नए विद्यालय के टेम्पलेट (My Childhood Dreams) पर जाएँ →</a>' : 'From a newly onboarded school? <a href="javascript:void(0)" onclick="setNovSchoolType(\'new\')" style="color:var(--red);font-weight:700;text-decoration:underline;">Switch to New Schools template (My Childhood Dreams) →</a>')
+          : (isHi ? 'क्या आप मौजूदा विद्यालय से हैं? <a href="javascript:void(0)" onclick="setNovSchoolType(\'existing\')" style="color:var(--red);font-weight:700;text-decoration:underline;">मौजूदा विद्यालय के टेम्पलेट (Childhood Memories) पर जाएँ →</a>' : 'From an existing school? <a href="javascript:void(0)" onclick="setNovSchoolType(\'existing\')" style="color:var(--red);font-weight:700;text-decoration:underline;">Switch to Existing Schools template (Childhood Memories) →</a>')) +
       '</div>';
   }
 
@@ -1850,7 +1869,7 @@ function renderStudentBootcampSection() {
   var heroBanner =
     '<div class="bc-hero-banner">' +
       '<div style="flex:1;min-width:280px;z-index:2;">' +
-        '<div class="bc-tag-pill">🚀 ' + (isHi ? 'केवीएस शरद ऋतु बूटकैंप 2026' : 'CBSE Digital Innovation Bootcamp 2026') + '</div>' +
+        '<div class="bc-tag-pill">🚀 ' + (isHi ? 'सीबीएसई डिजिटल इनोवेशन बूटकैंप 2026' : 'CBSE Digital Innovation Bootcamp 2026') + '</div>' +
         '<div class="bc-timing-pill">📅 ' + (isHi ? '17 से 24 अक्टूबर 2026 • शाम 4:00 से 5:00 बजे' : '17th - 24th October, 2026 • Time: 4:00 PM - 5:00 PM') + '</div>' +
         '<h2 style="font-size:1.6rem;font-weight:900;letter-spacing:-.03em;line-height:1.2;margin-bottom:8px;color:#FFF;">' +
           (isHi ? 'एडोब एक्सप्रेस फॉर एजुकेशन ऑटम बूटकैंप' : 'CBSE Digital Innovation Bootcamp') +
@@ -2044,7 +2063,7 @@ var STUDENT_SECTIONS_DATA = {
     tagEn: 'Special Initiative • Autumn Bootcamp',
     tagHi: 'विशेष पहल • शरद ऋतु बूटकैंप',
     titleEn: 'CBSE Digital Innovation Bootcamp (17th - 24th October, 2026)',
-    titleHi: 'केवीएस शरद ऋतु बूटकैंप (17 - 24 अक्टूबर 2026)',
+    titleHi: 'सीबीएसई डिजिटल इनोवेशन बूटकैंप (17 - 24 अक्टूबर 2026)',
     descEn: '3 Live interactive masterclasses from 4:00 PM to 5:00 PM: Comic-a-concept, Hero of My Nation, and My Childhood Memory. Use GenAI in Adobe Express!',
     descHi: 'शाम 4:00 से 5:00 बजे तक 3 लाइव इंटरएक्टिव मास्टरक्लास। यूट्यूब पर देखें, आधिकारिक एडोब एक्सप्रेस टेम्पलेट्स का उपयोग करें और अपनी डिजिटल कहानियां बनाएं!',
     render: function(lang) { return renderStudentBootcampSection(); }
