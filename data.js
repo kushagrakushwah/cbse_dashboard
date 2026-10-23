@@ -559,18 +559,20 @@ window.ADOBE_DATA = {
       {
         "id": "november",
         "monthName": { "en": "November", "hi": "नवंबर" },
-        "theme": { "en": "Children's Day • My Childhood Dreams", "hi": "बाल दिवस • मेरे बचपन के सपने" },
-        "activityName": { "en": "MY CHILDHOOD DREAMS", "hi": "मेरे बचपन के सपने (My Childhood Dreams)" },
+        "theme": { "en": "Children's Day • Childhood Memories & Dreams", "hi": "बाल दिवस • बचपन की यादें एवं सपने" },
+        "activityName": { "en": "Childhood Memories (Existing) / My Childhood Dreams (New)", "hi": "बचपन की यादें (मौजूदा) / मेरे बचपन के सपने (नए)" },
+        "activityNameExisting": "Childhood Memories",
+        "activityNameNew": "My Childhood Dreams",
         "desc": {
-          "en": "Design your personal \"My Childhood Dreams\" creative poster or vision board celebrating Children's Day in Adobe Express! Express your hopes, aspirations, and favorite childhood memories.",
-          "hi": "एडोबी एक्सप्रेस में बाल दिवस के उपलक्ष्य पर अपना रचनात्मक \"मेरे बचपन के सपने\" पोस्टर या विज़न बोर्ड बनाएं! अपनी आकांक्षाओं, बचपन की यादों और सपनों को व्यक्त करें।"
+          "en": "Design a personal 'Childhood Memories' poster (Existing Schools) or 'My Childhood Dreams' poster (New Schools) celebrating Children's Day in Adobe Express.",
+          "hi": "एडोबी एक्सप्रेस में बाल दिवस के उपलक्ष्य पर 'बचपन की यादें' (मौजूदा विद्यालय) या 'मेरे बचपन के सपने' (नए विद्यालय) का रचनात्मक पोस्टर बनाएं।"
         },
         "skills": ["Poster Design", "Creative Expression", "Visual Storytelling"],
         "duration": "45 mins",
         "tutorialLink": "https://youtu.be/eRA7DjSb5gs?si=TJkotAxLC9WsvJON",
         "activityLink": "https://new.express.adobe.com/design/template/urn:aaid:sc:VA6C2:fcf64e48-8456-5141-9d68-55b0d404d468?category=search&pageId=7b5aebd5-bcab-42a5-a163-05d16f18e735",
-        "submissionLink": "https://forms.gle/gHbX1TfefpdyNE4B6"
-      },
+        "activityLinkNewSchools": "https://new.express.adobe.com/design/template/urn:aaid:sc:VA6C2:e1cb7d5d-5c61-5064-bfb1-a1d1e94b693e",
+        "submissionLink": "https://forms.gle/gHbX1TfefpdyNE4B6"},
       {
         "id": "december",
         "monthName": { "en": "December", "hi": "दिसंबर" },
